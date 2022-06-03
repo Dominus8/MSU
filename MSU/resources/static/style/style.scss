@@ -1,4 +1,10 @@
     //=========== main ================
+    * {
+        a {
+            text-decoration: none;
+        }
+    }
+    
     .section-outer {
         margin: 0 auto;
         width: 1440px;
@@ -125,6 +131,88 @@
         background-image: url(/MSU/resources/static/images/slider_bg_image.png);
         background-repeat: no-repeat;
         background-position: center;
+        .slide {
+            .slide-wrapper {
+                height: 529px;
+                width: 1110px;
+                background-image: url(../images/slide_img-cam.png);
+                background-repeat: no-repeat;
+                background-position: 110% 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .slide-text {
+                    width: 440px;
+                    .slide-text__line {
+                        height: 1px;
+                        border: none;
+                        width: 70px;
+                        text-align: left;
+                        background-color: #BDBDBD;
+                        /* для ie */
+                        margin: 0 auto 0 0;
+                        /* для остальных браузеров */
+                    }
+                    .slide-text__title {
+                        margin-top: 15px;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 34px;
+                        line-height: 140%;
+                        /* or 48px */
+                        /* Grey / 800 */
+                        color: #333333;
+                    }
+                    .slide-text__produkt-name {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 34px;
+                        line-height: 140%;
+                        text-transform: uppercase;
+                        /* or 48px */
+                        /* Grey / 800 */
+                        color: #66B821;
+                    }
+                    .slide-text__subtitle {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 17px;
+                        line-height: 140%;
+                        /* or 24px */
+                        letter-spacing: 0.002em;
+                        /* Grey / 700 */
+                        color: #5E5E5E;
+                    }
+                }
+                .slide-button {
+                    /* Button_web */
+                    /* Auto layout */
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 250px;
+                    height: 48px;
+                    /* MSU24/Green */
+                    background: #66B821;
+                    border-radius: 4px;
+                    .slide-button__link {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .slider-bollets {
+            height: 70px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     
     .main-slider {
