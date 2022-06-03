@@ -1,4 +1,119 @@
     //=========== main ================
+    @font-face {
+        font-family: 'DINPro-BoldItalic';
+        src: url('../fonts/DINPro-BoldItalic.eot');
+        src: url('../fonts/DINPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro-BoldItalic.svg#DINPro-BoldItalic') format('svg'), url('../fonts/DINPro-BoldItalic.ttf') format('truetype'), url('../fonts/DINPro-BoldItalic.woff') format('woff'), url('../fonts/DINPro-BoldItalic.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'DINPro-Medium';
+        src: url('../fonts/DINPro-Medium.eot');
+        src: url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro-Medium.svg#DINPro-Medium') format('svg'), url('../fonts/DINPro-Medium.ttf') format('truetype'), url('../fonts/DINPro-Medium.woff') format('woff'), url('../fonts/DINPro-Medium.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'DINPro-Medium';
+        src: url('../fonts/DINPro-Medium.eot');
+        src: url('../fonts/DINPro-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro-Medium.svg#DINPro-Medium') format('svg'), url('../fonts/DINPro-Medium.ttf') format('truetype'), url('../fonts/DINPro-Medium.woff') format('woff'), url('../fonts/DINPro-Medium.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Gotham Pro';
+        src: url('../fonts/GothamPro.svg#GothamPro') format('svg'), url('../fonts/GothamPro.ttf') format('truetype'), url('../fonts/GothamPro.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'GothamPro-Bold';
+        src: url('../fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg'), url('../fonts/GothamPro-Bold.ttf') format('truetype'), url('../fonts/GothamPro-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'gothampro_bold';
+        src: url('../fonts/gothampro_bold.eot');
+        src: url('../fonts/gothampro_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/gothampro_bold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'GothamPro-Medium';
+        src: url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg'), url('../fonts/GothamPro-Medium.ttf') format('truetype'), url('../fonts/GothamPro-Medium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'gothampro_medium';
+        src: url('../fonts/gothampro_medium.eot');
+        src: url('../fonts/gothampro_medium.eot?#iefix') format('embedded-opentype'), url('../fonts/gothampro_medium.woff2') format('woff2');
+        font-weigh: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'ProximaNova-Semibold';
+        src: url('../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Proxima Nova';
+        src: url('../fonts/ofont.ru_Proxima Nova.eot');
+        src: url('../fonts/ofont.ru_Proxima Nova.eot?#iefix') format('embedded-opentype'), url('../fonts/ofont.ru_Proxima Nova.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'ProximaNova-Bold';
+        src: url('../fonts/ProximaNova-Bold.eot');
+        src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'ProximaNova-Regular';
+        src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'proximanova_regular';
+        src: url('../fonts/proximanova_regular.eot');
+        src: url('../fonts/proximanova_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova_regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'DINPro-Bold';
+        src: url('../fonts/DINPro-Bold.eot');
+        src: url('../fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/DINPro-Bold.svg#DINPro-Bold') format('svg'), url('../fonts/DINPro-Bold.ttf') format('truetype'), url('../fonts/DINPro-Bold.woff') format('woff'), url('../fonts/DINPro-Bold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Poppins';
+        src: url('../fonts/Poppins-Regular.eot');
+        src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg'), url('../fonts/Poppins-Regular.ttf') format('truetype'), url('../fonts/Poppins-Regular.woff') format('woff'), url('../fonts/Poppins-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
     * {
         a {
             text-decoration: none;
@@ -29,6 +144,7 @@
             }
         }
         &_info {
+            font-family: 'Proxima Nova';
             height: 38px;
             width: 335px;
             display: flex;
@@ -102,6 +218,7 @@
             justify-content: space-between;
             align-items: center;
             .nav-item {
+                font-family: 'Proxima Nova';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
@@ -142,6 +259,7 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 .slide-text {
+                    font-family: 'Proxima Nova';
                     width: 440px;
                     .slide-text__line {
                         height: 1px;
@@ -197,6 +315,7 @@
                     background: #66B821;
                     border-radius: 4px;
                     .slide-button__link {
+                        font-family: 'Poppins';
                         font-style: normal;
                         font-weight: 500;
                         font-size: 14px;
@@ -229,6 +348,126 @@
     .footer {
         height: 327px;
         background-color: #333333;
+        .footer__logo {
+            height: 140px;
+            // display: flex;
+            // align-items: center;
+            img {
+                margin-top: 64px;
+            }
+        }
+        .footer__body {
+            height: 103px;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Gotham Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            /* identical to box height, or 17px */
+            letter-spacing: 0.01em;
+            /* Grey / 300 */
+            color: #E0E0E0;
+            .footer-nav {
+                display: flex;
+                justify-content: space-between;
+                width: 538px;
+                font-family: 'Gotham Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                /* identical to box height, or 17px */
+                letter-spacing: 0.01em;
+                /* Grey / 300 */
+                color: #E0E0E0;
+                .footer-nav__block {
+                    width: 155px;
+                    .nav-item {
+                        &--primary {
+                            padding-bottom: 16px;
+                            font-family: 'Gotham Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            /* identical to box height, or 20px */
+                            letter-spacing: 0.002em;
+                        }
+                    }
+                }
+            }
+            .footer-contacts {
+                width: 299px;
+                display: flex;
+                justify-content: space-between;
+                .contacts-block {
+                    .contacts-item {
+                        .contacts-item__title {
+                            /* Caption / L / Regular */
+                            font-family: 'Gotham Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 140%;
+                            /* identical to box height, or 17px */
+                            letter-spacing: 0.01em;
+                            /* Grey / 500 */
+                            color: #9E9E9E;
+                        }
+                        .contakts-item__subtitle {
+                            /* Body / S / (Medium) */
+                            font-family: 'Gotham Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            /* identical to box height, or 20px */
+                            letter-spacing: 0.002em;
+                            /* Grey / 100 */
+                            color: #F5F5F5;
+                        }
+                    }
+                }
+            }
+            .footer-social {
+                .footer-social__title {}
+                .footer-social__ico {
+                    padding-top: 10px;
+                }
+            }
+        }
+        .footer__copyrites {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .copyrites {
+                font-family: 'Gotham Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+                /* identical to box height, or 20px */
+                letter-spacing: 0.002em;
+                /* Grey / 500 */
+                color: #9E9E9E;
+            }
+            .privacy-policy {
+                a {
+                    font-family: 'Gotham Pro';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                    /* identical to box height, or 20px */
+                    letter-spacing: 0.002em;
+                    /* Grey / 500 */
+                    color: #9E9E9E;
+                }
+            }
+        }
     }
     
     //============= /footer ===============
