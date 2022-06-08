@@ -38,25 +38,9 @@
     }
     
     @font-face {
-        font-family: 'gothampro_bold';
-        src: url('../fonts/gothampro_bold.eot');
-        src: url('../fonts/gothampro_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/gothampro_bold.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
         font-family: 'GothamPro-Medium';
         src: url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg'), url('../fonts/GothamPro-Medium.ttf') format('truetype'), url('../fonts/GothamPro-Medium.woff') format('woff');
         font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'gothampro_medium';
-        src: url('../fonts/gothampro_medium.eot');
-        src: url('../fonts/gothampro_medium.eot?#iefix') format('embedded-opentype'), url('../fonts/gothampro_medium.woff2') format('woff2');
-        font-weigh: normal;
         font-style: normal;
     }
     
@@ -118,6 +102,11 @@
         a {
             text-decoration: none;
         }
+    }
+    
+    .swiper {
+        width: 1110px;
+        // height: 300px;
     }
     
     .section-outer {
@@ -248,79 +237,85 @@
         background-image: url(/MSU/resources/static/images/slider_bg_image.png);
         background-repeat: no-repeat;
         background-position: center;
-        .slide {
-            .slide-wrapper {
-                height: 529px;
-                width: 1110px;
-                background-image: url(../images/slide_img-cam.png);
-                background-repeat: no-repeat;
-                background-position: 110% 10%;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                .slide-text {
-                    font-family: 'Proxima Nova';
-                    width: 440px;
-                    .slide-text__line {
-                        height: 1px;
-                        border: none;
-                        width: 70px;
-                        text-align: left;
-                        background-color: #BDBDBD;
-                        /* для ie */
-                        margin: 0 auto 0 0;
-                        /* для остальных браузеров */
-                    }
-                    .slide-text__title {
-                        margin-top: 15px;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 34px;
-                        line-height: 140%;
-                        /* or 48px */
-                        /* Grey / 800 */
-                        color: #333333;
-                    }
-                    .slide-text__produkt-name {
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 34px;
-                        line-height: 140%;
-                        text-transform: uppercase;
-                        /* or 48px */
-                        /* Grey / 800 */
-                        color: #66B821;
-                    }
-                    .slide-text__subtitle {
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 17px;
-                        line-height: 140%;
-                        /* or 24px */
-                        letter-spacing: 0.002em;
-                        /* Grey / 700 */
-                        color: #5E5E5E;
-                    }
-                }
-                .slide-button {
-                    /* Button_web */
-                    /* Auto layout */
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    width: 250px;
-                    height: 48px;
-                    /* MSU24/Green */
-                    background: #66B821;
-                    border-radius: 4px;
-                    .slide-button__link {
-                        font-family: 'Poppins';
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 24px;
-                        color: #FFFFFF;
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .slide-wrapper {
+                        height: 599px; //height: 529px;
+                        width: 1110px;
+                        background-image: url(../images/slide_img-cam.png);
+                        background-repeat: no-repeat;
+                        background-position: 110% 10%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        .slide-text {
+                            font-family: 'Proxima Nova';
+                            width: 440px;
+                            margin-bottom: 70px;
+                            .slide-text__line {
+                                height: 1px;
+                                border: none;
+                                width: 70px;
+                                text-align: left;
+                                background-color: #BDBDBD;
+                                /* для ie */
+                                margin: 0 auto 0 0;
+                                /* для остальных браузеров */
+                            }
+                            .slide-text__title {
+                                margin-top: 15px;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 34px;
+                                line-height: 140%;
+                                /* or 48px */
+                                /* Grey / 800 */
+                                color: #333333;
+                            }
+                            .slide-text__produkt-name {
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 34px;
+                                line-height: 140%;
+                                text-transform: uppercase;
+                                /* or 48px */
+                                /* Grey / 800 */
+                                color: #66B821;
+                            }
+                            .slide-text__subtitle {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
+                            }
+                        }
+                        .slide-button {
+                            margin-bottom: 70px;
+                            /* Button_web */
+                            /* Auto layout */
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            width: 250px;
+                            height: 48px;
+                            /* MSU24/Green */
+                            background: #66B821;
+                            border-radius: 4px;
+                            .slide-button__link {
+                                font-family: 'ProximaNova-Semibold';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 24px;
+                                color: #FFFFFF;
+                            }
+                        }
                     }
                 }
             }
@@ -385,7 +380,9 @@
                 .footer-nav__block {
                     width: 155px;
                     .nav-item {
+                        color: #E0E0E0;
                         &--primary {
+                            color: #E0E0E0;
                             padding-bottom: 16px;
                             font-family: 'Gotham Pro';
                             font-style: normal;
@@ -394,6 +391,9 @@
                             line-height: 140%;
                             /* identical to box height, or 20px */
                             letter-spacing: 0.002em;
+                        }
+                        &:active {
+                            font-style: italic;
                         }
                     }
                 }

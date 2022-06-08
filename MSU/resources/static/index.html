@@ -8,6 +8,7 @@
     <title>MSU</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -60,25 +61,41 @@
     <section class="section-outer section-main-slider">
         <section class="section-inner">
             <div class="main-slider">
-                <div class="slide">
-                    <div class="slide-wrapper">
-
-                        <div class="slide-text">
-                            <hr class="slide-text__line">
-                            <div class="slide-text__title">Детектор Транспорта</div>
-                            <div class="slide-text__produkt-name">Оптик</div>
-                            <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">
+                            <div class="slide-wrapper">
+                                <div class="slide-text">
+                                    <hr class="slide-text__line">
+                                    <div class="slide-text__title">Детектор Транспорта</div>
+                                    <div class="slide-text__produkt-name">Оптик</div>
+                                    <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
+                                </div>
+                                <div class="slide-button">
+                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="slide-button">
-                            <a class="slide-button__link" href="#">Узнать подробнее</a>
-                        </div>
-
                     </div>
-                </div>
-                <div class="slider-bollets">
-                    <img src="./images/slider_bollet_line.png" alt="">
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
 
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
+
+                <!-- <div class="slider-bollets">
+                    <img src="./images/slider_bollet_line.png" alt="">
+                </div> -->
             </div>
         </section>
     </section>
@@ -94,20 +111,38 @@
                 <div class="footer__body">
                     <div class="footer-nav">
                         <div class="footer-nav__block">
-                            <div class="nav-item--primary">Каталог</div>
-                            <div class="nav-item">Программные продукты</div>
-                            <div class="nav-item">Программно-аппаратные продукты</div>
+                            <div> <a class="nav-item--primary" href="#"> Каталог</a></div>
+                            <div>
+                                <a class="nav-item" href="#">Программные продукты</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Программно-аппаратные продукты</a>
+                            </div>
                         </div>
                         <div class="footer-nav__block">
-                            <div class="nav-item--primary">О нас</div>
-                            <div class="nav-item">Партнеры</div>
-                            <div class="nav-item">Сотрудничество</div>
-                            <div class="nav-item">Поддержка</div>
+                            <div>
+                                <a class="nav-item--primary" href="#">О нас</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Партнеры</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Сотрудничество</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Поддержка</a>
+                            </div>
                         </div>
                         <div class="footer-nav__block">
-                            <div class="nav-item--primary">Наши проекты</div>
-                            <div class="nav-item">Реализованные проекты</div>
-                            <div class="nav-item">Пилотные проекты</div>
+                            <div>
+                                <a class="nav-item--primary" href="#">Наши проекты</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Реализованные проекты</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="#">Пилотные проекты</a>
+                            </div>
                         </div>
                     </div>
                     <div class="footer-contacts">
@@ -149,6 +184,8 @@
         </section>
     </section>
     <!-- /footer -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
