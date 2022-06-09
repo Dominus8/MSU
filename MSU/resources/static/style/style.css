@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'DINPro-BoldItalic';
   src: url("../fonts/DINPro-BoldItalic.eot");
@@ -103,17 +102,17 @@
 }
 
 .swiper {
-  width: 1110px;
+  max-width: 1110px;
 }
 
 .section-outer {
   margin: 0 auto;
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .section-inner {
   margin: 0 auto;
-  width: 1110px;
+  max-width: 1110px;
 }
 
 .header {
@@ -131,13 +130,13 @@
 
 .header_logo img {
   height: 39px;
-  width: 260px;
+  max-width: 260px;
 }
 
 .header_info {
   font-family: 'Proxima Nova';
   height: 38px;
-  width: 335px;
+  max-width: 335px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +197,6 @@
   height: 52px;
   left: 0px;
   top: 104px;
-  /* Grey / 800 */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,9 +226,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
   letter-spacing: 0.002em;
-  /* Grey / 100 */
   color: #F5F5F5;
   -webkit-transition-property: color;
   transition-property: color;
@@ -241,23 +237,24 @@
 }
 
 .nav .nav-wrapper .nav-item:hover {
-  color: aqua;
-  -webkit-transition-duration: .9s;
-          transition-duration: .9s;
-  font-size: 18px;
   cursor: pointer;
 }
 
 .section-main-slider {
-  background-image: url(/MSU/resources/static/images/slider_bg_image.png);
+  background-image: url(../images/slider_bg_image.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.section-main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
+  max-height: 599px;
+  position: absolute;
+  padding-left: 190px;
+}
+
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper {
   height: 599px;
-  width: 1110px;
-  background-image: url(../images/slide_img-cam.png);
+  max-width: 1110px;
   background-repeat: no-repeat;
   background-position: 110% 10%;
   display: -webkit-box;
@@ -273,19 +270,17 @@
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text {
   font-family: 'Proxima Nova';
-  width: 440px;
+  max-width: 440px;
   margin-bottom: 70px;
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .slide-text__line {
   height: 1px;
   border: none;
-  width: 70px;
+  max-width: 70px;
   text-align: left;
   background-color: #BDBDBD;
-  /* для ie */
   margin: 0 auto 0 0;
-  /* для остальных браузеров */
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .slide-text__title {
@@ -294,8 +289,6 @@
   font-weight: 600;
   font-size: 34px;
   line-height: 140%;
-  /* or 48px */
-  /* Grey / 800 */
   color: #333333;
 }
 
@@ -305,8 +298,6 @@
   font-size: 34px;
   line-height: 140%;
   text-transform: uppercase;
-  /* or 48px */
-  /* Grey / 800 */
   color: #66B821;
 }
 
@@ -315,16 +306,12 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 140%;
-  /* or 24px */
   letter-spacing: 0.002em;
-  /* Grey / 700 */
   color: #5E5E5E;
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-button {
   margin-bottom: 70px;
-  /* Button_web */
-  /* Auto layout */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +327,6 @@
           align-items: center;
   width: 250px;
   height: 48px;
-  /* MSU24/Green */
   background: #66B821;
   border-radius: 4px;
 }
@@ -405,9 +391,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
-  /* identical to box height, or 17px */
   letter-spacing: 0.01em;
-  /* Grey / 300 */
   color: #E0E0E0;
 }
 
@@ -424,9 +408,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
-  /* identical to box height, or 17px */
   letter-spacing: 0.01em;
-  /* Grey / 300 */
   color: #E0E0E0;
 }
 
@@ -446,7 +428,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
   letter-spacing: 0.002em;
 }
 
@@ -455,7 +436,7 @@
 }
 
 .footer .footer__body .footer-contacts {
-  width: 299px;
+  max-width: 299px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,28 +446,22 @@
 }
 
 .footer .footer__body .footer-contacts .contacts-block .contacts-item .contacts-item__title {
-  /* Caption / L / Regular */
   font-family: 'Gotham Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
-  /* identical to box height, or 17px */
   letter-spacing: 0.01em;
-  /* Grey / 500 */
   color: #9E9E9E;
 }
 
 .footer .footer__body .footer-contacts .contacts-block .contacts-item .contakts-item__subtitle {
-  /* Body / S / (Medium) */
   font-family: 'Gotham Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
   letter-spacing: 0.002em;
-  /* Grey / 100 */
   color: #F5F5F5;
 }
 
@@ -513,9 +488,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
   letter-spacing: 0.002em;
-  /* Grey / 500 */
   color: #9E9E9E;
 }
 
@@ -525,9 +498,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
   letter-spacing: 0.002em;
-  /* Grey / 500 */
   color: #9E9E9E;
 }
 /*# sourceMappingURL=style.css.map */
