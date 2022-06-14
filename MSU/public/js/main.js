@@ -18,4 +18,12 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+
+        },
+
+    }
 });

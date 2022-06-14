@@ -119,12 +119,6 @@
         max-width: 1110px;
     }
     
-    @media (max-width: 1120px) {
-        .section-inner {
-            padding: 0 20px;
-        }
-    }
-    
     //=========== /main ===============
     //=========== header =============
     .header {
@@ -137,6 +131,9 @@
                 height: 39px;
                 max-width: 260px;
             }
+        }
+        &_logo--mobile {
+            display: none;
         }
         &_info {
             font-family: 'Proxima Nova';
@@ -187,6 +184,9 @@
                     color: #333333;
                 }
             }
+        }
+        .momile-header {
+            display: none;
         }
     }
     
@@ -483,3 +483,171 @@
     }
     
     //============= /footer ===============
+    @media (max-width: 1120px) {
+        .section-inner {
+            padding: 0 20px;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        .section-inner {
+            padding: 0 15px;
+        }
+        .section-header {
+            background-color: #333333;
+        }
+        .header {
+            .momile-header {
+                display: block;
+                .info-wrapper {
+                    width: 120px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .momile-header__item {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .header_logo {
+            display: none;
+        }
+        .header_logo--mobile {
+            display: block;
+        }
+        .header_info {
+            display: none;
+        }
+        .section-nav {
+            display: none;
+        }
+        .nav {
+            display: none;
+        }
+        .section-main-slider {
+            background-image: url(../images/slider_bg_image--mobile.png);
+        }
+        .section-main-slider {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .slider-image {
+                            max-width: 480px;
+                            // max-height: 288px;
+                            padding-left: 0px;
+                            margin-left: -50px;
+                        }
+                        .slide-wrapper {
+                            flex-direction: column;
+                            justify-content: end;
+                            align-items: flex-start;
+                            .slide-text {
+                                margin-bottom: 20px;
+                                .slide-text__line {}
+                                .slide-text__title {}
+                                .slide-text__produkt-name {}
+                                .slide-text__subtitle {}
+                            }
+                            .slide-button {
+                                margin-bottom: 30px;
+                                width: 335px;
+                                align-self: center;
+                                .slide-button__link {}
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    display: none;
+                }
+                .swiper-button-next {
+                    display: none;
+                }
+                .swiper-pagination {
+                    &-bullet {
+                        &-active {}
+                    }
+                }
+                .swiper-scrollbar {
+                    // padding-bottom: 12.5px;
+                    margin-bottom: 14px;
+                    height: 1.5px;
+                    // background-color: #5E5E5E;
+                    .swiper-scrollbar-drag {
+                        background-color: #66B821;
+                    }
+                }
+            }
+            .slider-bollets {
+                height: 70px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .footer {
+            .footer__logo {
+                height: 70px;
+                img {
+                    margin-top: 40px;
+                    width: 195px;
+                }
+            }
+            .footer__body {
+                .footer-nav {
+                    display: none;
+                    .footer-nav__block {
+                        .nav-item {
+                            &--primary {}
+                            &:active {}
+                        }
+                    }
+                }
+                .footer-contacts {
+                    display: none;
+                    .contacts-block {
+                        .contacts-item {
+                            .contacts-item__title {}
+                            .contakts-item__subtitle {}
+                        }
+                    }
+                }
+                .footer-social {
+                    padding-top: 25px;
+                    width: 210px;
+                    .footer-social__title {
+                        display: none;
+                    }
+                    .footer-social__ico {
+                        .footer-social__ico-wrapper {
+                            .footer-social__ico-item {
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            hr {
+                height: 0.005em;
+                background-color: #F5F5F5;
+                border: none;
+            }
+            .footer__copyrites {
+                flex-direction: column;
+                align-items: flex-start;
+                .copyrites {
+                    padding-top: 20px;
+                }
+                .privacy-policy {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }

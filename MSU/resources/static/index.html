@@ -20,6 +20,9 @@
                 <div class="header_logo">
                     <img src="images/header_logo.png" alt="">
                 </div>
+                <div class="header_logo--mobile">
+                    <img src="./images/header_logo--mobile.png" alt="">
+                </div>
                 <div class="header_info">
                     <div class="info-email">
                         <div class="info-email_top">Напишите нам</div>
@@ -28,6 +31,21 @@
                     <div class="info-phone">
                         <div class="info-phone_top">Позвоните нам</div>
                         <div class="info-phone_bottom">+7 (391) 27-24-24-0</div>
+                    </div>
+                </div>
+                <div class="momile-header">
+                    <div class="info-wrapper">
+                        <div class="momile-header__item mail-ico">
+                            <a href="#">
+                                <img src="./images/mail-ico.png" alt="">
+                            </a>
+                        </div>
+                        <div class="momile-header__item phone-ico">
+                            <img src="./images/phone-ico.png" alt="">
+                        </div>
+                        <div class="momile-header__item naw-burger">
+                            <img src="./images/nav-ico.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
