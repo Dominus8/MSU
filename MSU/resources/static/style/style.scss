@@ -359,6 +359,70 @@
     }
     
     //============== /main-slider ========
+    //=============== about =====================
+    .section-about {
+        .about {
+            .about-wrapper {
+                .about-title {}
+                .about-body {
+                    display: flex;
+                    .about-body__content {
+                        .about-subtitle {
+                            width: 535px;
+                        }
+                        .honor-aria {
+                            .honor-aria__card {
+                                display: flex;
+                                width: 634px;
+                                .honor-card__image {
+                                    img {}
+                                }
+                                .honor-card__content {
+                                    padding-left: 25px;
+                                    .card-content__text {}
+                                    .card-content__date {}
+                                }
+                            }
+                        }
+                        .documents {
+                            .documents__title {
+                                display: flex;
+                            }
+                            .documents__element {
+                                display: flex;
+                            }
+                        }
+                    }
+                    .about-body__right-sitebar {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .about-numbers {
+                            display: flex;
+                            .numders__element {
+                                width: 130px;
+                            }
+                        }
+                        .about-call {
+                            width: 340px;
+                            display: flex;
+                            .about-call__image {}
+                            .about-call__subtitle {
+                                width: 220px;
+                                padding-left: 10px;
+                                span {
+                                    font-weight: 600;
+                                    color: #66B821;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================ /about ====================
     //============= footer ===============
     .section-footer {
         background-color: #333333;

@@ -409,6 +409,79 @@
   height: 599px;
 }
 
+.section-about .about .about-wrapper .about-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .about-subtitle {
+  width: 535px;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 634px;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content {
+  padding-left: 25px;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .documents .documents__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .documents .documents__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-numbers .numders__element {
+  width: 130px;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-call {
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-call .about-call__subtitle {
+  width: 220px;
+  padding-left: 10px;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-call .about-call__subtitle span {
+  font-weight: 600;
+  color: #66B821;
+}
+
 .section-footer {
   background-color: #333333;
 }
