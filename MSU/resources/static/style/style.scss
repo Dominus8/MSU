@@ -363,53 +363,162 @@
     .section-about {
         .about {
             .about-wrapper {
-                .about-title {}
+                margin-top: 64px;
+                margin-bottom: 100px;
+                .about-title {
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 34px;
+                    line-height: 140%;
+                    color: #333333;
+                }
                 .about-body {
                     display: flex;
                     .about-body__content {
+                        margin-top: 42px;
                         .about-subtitle {
-                            width: 535px;
+                            height: 172px;
+                            border-bottom: 1px solid #E0E0E0;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 17px;
+                            line-height: 160%;
+                            /* or 27px */
+                            letter-spacing: 0.002em;
+                            /* Grey / 700 */
+                            color: #5E5E5E;
+                            &__content {
+                                max-width: 535px;
+                            }
                         }
                         .honor-aria {
                             .honor-aria__card {
                                 display: flex;
+                                align-items: center;
                                 width: 634px;
+                                height: 172px;
+                                border-bottom: 1px solid #E0E0E0;
                                 .honor-card__image {
                                     img {}
                                 }
                                 .honor-card__content {
                                     padding-left: 25px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    /* or 27px */
+                                    letter-spacing: 0.002em;
+                                    /* Grey / 700 */
+                                    color: #5E5E5E;
                                     .card-content__text {}
                                     .card-content__date {}
                                 }
                             }
                         }
                         .documents {
+                            margin-top: 64px;
                             .documents__title {
+                                margin-bottom: 24px;
+                                align-items: center;
                                 display: flex;
+                                /* MSU24/Title Semibold */
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                /* identical to box height, or 34px */
+                                /* Grey / 800 */
+                                color: #333333;
+                                img {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                .title-text {
+                                    padding-left: 12px;
+                                }
                             }
                             .documents__element {
+                                padding-top: 16px;
                                 display: flex;
+                                align-items: center;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* identical to box height, or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
+                                .element__ico {
+                                    img {}
+                                }
+                                .elemetn__title {
+                                    padding-left: 14px;
+                                }
                             }
                         }
                     }
                     .about-body__right-sitebar {
+                        padding-left: 40px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         .about-numbers {
                             display: flex;
                             .numders__element {
+                                &:nth-child(2) {
+                                    padding-left: 60px;
+                                }
                                 width: 130px;
+                                .numders__title {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 34px;
+                                    line-height: 140%;
+                                    /* identical to box height, or 48px */
+                                    /* MSU/green */
+                                    color: #66B821;
+                                }
+                                .numbers__subtitle {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    /* or 27px */
+                                    letter-spacing: 0.002em;
+                                    /* Grey / 700 */
+                                    color: #5E5E5E;
+                                }
                             }
                         }
                         .about-call {
                             width: 340px;
+                            height: 103px;
                             display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #FAFAFA;
                             .about-call__image {}
                             .about-call__subtitle {
-                                width: 220px;
+                                width: 230px;
                                 padding-left: 10px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
                                 span {
                                     font-weight: 600;
                                     color: #66B821;
