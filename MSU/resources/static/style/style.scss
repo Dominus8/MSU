@@ -223,6 +223,12 @@
                 transition-property: color;
                 transition-property: font-weight;
                 transition-property: font-size;
+                a {
+                    color: #F5F5F5;
+                    &:focus {
+                        color: #66B821;
+                    }
+                }
                 &:hover {
                     // color: aqua;
                     // transition-duration: .9s;
@@ -532,6 +538,83 @@
     }
     
     //================ /about ====================
+    //============================================
+    .section-catalog-pac {
+        .section-inner {
+            .catalog-pac {
+                .catalog-pac-wrapper {
+                    .catalog-pac__nav {
+                        .pac-nav-wrapper {
+                            overflow-x: scroll;
+                            height: 136px;
+                            display: flex;
+                            align-items: center;
+                            .nav-link {
+                                .pac-nav__element {
+                                    margin-left: 20px;
+                                    display: flex;
+                                    width: 308px;
+                                    height: 84px;
+                                    background: #EEEEEE;
+                                    border-radius: 8px;
+                                    align-items: center;
+                                    .nav-element__ico {
+                                        margin-left: 18px;
+                                    }
+                                    .nav-element__title {
+                                        margin-left: 12px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                        /* or 20px */
+                                        letter-spacing: 0.002em;
+                                        color: #5E5E5E;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .catalog-pac__home-content {
+                        margin-top: 72px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .pac-home-content__title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 34px;
+                            line-height: 140%;
+                            color: #333333;
+                        }
+                        .pac-home-content__subtitle {
+                            margin-top: 20px;
+                            max-width: 575px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 17px;
+                            line-height: 140%;
+                            /* or 24px */
+                            text-align: center;
+                            letter-spacing: 0.002em;
+                            /* Grey / 700 */
+                            color: #5E5E5E;
+                        }
+                        .pac-home-content__image {
+                            margin-top: 68px;
+                            margin-bottom: 185px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //=======================================================
     //============= footer ===============
     .section-footer {
         background-color: #333333;

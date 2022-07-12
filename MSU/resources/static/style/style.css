@@ -248,6 +248,14 @@
   transition-property: font-size;
 }
 
+.nav .nav-wrapper .nav-item a {
+  color: #F5F5F5;
+}
+
+.nav .nav-wrapper .nav-item a:focus {
+  color: #66B821;
+}
+
 .nav .nav-wrapper .nav-item:hover {
   cursor: pointer;
 }
@@ -614,6 +622,93 @@
 .section-about .about .about-wrapper .about-body .about-body__right-sitebar .about-call .about-call__subtitle span {
   font-weight: 600;
   color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav .pac-nav-wrapper {
+  overflow-x: scroll;
+  height: 136px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 308px;
+  height: 84px;
+  background: #EEEEEE;
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element .nav-element__ico {
+  margin-left: 18px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element .nav-element__title {
+  margin-left: 12px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__home-content {
+  margin-top: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__home-content .pac-home-content__title {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__home-content .pac-home-content__subtitle {
+  margin-top: 20px;
+  max-width: 575px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  /* or 24px */
+  text-align: center;
+  letter-spacing: 0.002em;
+  /* Grey / 700 */
+  color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__home-content .pac-home-content__image {
+  margin-top: 68px;
+  margin-bottom: 185px;
 }
 
 .section-footer {
