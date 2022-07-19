@@ -866,6 +866,318 @@
   color: #66B821;
 }
 
+.section-support .section-inner .support .support-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content {
+  padding-top: 64px;
+  padding-bottom: 100px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .support-title {
+  margin-bottom: 32px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards {
+  margin-bottom: 32px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper .warranty-cards__title-mark {
+  margin-right: 12px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper .warranty-cards__title-text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__element {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__element .warranty-cards__element-mark {
+  margin-right: 14px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__title-wrapper {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__title-wrapper .support-manuals__title-mark {
+  margin-right: 12px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__element {
+  cursor: pointer;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  /* identical to box height, or 24px */
+  letter-spacing: 0.002em;
+  /* Grey / 700 */
+  color: #5E5E5E;
+}
+
+.section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__element .support-manuals__element-mark {
+  margin-right: 14px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback {
+  padding-top: 64px;
+  padding-bottom: 100px;
+  width: 535px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FAFAFA;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message {
+  width: 344px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__image {
+  margin-right: 23px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__text-wrapper {
+  color: #333333;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__text-wrapper .feedback-message__title {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__text-wrapper .feedback-message__subtitle {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form {
+  width: 344px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input {
+  width: 344px;
+  height: 48px;
+  margin-bottom: 32px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  border: none;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:focus {
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-webkit-input-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-moz-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-moz-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-ms-input-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message {
+  margin-bottom: 40px;
+  background: #F5F5F5;
+  border-radius: 8px;
+  border: none;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:focus {
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-webkit-input-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-moz-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-moz-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-ms-input-placeholder {
+  color: #757575;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-submit {
+  cursor: pointer;
+  color: white;
+  background: #66B821;
+  border-radius: 4px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-footer {
+  margin-top: 18px;
+  width: 344px;
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  /* or 17px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.01em;
+  /* Grey / 500 */
+  color: #9E9E9E;
+}
+
 .section-footer {
   background-color: #333333;
 }

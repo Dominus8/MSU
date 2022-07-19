@@ -756,6 +756,268 @@
     }
     
     //=================== /partners =============================
+    //==================== support ==============================
+    .section-support {
+        .section-inner {
+            .support {
+                .support-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .support-content {
+                        padding-top: 64px;
+                        padding-bottom: 100px;
+                        .support-title {
+                            margin-bottom: 32px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 34px;
+                            line-height: 140%;
+                            color: #333333;
+                        }
+                        .warranty-cards {
+                            margin-bottom: 32px;
+                            .warranty-cards__title-wrapper {
+                                margin-bottom: 32px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                color: #333333;
+                                .warranty-cards__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .warranty-cards__title-text {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    color: #333333;
+                                }
+                            }
+                            .warranty-cards__element {
+                                cursor: pointer;
+                                display: flex;
+                                margin-bottom: 16px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                                .warranty-cards__element-mark {
+                                    margin-right: 14px;
+                                }
+                                .warranty-cards__element-title {}
+                            }
+                        }
+                        .support-manuals {
+                            .support-manuals__title-wrapper {
+                                margin-bottom: 24px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                color: #333333;
+                                .support-manuals__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .support-manuals__title-text {}
+                            }
+                            .support-manuals__element {
+                                cursor: pointer;
+                                margin-bottom: 16px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* identical to box height, or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
+                                .support-manuals__element-mark {
+                                    margin-right: 14px;
+                                }
+                                .support-manuals__element-title {}
+                            }
+                        }
+                    }
+                    .support-feedback {
+                        padding-top: 64px;
+                        padding-bottom: 100px;
+                        width: 535px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: #FAFAFA;
+                        .feedback-message {
+                            width: 344px;
+                            display: flex;
+                            justify-self: start;
+                            align-items: center;
+                            margin-bottom: 40px;
+                            .feedback-message__image {
+                                margin-right: 23px;
+                            }
+                            .feedback-message__text-wrapper {
+                                color: #333333;
+                                .feedback-message__title {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                }
+                                .feedback-message__subtitle {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                }
+                            }
+                        }
+                        .feedback-form {
+                            form {
+                                width: 344px;
+                                display: flex;
+                                flex-direction: column;
+                                border-bottom: 1px solid #E0E0E0;
+                                input {
+                                    width: 344px;
+                                    height: 48px;
+                                    margin-bottom: 32px;
+                                    background: #F5F5F5;
+                                    border-radius: 8px;
+                                    border: none;
+                                    &:focus {
+                                        background: #FFFFFF;
+                                        border: 1px solid #BDBDBD;
+                                        border-radius: 8px;
+                                    }
+                                    &::-webkit-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &::-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    /* Firefox 19+ */
+                                    &:-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    /* Firefox 18- */
+                                    &:-ms-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                }
+                                .feedback-message {
+                                    margin-bottom: 40px;
+                                    background: #F5F5F5;
+                                    border-radius: 8px;
+                                    border: none;
+                                    &:focus {
+                                        background: #FFFFFF;
+                                        border: 1px solid #BDBDBD;
+                                        border-radius: 8px;
+                                    }
+                                    &::-webkit-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &::-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    /* Firefox 19+ */
+                                    &:-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    /* Firefox 18- */
+                                    &:-ms-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                }
+                                .feedback-submit {
+                                    cursor: pointer;
+                                    color: white;
+                                    background: #66B821;
+                                    border-radius: 4px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        .feedback-footer {
+                            margin-top: 18px;
+                            width: 344px;
+                            font-family: 'Gotham Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 140%;
+                            /* or 17px */
+                            display: flex;
+                            align-items: center;
+                            letter-spacing: 0.01em;
+                            /* Grey / 500 */
+                            color: #9E9E9E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //==================== /support ==============================
     //============= footer ===============
     .section-footer {
         background-color: #333333;
