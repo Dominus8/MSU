@@ -967,9 +967,7 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 140%;
-  /* identical to box height, or 24px */
   letter-spacing: 0.002em;
-  /* Grey / 700 */
   color: #5E5E5E;
 }
 
@@ -1049,8 +1047,6 @@
   background: #F5F5F5;
   border-radius: 8px;
   border: none;
-  /* Firefox 19+ */
-  /* Firefox 18- */
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:focus {
@@ -1100,8 +1096,6 @@
   background: #F5F5F5;
   border-radius: 8px;
   border: none;
-  /* Firefox 19+ */
-  /* Firefox 18- */
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:focus {
@@ -1166,7 +1160,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
-  /* or 17px */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1174,8 +1167,177 @@
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.01em;
-  /* Grey / 500 */
   color: #9E9E9E;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper {
+  margin-bottom: 120px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-title {
+  margin-top: 64px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main {
+  margin-top: 32px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title {
+  margin-bottom: 16px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper .contacts-main__title-mark {
+  margin-right: 12px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper .contacts-main__title-text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__addres {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 160%;
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__addres span {
+  font-weight: 600;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main_email {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 160%;
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main_email span {
+  font-weight: 600;
+  color: #66B821;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__phone {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 160%;
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__phone span {
+  font-weight: 600;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-map {
+  margin-top: 34px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices {
+  margin-top: 64px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__title .contacts-regional-offices__title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__title .contacts-regional-offices__title-wrapper .contacts-regional-offices__title-mark {
+  margin-right: 12px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__title .contacts-regional-offices__title-wrapper .contacts-regional-offices__title-text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #E0E0E0;
+  height: 188px;
+  width: 554.5px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card:nth-child(2n) {
+  border-left: 1px solid #E0E0E0;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card .offices-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card .offices-card-wrapper .offices-card__image {
+  padding-right: 10px;
+  margin-right: 24px;
+  text-align: center;
+  width: 250px;
+}
+
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card .offices-card-wrapper .offices-card__text {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 160%;
+  /* or 27px */
+  letter-spacing: 0.002em;
+  /* Grey / 700 */
+  color: #5E5E5E;
 }
 
 .section-footer {

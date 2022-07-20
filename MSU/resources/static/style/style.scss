@@ -98,6 +98,24 @@
         font-style: normal;
     }
     
+    @mixin h1 {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 140%;
+        color: #333333;
+    }
+    
+    @mixin h2 {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        color: #333333;
+    }
+    
     * {
         a {
             text-decoration: none;
@@ -839,9 +857,7 @@
                                 font-weight: 400;
                                 font-size: 17px;
                                 line-height: 140%;
-                                /* identical to box height, or 24px */
                                 letter-spacing: 0.002em;
-                                /* Grey / 700 */
                                 color: #5E5E5E;
                                 .support-manuals__element-mark {
                                     margin-right: 14px;
@@ -919,7 +935,6 @@
                                         font-size: 14px;
                                         line-height: 140%;
                                     }
-                                    /* Firefox 19+ */
                                     &:-moz-placeholder {
                                         color: #757575;
                                         font-family: 'Proxima Nova';
@@ -928,7 +943,6 @@
                                         font-size: 14px;
                                         line-height: 140%;
                                     }
-                                    /* Firefox 18- */
                                     &:-ms-input-placeholder {
                                         color: #757575;
                                         font-family: 'Proxima Nova';
@@ -964,7 +978,6 @@
                                         font-size: 14px;
                                         line-height: 140%;
                                     }
-                                    /* Firefox 19+ */
                                     &:-moz-placeholder {
                                         color: #757575;
                                         font-family: 'Proxima Nova';
@@ -973,7 +986,6 @@
                                         font-size: 14px;
                                         line-height: 140%;
                                     }
-                                    /* Firefox 18- */
                                     &:-ms-input-placeholder {
                                         color: #757575;
                                         font-family: 'Proxima Nova';
@@ -1004,11 +1016,9 @@
                             font-weight: 400;
                             font-size: 12px;
                             line-height: 140%;
-                            /* or 17px */
                             display: flex;
                             align-items: center;
                             letter-spacing: 0.01em;
-                            /* Grey / 500 */
                             color: #9E9E9E;
                         }
                     }
@@ -1018,6 +1028,133 @@
     }
     
     //==================== /support ==============================
+    //===================== contacts =============================
+    .section-contacts {
+        .section-inner {
+            .contacts {
+                .contacts-wrapper {
+                    margin-bottom: 120px;
+                    .contacts-title {
+                        margin-top: 64px;
+                        @include h1();
+                    }
+                    .contacts-main {
+                        margin-top: 32px;
+                        .contacts-main__title {
+                            margin-bottom: 16px;
+                            .contacts-main__title-werapper {
+                                display: flex;
+                                align-items: center;
+                                .contacts-main__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .contacts-main__title-text {
+                                    @include h2();
+                                }
+                            }
+                        }
+                        .contacts-main__addres {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                        .contacts-main_email {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                                color: #66B821;
+                            }
+                        }
+                        .contacts-main__phone {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .contacts-map {
+                        margin-top: 34px;
+                    }
+                    .contacts-regional-offices {
+                        margin-top: 64px;
+                        .contacts-regional-offices__title {
+                            .contacts-regional-offices__title-wrapper {
+                                display: flex;
+                                align-items: center;
+                                .contacts-regional-offices__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .contacts-regional-offices__title-text {
+                                    @include h2();
+                                }
+                            }
+                        }
+                        .contacts-regional-offices__cards-wrapper {
+                            margin-top: 32px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            .contacts-regional-offices__card {
+                                display: flex;
+                                &:nth-child(2n) {
+                                    border-left: 1px solid #E0E0E0;
+                                }
+                                border-top: 1px solid #E0E0E0;
+                                height: 188px;
+                                width: 554.5px;
+                                .offices-card-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    .offices-card__image {
+                                        padding-right: 10px;
+                                        margin-right: 24px;
+                                        text-align: center;
+                                        width: 250px;
+                                    }
+                                    .offices-card__text {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 17px;
+                                        line-height: 160%;
+                                        /* or 27px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        .offices-card__title {}
+                                        .offices-card__address {}
+                                        .offices-card__phone {}
+                                        .offices-card__email {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //===================== /contacts ============================
     //============= footer ===============
     .section-footer {
         background-color: #333333;
