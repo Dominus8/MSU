@@ -633,6 +633,241 @@
     }
     
     //==================/ catalog =====================================
+    //================== single page ==================================
+    .section-catalog-pac {
+        .section-inner {
+            .catalog-pac {
+                .catalog-pac-wrapper {
+                    .catalog-pac__nav {
+                        .pac-nav-wrapper {}
+                    }
+                    .app-product-singlepage__content {
+                        .single-page-pagination {
+                            margin: 32px 0;
+                            a {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #BDBDBD;
+                            }
+                        }
+                        .singlepage-content-title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 130%;
+                            color: #1F1F1F;
+                        }
+                        .single-page-content__pruduct-name {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 130%;
+                            color: #66B821;
+                        }
+                        .singlep-age-content__category-name {
+                            text-align: right;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            letter-spacing: 0.002em;
+                            color: #BDBDBD;
+                        }
+                        .single-page-content__body {
+                            margin: 32px 0;
+                            .content-body__top {
+                                padding-bottom: 64px;
+                                display: flex;
+                                justify-content: space-between;
+                                .body-top__text {
+                                    width: 545px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                    color: #5E5E5E;
+                                    .product__subtitle {
+                                        .green {
+                                            color: #66B821;
+                                        }
+                                    }
+                                    .product__purpose {
+                                        .product__purpose-title {
+                                            margin: 32px 0 12px 0;
+                                            display: flex;
+                                            align-items: center;
+                                            .green-marc {}
+                                            .purpose-title {
+                                                margin-left: 12px;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 24px;
+                                                line-height: 140%;
+                                            }
+                                        }
+                                    }
+                                }
+                                .body-top__slider {
+                                    .swiper-single-page {
+                                        width: 345px;
+                                        background-color: #66B821;
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                display: flex;
+                                                align-items: center;
+                                                width: 345px;
+                                                height: 440px;
+                                            }
+                                        }
+                                        .swiper-button-prev {
+                                            color: #9E9E9E;
+                                        }
+                                        .swiper-button-next {
+                                            color: #9E9E9E;
+                                        }
+                                        .swiper-button-disabled {
+                                            color: #9E9E9E;
+                                        }
+                                    }
+                                }
+                            }
+                            .content-body__bottom {
+                                padding: 64px 0 64px 0;
+                                background: #FAFAFA;
+                                .body-bottom__basic-parameters {
+                                    .basic-parameters__title {
+                                        margin-bottom: 32px;
+                                        display: flex;
+                                        align-items: center;
+                                        .basic-parameters__title-text {
+                                            margin-left: 12px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 140%;
+                                            color: #333333;
+                                        }
+                                    }
+                                    .basic-parameters-body {
+                                        .basic-parameters__list {
+                                            border-bottom: 1px solid #E0E0E0;
+                                            width: 730px;
+                                            .parameters-list__el {
+                                                width: 730px;
+                                                height: 56px;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 17px;
+                                                line-height: 140%;
+                                                letter-spacing: 0.002em;
+                                                color: #757575;
+                                                border-top: 1px solid #E0E0E0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .single-page-content__product-documents {
+                            margin: 64px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            .product-documents-wrapper {
+                                .product-documents__title {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 32px;
+                                    .product-documents__title-text {
+                                        margin-left: 12px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 24px;
+                                        line-height: 140%;
+                                        color: #333333;
+                                    }
+                                }
+                                .product-documents__el-wrapper {
+                                    width: 715px;
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    grid-auto-rows: 3em;
+                                    grid-gap: .8em;
+                                    .product-documents__el {
+                                        max-width: 318px;
+                                        display: flex;
+                                        align-items: center;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                        /* identical to box height, or 24px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        img {}
+                                        .product-documents__el-title {
+                                            margin-left: 12px;
+                                        }
+                                        .product-documents__el-format {
+                                            margin-left: 6px;
+                                            color: #9E9E9E;
+                                        }
+                                    }
+                                }
+                            }
+                            .product-call-to-action {
+                                margin-top: 75px;
+                                .call-to-action-wrapper {
+                                    width: 345px;
+                                    height: 105px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #FAFAFA;
+                                    .call-to-action__image {}
+                                    .call-to-action__text {
+                                        margin-left: 20px;
+                                        width: 245px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                        /* or 24px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        .green {
+                                            color: #66B821;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /single page =================================
     //================== refiled-projects =======================
     .section-refiled-projects {
         .section-inner {

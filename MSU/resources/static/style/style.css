@@ -711,6 +711,282 @@
   margin-bottom: 185px;
 }
 
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-pagination {
+  margin: 32px 0;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-pagination a {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
+  color: #BDBDBD;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .singlepage-content-title {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  color: #1F1F1F;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__pruduct-name {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .singlep-age-content__category-name {
+  text-align: right;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
+  color: #BDBDBD;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body {
+  margin: 32px 0;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top {
+  padding-bottom: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text {
+  width: 545px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 160%;
+  letter-spacing: 0.002em;
+  color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .green {
+  color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__purpose .product__purpose-title {
+  margin: 32px 0 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__purpose .product__purpose-title .purpose-title {
+  margin-left: 12px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page {
+  width: 345px;
+  background-color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 345px;
+  height: 440px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-prev {
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-next {
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-disabled {
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom {
+  padding: 64px 0 64px 0;
+  background: #FAFAFA;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters__title {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters__title .basic-parameters__title-text {
+  margin-left: 12px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters-body .basic-parameters__list {
+  border-bottom: 1px solid #E0E0E0;
+  width: 730px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters-body .basic-parameters__list .parameters-list__el {
+  width: 730px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
+  color: #757575;
+  border-top: 1px solid #E0E0E0;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents {
+  margin: 64px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__title .product-documents__title-text {
+  margin-left: 12px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #333333;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper {
+  width: 715px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 3em;
+  grid-gap: .8em;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el {
+  max-width: 318px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  /* identical to box height, or 24px */
+  letter-spacing: 0.002em;
+  /* Grey / 700 */
+  color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el .product-documents__el-title {
+  margin-left: 12px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el .product-documents__el-format {
+  margin-left: 6px;
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action {
+  margin-top: 75px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action .call-to-action-wrapper {
+  width: 345px;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FAFAFA;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action .call-to-action-wrapper .call-to-action__text {
+  margin-left: 20px;
+  width: 245px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  /* or 24px */
+  letter-spacing: 0.002em;
+  /* Grey / 700 */
+  color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action .call-to-action-wrapper .call-to-action__text .green {
+  color: #66B821;
+}
+
 .section-refiled-projects .section-inner .refiled-projects {
   margin-bottom: 100px;
 }
