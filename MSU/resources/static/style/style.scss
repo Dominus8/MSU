@@ -781,6 +781,16 @@
                                         }
                                     }
                                 }
+                                .body-bottom__slider {
+                                    .swiper-single-page__bottom {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                text-align: center;
+                                                .slider-image {}
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                         .single-page-content__product-documents {

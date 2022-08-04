@@ -882,6 +882,10 @@
   border-top: 1px solid #E0E0E0;
 }
 
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-wrapper .swiper-slide {
+  text-align: center;
+}
+
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents {
   margin: 64px 0;
   display: -webkit-box;
