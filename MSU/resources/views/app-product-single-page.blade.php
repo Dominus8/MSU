@@ -1,81 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('base')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSU</title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-</head>
-
-<body>
-
-    <!-- Header -->
-    <section class="section-outer section-header">
-        <section class="section-inner">
-            <div class="header">
-                <div class="header_logo">
-                    <a href="index.html"><img src="images/header_logo.png" alt=""></a>
-
-                </div>
-                <div class="header_logo--mobile">
-                    <img src="./images/header_logo--mobile.png" alt="">
-                </div>
-                <div class="header_info">
-                    <div class="info-email">
-                        <div class="info-email_top">Напишите нам</div>
-                        <div class="info-email_bottom">info@msu24.ru</div>
-                    </div>
-                    <div class="info-phone">
-                        <div class="info-phone_top">Позвоните нам</div>
-                        <div class="info-phone_bottom">+7 (391) 27-24-24-0</div>
-                    </div>
-                </div>
-                <div class="momile-header">
-                    <div class="info-wrapper">
-                        <div class="momile-header__item mail-ico">
-                            <a href="#">
-                                <img src="./images/mail-ico.png" alt="">
-                            </a>
-                        </div>
-                        <div class="momile-header__item phone-ico">
-                            <img src="./images/phone-ico.png" alt="">
-                        </div>
-                        <div class="momile-header__item naw-burger">
-                            <img src="./images/nav-ico.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    <!-- /Header -->
-
-    <!-- nav -->
-    <section class="section-outer section-nav">
-        <section class="section-inner">
-            <div class="nav">
-                <div class="nav-wrapper">
-                    <div class="nav-item"> <a href="about.html">О нас</a> </div>
-                    <div class="nav-item"><a href="app-product.html">Программные продукты</a></div>
-                    <div class="nav-item"><a href="app-hard-product.html">Программно-аппаратные продукты</a></div>
-                    <div class="nav-item">Новости</div>
-                    <div class="nav-item"><a href="refiled-projects.html">Реализованные проекты</a></div>
-                    <div class="nav-item"><a href="partners.html">Партнеры</a> </div>
-                    <div class="nav-item"><a href="support.html">Поддержка</a></div>
-                    <div class="nav-item"><a href="contacts.html">Контакты</a></div>
-                    <div class="nav-item-sourse">
-                        <img src="images/magnifier-icon.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    <!-- /nav -->
-
+@section('content')
     <!-- main-content -->
     <section class="section-outer section-catalog-pac">
         <section class="section-inner">
@@ -83,37 +8,37 @@
                 <div class="catalog-pac-wrapper">
                     <div class="catalog-pac__nav">
                         <div class="pac-nav-wrapper">
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Координированное управление транспортными потоками</div>
                                 </div>
                             </a>
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
                                 </div>
                             </a>
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Выдача транспортных разрешений</div>
                                 </div>
                             </a>
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link" href="app-product-singlepage.html">
+                            <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
@@ -123,13 +48,13 @@
                     </div>
                     <div class="app-product-singlepage__content">
                         <div class="single-page-pagination">
-                            <a href="index.html">Главная</a><a href="app-hard-product.html">— Программные продукты</a><a href="#">— Единая платформа управления</a>
+                            <a href="{{route('index')}}">Главная</a><a href="{{route('app-product')}}">— Программно-аппаратные продукты</a><a href="{{route('app-product-single-page')}}">— ДТ Оптик</a>
                         </div>
                         <div class="singlepage-content-title">
-                            Единая платформа управления
+                            Детектор транспорта
                         </div>
                         <div class="single-page-content__pruduct-name">
-                            Транспортной системой
+                            ОПТИК
                         </div>
                         <div class="singlep-age-content__category-name">
                             ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ
@@ -138,10 +63,11 @@
                         <div class="single-page-content__body">
                             <div class="content-body__top">
                                 <div class="body-top__text">
-                                    <div class="product__subtitle">Единая платформа управления транспортной системой — программа, предназначенная для обнаружения транспортных средств, регистрации прохождения количества транспортных средств через зону детекции и определения параметров.
+                                    <div class="product__subtitle">Детектор транспорта — техническое средство, предназначенное для обнаружения транспортных средств, регистрации прохождения количества транспортных средств через зону детекции и определения параметров транспортных потоков.
                                         <br>
-                                        <br>Изготавливается в соответствии с требованиями <span class="green">ГОСТ 34.401-90</span> «Информационная технология (ИТ). Комплекс стандартов на автоматизированные системы. Средства технические периферийные автоматизированных
-                                        систем дорожного движения. Типы и технические требования». <span class="green">ГОСТ 32965-2014</span> (прил. Б) «Дороги автомобильные общего пользования. Методы учёта интенсивности движения транспортного потока».
+                                        <br> Изготавливается в соответствии с требованиями <span class="green">ГОСТ 34.401-90 </span> «Информационная технология (ИТ). Комплекс стандартов на автоматизированные системы. Средства технические периферийные
+                                        автоматизированных систем дорожного движения. Типы и технические требования». <span class="green">ГОСТ 32965-2014</span> (прил. Б) «Дороги автомобильные общего пользования. Методы учёта интенсивности движения транспортного
+                                        потока».
                                     </div>
                                     <div class="product__purpose">
                                         <div class="product__purpose-title">
@@ -158,8 +84,10 @@
                                     </div>
                                 </div>
                                 <div class="body-top__slider">
-                                    <!-- <div class="swiper swiper-single-page">
+                                    <div class="swiper swiper-single-page">
+                                        <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
+                                            <!-- Slides -->
                                             <div class="swiper-slide">
                                                 <img class="slider-image" src="./images/product_image.png" alt="">
                                             </div>
@@ -170,32 +98,18 @@
                                                 <img class="slider-image" src="./images/product_image.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div>
-                                    </div> -->
-                                </div>
-                            </div>
+                                        <!-- If we need pagination -->
+                                        <!-- <div class="swiper-pagination"></div> -->
 
+                                        <!-- If we need navigation buttons -->
 
-                            <div class="content-body__bottom">
-                                <div class="body-bottom__slider">
-                                    <div class="swiper swiper-single-page__bottom">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/sp-slide.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/sp-slide.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/sp-slide.png" alt="">
-                                            </div>
-                                        </div>
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
                                     </div>
                                 </div>
-                                <!-- <div class="body-bottom__basic-parameters">
+                            </div>
+                            <div class="content-body__bottom">
+                                <div class="body-bottom__basic-parameters">
                                     <div class="basic-parameters__title">
                                         <img src="./images/green-mark.png" alt="">
                                         <div class="basic-parameters__title-text">
@@ -246,7 +160,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
 
                         </div>
@@ -346,93 +260,4 @@
         </section>
     </section>
     <!-- /main-content -->
-
-    <!-- footer -->
-    <section class="section-outer section-footer">
-        <section class="section-inner">
-            <div class="footer">
-                <div class="footer__logo">
-                    <img src="./images/footer_logo.png" alt="">
-                </div>
-                <div class="footer__body">
-                    <div class="footer-nav">
-                        <div class="footer-nav__block">
-                            <div> <a class="nav-item--primary" href="#"> Каталог</a></div>
-                            <div>
-                                <a class="nav-item" href="#">Программные продукты</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Программно-аппаратные продукты</a>
-                            </div>
-                        </div>
-                        <div class="footer-nav__block">
-                            <div>
-                                <a class="nav-item--primary" href="#">О нас</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Партнеры</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Сотрудничество</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Поддержка</a>
-                            </div>
-                        </div>
-                        <div class="footer-nav__block">
-                            <div>
-                                <a class="nav-item--primary" href="#">Наши проекты</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Реализованные проекты</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="#">Пилотные проекты</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-contacts">
-                        <div class="contacts-block">
-                            <div class="contacts-item">
-                                <div class="contacts-item__title">Позвоните нам</div>
-                                <div class="contakts-item__subtitle">+7 (999) 236-7896</div>
-                            </div>
-                        </div>
-                        <div class="contacts-block">
-                            <div class="contacts-item">
-                                <div class="contacts-item__title">Напишите нам</div>
-                                <div class="contakts-item__subtitle">info@msu24.ru</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-social">
-                        <div class="footer-social__title">
-                            Мы в социальных сетях
-                        </div>
-                        <div class="footer-social__ico">
-                            <div class="footer-social__ico-wrapper">
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_fb.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_yt.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_tg.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_wp.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_ig.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="footer__copyrites">
-                    <div class="copyrites">MSU24 © 2018 - 2022. Все права защищены.</div>
-                    <div class="privacy-policy">
-                        <a href="#">Политика конфиденциальности</a>
-                    </div>
-                </div>
-        </section>
-    </section>
-    <!-- /footer -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-
-</body>
-
-</html>
+@endsection

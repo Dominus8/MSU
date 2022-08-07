@@ -6,9 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSU</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Мета для ссылки-->
+    
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Название страницы"/>
+    <meta property="og:description" content="Описание страницы"/>
+    <meta property="og:image" content="images/header_logo.png"/>
+    <meta property="og:url" content="http://MSU24.ru"/>
+    <meta property="og:site_name" content="MSU24"/>
+
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    
 </head>
 
 <body>
@@ -17,9 +32,9 @@
     <section class="section-outer section-header">
         <section class="section-inner">
             <div class="header">
-                <div class="header_logo">
+                <a href="{{route('index')}}" class="header_logo">
                     <img src="images/header_logo.png" alt="">
-                </div>
+                </a>
                 <div class="header_logo--mobile">
                     <img src="./images/header_logo--mobile.png" alt="">
                 </div>
@@ -58,14 +73,14 @@
         <section class="section-inner">
             <div class="nav">
                 <div class="nav-wrapper">
-                    <div class="nav-item">О нас</div>
-                    <div class="nav-item">Программные продукты</div>
-                    <div class="nav-item">Программно-аппаратные продукты</div>
-                    <div class="nav-item">Новости</div>
-                    <div class="nav-item">Реализованные проекты</div>
-                    <div class="nav-item">Партнеры</div>
-                    <div class="nav-item">Поддержка</div>
-                    <div class="nav-item">Контакты</div>
+                    <div class="nav-item"><a href="{{route('about')}}">О нас</a> </div>
+                    <div class="nav-item"><a href="{{route('app-product')}}">Программные продукты</a></div>
+                    <div class="nav-item"><a href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div>
+                    <div class="nav-item"> <a href="{{route('news-list')}}">Новости</a></div>
+                    <div class="nav-item"><a href="{{route('refiled-projects')}}">Реализованные проекты</a></div>
+                    <div class="nav-item"><a href="{{route('partners')}}">Партнеры</a></div>
+                    <div class="nav-item"><a href="{{route('support')}}">Поддержка</a></div>
+                    <div class="nav-item"><a href="{{route('contacts')}}">Контакты</a></div>
                     <div class="nav-item-sourse">
                         <img src="images/magnifier-icon.png" alt="">
                     </div>
@@ -74,77 +89,7 @@
         </section>
     </section>
     <!-- /nav -->
-
-    <!-- main-slider -->
-    <section class="section-outer section-main-slider">
-        <section class="section-inner">
-            <div class="main-slider">
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img class="slider-image" src="./images/slide_img-cam.png" alt="">
-                            <div class="slide-wrapper">
-                                <div class="slide-text">
-                                    <hr class="slide-text__line">
-                                    <div class="slide-text__title">Детектор Транспорта</div>
-                                    <div class="slide-text__produkt-name">Оптик</div>
-                                    <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
-                                </div>
-                                <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="slider-image" src="./images/slide_img-cam.png" alt="">
-                            <div class="slide-wrapper">
-                                <div class="slide-text">
-                                    <hr class="slide-text__line">
-                                    <div class="slide-text__title">Детектор Транспорта</div>
-                                    <div class="slide-text__produkt-name">Оптик</div>
-                                    <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
-                                </div>
-                                <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="slider-image" src="./images/slide_img-pad.png" alt="">
-                            <div class="slide-wrapper">
-                                <div class="slide-text">
-                                    <hr class="slide-text__line">
-                                    <div class="slide-text__title">Управления транспортом</div>
-                                    <div class="slide-text__produkt-name">Единая плаформа</div>
-                                    <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
-                                </div>
-                                <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
-                </div>
-
-                <!-- <div class="slider-bollets">
-                    <img src="./images/slider_bollet_line.png" alt="">
-                </div> -->
-            </div>
-        </section>
-    </section>
-    <!-- /main-slider -->
-
+    @yield('content')
     <!-- footer -->
     <section class="section-outer section-footer">
         <section class="section-inner">

@@ -98,6 +98,24 @@
         font-style: normal;
     }
     
+    @mixin h1 {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 140%;
+        color: #333333;
+    }
+    
+    @mixin h2 {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        color: #333333;
+    }
+    
     * {
         a {
             text-decoration: none;
@@ -132,6 +150,9 @@
                 max-width: 260px;
             }
         }
+        &_logo--mobile {
+            display: none;
+        }
         &_info {
             font-family: 'Proxima Nova';
             height: 38px;
@@ -160,6 +181,7 @@
                 }
             }
             .info-phone {
+                padding-left: 5px;
                 &_top {
                     font-style: normal;
                     font-weight: 400;
@@ -180,6 +202,9 @@
                     color: #333333;
                 }
             }
+        }
+        .momile-header {
+            display: none;
         }
     }
     
@@ -216,6 +241,12 @@
                 transition-property: color;
                 transition-property: font-weight;
                 transition-property: font-size;
+                a {
+                    color: #F5F5F5;
+                    &:focus {
+                        color: #66B821;
+                    }
+                }
                 &:hover {
                     // color: aqua;
                     // transition-duration: .9s;
@@ -308,6 +339,35 @@
                     }
                 }
             }
+            .swiper-pagination {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 4px;
+                &-bullet {
+                    height: 4px;
+                    width: 4px;
+                    background-color: rgba($color: #000000, $alpha: 0.0);
+                    border: 2px solid grey;
+                    border-radius: 25px;
+                    &-active {
+                        height: 4px;
+                        width: 4px;
+                        background-color: #66B821;
+                        border: 2px solid #66B821;
+                        border-radius: 25px;
+                    }
+                }
+            }
+            .swiper-scrollbar {
+                // padding-bottom: 12.5px;
+                margin-bottom: 14px;
+                height: 1.5px;
+                // background-color: #5E5E5E;
+                .swiper-scrollbar-drag {
+                    background-color: #66B821;
+                }
+            }
         }
         .slider-bollets {
             height: 70px;
@@ -323,6 +383,1023 @@
     }
     
     //============== /main-slider ========
+    //=============== about =====================
+    .section-about {
+        .about {
+            .about-wrapper {
+                margin-top: 64px;
+                margin-bottom: 100px;
+                .about-title {
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 34px;
+                    line-height: 140%;
+                    color: #333333;
+                }
+                .about-body {
+                    display: flex;
+                    .about-body__content {
+                        margin-top: 42px;
+                        .about-subtitle {
+                            height: 172px;
+                            border-bottom: 1px solid #E0E0E0;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 17px;
+                            line-height: 160%;
+                            /* or 27px */
+                            letter-spacing: 0.002em;
+                            /* Grey / 700 */
+                            color: #5E5E5E;
+                            &__content {
+                                max-width: 535px;
+                            }
+                        }
+                        .honor-aria {
+                            .honor-aria__card {
+                                display: flex;
+                                align-items: center;
+                                width: 634px;
+                                height: 172px;
+                                border-bottom: 1px solid #E0E0E0;
+                                .honor-card__image {
+                                    img {}
+                                }
+                                .honor-card__content {
+                                    padding-left: 25px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    /* or 27px */
+                                    letter-spacing: 0.002em;
+                                    /* Grey / 700 */
+                                    color: #5E5E5E;
+                                    .card-content__text {}
+                                    .card-content__date {}
+                                }
+                            }
+                        }
+                        .documents {
+                            margin-top: 64px;
+                            .documents__title {
+                                margin-bottom: 24px;
+                                align-items: center;
+                                display: flex;
+                                /* MSU24/Title Semibold */
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                /* identical to box height, or 34px */
+                                /* Grey / 800 */
+                                color: #333333;
+                                img {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                                .title-text {
+                                    padding-left: 12px;
+                                }
+                            }
+                            .documents__element {
+                                padding-top: 16px;
+                                display: flex;
+                                align-items: center;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* identical to box height, or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
+                                .element__ico {
+                                    img {}
+                                }
+                                .elemetn__title {
+                                    padding-left: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .about-body__right-sitebar {
+                        padding-left: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .about-numbers {
+                            display: flex;
+                            .numders__element {
+                                &:nth-child(2) {
+                                    padding-left: 60px;
+                                }
+                                width: 130px;
+                                .numders__title {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 34px;
+                                    line-height: 140%;
+                                    /* identical to box height, or 48px */
+                                    /* MSU/green */
+                                    color: #66B821;
+                                }
+                                .numbers__subtitle {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    /* or 27px */
+                                    letter-spacing: 0.002em;
+                                    /* Grey / 700 */
+                                    color: #5E5E5E;
+                                }
+                            }
+                        }
+                        .about-call {
+                            width: 340px;
+                            height: 103px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #FAFAFA;
+                            .about-call__image {}
+                            .about-call__subtitle {
+                                width: 230px;
+                                padding-left: 10px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                /* or 24px */
+                                letter-spacing: 0.002em;
+                                /* Grey / 700 */
+                                color: #5E5E5E;
+                                span {
+                                    font-weight: 600;
+                                    color: #66B821;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================ /about ====================
+    //================= catalog ===========================
+    .section-catalog-pac {
+        .section-inner {
+            .catalog-pac {
+                .catalog-pac-wrapper {
+                    .catalog-pac__nav {
+                        .pac-nav-wrapper {
+                            overflow-x: scroll;
+                            height: 136px;
+                            display: flex;
+                            align-items: center;
+                            .nav-link {
+                                .pac-nav__element {
+                                    margin-left: 20px;
+                                    display: flex;
+                                    width: 308px;
+                                    height: 84px;
+                                    background: #EEEEEE;
+                                    border-radius: 8px;
+                                    align-items: center;
+                                    .nav-element__ico {
+                                        margin-left: 18px;
+                                    }
+                                    .nav-element__title {
+                                        margin-left: 12px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                        /* or 20px */
+                                        letter-spacing: 0.002em;
+                                        color: #5E5E5E;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .catalog-pac__home-content {
+                        margin-top: 72px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .pac-home-content__title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 34px;
+                            line-height: 140%;
+                            color: #333333;
+                        }
+                        .pac-home-content__subtitle {
+                            margin-top: 20px;
+                            max-width: 575px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 17px;
+                            line-height: 140%;
+                            /* or 24px */
+                            text-align: center;
+                            letter-spacing: 0.002em;
+                            /* Grey / 700 */
+                            color: #5E5E5E;
+                        }
+                        .pac-home-content__image {
+                            margin-top: 68px;
+                            margin-bottom: 185px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //==================/ catalog =====================================
+    //================== single page ==================================
+    .section-catalog-pac {
+        .section-inner {
+            .catalog-pac {
+                .catalog-pac-wrapper {
+                    .catalog-pac__nav {
+                        .pac-nav-wrapper {}
+                    }
+                    .app-product-singlepage__content {
+                        .single-page-pagination {
+                            margin: 32px 0;
+                            a {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #BDBDBD;
+                            }
+                        }
+                        .singlepage-content-title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 130%;
+                            color: #1F1F1F;
+                        }
+                        .single-page-content__pruduct-name {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 48px;
+                            line-height: 130%;
+                            color: #66B821;
+                        }
+                        .singlep-age-content__category-name {
+                            text-align: right;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            letter-spacing: 0.002em;
+                            color: #BDBDBD;
+                        }
+                        .single-page-content__body {
+                            margin: 32px 0;
+                            .content-body__top {
+                                padding-bottom: 64px;
+                                display: flex;
+                                justify-content: space-between;
+                                .body-top__text {
+                                    width: 545px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                    color: #5E5E5E;
+                                    .product__subtitle {
+                                        .green {
+                                            color: #66B821;
+                                        }
+                                    }
+                                    .product__purpose {
+                                        .product__purpose-title {
+                                            margin: 32px 0 12px 0;
+                                            display: flex;
+                                            align-items: center;
+                                            .green-marc {}
+                                            .purpose-title {
+                                                margin-left: 12px;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 24px;
+                                                line-height: 140%;
+                                            }
+                                        }
+                                    }
+                                }
+                                .body-top__slider {
+                                    .swiper-single-page {
+                                        width: 345px;
+                                        background-color: #66B821;
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                display: flex;
+                                                align-items: center;
+                                                width: 345px;
+                                                height: 440px;
+                                            }
+                                        }
+                                        .swiper-button-prev {
+                                            color: #9E9E9E;
+                                        }
+                                        .swiper-button-next {
+                                            color: #9E9E9E;
+                                        }
+                                        .swiper-button-disabled {
+                                            color: #9E9E9E;
+                                        }
+                                    }
+                                }
+                            }
+                            .content-body__bottom {
+                                padding: 64px 0 64px 0;
+                                background: #FAFAFA;
+                                .body-bottom__basic-parameters {
+                                    .basic-parameters__title {
+                                        margin-bottom: 32px;
+                                        display: flex;
+                                        align-items: center;
+                                        .basic-parameters__title-text {
+                                            margin-left: 12px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 140%;
+                                            color: #333333;
+                                        }
+                                    }
+                                    .basic-parameters-body {
+                                        .basic-parameters__list {
+                                            border-bottom: 1px solid #E0E0E0;
+                                            width: 730px;
+                                            .parameters-list__el {
+                                                width: 730px;
+                                                height: 56px;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 17px;
+                                                line-height: 140%;
+                                                letter-spacing: 0.002em;
+                                                color: #757575;
+                                                border-top: 1px solid #E0E0E0;
+                                            }
+                                        }
+                                    }
+                                }
+                                .body-bottom__slider {
+                                    .swiper-single-page__bottom {
+                                        .swiper-wrapper {
+                                            .swiper-slide {
+                                                text-align: center;
+                                                .slider-image {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .single-page-content__product-documents {
+                            margin: 64px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            .product-documents-wrapper {
+                                .product-documents__title {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 32px;
+                                    .product-documents__title-text {
+                                        margin-left: 12px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 24px;
+                                        line-height: 140%;
+                                        color: #333333;
+                                    }
+                                }
+                                .product-documents__el-wrapper {
+                                    width: 715px;
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    grid-auto-rows: 3em;
+                                    grid-gap: .8em;
+                                    .product-documents__el {
+                                        max-width: 318px;
+                                        display: flex;
+                                        align-items: center;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                        /* identical to box height, or 24px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        img {}
+                                        .product-documents__el-title {
+                                            margin-left: 12px;
+                                        }
+                                        .product-documents__el-format {
+                                            margin-left: 6px;
+                                            color: #9E9E9E;
+                                        }
+                                    }
+                                }
+                            }
+                            .product-call-to-action {
+                                margin-top: 75px;
+                                .call-to-action-wrapper {
+                                    width: 345px;
+                                    height: 105px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #FAFAFA;
+                                    .call-to-action__image {}
+                                    .call-to-action__text {
+                                        margin-left: 20px;
+                                        width: 245px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                        /* or 24px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        .green {
+                                            color: #66B821;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /single page =================================
+    //================== refiled-projects =======================
+    .section-refiled-projects {
+        .section-inner {
+            .refiled-projects {
+                margin-bottom: 100px;
+                .refiled-projects-wrapper {
+                    border-bottom: 1px solid #E0E0E0;
+                    .refiled-projects__title {
+                        margin: 64px 0;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 34px;
+                        line-height: 140%;
+                        color: #333333;
+                    }
+                    .refiled-projects__body {
+                        .projects-body__pagination {
+                            display: flex;
+                            justify-content: end;
+                            margin-bottom: 16px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            letter-spacing: 0.002em;
+                            text-transform: uppercase;
+                            color: #BDBDBD;
+                            .projects-pagination__count {}
+                            .projects-pagination_switch {
+                                margin-left: 704px;
+                            }
+                        }
+                        .projects-body__cards {
+                            .projects-body__card {
+                                height: 206px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border-top: 1px solid #E0E0E0;
+                                .card__dot {
+                                    padding-top: 41px;
+                                    align-self: flex-start;
+                                }
+                                .card__content-wrapper {
+                                    padding-left: 150px;
+                                    max-width: 550px;
+                                    .card-content__title {
+                                        margin-bottom: 10px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 24px;
+                                        line-height: 140%;
+                                        color: #333333;
+                                    }
+                                    .card-content__subtitle {
+                                        margin-bottom: 10px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 160%;
+                                        letter-spacing: 0.002em;
+                                        color: #5E5E5E;
+                                    }
+                                    .card-content__download-link {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 17px;
+                                        line-height: 160%;
+                                        letter-spacing: 0.002em;
+                                        color: #66B821;
+                                    }
+                                }
+                                .card-image {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /refiled-projects ======================
+    //=================== partners ==============================
+    .section-partners {
+        .section-inner {
+            .partners {
+                .partners-wrapper {
+                    margin-bottom: 100px;
+                    .partners__title {
+                        margin: 64px 0;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 34px;
+                        line-height: 140%;
+                        color: #333333;
+                    }
+                    .partners__logo {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 64px;
+                        .partners-logo__item {}
+                    }
+                    .partners__callback {
+                        .partners-call {
+                            width: 511px;
+                            height: 103px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: #FAFAFA;
+                            .partners-call__image {}
+                            .partners-call__subtitle {
+                                width: 400px;
+                                padding-left: 19px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                                span {
+                                    font-weight: 600;
+                                    color: #66B821;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //=================== /partners =============================
+    //==================== support ==============================
+    .section-support {
+        .section-inner {
+            .support {
+                .support-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .support-content {
+                        padding-top: 64px;
+                        padding-bottom: 100px;
+                        .support-title {
+                            margin-bottom: 32px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 34px;
+                            line-height: 140%;
+                            color: #333333;
+                        }
+                        .warranty-cards {
+                            margin-bottom: 32px;
+                            .warranty-cards__title-wrapper {
+                                margin-bottom: 32px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                color: #333333;
+                                .warranty-cards__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .warranty-cards__title-text {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    color: #333333;
+                                }
+                            }
+                            .warranty-cards__element {
+                                cursor: pointer;
+                                display: flex;
+                                margin-bottom: 16px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                                .warranty-cards__element-mark {
+                                    margin-right: 14px;
+                                }
+                                .warranty-cards__element-title {}
+                            }
+                        }
+                        .support-manuals {
+                            .support-manuals__title-wrapper {
+                                margin-bottom: 24px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                color: #333333;
+                                .support-manuals__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .support-manuals__title-text {}
+                            }
+                            .support-manuals__element {
+                                cursor: pointer;
+                                margin-bottom: 16px;
+                                display: flex;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                                .support-manuals__element-mark {
+                                    margin-right: 14px;
+                                }
+                                .support-manuals__element-title {}
+                            }
+                        }
+                    }
+                    .support-feedback {
+                        padding-top: 64px;
+                        padding-bottom: 100px;
+                        width: 535px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: #FAFAFA;
+                        .feedback-message {
+                            width: 344px;
+                            display: flex;
+                            justify-self: start;
+                            align-items: center;
+                            margin-bottom: 40px;
+                            .feedback-message__image {
+                                margin-right: 23px;
+                            }
+                            .feedback-message__text-wrapper {
+                                color: #333333;
+                                .feedback-message__title {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                }
+                                .feedback-message__subtitle {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                }
+                            }
+                        }
+                        .feedback-form {
+                            form {
+                                width: 344px;
+                                display: flex;
+                                flex-direction: column;
+                                border-bottom: 1px solid #E0E0E0;
+                                input {
+                                    width: 344px;
+                                    height: 48px;
+                                    margin-bottom: 32px;
+                                    background: #F5F5F5;
+                                    border-radius: 8px;
+                                    border: none;
+                                    &:focus {
+                                        background: #FFFFFF;
+                                        border: 1px solid #BDBDBD;
+                                        border-radius: 8px;
+                                    }
+                                    &::-webkit-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &::-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &:-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &:-ms-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                }
+                                .feedback-message {
+                                    margin-bottom: 40px;
+                                    background: #F5F5F5;
+                                    border-radius: 8px;
+                                    border: none;
+                                    &:focus {
+                                        background: #FFFFFF;
+                                        border: 1px solid #BDBDBD;
+                                        border-radius: 8px;
+                                    }
+                                    &::-webkit-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &::-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &:-moz-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                    &:-ms-input-placeholder {
+                                        color: #757575;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 140%;
+                                    }
+                                }
+                                .feedback-submit {
+                                    cursor: pointer;
+                                    color: white;
+                                    background: #66B821;
+                                    border-radius: 4px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                        .feedback-footer {
+                            margin-top: 18px;
+                            width: 344px;
+                            font-family: 'Gotham Pro';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 140%;
+                            display: flex;
+                            align-items: center;
+                            letter-spacing: 0.01em;
+                            color: #9E9E9E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //==================== /support ==============================
+    //===================== contacts =============================
+    .section-contacts {
+        .section-inner {
+            .contacts {
+                .contacts-wrapper {
+                    margin-bottom: 120px;
+                    .contacts-title {
+                        margin-top: 64px;
+                        @include h1();
+                    }
+                    .contacts-main {
+                        margin-top: 32px;
+                        .contacts-main__title {
+                            margin-bottom: 16px;
+                            .contacts-main__title-werapper {
+                                display: flex;
+                                align-items: center;
+                                .contacts-main__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .contacts-main__title-text {
+                                    @include h2();
+                                }
+                            }
+                        }
+                        .contacts-main__addres {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                        .contacts-main_email {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                                color: #66B821;
+                            }
+                        }
+                        .contacts-main__phone {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .contacts-map {
+                        margin-top: 34px;
+                    }
+                    .contacts-regional-offices {
+                        margin-top: 64px;
+                        .contacts-regional-offices__title {
+                            .contacts-regional-offices__title-wrapper {
+                                display: flex;
+                                align-items: center;
+                                .contacts-regional-offices__title-mark {
+                                    margin-right: 12px;
+                                }
+                                .contacts-regional-offices__title-text {
+                                    @include h2();
+                                }
+                            }
+                        }
+                        .contacts-regional-offices__cards-wrapper {
+                            margin-top: 32px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            .contacts-regional-offices__card {
+                                display: flex;
+                                &:nth-child(2n) {
+                                    border-left: 1px solid #E0E0E0;
+                                }
+                                border-top: 1px solid #E0E0E0;
+                                height: 188px;
+                                width: 554.5px;
+                                .offices-card-wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    .offices-card__image {
+                                        padding-right: 10px;
+                                        margin-right: 24px;
+                                        text-align: center;
+                                        width: 250px;
+                                    }
+                                    .offices-card__text {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 17px;
+                                        line-height: 160%;
+                                        /* or 27px */
+                                        letter-spacing: 0.002em;
+                                        /* Grey / 700 */
+                                        color: #5E5E5E;
+                                        .offices-card__title {}
+                                        .offices-card__address {}
+                                        .offices-card__phone {}
+                                        .offices-card__email {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //===================== /contacts ============================
     //============= footer ===============
     .section-footer {
         background-color: #333333;
@@ -385,6 +1462,7 @@
                 justify-content: space-between;
                 .contacts-block {
                     .contacts-item {
+                        padding-left: 10px;
                         .contacts-item__title {
                             font-family: 'Gotham Pro';
                             font-style: normal;
@@ -410,6 +1488,10 @@
                 .footer-social__title {}
                 .footer-social__ico {
                     padding-top: 10px;
+                    .footer-social__ico-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                    }
                 }
             }
         }
@@ -442,3 +1524,171 @@
     }
     
     //============= /footer ===============
+    @media (max-width: 1120px) {
+        .section-inner {
+            padding: 0 20px;
+        }
+    }
+    
+    @media (max-width: 375px) {
+        .section-inner {
+            padding: 0 15px;
+        }
+        .section-header {
+            background-color: #333333;
+        }
+        .header {
+            .momile-header {
+                display: block;
+                .info-wrapper {
+                    width: 120px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .momile-header__item {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .header_logo {
+            display: none;
+        }
+        .header_logo--mobile {
+            display: block;
+        }
+        .header_info {
+            display: none;
+        }
+        .section-nav {
+            display: none;
+        }
+        .nav {
+            display: none;
+        }
+        .section-main-slider {
+            background-image: url(../images/slider_bg_image--mobile.png);
+        }
+        .section-main-slider {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .slider-image {
+                            max-width: 480px;
+                            // max-height: 288px;
+                            padding-left: 0px;
+                            margin-left: -50px;
+                        }
+                        .slide-wrapper {
+                            flex-direction: column;
+                            justify-content: end;
+                            align-items: flex-start;
+                            .slide-text {
+                                margin-bottom: 20px;
+                                .slide-text__line {}
+                                .slide-text__title {}
+                                .slide-text__produkt-name {}
+                                .slide-text__subtitle {}
+                            }
+                            .slide-button {
+                                margin-bottom: 30px;
+                                width: 335px;
+                                align-self: center;
+                                .slide-button__link {}
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    display: none;
+                }
+                .swiper-button-next {
+                    display: none;
+                }
+                .swiper-pagination {
+                    &-bullet {
+                        &-active {}
+                    }
+                }
+                .swiper-scrollbar {
+                    // padding-bottom: 12.5px;
+                    margin-bottom: 14px;
+                    height: 1.5px;
+                    // background-color: #5E5E5E;
+                    .swiper-scrollbar-drag {
+                        background-color: #66B821;
+                    }
+                }
+            }
+            .slider-bollets {
+                height: 70px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .footer {
+            .footer__logo {
+                height: 70px;
+                img {
+                    margin-top: 40px;
+                    width: 195px;
+                }
+            }
+            .footer__body {
+                .footer-nav {
+                    display: none;
+                    .footer-nav__block {
+                        .nav-item {
+                            &--primary {}
+                            &:active {}
+                        }
+                    }
+                }
+                .footer-contacts {
+                    display: none;
+                    .contacts-block {
+                        .contacts-item {
+                            .contacts-item__title {}
+                            .contakts-item__subtitle {}
+                        }
+                    }
+                }
+                .footer-social {
+                    padding-top: 25px;
+                    width: 210px;
+                    .footer-social__title {
+                        display: none;
+                    }
+                    .footer-social__ico {
+                        .footer-social__ico-wrapper {
+                            .footer-social__ico-item {
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            hr {
+                height: 0.005em;
+                background-color: #F5F5F5;
+                border: none;
+            }
+            .footer__copyrites {
+                flex-direction: column;
+                align-items: flex-start;
+                .copyrites {
+                    padding-top: 20px;
+                }
+                .privacy-policy {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
