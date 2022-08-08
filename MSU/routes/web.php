@@ -61,7 +61,7 @@ Route::get('/admin-contact', [MainController::class, 'admin_contact'])->name('ad
 Route::post('/admin/create-contact', [MainController::class, 'create_contact']) ->name('create_contact');
 
 //Изменение карточек Контактов
-Route::get('/admin/edit-contact/{id}', [MainController::class, 'edit_contact']) ->name('edit_contact');
+Route::get('/edit-contact/{id}', [MainController::class, 'edit_contact']) ->name('edit_contact');
 
 //Обновление карточек Контактов
 Route::post('/admin/update-contact/{id}', [MainController::class, 'update_contact']) ->name('update_contact');

@@ -29,8 +29,9 @@
                     <!--Список существующих карточек-->
                     @foreach($contact as $el)
                         <div class="manage-element directions_card">
+                            <img src="/storage/contacts_image/{{$el->contact_image}}" alt="img">
                             <h6>{{$el->contact_title}}</h6>
-                            <a class='btn btn-warning' href="/admin/edit-contact/{{$el->id}}">edit</a>
+                            <a class='btn btn-warning' href="/edit-contact/{{$el->id}}">edit</a>
                             <a class='btn btn-danger' href="/admin/dell-contact/{{$el->id}}">x</a>
                         </div>
                     @endforeach 

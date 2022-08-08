@@ -16,7 +16,7 @@
                                 <div class="contacts-main__title-text">Главный офис</div>
                             </div>
                         </div>
-                        <div class="contacts-main__addres">Адрес: <span>г. Красноярск, ул. Ленина, д. 53, строение 1</span> </div>
+                        <div class="contacts-main__address">Адрес: <span>г. Красноярск, ул. Ленина, д. 53, строение 1</span> </div>
                         <div class="contacts-main_email">Напишите нам: <span>info@msu24.ru</span> </div>
                         <div class="contacts-main__phone">Позвоните нам: <span>+7 (391) 27-24-24-0</span> </div>
                     </div>
@@ -33,73 +33,90 @@
                             </div>
                         </div>
                         <div class="contacts-regional-offices__cards-wrapper">
+                        @if(count($contact)>=1)
+                            @foreach($contact as $el)
                             <div class="contacts-regional-offices__card">
-                                <div class="offices-card-wrapper">
-                                    <div class="offices-card__image">
-                                        <img src="./images/card-logo1.png" alt="">
-                                    </div>
-                                    <div class="offices-card__text">
-                                        <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                        <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                        <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                        <div class="offices-card__email">info@company.com</div>
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="/storage/contacts_image/{{$el->contact_image}}" alt="Региональное представительство">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">{{$el->contact_title}}</div>
+                                            <div class="offices-card__address">{{$el->contact_adress}}</div>
+                                            <div class="offices-card__phone">{{$el->contact_phone}}</div>
+                                            <div class="offices-card__email">{{$el->contact_mail}}</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="contacts-regional-offices__card">
-                                <div class="offices-card-wrapper">
-                                    <div class="offices-card__image">
-                                        <img src="./images/card-logo2.png" alt="">
-                                    </div>
-                                    <div class="offices-card__text">
-                                        <div class="offices-card__title">ООО “Связь банк”</div>
-                                        <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                        <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                        <div class="offices-card__email">info@company.com</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contacts-regional-offices__card">
-                                <div class="offices-card-wrapper">
-                                    <div class="offices-card__image">
-                                        <img src="./images/card-logo3.png" alt="">
-                                    </div>
-                                    <div class="offices-card__text">
-                                        <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                        <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                        <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                        <div class="offices-card__email">info@company.com</div>
+                            @endforeach
+                            @else
+                                <div class="contacts-regional-offices__card">
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="./images/card-logo1.png" alt="">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
+                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
+                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
+                                            <div class="offices-card__email">info@company.com</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="contacts-regional-offices__card">
-                                <div class="offices-card-wrapper">
-                                    <div class="offices-card__image">
-                                        <img src="./images/card-logo1.png" alt="">
-                                    </div>
-                                    <div class="offices-card__text">
-                                        <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                        <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                        <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                        <div class="offices-card__email">info@company.com</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contacts-regional-offices__card">
-                                <div class="offices-card-wrapper">
-                                    <div class="offices-card__image">
-                                        <img src="./images/card-logo1.png" alt="">
-                                    </div>
-                                    <div class="offices-card__text">
-                                        <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                        <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                        <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                        <div class="offices-card__email">info@company.com</div>
+                                <div class="contacts-regional-offices__card">
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="./images/card-logo2.png" alt="">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">ООО “Связь банк”</div>
+                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
+                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
+                                            <div class="offices-card__email">info@company.com</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="contacts-regional-offices__card">
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="./images/card-logo3.png" alt="">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
+                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
+                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
+                                            <div class="offices-card__email">info@company.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-regional-offices__card">
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="./images/card-logo1.png" alt="">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
+                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
+                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
+                                            <div class="offices-card__email">info@company.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-regional-offices__card">
+                                    <div class="offices-card-wrapper">
+                                        <div class="offices-card__image">
+                                            <img src="./images/card-logo1.png" alt="">
+                                        </div>
+                                        <div class="offices-card__text">
+                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
+                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
+                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
+                                            <div class="offices-card__email">info@company.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </div>
-
                     </div>
                 </div>
             </section>

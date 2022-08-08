@@ -76,7 +76,8 @@ class MainController extends Controller
 
 //Контакты
     public function contacts(){
-        return view('contacts');
+        $contact = new Contact();
+        return view('contacts',['contact'=>$contact->all()]);
     }
 
 
@@ -108,7 +109,7 @@ public function admin_contact(){
             $img = Image::make( $request->file('contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
     
             $contact = new Contact();
-            $contact->contact_image = '$image';
+            $contact->contact_image = $image;
             $contact->contact_title = $request->input('contact_title');
             $contact->contact_adress = $request->input('contact_adress');
             $contact->contact_phone = $request->input('contact_phone');
@@ -123,7 +124,7 @@ public function admin_contact(){
 // Редактирование карточки направления
     public function edit_contact($id){
 
-        $contact = new ContactModel;
+        $contact = new Contact;
 
         return view('editcontact',['contact'=>$contact->find($id)]);
     }
@@ -131,11 +132,11 @@ public function admin_contact(){
 //Обновление карточки кнтактов
     public function update_contact($id, Request $request){
 
-        $valid = $request->validate([
-            'contact_body'=>'required|max:200',
-            'contact_phone'=>'required|max:150',
-            'contact_mail'=>'required|max:150',
-        ]);
+        // $valid = $request->validate([
+        //     'contact_body'=>'required|max:200',
+        //     'contact_phone'=>'required|max:150',
+        //     'contact_mail'=>'required|max:150',
+        // ]);
 
         if($request->file('contact_image')){
             $image = $request->file('contact_image')->store('storage', 'contacts_image');
@@ -149,9 +150,9 @@ public function admin_contact(){
         }
 
         $contact = Contact::find($id);
-        $contact->contact_image = '$image';
-        $contact->contact_body = $request->input('contact_title');
-        $contact->contact_body = $request->input('contact_adress');
+        $contact->contact_image = $image;
+        $contact->contact_title = $request->input('contact_title');
+        $contact->contact_adress = $request->input('contact_adress');
         $contact->contact_phone = $request->input('contact_phone');
         $contact->contact_mail = $request->input('contact_mail');
 
