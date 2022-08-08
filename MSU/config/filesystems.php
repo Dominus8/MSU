@@ -43,6 +43,14 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        
+        //для контактов
+        'contacts_image' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/contacts_image'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',

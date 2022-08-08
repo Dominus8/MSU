@@ -48,3 +48,23 @@ Route::get('/support', [MainController::class, 'support'])->name('support');
 //Контакты
 Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts');
 
+//Админка
+Route::get('/admin', [MainController::class, 'admin'])->name('admin');
+
+
+//--------- Админка - Контакты------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление контактами
+Route::get('/admin-contact', [MainController::class, 'admin_contact'])->name('admin-contact');
+
+// Создание карточек Контактов
+Route::post('/admin/create-contact', [MainController::class, 'create_contact']) ->name('create_contact');
+
+//Изменение карточек Контактов
+Route::get('/admin/edit-contact/{id}', [MainController::class, 'edit_contact']) ->name('edit_contact');
+
+//Обновление карточек Контактов
+Route::post('/admin/update-contact/{id}', [MainController::class, 'update_contact']) ->name('update_contact');
+
+//Удаление карточек Контактов
+Route::get('/admin/dell-contact/{id}', [MainController::class, 'dell_contact']) ->name('dell_contact');
