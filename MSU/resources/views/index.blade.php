@@ -5,7 +5,7 @@
     <section class="section-outer section-main-slider">
         <section class="section-inner">
             <div class="main-slider">
-                <div class="swiper">
+                <div class="swiper main-swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->

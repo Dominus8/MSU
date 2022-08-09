@@ -6,7 +6,7 @@
         <section class="section-inner">
             <section class="catalog-pac">
                 <div class="catalog-pac-wrapper">
-                    <div class="catalog-pac__nav">
+                    <!-- <div class="catalog-pac__nav">
                         <div class="pac-nav-wrapper">
                             <a class="nav-link" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
@@ -39,6 +39,46 @@
                                 </div>
                             </a>
                             <a class="nav-link" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="catalog-pac__nav swiper swiperslider">
+                        <div class="pac-nav-wrapper swiper-wrapper">
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element ">
+                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Координированное управление транспортными потоками</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Выдача транспортных разрешений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>

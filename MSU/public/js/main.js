@@ -1,4 +1,4 @@
-let swiper = new Swiper('.swiper', {
+let swiper = new Swiper('.main-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
@@ -80,6 +80,21 @@ let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
         el: '.swiper-scrollbar',
     },
 
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+
+        },
+
+    }
+});
+
+let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
+    // Optional parameters
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    loop: true,
     breakpoints: {
         // when window width is >= 320px
         320: {
