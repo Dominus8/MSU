@@ -22,6 +22,7 @@
 
     @yield('head-link')
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -61,7 +62,26 @@
                             <img src="./images/phone-ico.png" alt="">
                         </div>
                         <div class="momile-header__item naw-burger">
-                            <img src="./images/nav-ico.png" alt="">
+                            <!-- <img src="./images/nav-ico.png" alt=""> -->
+                            <input id="menu-toggle" type="checkbox" />
+                            <label class='menu-button-container' for="menu-toggle">
+                                <div class='menu-button'></div>
+                            </label>
+                            <ul class="menu">
+                                <li><div class="mobile_nav-item"><a href="{{route('about')}}">О нас</a> </div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('app-product')}}">Программные продукты</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('news-list')}}">Новости</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('refiled-projects')}}">Реализованные проекты</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('partners')}}">Партнеры</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('support')}}">Поддержка</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('contacts')}}">Контакты</a></div></li>
+                                <li>
+                                <div class="mobile_nav-item-sourse">
+                                    <img src="images/magnifier-icon.png" alt="">
+                                </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

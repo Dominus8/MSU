@@ -1,5 +1,6 @@
 let swiper = new Swiper('.main-swiper', {
     // Optional parameters
+    spaceBetween: 35,
     direction: 'horizontal',
     loop: false,
 
