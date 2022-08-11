@@ -103,6 +103,7 @@
 
 
                             <div class="content-body__bottom">
+                            <div class="basic-parameters-body__bg-slider"></div>
                                 <div class="body-bottom__slider">
                                     <div class="swiper swiper-single-page__bottom">
                                         <div class="swiper-wrapper">
@@ -270,5 +271,11 @@
             </section>
         </section>
     </section>
+    <script>
+        let x = $('.content-body__bottom').height();
+        let y = $('.basic-parameters-body__bg').height(x+128);
+        // let z = $('.basic-parameters-body__bg-slider').height(x+128);
+        console.log(x);
+    </script>
     <!-- /main-content -->
 @endsection

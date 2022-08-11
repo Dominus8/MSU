@@ -149,6 +149,7 @@
                                 </div>
                             </div>
                             <div class="content-body__bottom">
+                                <div class="basic-parameters-body__bg"></div>
                                 <div class="body-bottom__basic-parameters">
                                     <div class="basic-parameters__title">
                                         <img src="./images/green-mark.png" alt="">
@@ -156,6 +157,7 @@
                                             Основные параметры
                                         </div>
                                     </div>
+                                    
                                     <div class="basic-parameters-body">
                                         <div class="basic-parameters__list">
                                             <div class="parameters-list__el">
@@ -198,11 +200,46 @@
                                                 <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
                                                 <div class="parameters-value">470*110*100 мм</div>
                                             </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
+                                            <div class="parameters-list__el">
+                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
+                                                <div class="parameters-value">470*110*100 мм</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="single-page-content__product-documents">
                             <div class="product-documents-wrapper">
@@ -299,5 +336,9 @@
             </section>
         </section>
     </section>
+    <script>
+        let x = $('.content-body__bottom').height();
+        let y = $('.basic-parameters-body__bg').height(x+128);
+    </script>
     <!-- /main-content -->
 @endsection
