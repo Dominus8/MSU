@@ -103,12 +103,34 @@
                         <div class="single-page-content__body">
                             <div class="content-body__top">
                                 <div class="body-top__text">
-                                    <div class="product__subtitle">Детектор транспорта — техническое средство, предназначенное для обнаружения транспортных средств, регистрации прохождения количества транспортных средств через зону детекции и определения параметров транспортных потоков.
-                                        <br>
-                                        <br> Изготавливается в соответствии с требованиями <span class="green">ГОСТ 34.401-90 </span> «Информационная технология (ИТ). Комплекс стандартов на автоматизированные системы. Средства технические периферийные
-                                        автоматизированных систем дорожного движения. Типы и технические требования». <span class="green">ГОСТ 32965-2014</span> (прил. Б) «Дороги автомобильные общего пользования. Методы учёта интенсивности движения транспортного
-                                        потока».
+                                    <div class="product__subtitle">
+                                        <div class="product__subtitle-wrapper">
+                                            <div class="product__subtitle-text">
+                                                Детектор транспорта — техническое средство, предназначенное для обнаружения транспортных средств, регистрации прохождения количества транспортных средств через зону детекции и определения параметров транспортных потоков.
+                                                <br>
+                                                <br> Изготавливается в соответствии с требованиями <span class="green">ГОСТ 34.401-90 </span> «Информационная технология (ИТ). Комплекс стандартов на автоматизированные системы. Средства технические периферийные
+                                                автоматизированных систем дорожного движения. Типы и технические требования». <span class="green">ГОСТ 32965-2014</span> (прил. Б) «Дороги автомобильные общего пользования. Методы учёта интенсивности движения транспортного
+                                                потока».
+                                            </div>
+                                            <div class="swiper swiper-single-page-mobile">
+                                                <div class="swiper-wrapper">
+
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-image" src="./images/product_image.png" alt="">
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-image" src="./images/product_image.png" alt="">
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img class="slider-image" src="./images/product_image.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div class="product__purpose">
                                         <div class="product__purpose-title">
                                             <div class="green-marc">
@@ -121,31 +143,25 @@
                                             <br><br> Благоприятные погодные условия — состояние погоды, при котором метеорологические факторы не оказывают отрицательного влияния на состояние поверхности дороги, скорость и безопасность движения автомобилей
                                             (сухо, ясно, отсутствие ветра или ветер со скоростью до 10 м/с, отсутствие тумана, относительная влажность воздуха до 90 %, температура воздуха в пределах от -40 °С до +40 °С в тени).
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="body-top__slider">
-                                    <div class="swiper swiper-single-page">
-                                        <!-- Additional required wrapper -->
-                                        <div class="swiper-wrapper">
-                                            <!-- Slides -->
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/product_image.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/product_image.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="./images/product_image.png" alt="">
-                                            </div>
+                                <div class="swiper swiper-single-page">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="slider-image" src="./images/product_image.png" alt="">
                                         </div>
-                                        <!-- If we need pagination -->
-                                        <!-- <div class="swiper-pagination"></div> -->
-
-                                        <!-- If we need navigation buttons -->
-
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-slide">
+                                            <img class="slider-image" src="./images/product_image.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="slider-image" src="./images/product_image.png" alt="">
+                                        </div>
                                     </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>    
                                 </div>
                             </div>
                             <div class="content-body__bottom">
@@ -330,6 +346,46 @@
                                     </div>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="catalog-pac__nav-mobile swiper swiperslider">
+                        <div class="pac-nav-wrapper swiper-wrapper">
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element ">
+                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Координированное управление транспортными потоками</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Выдача транспортных разрешений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
+                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

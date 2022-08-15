@@ -676,6 +676,128 @@
                         .pac-home-content__image {
                             margin-top: 68px;
                             margin-bottom: 185px;
+                            // width: 100%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .catalog-pac__nav-mobile {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 425px) {
+        .section-catalog-pac {
+            .section-inner {
+                .catalog-pac {
+                    .catalog-pac-wrapper {
+                        .catalog-pac__nav {
+                            display: none;
+                            .pac-nav-wrapper {
+                                // height: 136px;
+                                // overflow-x: scroll;
+                                // scroll-snap-type: x;
+                                // scroll-snap-align: start;
+                                // scroll-snap-stop: always;
+                                // align-items: center;
+                                .nav-link {
+                                    .pac-nav__element {
+                                        .nav-element__ico {}
+                                        .nav-element__title {}
+                                    }
+                                }
+                            }
+                        }
+                        .catalog-pac__home-content {
+                            margin-top: 72px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .pac-home-content__title {
+                                text-align: center;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 34px;
+                                line-height: 140%;
+                                color: #333333;
+                            }
+                            .pac-home-content__subtitle {
+                                text-align: center;
+                                margin-top: 20px;
+                                max-width: 575px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 17px;
+                                line-height: 140%;
+                                text-align: center;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                            }
+                            .pac-home-content__image {
+                                margin-top: 68px;
+                                margin-bottom: 40px;
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .catalog-pac__nav-mobile {
+                            display: block;
+                            margin-bottom: 40px;
+                            right: 0px;
+                            width: 335px;
+                            &::after {
+                                content: '';
+                                z-index: 1;
+                                width: 0px;
+                                height: 84px;
+                                background: linear-gradient(86deg, rgba(255, 255, 255, 0) 12%, rgba(255, 255, 255, 1) 63%);
+                                position: absolute;
+                                bottom: 0px;
+                                right: 0px;
+                            }
+                            .pac-nav-wrapper {
+                                // height: 136px;
+                                // overflow-x: scroll;
+                                // scroll-snap-type: x;
+                                // scroll-snap-align: start;
+                                // scroll-snap-stop: always;
+                                // align-items: center;
+                                .nav-link {
+                                    .pac-nav__element {
+                                        // margin-left: -20px;
+                                        // display: flex;
+                                        width: 160px;
+                                        height: 168px;
+                                        background: #EEEEEE;
+                                        border-radius: 8px;
+                                        align-items: center;
+                                        .nav-element__ico {
+                                            margin-left: 12px;
+                                            padding-top: 15px;
+                                        }
+                                        .nav-element__title {
+                                            margin-left: 12px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                            line-height: 140%;
+                                            /* or 20px */
+                                            letter-spacing: 0.002em;
+                                            color: #5E5E5E;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -738,7 +860,7 @@
                                 display: flex;
                                 justify-content: space-between;
                                 .body-top__text {
-                                    width: 545px;
+                                    max-width: 545px;
                                     font-family: 'Proxima Nova';
                                     font-style: normal;
                                     font-weight: 600;
@@ -747,11 +869,41 @@
                                     letter-spacing: 0.002em;
                                     color: #5E5E5E;
                                     .product__subtitle {
-                                        .green {
-                                            color: #66B821;
+                                        .product__subtitle-wrapper {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            .product__subtitle-text {
+                                                width: 545px;
+                                                .green {
+                                                    color: #66B821;
+                                                }
+                                            }
+                                            .swiper-single-page-mobile {
+                                                display: none;
+                                                width: 345px;
+                                                background-color: #66B821;
+                                                .swiper-wrapper {
+                                                    .swiper-slide {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        width: 345px;
+                                                        height: 440px;
+                                                    }
+                                                }
+                                                .swiper-button-prev {
+                                                    color: #9E9E9E;
+                                                }
+                                                .swiper-button-next {
+                                                    color: #9E9E9E;
+                                                }
+                                                .swiper-button-disabled {
+                                                    color: #9E9E9E;
+                                                }
+                                            }
                                         }
                                     }
                                     .product__purpose {
+                                        max-width: 545px;
                                         .product__purpose-title {
                                             margin: 32px 0 12px 0;
                                             display: flex;
@@ -829,11 +981,12 @@
                                     .basic-parameters-body {
                                         .basic-parameters__list {
                                             border-bottom: 1px solid #E0E0E0;
-                                            width: 730px;
+                                            max-width: 730px;
                                             .parameters-list__el {
-                                                width: 730px;
+                                                max-width: 730px;
                                                 height: 56px;
                                                 display: flex;
+                                                flex-wrap: wrap;
                                                 justify-content: space-between;
                                                 align-items: center;
                                                 font-family: 'Proxima Nova';
@@ -865,6 +1018,7 @@
                             margin: 64px 0;
                             display: flex;
                             justify-content: space-between;
+                            flex-wrap: wrap;
                             .product-documents-wrapper {
                                 .product-documents__title {
                                     display: flex;
@@ -881,11 +1035,11 @@
                                     }
                                 }
                                 .product-documents__el-wrapper {
-                                    width: 715px;
                                     display: grid;
                                     grid-template-columns: 1fr 1fr;
                                     grid-auto-rows: 3em;
                                     grid-gap: .8em;
+                                    column-gap: 40px;
                                     .product-documents__el {
                                         max-width: 318px;
                                         display: flex;
@@ -926,12 +1080,151 @@
                                         font-weight: 400;
                                         font-size: 17px;
                                         line-height: 140%;
-                                        /* or 24px */
                                         letter-spacing: 0.002em;
-                                        /* Grey / 700 */
                                         color: #5E5E5E;
                                         .green {
                                             color: #66B821;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 425px) {
+        .section-catalog-pac {
+            .section-inner {
+                .catalog-pac {
+                    .catalog-pac-wrapper {
+                        .catalog-pac__nav {
+                            .pac-nav-wrapper {}
+                        }
+                        .app-product-singlepage__content {
+                            .single-page-pagination {
+                                display: none;
+                                a {}
+                            }
+                            .singlepage-content-title {
+                                margin-top: 25px;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                            }
+                            .single-page-content__pruduct-name {
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                                margin-bottom: 25px;
+                            }
+                            .singlep-age-content__category-name {
+                                display: none;
+                            }
+                            .single-page-content__body {
+                                .content-body__top {
+                                    padding-bottom: 30px;
+                                    .body-top__text {
+                                        .product__subtitle {
+                                            .product__subtitle-wrapper {
+                                                flex-wrap: wrap;
+                                                .product__subtitle-text {
+                                                    width: 335px;
+                                                    .green {}
+                                                }
+                                                .swiper-single-page-mobile {
+                                                    margin-top: 40px;
+                                                    display: block;
+                                                    max-width: 425px;
+                                                    .swiper-wrapper {
+                                                        .swiper-slide {}
+                                                    }
+                                                    .swiper-button-prev {}
+                                                    .swiper-button-next {}
+                                                    .swiper-button-disabled {}
+                                                }
+                                            }
+                                        }
+                                        .product__purpose {
+                                            .product__purpose-title {
+                                                .green-marc {}
+                                                .purpose-title {}
+                                            }
+                                        }
+                                    }
+                                    .body-top__slider {
+                                        display: none;
+                                        .swiper-single-page {
+                                            .swiper-wrapper {
+                                                .swiper-slide {}
+                                            }
+                                            .swiper-button-prev {}
+                                            .swiper-button-next {}
+                                            .swiper-button-disabled {}
+                                        }
+                                    }
+                                }
+                                .content-body__bottom {
+                                    padding-top: 30px;
+                                    padding-bottom: 30px;
+                                    .basic-parameters-body__bg {}
+                                    .basic-parameters-body__bg-slider {
+                                        height: 330px;
+                                    }
+                                    .body-bottom__basic-parameters {
+                                        .basic-parameters__title {
+                                            .basic-parameters__title-text {}
+                                        }
+                                        .basic-parameters-body {
+                                            .basic-parameters__list {
+                                                border: none;
+                                                .parameters-list__el {
+                                                    border: none;
+                                                    display: block;
+                                                    margin-bottom: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .body-bottom__slider {
+                                        height: auto;
+                                        .swiper-single-page__bottom {
+                                            .swiper-wrapper {
+                                                .swiper-slide {
+                                                    .slider-image {
+                                                        width: 335px;
+                                                        img {}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .single-page-content__product-documents {
+                                margin-top: 30px;
+                                margin-bottom: 40px;
+                                .product-documents-wrapper {
+                                    .product-documents__title {
+                                        .product-documents__title-text {}
+                                    }
+                                    .product-documents__el-wrapper {
+                                        grid-template-columns: 1fr;
+                                        .product-documents__el {
+                                            img {}
+                                            .product-documents__el-title {}
+                                            .product-documents__el-format {}
+                                        }
+                                    }
+                                }
+                                .product-call-to-action {
+                                    margin: 40px auto;
+                                    .call-to-action-wrapper {
+                                        .call-to-action__image {}
+                                        .call-to-action__text {
+                                            .green {}
                                         }
                                     }
                                 }

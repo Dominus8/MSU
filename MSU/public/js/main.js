@@ -53,14 +53,14 @@ let swiper_single_page = new Swiper('.swiper-single-page', {
 
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        425: {
 
         },
 
     }
 });
 
-let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
+let swiper_single_page_mobile = new Swiper('.swiper-single-page-mobile', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
@@ -83,8 +83,31 @@ let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
 
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        425: {
 
+        },
+
+    }
+});
+
+let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+    breakpoints: {
+        // when window width is >= 320px
+        425: {
+
+            spaceBetween: 10,
         },
 
     }
@@ -98,8 +121,23 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
     loop: true,
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        425: {
 
+        },
+
+    }
+});
+let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
+    // Optional parameters
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    loop: true,
+    breakpoints: {
+        // when window width is >= 320px
+        425: {
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
 
     }
