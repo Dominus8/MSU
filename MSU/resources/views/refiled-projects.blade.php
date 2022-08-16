@@ -22,7 +22,7 @@
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">Проектирование дороги</div>
                                     <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="#" class="card-content__download-link">
+                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>
@@ -37,7 +37,7 @@
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">Анализ дорожной разметки</div>
                                     <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="#" class="card-content__download-link">
+                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>
@@ -52,7 +52,7 @@
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">Установка детекторов транспорта</div>
                                     <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="#" class="card-content__download-link">
+                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>
@@ -67,7 +67,7 @@
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">Установка детекторов транспорта</div>
                                     <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="#" class="card-content__download-link">
+                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">Установка детекторов транспорта</div>
                                     <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="#" class="card-content__download-link">
+                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>

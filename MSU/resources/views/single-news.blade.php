@@ -5,10 +5,7 @@
     <section class="section-outer section-news-list">
         <section class="section-inner">
             <section class="news-list">
-                <h1>Новости будут сдесь скоро</h1>
-                <a href="{{route('single-news')}}">
-                    <h4>Одна новость</h4>
-                </a>
+                <h1>Одна новость</h1>
             </section>
         </section>
     </section>

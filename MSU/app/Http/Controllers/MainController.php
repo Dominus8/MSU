@@ -56,9 +56,21 @@ class MainController extends Controller
     }
 
 
+//Новости соло страница
+    public function news_single_page(){
+        return view('single-news');
+    }
+
+
 //Реализованные проекты
     public function refiled_projects(){
         return view('refiled-projects');
+    }
+
+
+//Реализованные проекты соло страница
+    public function refiled_projects_single_page(){
+        return view('refiled-projects-single-page');
     }
 
 

@@ -36,8 +36,14 @@ Route::get('/app-hard-product-single-page', [MainController::class, 'app_hard_pr
 //Новости
 Route::get('/news-list', [MainController::class, 'news_list'])->name('news-list');
 
+//Новости соло страница
+Route::get('/single-news', [MainController::class, 'news_single_page'])->name('single-news');
+
 //Реализованные проекты
 Route::get('/refiled-projects', [MainController::class, 'refiled_projects'])->name('refiled-projects');
+
+//Реализованные проекты соло страница
+Route::get('/refiled-projects-single page', [MainController::class, 'refiled_projects_single_page'])->name('refiled-projects-single-page');
 
 //Партнеры
 Route::get('/partners', [MainController::class, 'partners'])->name('partners');
