@@ -878,6 +878,50 @@
     }
     
     //================== /single page =================================
+    //================== news =========================================
+    .section-news-list {
+        .section-inner {
+            .news-list {
+                .news-list-content {
+                    .news-list-pagination {}
+                    .news-list-wrapper {
+                        .news-list__title {}
+                        .news-list-el {
+                            display: flex;
+                            .news__text-content {}
+                            .news__create-date {}
+                            .news__thumbnail {
+                                .news__thumbnail-image {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1120px) {
+        .section-news-list {
+            .section-inner {
+                .news-list {
+                    .news-list-content {
+                        .news-list-pagination {}
+                        .news-list-wrapper {
+                            .news-list__title {}
+                            .news-list-el {}
+                            .news__text-content {}
+                            .news__create-date {}
+                            .news__thumbnail {
+                                .news__thumbnail-image {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /news =========================================
     //================== refiled-projects =======================
     .section-refiled-projects {
         .section-inner {

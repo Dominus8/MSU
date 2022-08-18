@@ -991,6 +991,12 @@
   color: #66B821;
 }
 
+.section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .section-refiled-projects .section-inner .refiled-projects {
   margin-bottom: 100px;
 }

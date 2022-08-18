@@ -1237,6 +1237,116 @@
     }
     
     //================== /single page =================================
+    //================== news =========================================
+    .section-news-list {
+        .section-inner {
+            .news-list {
+                .news-list-content {
+                    .news-list-wrapper {
+                        margin-bottom: 100px;
+                        .news-list__title {
+                            @include h1();
+                            margin: 64px 0 32px 0;
+                        }
+                        .news-list-pagination {
+                            text-align: right;
+                            padding-bottom: 16px;
+                            padding-right: 15px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 140%;
+                            text-align: right;
+                            letter-spacing: 0.002em;
+                            color: #BDBDBD;
+                            border-bottom: 1px solid #E0E0E0;
+                        }
+                        .news-list-el {
+                            padding: 32px 0;
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #E0E0E0;
+                            .news__text-content {
+                                max-width: 550px;
+                                .news__title {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    color: #333333;
+                                }
+                                .news__subtitle {
+                                    margin-top: 16px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                    color: #5E5E5E;
+                                }
+                                .news__more-link {
+                                    margin-top: 16px;
+                                    a {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 17px;
+                                        line-height: 160%;
+                                        letter-spacing: 0.002em;
+                                        color: #66B821;
+                                    }
+                                }
+                            }
+                            .news__create-date {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 140%;
+                                text-align: right;
+                                letter-spacing: 0.002em;
+                                text-transform: uppercase;
+                                color: #BDBDBD;
+                            }
+                            .news__thumbnail {
+                                .news__thumbnail-image {
+                                    max-width: 343px;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 425px) {
+        .section-news-list {
+            .section-inner {
+                .news-list {
+                    .news-list-content {
+                        .news-list-wrapper {
+                            .news-list__title {}
+                            .news-list-pagination {}
+                            .news-list-el {
+                                .news__text-content {}
+                                .news__create-date {}
+                                .news__thumbnail {
+                                    .news__thumbnail-image {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /news =========================================
     //================== refiled-projects =======================
     .section-refiled-projects {
         .section-inner {
