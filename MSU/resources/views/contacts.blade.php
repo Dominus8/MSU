@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-contacts">
         <section class="section-inner">
-            <section class="contacts">
+            <section class="mine-content contacts">
                 <div class="contacts-wrapper">
                     <div class="contacts-title">Контакты</div>
                     <div class="contacts-main">

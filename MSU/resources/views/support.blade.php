@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-support">
         <section class="section-inner">
-            <section class="support">
+            <section class="mine-content support">
                 <div class="support-wrapper">
                     <div class="support-content">
                         <div class="support-title">Поддержка</div>

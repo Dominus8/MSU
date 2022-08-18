@@ -137,6 +137,10 @@
         max-width: 1110px;
     }
     
+    .mine-content {
+        min-height: calc(100vh - 483px);
+    }
+    
     //=========== /main ===============
     //=========== header =============
     .header {
@@ -1347,6 +1351,150 @@
     }
     
     //================== /news =========================================
+    //================== news-single-page ==============================
+    .section-single-news {
+        .section-inner {
+            .single-news {
+                .single-news-wrapper {
+                    margin-top: 80px;
+                    margin-bottom: 100px;
+                    .single-news__title {
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 48px;
+                        line-height: 130%;
+                        .single-news__title--black {
+                            color: #1F1F1F;
+                        }
+                        .single-news__title--green {
+                            color: #66B821;
+                        }
+                    }
+                    .single-news__publishing-date {
+                        padding-bottom: 16px;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 140%;
+                        text-align: right;
+                        letter-spacing: 0.002em;
+                        color: #BDBDBD;
+                        border-bottom: 1px solid #E0E0E0;
+                    }
+                    .single-news-content {
+                        margin-top: 32px;
+                        .single-news__content-wrapper {
+                            .single-news__top-section-wrapper {
+                                display: flex;
+                                justify-content: space-between;
+                                position: relative;
+                                .single-news__text-top {
+                                    max-width: 535px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 17px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                    color: #5E5E5E;
+                                }
+                                .single-news__image-area-wrapper {
+                                    width: 343px;
+                                    .single-news__image-area {
+                                        right: 0;
+                                        position: absolute;
+                                        .single-news__image-wrapper {
+                                            height: 440px;
+                                            width: 343px;
+                                            background-color: #66B821;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: end;
+                                            .single-news__image {}
+                                        }
+                                        a {
+                                            .single-news__link {
+                                                margin-top: 28px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: end;
+                                                .single-news__link-text {
+                                                    font-family: 'Proxima Nova';
+                                                    font-style: normal;
+                                                    font-weight: 400;
+                                                    font-size: 17px;
+                                                    line-height: 140%;
+                                                    /* identical to box height, or 24px */
+                                                    text-align: right;
+                                                    letter-spacing: 0.002em;
+                                                    /* MSU24/Green */
+                                                    color: #66B821;
+                                                }
+                                                .single-news__ico {
+                                                    margin-left: 14px;
+                                                    img {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .single-news__text-bottom {
+                                max-width: 535px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 17px;
+                                line-height: 160%;
+                                letter-spacing: 0.002em;
+                                color: #5E5E5E;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 425px) {
+        .section-single-news {
+            .section-inner {
+                .single-news {
+                    .single-news-wrapper {
+                        .single-news__title {
+                            .single-news__title--black {}
+                            .single-news__title--green {}
+                        }
+                        .single-news__publishing-date {}
+                        .single-news-content {
+                            .single-news__content-wrapper {
+                                .single-news__top-section-wrapper {
+                                    .single-news__image-area {
+                                        .single-news__image-wrapper {
+                                            .single-news__image {}
+                                        }
+                                        a {
+                                            .single-news__link {
+                                                .single-news__link-text {}
+                                                .single-news__ico {
+                                                    img {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .single-news__text-bottom {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /news-single-page ==============================
     //================== refiled-projects =======================
     .section-refiled-projects {
         .section-inner {
@@ -2246,7 +2394,6 @@
                     .swiper-slide {
                         .slider-image {
                             max-width: 480px;
-                            // max-height: 288px;
                             padding-left: 0px;
                             margin-left: -50px;
                         }

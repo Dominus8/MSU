@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-partners">
         <section class="section-inner">
-            <section class="partners">
+            <section class="mine-content partners">
                 <div class="partners-wrapper">
                     <div class="partners__title">Наши партнеры</div>
                     <div class="partners__logo">

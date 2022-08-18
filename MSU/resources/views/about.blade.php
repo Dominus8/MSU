@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-about">
         <section class="section-inner">
-            <section class="about">
+            <section class="mine-content about">
                 <div class="about-wrapper">
                     <div class="about-title">О компании</div>
                     <div class="about-body">

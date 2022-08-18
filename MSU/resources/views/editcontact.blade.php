@@ -3,7 +3,7 @@
 
 @section('admin-content')
 
-<div class="admin-section__form">
+<div class="mine-content admin-section__form">
     <form action="/admin/update-contact/{{$contact->id}}" method="post" enctype="multipart/form-data" >
         {{ csrf_field() }}
         <div class="form-group"> 

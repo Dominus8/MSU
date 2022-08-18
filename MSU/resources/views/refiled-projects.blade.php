@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-refiled-projects">
         <section class="section-inner">
-            <section class="refiled-projects">
+            <section class="mine-content refiled-projects">
                 <div class="refiled-projects-wrapper">
                     <div class="refiled-projects__title">Реализованные проекты</div>
                     <div class="refiled-projects__body">

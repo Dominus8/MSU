@@ -8,7 +8,7 @@
     <!-- main-content -->
     <section class="section-outer section-admin">
         <section class="section-inner">
-            <section class="admin">
+            <section class="mine-content admin">
             <a href="{{route('admin')}}"><h1>Админка</h1></a>
             <div class="admin-nav">
                 <a href="#" class="admin-nav__el">О нас</a>

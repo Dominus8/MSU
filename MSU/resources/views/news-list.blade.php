@@ -4,7 +4,7 @@
     <!-- main-content -->
     <section class="section-outer section-news-list">
         <section class="section-inner">
-            <section class="news-list">
+            <section class="mine-content news-list">
                 <div class="news-list-content">
                     <div class="news-list-wrapper">
                         <div class="news-list__title">Новости</div>

@@ -4,7 +4,7 @@
  <!-- main-content -->
  <section class="section-outer section-catalog-pac">
         <section class="section-inner">
-            <section class="catalog-pac ">
+            <section class="mine-content catalog-pac">
                 <div class="catalog-pac-wrapper">
                     <div class="catalog-pac__nav swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
