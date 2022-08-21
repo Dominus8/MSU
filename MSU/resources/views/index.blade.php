@@ -19,7 +19,7 @@
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
+                                    <a class="slide-button__link" href="{{route('app-product-single-page')}}">Узнать подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
+                                    <a class="slide-button__link" href="{{route('app-product-single-page')}}">Узнать подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -46,9 +46,9 @@
                                     <div class="slide-text__produkt-name">Единая плаформа</div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
-                                <div class="slide-button">
-                                    <a class="slide-button__link" href="#">Узнать подробнее</a>
-                                </div>
+                                <a href="{{route('app-product-single-page')}}" class="slide-button">
+                                    <div class="slide-button__link" >Узнать подробнее</div>
+                                </a>
                             </div>
                         </div>
                     </div>

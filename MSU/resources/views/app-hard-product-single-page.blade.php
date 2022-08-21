@@ -48,7 +48,7 @@
                     </div>
                     <div class="app-product-singlepage__content">
                         <div class="single-page-pagination">
-                            <a href="{{route('index')}}">Главная</a><a href="{{route('app-hard-product')}}">— Программные продукты</a><a href="{{route('app-hard-product-single-page')}}">— Единая платформа управления</a>
+                            <!-- <a href="{{route('index')}}">Главная</a><a href="{{route('app-hard-product')}}">— Программные продукты</a><a href="{{route('app-hard-product-single-page')}}">— Единая платформа управления</a> -->
                         </div>
                         <div class="singlepage-content-title">
                             Единая платформа управления
@@ -57,7 +57,7 @@
                             Транспортной системой
                         </div>
                         <div class="singlep-age-content__category-name">
-                            ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ
+                            <!-- ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ -->
                         </div>
                         <hr>
                         <div class="single-page-content__body">
@@ -306,6 +306,7 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>

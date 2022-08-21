@@ -130,6 +130,7 @@
     .section-outer {
         margin: 0 auto;
         // max-width: 1440px;
+        overflow-x: hidden;
     }
     
     .section-inner {
@@ -251,7 +252,7 @@
         }
     }
     
-    //============= /Navigation ========
+    //============= /Navigation ==========
     //============== main-slider =========
     .section-main-slider {
         background-image: url(../images/slider_bg_image.png);
@@ -261,11 +262,13 @@
             .swiper-wrapper {
                 .swiper-slide {
                     .slider-image {
+                        z-index: 1;
                         max-height: 599px;
                         position: absolute;
                         padding-left: 190px;
                     }
                     .slide-wrapper {
+                        z-index: 999;
                         height: 599px;
                         max-width: 1110px;
                         background-repeat: no-repeat;
@@ -311,6 +314,9 @@
                             }
                         }
                         .slide-button {
+                            right: 0;
+                            position: absolute;
+                            z-index: 999;
                             margin-bottom: 70px;
                             display: flex;
                             flex-direction: row;
@@ -537,7 +543,7 @@
                             }
                         }
                     }
-                    @media (max-width: 425px) {
+                    @media (max-width: 768px) {
                         .about-body__content {
                             .about-subtitle {
                                 .about-subtitle__content {
@@ -616,12 +622,6 @@
                             right: 0px;
                         }
                         .pac-nav-wrapper {
-                            // height: 136px;
-                            // overflow-x: scroll;
-                            // scroll-snap-type: x;
-                            // scroll-snap-align: start;
-                            // scroll-snap-stop: always;
-                            // align-items: center;
                             .nav-link {
                                 .pac-nav__element {
                                     margin-left: 20px;
@@ -641,7 +641,6 @@
                                         font-weight: 400;
                                         font-size: 14px;
                                         line-height: 140%;
-                                        /* or 20px */
                                         letter-spacing: 0.002em;
                                         color: #5E5E5E;
                                     }
@@ -671,16 +670,13 @@
                             font-weight: 400;
                             font-size: 17px;
                             line-height: 140%;
-                            /* or 24px */
                             text-align: center;
                             letter-spacing: 0.002em;
-                            /* Grey / 700 */
                             color: #5E5E5E;
                         }
                         .pac-home-content__image {
                             margin-top: 68px;
                             margin-bottom: 185px;
-                            // width: 100%;
                             img {
                                 width: 100%;
                             }
@@ -694,7 +690,7 @@
         }
     }
     
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         .section-catalog-pac {
             .section-inner {
                 .catalog-pac {
@@ -702,12 +698,6 @@
                         .catalog-pac__nav {
                             display: none;
                             .pac-nav-wrapper {
-                                // height: 136px;
-                                // overflow-x: scroll;
-                                // scroll-snap-type: x;
-                                // scroll-snap-align: start;
-                                // scroll-snap-stop: always;
-                                // align-items: center;
                                 .nav-link {
                                     .pac-nav__element {
                                         .nav-element__ico {}
@@ -758,6 +748,7 @@
                             margin-bottom: 40px;
                             right: 0px;
                             width: 335px;
+                            height: 188px;
                             &::after {
                                 content: '';
                                 z-index: 1;
@@ -769,16 +760,8 @@
                                 right: 0px;
                             }
                             .pac-nav-wrapper {
-                                // height: 136px;
-                                // overflow-x: scroll;
-                                // scroll-snap-type: x;
-                                // scroll-snap-align: start;
-                                // scroll-snap-stop: always;
-                                // align-items: center;
                                 .nav-link {
                                     .pac-nav__element {
-                                        // margin-left: -20px;
-                                        // display: flex;
                                         width: 160px;
                                         height: 168px;
                                         background: #EEEEEE;
@@ -801,6 +784,9 @@
                                         }
                                     }
                                 }
+                            }
+                            .swiper-pagination {
+                                margin-bottom: -12px;
                             }
                         }
                     }
@@ -950,7 +936,6 @@
                             }
                             .content-body__bottom {
                                 padding: 64px 0 64px 0;
-                                // background: #FAFAFA;
                                 .basic-parameters-body__bg {
                                     margin-top: -64px;
                                     position: absolute;
@@ -1099,7 +1084,7 @@
         }
     }
     
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         .section-catalog-pac {
             .section-inner {
                 .catalog-pac {
@@ -1141,7 +1126,7 @@
                                                 .swiper-single-page-mobile {
                                                     margin-top: 40px;
                                                     display: block;
-                                                    max-width: 425px;
+                                                    max-width: 768px;
                                                     .swiper-wrapper {
                                                         .swiper-slide {}
                                                     }
@@ -1328,7 +1313,7 @@
         }
     }
     
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         .section-news-list {
             .section-inner {
                 .news-list {
@@ -1458,7 +1443,7 @@
         }
     }
     
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         .section-single-news {
             .section-inner {
                 .single-news {
@@ -1581,6 +1566,184 @@
         }
     }
     
+    //================== refiled-projects-single-page =======================
+    .section-refiled-projects-sigle-page {
+        .section-inner {
+            .refiled-projects-sigle-page {
+                .refiled-projects-sigle-page-wrapper {
+                    .refiled-projects-sigle-page-title {
+                        margin: 32px 0;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 48px;
+                        line-height: 130%;
+                        ;
+                        .refiled-projects-sigle-page-title--black {
+                            color: #1F1F1F
+                        }
+                        .refiled-projects-sigle-page-title--green {
+                            color: #66B821
+                        }
+                    }
+                    hr {
+                        width: 1110px;
+                        height: 0px;
+                        border: 1px solid #E0E0E0;
+                    }
+                    .refiled-projects-sigle-page__content {
+                        margin: 32px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        .refiled-projects-sigle-page__content-text {
+                            max-width: 535px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 17px;
+                            line-height: 160%;
+                            letter-spacing: 0.002em;
+                            color: #5E5E5E;
+                            .green {
+                                color: #66B821;
+                            }
+                        }
+                        .refiled-projects-sigle-page__content-links {
+                            .refiled-projects-sigle-page__link-el {
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                .link__text {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                    letter-spacing: 0.002em;
+                                    color: #66B821;
+                                }
+                                .link__ico {
+                                    margin-left: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .refiled-projects__slider {
+                        margin: 128px 0;
+                        .swiper-refiled-projects {
+                            .swiper-wrapper {
+                                .swiper-slide {
+                                    text-align: center;
+                                    .slider-image {}
+                                }
+                            }
+                        }
+                    }
+                    .refiled-projects__product-documents {
+                        margin: 64px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .refiled-projects-documents-wrapper {
+                            .refiled-projects-documents__title {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 32px;
+                                img {}
+                                .refiled-projects-documents__title-text {
+                                    margin-left: 12px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 140%;
+                                    color: #333333;
+                                }
+                            }
+                            .refiled-projects-documents__el-wrapper {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                grid-auto-rows: 3em;
+                                grid-gap: .8em;
+                                column-gap: 40px;
+                                .refiled-projects-documents__el {
+                                    max-width: 335px;
+                                    display: flex;
+                                    align-items: center;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                    letter-spacing: 0.002em;
+                                    color: #5E5E5E;
+                                    img {}
+                                    .refiled-projects-documents__el-title {
+                                        margin-left: 12px;
+                                    }
+                                    .refiled-projects-documents__el-format {
+                                        margin-left: 6px;
+                                        color: #9E9E9E;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-refiled-projects-sigle-page {
+            .section-inner {
+                .refiled-projects-sigle-page {
+                    .refiled-projects-sigle-page-wrapper {
+                        .refiled-projects-sigle-page-title {
+                            .refiled-projects-sigle-page-title--black {}
+                            .refiled-projects-sigle-page-title--green {}
+                        }
+                        hr {}
+                        .refiled-projects-sigle-page__content {
+                            .refiled-projects-sigle-page__content-text {}
+                            .refiled-projects-sigle-page__content-links {
+                                .refiled-projects-sigle-page__link-el {
+                                    .link__text {}
+                                    .link__ico {}
+                                }
+                            }
+                        }
+                        .refiled-projects__slider {
+                            .swiper-refiled-projects {
+                                .swiper-wrapper {
+                                    .swiper-slide {
+                                        .slider-image {}
+                                    }
+                                }
+                            }
+                        }
+                        .refiled-projects__product-documents {
+                            .refiled-projects-documents-wrapper {
+                                .refiled-projects-documents__title {
+                                    img {}
+                                    .refiled-projects-documents__title-text {}
+                                }
+                                .refiled-projects-documents__el-wrapper {
+                                    .refiled-projects-documents__el {
+                                        img {}
+                                        .refiled-projects-documents__el-title {}
+                                        .refiled-projects-documents__el-format {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //================== /refiled-projects-single-page =======================
     //================== /refiled-projects ======================
     //=================== partners ==============================
     .section-partners {
@@ -2227,7 +2390,7 @@
         }
     }
     
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
         .section-inner {
             padding: 0 15px;
         }
@@ -2409,6 +2572,7 @@
                                 .slide-text__subtitle {}
                             }
                             .slide-button {
+                                position: relative;
                                 margin-bottom: 30px;
                                 width: 335px;
                                 align-self: center;

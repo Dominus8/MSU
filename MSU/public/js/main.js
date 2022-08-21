@@ -112,6 +112,28 @@ let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
 
     }
 });
+let refiled_projects = new Swiper('.swiper-refiled-projects', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+
+    breakpoints: {
+        // when window width is >= 320px
+        425: {
+
+            spaceBetween: 10,
+        },
+
+    }
+});
 
 let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
     // Optional parameters
@@ -129,10 +151,13 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
 });
 let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
     // Optional parameters
-    slidesPerView: 4,
-    spaceBetween: 20,
+    slidesPerView: 2,
+    spaceBetween: 10,
     freeMode: true,
-    loop: true,
+    loop: false,
+    pagination: {
+        el: '.swiper-pagination',
+    },
     breakpoints: {
         // when window width is >= 320px
         425: {

@@ -48,7 +48,7 @@
                     </div>
                     <div class="app-product-singlepage__content">
                         <div class="single-page-pagination">
-                            <a href="{{route('index')}}">Главная</a><a href="{{route('app-product')}}">— Программно-аппаратные продукты</a><a href="{{route('app-product-single-page')}}">— ДТ Оптик</a>
+                            <!-- <a href="{{route('index')}}">Главная</a><a href="{{route('app-product')}}">— Программно-аппаратные продукты</a><a href="{{route('app-product-single-page')}}">— ДТ Оптик</a> -->
                         </div>
                         <div class="singlepage-content-title">
                             Детектор транспорта
@@ -57,7 +57,7 @@
                             ОПТИК
                         </div>
                         <div class="singlep-age-content__category-name">
-                            ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ
+                            <!-- ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ -->
                         </div>
                         <hr>
                         <div class="single-page-content__body">
@@ -347,6 +347,7 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>

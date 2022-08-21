@@ -46,10 +46,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <h1>Новости будут сдесь скоро</h1>
-                <a href="{{route('single-news')}}">
-                    <h4>Одна новость</h4>
-                </a> -->
             </section>
         </section>
     </section>

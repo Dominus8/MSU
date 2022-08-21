@@ -122,7 +122,9 @@
                 <div class="footer__body">
                     <div class="footer-nav">
                         <div class="footer-nav__block">
-                            <div> <a class="nav-item--primary" href="#"> Каталог</a></div>
+                            <!-- <div> 
+                                <a class="nav-item--primary" href="#"> Каталог</a>
+                            </div> -->
                             <div>
                                 <a class="nav-item" href="#">Программные продукты</a>
                             </div>
