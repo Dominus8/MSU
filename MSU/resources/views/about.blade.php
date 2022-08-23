@@ -34,7 +34,7 @@
                                     <div class="honor-card__content">
                                         <div class="card-content__text">Включение в реестр надежных поставщиков АО "Корпорация развития Енисейской Сибири"
                                         </div>
-                                        <div class="card-content__date">Дата аккредитации: 04.10.2019г.</div>
+                                        <div class="card-content__date"><span class="text-bold">Дата аккредитации:</span>  04.10.2019г.</div>
                                     </div>
                                 </div>
                                 <div class="honor-aria__card">
@@ -42,7 +42,7 @@
                                     <div class="honor-card__content">
                                         <div class="card-content__text">Включение в реестр надежных поставщиков АО "Корпорация развития Енисейской Сибири"
                                         </div>
-                                        <div class="card-content__date">Дата аккредитации: 04.10.2019г.</div>
+                                        <div class="card-content__date"><span class="text-bold">Дата аккредитации:</span> 04.10.2019г.</div>
                                     </div>
                                 </div>
                             </div>

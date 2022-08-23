@@ -140,7 +140,12 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
     slidesPerView: 4,
     spaceBetween: 20,
     freeMode: true,
-    loop: true,
+    loop: false,
+    mousewheelControl: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
     breakpoints: {
         // when window width is >= 320px
         425: {

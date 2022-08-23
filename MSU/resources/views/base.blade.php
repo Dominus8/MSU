@@ -122,9 +122,9 @@
                 <div class="footer__body">
                     <div class="footer-nav">
                         <div class="footer-nav__block">
-                            <!-- <div> 
+                            <div> 
                                 <a class="nav-item--primary" href="#"> Каталог</a>
-                            </div> -->
+                            </div>
                             <div>
                                 <a class="nav-item" href="#">Программные продукты</a>
                             </div>
@@ -160,9 +160,9 @@
                     </div>
                     <div class="footer-contacts">
                         <div class="contacts-block">
-                            <div class="contacts-item">
+                            <div class="contacts-item--first">
                                 <div class="contacts-item__title">Позвоните нам</div>
-                                <div class="contakts-item__subtitle">+7 (999) 236-7896</div>
+                                <div class="contakts-item__subtitle">+7 (391) 27-24-24-0</div>
                             </div>
                         </div>
                         <div class="contacts-block">
