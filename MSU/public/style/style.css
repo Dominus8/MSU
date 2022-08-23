@@ -265,8 +265,11 @@
 
 .section-main-slider {
   background-image: url(../images/slider_bg_image.png);
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
