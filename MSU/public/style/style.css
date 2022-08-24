@@ -58,14 +58,6 @@
 }
 
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url("../fonts/ofont.ru_Proxima Nova.eot");
-  src: url("../fonts/ofont.ru_Proxima Nova.eot?#iefix") format("embedded-opentype"), url("../fonts/ofont.ru_Proxima Nova.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Proxima Nova-Bold';
   src: url("../fonts/ProximaNova-Bold.eot");
   src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.woff2") format("woff2");
@@ -75,6 +67,13 @@
 
 @font-face {
   font-family: 'Proxima Nova-Regular';
+  src: url("../fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
   src: url("../fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -257,6 +256,7 @@
 
 .nav .nav-wrapper .nav-item a:focus {
   color: #66B821;
+  font-weight: 600;
 }
 
 .nav .nav-wrapper .nav-item:hover {
@@ -363,7 +363,7 @@
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-button .slide-button__link {
-  font-family: 'ProximaNova-Semibold';
+  font-family: 'Proxima Nova-Semibold';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -488,7 +488,7 @@
 .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-numbers .numders__element .numders__title {
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 34px;
   line-height: 140%;
   color: #66B821;
@@ -728,10 +728,11 @@
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .swiper-scrollbar {
   width: 1110px;
+  margin-bottom: 10px;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__home-content {
-  margin-top: 72px;
+  margin-top: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,7 +944,7 @@
   max-width: 545px;
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 160%;
   letter-spacing: 0.002em;
@@ -1452,7 +1453,7 @@
   max-width: 535px;
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 160%;
   letter-spacing: 0.002em;
@@ -1517,7 +1518,7 @@
   max-width: 535px;
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 160%;
   letter-spacing: 0.002em;
@@ -1533,7 +1534,7 @@
 }
 
 .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__title {
-  margin: 64px 0;
+  margin: 64px 0 32px 0;
   font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: 600;
@@ -1657,7 +1658,7 @@
   max-width: 535px;
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 160%;
   letter-spacing: 0.002em;
@@ -2225,6 +2226,11 @@
   margin-top: 34px;
 }
 
+.section-contacts .section-inner .contacts .contacts-wrapper .contacts-map .contacts-map-svg {
+  -webkit-transform: scale(3, 1);
+          transform: scale(3, 1);
+}
+
 .section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices {
   margin-top: 64px;
 }
@@ -2317,9 +2323,10 @@
 }
 
 .section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__cards-wrapper .contacts-regional-offices__card .offices-card-wrapper .offices-card__text {
+  padding-right: 5px;
   font-family: 'Proxima Nova';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 17px;
   line-height: 160%;
   /* or 27px */
@@ -2402,7 +2409,7 @@
 }
 
 .footer {
-  height: 327px;
+  height: 335px;
   background-color: #333333;
 }
 
@@ -2410,7 +2417,7 @@
   height: 140px;
 }
 
-.footer .footer__logo img {
+.footer .footer__logo .footer__logo-img {
   margin-top: 64px;
 }
 
@@ -2848,7 +2855,7 @@
   .footer .footer__logo {
     height: 70px;
   }
-  .footer .footer__logo img {
+  .footer .footer__logo .footer__logo-img {
     margin-top: 40px;
     width: 195px;
   }

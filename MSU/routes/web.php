@@ -43,7 +43,7 @@ Route::get('/single-news', [MainController::class, 'news_single_page'])->name('s
 Route::get('/refiled-projects', [MainController::class, 'refiled_projects'])->name('refiled-projects');
 
 //Реализованные проекты соло страница
-Route::get('/refiled-projects-single page', [MainController::class, 'refiled_projects_single_page'])->name('refiled-projects-single-page');
+Route::get('/refiled-projects-single-page', [MainController::class, 'refiled_projects_single_page'])->name('refiled-projects-single-page');
 
 //Партнеры
 Route::get('/partners', [MainController::class, 'partners'])->name('partners');

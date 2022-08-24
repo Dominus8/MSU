@@ -21,7 +21,9 @@
                         <div class="contacts-main__phone">Позвоните нам: <span>+7 (391) 27-24-24-0</span> </div>
                     </div>
                     <div class="contacts-map">
-                        <img src="./images/contacts_map.png" alt="">
+                        <!-- <img src="./images/contacts_map.png" alt=""> -->
+                        <object type="image/svg+xml" data="./images/contacts_map.svg"></object>
+
                     </div>
                     <div class="contacts-regional-offices">
                         <div class="contacts-regional-offices__title">

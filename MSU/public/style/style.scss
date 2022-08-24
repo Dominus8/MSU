@@ -58,14 +58,13 @@
         font-style: normal;
     }
     
-    @font-face {
-        font-family: 'Proxima Nova';
-        src: url('../fonts/ofont.ru_Proxima Nova.eot');
-        src: url('../fonts/ofont.ru_Proxima Nova.eot?#iefix') format('embedded-opentype'), url('../fonts/ofont.ru_Proxima Nova.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-    }
-    
+    // @font-face {
+    //     font-family: 'Proxima Nova';
+    //     src: url('../fonts/ofont.ru_Proxima Nova.eot');
+    //     src: url('../fonts/ofont.ru_Proxima Nova.eot?#iefix') format('embedded-opentype'), url('../fonts/ofont.ru_Proxima Nova.woff2') format('woff2');
+    //     font-weight: 400;
+    //     font-style: normal;
+    // }
     @font-face {
         font-family: 'Proxima Nova-Bold';
         src: url('../fonts/ProximaNova-Bold.eot');
@@ -76,6 +75,13 @@
     
     @font-face {
         font-family: 'Proxima Nova-Regular';
+        src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Proxima Nova';
         src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
         font-weight: 400;
         font-style: normal;
@@ -249,6 +255,7 @@
                     color: #F5F5F5;
                     &:focus {
                         color: #66B821;
+                        font-weight: 600;
                     }
                 }
                 &:hover {
@@ -336,7 +343,7 @@
                             background: #66B821;
                             border-radius: 4px;
                             .slide-button__link {
-                                font-family: 'ProximaNova-Semibold';
+                                font-family: 'Proxima Nova-Semibold';
                                 font-style: normal;
                                 font-weight: 500;
                                 font-size: 14px;
@@ -436,7 +443,7 @@
                                         .numders__title {
                                             font-family: 'Proxima Nova';
                                             font-style: normal;
-                                            font-weight: 400;
+                                            font-weight: 600;
                                             font-size: 34px;
                                             line-height: 140%;
                                             color: #66B821;
@@ -630,7 +637,7 @@
     }
     
     //================ /about ====================
-    //================= catalog #FAFAFA===========================
+    //================= catalog ===========================
     .section-catalog-pac {
         .section-inner {
             .catalog-pac {
@@ -685,11 +692,12 @@
                             }
                             .swiper-scrollbar {
                                 width: 1110px;
+                                margin-bottom: 10px;
                             }
                         }
                     }
                     .catalog-pac__home-content {
-                        margin-top: 72px;
+                        margin-top: 190px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -894,7 +902,7 @@
                                     max-width: 545px;
                                     font-family: 'Proxima Nova';
                                     font-style: normal;
-                                    font-weight: 600;
+                                    font-weight: 400;
                                     font-size: 17px;
                                     line-height: 160%;
                                     letter-spacing: 0.002em;
@@ -1420,7 +1428,7 @@
                                     max-width: 535px;
                                     font-family: 'Proxima Nova';
                                     font-style: normal;
-                                    font-weight: 600;
+                                    font-weight: 400;
                                     font-size: 17px;
                                     line-height: 160%;
                                     letter-spacing: 0.002em;
@@ -1471,7 +1479,7 @@
                                 max-width: 535px;
                                 font-family: 'Proxima Nova';
                                 font-style: normal;
-                                font-weight: 600;
+                                font-weight: 400;
                                 font-size: 17px;
                                 line-height: 160%;
                                 letter-spacing: 0.002em;
@@ -1529,7 +1537,7 @@
                 .refiled-projects-wrapper {
                     border-bottom: 1px solid #E0E0E0;
                     .refiled-projects__title {
-                        margin: 64px 0;
+                        margin: 64px 0 32px 0;
                         font-family: 'Proxima Nova';
                         font-style: normal;
                         font-weight: 600;
@@ -1640,7 +1648,7 @@
                             max-width: 535px;
                             font-family: 'Proxima Nova';
                             font-style: normal;
-                            font-weight: 600;
+                            font-weight: 400;
                             font-size: 17px;
                             line-height: 160%;
                             letter-spacing: 0.002em;
@@ -2159,6 +2167,9 @@
                     }
                     .contacts-map {
                         margin-top: 34px;
+                        .contacts-map-svg {
+                            transform: scale(3, 1);
+                        }
                     }
                     .contacts-regional-offices {
                         margin-top: 64px;
@@ -2220,9 +2231,10 @@
                                         }
                                     }
                                     .offices-card__text {
+                                        padding-right: 5px;
                                         font-family: 'Proxima Nova';
                                         font-style: normal;
-                                        font-weight: 600;
+                                        font-weight: 400;
                                         font-size: 17px;
                                         line-height: 160%;
                                         /* or 27px */
@@ -2307,11 +2319,11 @@
     }
     
     .footer {
-        height: 327px;
+        height: 335px;
         background-color: #333333;
         .footer__logo {
             height: 140px;
-            img {
+            .footer__logo-img {
                 margin-top: 64px;
             }
         }
@@ -2683,7 +2695,7 @@
         .footer {
             .footer__logo {
                 height: 70px;
-                img {
+                .footer__logo-img {
                     margin-top: 40px;
                     width: 195px;
                 }

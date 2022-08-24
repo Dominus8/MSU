@@ -36,10 +36,13 @@
         <section class="section-inner">
             <div class="header">
                 <a href="{{route('index')}}" class="header_logo">
-                    <img src="images/header_logo.png" alt="">
+                    <!-- <img src="images/header_logo.png" alt=""> -->
+                    <object type="image/svg+xml" data="images/header_logo.svg"></object>
                 </a>
                 <div class="header_logo--mobile">
-                    <img src="./images/header_logo--mobile.png" alt="">
+                    <!-- <img src="./images/header_logo--mobile.png" alt=""> -->
+                    <object type="image/svg+xml" data="images/header_logo--mobile.svg"></object>
+
                 </div>
                 <div class="header_info">
                     <div class="info-email">
@@ -117,7 +120,8 @@
         <section class="section-inner">
             <div class="footer">
                 <div class="footer__logo">
-                    <img src="./images/footer_logo.png" alt="">
+                    <!-- <img src="./images/footer_logo.png" alt=""> -->
+                    <object class="footer__logo-img" type="image/svg+xml" data="images/footer_logo.svg"></object>
                 </div>
                 <div class="footer__body">
                     <div class="footer-nav">

@@ -9,7 +9,7 @@
                     <div class="refiled-projects__title">Реализованные проекты</div>
                     <div class="refiled-projects__body">
                         <div class="projects-body__pagination">
-                            <div class="projects-pagination__count">Более 300 проектов</div>
+                            <!-- <div class="projects-pagination__count">Более 300 проектов</div> -->
                             <div class="projects-pagination_switch">
                                 &#60; 1 из 5 &#62;
                             </div>

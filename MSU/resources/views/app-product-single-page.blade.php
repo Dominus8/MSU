@@ -6,6 +6,7 @@
         <section class="section-inner">
             <section class="mine-content catalog-pac">
                 <div class="catalog-pac-wrapper">
+                <div class="catalog-pac__nav--bg">
                     <div class="catalog-pac__nav swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
                             <a class="nav-link swiper-slide" href="{{route('app-product-single-page')}}">
@@ -45,6 +46,8 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                     </div>
                     <div class="app-product-singlepage__content">
                         <div class="single-page-pagination">
