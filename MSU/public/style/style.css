@@ -716,6 +716,7 @@
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element .nav-element__title {
+  padding-right: 5px;
   margin-left: 12px;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -971,7 +972,7 @@
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper .swiper-single-page-mobile {
   display: none;
   width: 345px;
-  background-color: #66B821;
+  background: url(../images/swiper-bg-single-page.png) 100% 100%;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper .swiper-single-page-mobile .swiper-wrapper .swiper-slide {
@@ -1022,7 +1023,8 @@
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page {
   width: 345px;
-  background-color: #66B821;
+  background: url(../images/swiper-bg-single-page.png) 100% 100% no-repeat;
+  background-position: top center;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-wrapper .swiper-slide {
@@ -1036,15 +1038,52 @@
   height: 440px;
 }
 
-.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-prev {
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control {
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control .swiper-button-prev {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  position: relative;
+  color: #9E9E9E;
+  left: 265px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control .swiper-button-next {
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  position: relative;
+  color: #9E9E9E;
+  right: 0;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control .swiper-button-disabled {
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  right: 0px;
   color: #9E9E9E;
 }
 
-.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-next {
-  color: #9E9E9E;
-}
-
-.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-button-disabled {
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control .swiper-pagination-2 {
+  text-align: right;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
   color: #9E9E9E;
 }
 

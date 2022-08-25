@@ -88,8 +88,11 @@
                                                         <img class="slider-image" src="./images/product_image.png" alt="">
                                                     </div>
                                                 </div>
-                                                <div class="swiper-button-prev"></div>
-                                                <div class="swiper-button-next"></div>
+                                                <!-- <div class="swiper-control">
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination-2"></div>
+                                                    <div class="swiper-button-next"></div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -110,21 +113,24 @@
                                     </div>
                                 </div>
                                 <div class="body-top__slider">
-                                <div class="swiper swiper-single-page">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img class="slider-image" src="./images/product_image.png" alt="">
+                                    <div class="swiper swiper-single-page">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img class="slider-image" src="./images/product_image.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img class="slider-image" src="./images/product_image.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img class="slider-image" src="./images/product_image.png" alt="">
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <img class="slider-image" src="./images/product_image.png" alt="">
+                                        <div class="swiper-control">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination-2"></div>
+                                                <div class="swiper-button-next"></div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <img class="slider-image" src="./images/product_image.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>    
+                                    </div>    
                                 </div>
                             </div>
                             <div class="content-body__bottom">

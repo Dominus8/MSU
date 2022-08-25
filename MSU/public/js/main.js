@@ -37,7 +37,8 @@ let swiper_single_page = new Swiper('.swiper-single-page', {
 
     // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination-2",
+        type: "fraction",
     },
 
     // Navigation arrows
@@ -46,10 +47,6 @@ let swiper_single_page = new Swiper('.swiper-single-page', {
         prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
 
     breakpoints: {
         // when window width is >= 320px

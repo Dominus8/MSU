@@ -678,6 +678,7 @@
                                             margin-left: 18px;
                                         }
                                         .nav-element__title {
+                                            padding-right: 5px;
                                             margin-left: 12px;
                                             font-family: 'Proxima Nova';
                                             font-style: normal;
@@ -920,7 +921,7 @@
                                             .swiper-single-page-mobile {
                                                 display: none;
                                                 width: 345px;
-                                                background-color: #66B821;
+                                                background: url(../images/swiper-bg-single-page.png) 100% 100%;
                                                 .swiper-wrapper {
                                                     .swiper-slide {
                                                         display: flex;
@@ -962,7 +963,8 @@
                                 .body-top__slider {
                                     .swiper-single-page {
                                         width: 345px;
-                                        background-color: #66B821;
+                                        background: url(../images/swiper-bg-single-page.png) 100% 100% no-repeat;
+                                        background-position: top center;
                                         .swiper-wrapper {
                                             .swiper-slide {
                                                 display: flex;
@@ -971,14 +973,41 @@
                                                 height: 440px;
                                             }
                                         }
-                                        .swiper-button-prev {
-                                            color: #9E9E9E;
-                                        }
-                                        .swiper-button-next {
-                                            color: #9E9E9E;
-                                        }
-                                        .swiper-button-disabled {
-                                            color: #9E9E9E;
+                                        .swiper-control {
+                                            margin-top: 28px;
+                                            display: flex;
+                                            align-items: center;
+                                            .swiper-button-prev {
+                                                justify-self: end;
+                                                margin: 0;
+                                                transform: scale(0.3);
+                                                position: relative;
+                                                color: #9E9E9E;
+                                                left: 265px;
+                                            }
+                                            .swiper-button-next {
+                                                margin: 0;
+                                                transform: scale(0.3);
+                                                position: relative;
+                                                color: #9E9E9E;
+                                                right: 0;
+                                            }
+                                            .swiper-button-disabled {
+                                                margin: 0;
+                                                transform: scale(0.3);
+                                                right: 0px;
+                                                color: #9E9E9E;
+                                            }
+                                            .swiper-pagination-2 {
+                                                text-align: right;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 17px;
+                                                line-height: 140%;
+                                                letter-spacing: 0.002em;
+                                                color: #9E9E9E;
+                                            }
                                         }
                                     }
                                 }

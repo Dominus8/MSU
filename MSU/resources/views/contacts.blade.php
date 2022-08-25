@@ -22,7 +22,7 @@
                     </div>
                     <div class="contacts-map">
                         <!-- <img src="./images/contacts_map.png" alt=""> -->
-                        <object type="image/svg+xml" data="./images/contacts_map.svg"></object>
+                        <object class="contacts-map-svg" type="image/svg+xml" data="./images/contacts_map.svg"></object>
 
                     </div>
                     <div class="contacts-regional-offices">
