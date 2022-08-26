@@ -1169,6 +1169,55 @@
   text-align: center;
 }
 
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-control {
+  margin: 0 auto;
+  width: 90px;
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-control .swiper-button-prev {
+  display: block;
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  position: relative;
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-control .swiper-button-next {
+  display: block;
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  position: relative;
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-control .swiper-button-disabled {
+  display: block;
+  margin: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  color: #9E9E9E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider .swiper-single-page__bottom .swiper-control .swiper-pagination-3 {
+  text-align: center;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.002em;
+  color: #9E9E9E;
+}
+
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents {
   margin: 64px 0;
   display: -webkit-box;

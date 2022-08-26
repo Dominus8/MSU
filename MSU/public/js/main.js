@@ -77,13 +77,9 @@ let swiper_single_page_mobile = new Swiper('.swiper-single-page-mobile', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
-
     breakpoints: {
         // when window width is >= 320px
-        425: {
-
-        },
-
+        425: {},
     }
 });
 
@@ -91,7 +87,10 @@ let swiper_single_page__bottom = new Swiper('.swiper-single-page__bottom', {
     // Optional parameters
     direction: 'horizontal',
     loop: false,
-
+    pagination: {
+        el: ".swiper-pagination-3",
+        type: "fraction",
+    },
 
     // Navigation arrows
     navigation: {
