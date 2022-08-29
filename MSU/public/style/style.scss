@@ -2011,10 +2011,17 @@
                     }
                     .partners__logo {
                         display: flex;
-                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        flex-shrink: 25px;
+                        justify-content: space-around;
                         align-items: center;
                         margin-bottom: 64px;
-                        .partners-logo__item {}
+                        .partners-logo__item {
+                            padding: 15px;
+                            background: #FAFAFA;
+                            border-radius: 25px;
+                            margin: 2.5px;
+                        }
                     }
                     .partners__callback {
                         .partners-call {
