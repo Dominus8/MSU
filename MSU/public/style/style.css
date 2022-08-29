@@ -1440,6 +1440,60 @@
      object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__text-content .news__title {
+    margin-top: 15px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__text-content .news__subtitle {
+    margin-top: 15px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__text-content .news__more-link {
+    margin-top: 15px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 160%;
+    /* identical to box height, or 24px */
+    letter-spacing: 0.002em;
+  }
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__create-date {
+    margin-top: 25px;
+    text-align: left;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+    letter-spacing: 0.002em;
+    text-transform: uppercase;
+  }
+  .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__thumbnail {
+    margin: 0 auto;
+  }
+}
+
 .section-single-news .section-inner .single-news .single-news-wrapper {
   margin-top: 80px;
   margin-bottom: 100px;
@@ -1600,12 +1654,8 @@
   color: #BDBDBD;
 }
 
-.section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__pagination .projects-pagination_switch {
-  margin-left: 704px;
-}
-
 .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card {
-  height: 206px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1627,9 +1677,15 @@
 .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper {
   padding-left: 150px;
   max-width: 550px;
+  margin-bottom: 25px;
 }
 
-.section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title {
+.section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title .card-content__title-mark {
+  display: none;
+}
+
+.section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title .card-content__title-text {
+  margin-top: 32px;
   margin-bottom: 10px;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -1658,6 +1714,75 @@
   line-height: 160%;
   letter-spacing: 0.002em;
   color: #66B821;
+}
+
+@media (max-width: 768px) {
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__dot {
+    display: none;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title .card-content__title-mark {
+    display: block;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__title .card-content__title-text {
+    margin: 0;
+    margin-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__subtitle {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__download-link {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 160%;
+    /* identical to box height, or 24px */
+    letter-spacing: 0.002em;
+  }
+  .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card-image {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 .section-refiled-projects-sigle-page .section-inner .refiled-projects-sigle-page .refiled-projects-sigle-page-wrapper .refiled-projects-sigle-page-title {

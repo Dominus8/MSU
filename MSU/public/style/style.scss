@@ -1400,7 +1400,54 @@
                             .news-list__title {}
                             .news-list-pagination {}
                             .news-list-el {
-                                .news__text-content {}
+                                flex-direction: column-reverse;
+                                .news__text-content {
+                                    .news__title {
+                                        margin-top: 15px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                        line-height: 120%;
+                                        /* identical to box height, or 22px */
+                                        letter-spacing: 0.002em;
+                                    }
+                                    .news__subtitle {
+                                        margin-top: 15px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 140%;
+                                        /* or 22px */
+                                        letter-spacing: 0.002em;
+                                    }
+                                    .news__more-link {
+                                        margin-top: 15px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        line-height: 160%;
+                                        /* identical to box height, or 24px */
+                                        letter-spacing: 0.002em;
+                                    }
+                                }
+                                .news__create-date {
+                                    margin-top: 25px;
+                                    text-align: left;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 140%;
+                                    /* identical to box height, or 20px */
+                                    letter-spacing: 0.002em;
+                                    text-transform: uppercase;
+                                }
+                                .news__thumbnail {
+                                    margin: 0 auto;
+                                }
                                 .news__create-date {}
                                 .news__thumbnail {
                                     .news__thumbnail-image {}
@@ -1589,12 +1636,12 @@
                             color: #BDBDBD;
                             .projects-pagination__count {}
                             .projects-pagination_switch {
-                                margin-left: 704px;
+                                // margin-left: 704px;
                             }
                         }
                         .projects-body__cards {
                             .projects-body__card {
-                                height: 206px;
+                                height: auto;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
@@ -1606,14 +1653,22 @@
                                 .card__content-wrapper {
                                     padding-left: 150px;
                                     max-width: 550px;
+                                    margin-bottom: 25px;
                                     .card-content__title {
-                                        margin-bottom: 10px;
-                                        font-family: 'Proxima Nova';
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 24px;
-                                        line-height: 140%;
-                                        color: #333333;
+                                        // display: flex;
+                                        .card-content__title-mark {
+                                            display: none;
+                                        }
+                                        .card-content__title-text {
+                                            margin-top: 32px;
+                                            margin-bottom: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 140%;
+                                            color: #333333;
+                                        }
                                     }
                                     .card-content__subtitle {
                                         margin-bottom: 10px;
@@ -1636,6 +1691,84 @@
                                     }
                                 }
                                 .card-image {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-refiled-projects {
+            .section-inner {
+                .refiled-projects {
+                    .refiled-projects-wrapper {
+                        .refiled-projects__title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 140%;
+                        }
+                        .refiled-projects__body {
+                            .projects-body__pagination {
+                                .projects-pagination__count {}
+                                .projects-pagination_switch {}
+                            }
+                            .projects-body__cards {
+                                .projects-body__card {
+                                    height: auto;
+                                    flex-direction: column-reverse;
+                                    .card__dot {
+                                        display: none;
+                                    }
+                                    .card__content-wrapper {
+                                        padding: 0;
+                                        margin-bottom: 25px;
+                                        .card-content__title {
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 15px;
+                                            .card-content__title-mark {
+                                                display: block;
+                                            }
+                                            .card-content__title-text {
+                                                margin: 0;
+                                                margin-left: 10px;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 18px;
+                                                line-height: 120%;
+                                                /* identical to box height, or 22px */
+                                                letter-spacing: 0.002em;
+                                            }
+                                        }
+                                        .card-content__subtitle {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            /* or 22px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .card-content__download-link {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 15px;
+                                            line-height: 160%;
+                                            /* identical to box height, or 24px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                    }
+                                    .card-image {
+                                        margin-top: 25px;
+                                        margin-bottom: 25px;
+                                    }
+                                }
                             }
                         }
                     }
