@@ -120,8 +120,11 @@
                                                 <img class="slider-image" src="./images/sp-slide.png" alt="">
                                             </div>
                                         </div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-control">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination-3"></div>
+                                                <div class="swiper-button-next"></div>
+                                            </div>
                                     </div>
                                 </div>
                                 <!-- <div class="body-bottom__basic-parameters">
