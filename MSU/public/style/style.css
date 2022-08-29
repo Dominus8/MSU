@@ -2244,6 +2244,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-webkit-input-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2253,6 +2254,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-moz-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2262,6 +2264,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-moz-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2271,6 +2274,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-ms-input-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2293,6 +2297,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-webkit-input-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2302,6 +2307,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-moz-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2311,6 +2317,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-moz-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2320,6 +2327,7 @@
 }
 
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-ms-input-placeholder {
+  padding-left: 15px;
   color: #757575;
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -2356,6 +2364,98 @@
           align-items: center;
   letter-spacing: 0.01em;
   color: #9E9E9E;
+}
+
+@media (max-width: 768px) {
+  .section-support .section-inner .support .support-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .support-title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper .warranty-cards__title-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__element .warranty-cards__element-title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__title-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__title-wrapper .support-manuals__title-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-support .section-inner .support .support-wrapper .support-content .support-manuals .support-manuals__element .support-manuals__element-title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    letter-spacing: 0.002em;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-webkit-input-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-moz-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-moz-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-ms-input-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-webkit-input-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-moz-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-moz-placeholder {
+    padding-left: 10px;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-ms-input-placeholder {
+    padding-left: 10px;
+  }
 }
 
 .section-contacts .section-inner .contacts .contacts-wrapper {
