@@ -1954,6 +1954,7 @@
                         }
                         hr {}
                         .refiled-projects-sigle-page__content {
+                            flex-direction: column;
                             .refiled-projects-sigle-page__content-text {}
                             .refiled-projects-sigle-page__content-links {
                                 .refiled-projects-sigle-page__link-el {
@@ -2465,6 +2466,7 @@
                             }
                         }
                         .contacts-main__address {
+                            margin-bottom: 15px;
                             font-family: 'Proxima Nova';
                             font-style: normal;
                             font-weight: 300;
@@ -2477,6 +2479,7 @@
                             }
                         }
                         .contacts-main_email {
+                            margin-bottom: 15px;
                             font-family: 'Proxima Nova';
                             font-style: normal;
                             font-weight: 300;
@@ -2584,10 +2587,213 @@
                                         letter-spacing: 0.002em;
                                         /* Grey / 700 */
                                         color: #5E5E5E;
-                                        .offices-card__title {}
-                                        .offices-card__address {}
-                                        .offices-card__phone {}
-                                        .offices-card__email {}
+                                        .offices-card__title {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 17px;
+                                            line-height: 160%;
+                                            /* or 27px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .offices-card__address {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 17px;
+                                            line-height: 160%;
+                                            /* or 27px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .offices-card__phone {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 17px;
+                                            line-height: 160%;
+                                            /* or 27px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .offices-card__email {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 17px;
+                                            line-height: 160%;
+                                            /* or 27px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        .section-contacts {
+            .section-inner {
+                .contacts {
+                    .contacts-wrapper {
+                        .contacts-title {
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 140%;
+                        }
+                        .contacts-main {
+                            .contacts-main__title {
+                                .contacts-main__title-werapper {
+                                    .contacts-main__title-mark {}
+                                    .contacts-main__title-text {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                        line-height: 120%;
+                                        letter-spacing: 0.002em;
+                                    }
+                                }
+                            }
+                            .contacts-main__address {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 160%;
+                                letter-spacing: 0.002em;
+                                span {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                }
+                            }
+                            .contacts-main_email {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 160%;
+                                letter-spacing: 0.002em;
+                                span {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                    text-decoration-line: underline;
+                                }
+                            }
+                            .contacts-main__phone {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 160%;
+                                letter-spacing: 0.002em;
+                                span {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 15px;
+                                    line-height: 160%;
+                                    letter-spacing: 0.002em;
+                                }
+                            }
+                        }
+                        .contacts-map {
+                            .contacts-map-svg {
+                                svg {}
+                            }
+                        }
+                        .contacts-regional-offices {
+                            .contacts-regional-offices__title {
+                                .contacts-regional-offices__title-wrapper {
+                                    .contacts-regional-offices__title-mark {}
+                                    .contacts-regional-offices__title-text {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                        line-height: 120%;
+                                        letter-spacing: 0.002em;
+                                    }
+                                }
+                            }
+                            .contacts-regional-offices__cards-wrapper {
+                                margin-top: 32px;
+                                .contacts-regional-offices__card {
+                                    height: auto;
+                                    width: auto;
+                                    &::after {
+                                        content: '';
+                                        bottom: 0px;
+                                    }
+                                    &::before {
+                                        content: '';
+                                        width: 0px;
+                                    }
+                                    &:nth-child(2n) {
+                                        &::before {
+                                            width: 0;
+                                        }
+                                    }
+                                    .offices-card-wrapper {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        margin: 25px 0;
+                                        .offices-card__image {
+                                            text-align: left;
+                                            margin-bottom: 25px;
+                                            img {}
+                                        }
+                                        .offices-card__text {
+                                            .offices-card__title {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 15px;
+                                                line-height: 160%;
+                                                /* identical to box height, or 24px */
+                                                letter-spacing: 0.002em;
+                                            }
+                                            .offices-card__address {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 15px;
+                                                line-height: 160%;
+                                                /* identical to box height, or 24px */
+                                                letter-spacing: 0.002em;
+                                            }
+                                            .offices-card__phone {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 15px;
+                                                line-height: 160%;
+                                                /* identical to box height, or 24px */
+                                                letter-spacing: 0.002em;
+                                            }
+                                            .offices-card__email {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 15px;
+                                                line-height: 160%;
+                                                /* identical to box height, or 24px */
+                                                letter-spacing: 0.002em;
+                                            }
+                                        }
                                     }
                                 }
                             }

@@ -127,58 +127,6 @@
                                             </div>
                                     </div>
                                 </div>
-                                <!-- <div class="body-bottom__basic-parameters">
-                                    <div class="basic-parameters__title">
-                                        <img src="./images/green-mark.png" alt="">
-                                        <div class="basic-parameters__title-text">
-                                            Основные параметры
-                                        </div>
-                                    </div>
-                                    <div class="basic-parameters-body">
-                                        <div class="basic-parameters__list">
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Расчет интенсивности потока</div>
-                                                <div class="parameters-value">от 0 до 2000 ед/ч</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Расчет скорости транспортных средств </div>
-                                                <div class="parameters-value">от 10 до 120 км/ч</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Минимальные размеры транспортного средства</div>
-                                                <div class="parameters-value">от 2м длины, от 1.3м ширины</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Количество контролируемых полос движения</div>
-                                                <div class="parameters-value">от 1 до 2</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Диапазон рабочей температуры</div>
-                                                <div class="parameters-value">от - 40 ° С до + 50 ° С</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Протокол взаимодействия с ИТС</div>
-                                                <div class="parameters-value">opt 1.0 (открытый)</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Потребляемая мощность </div>
-                                                <div class="parameters-value">220 В ± 10%</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Напряжение питания</div>
-                                                <div class="parameters-value">220 В ± 10%</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Масса (без кронштейна)</div>
-                                                <div class="parameters-value">не более 3 кг</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
 
                         </div>
