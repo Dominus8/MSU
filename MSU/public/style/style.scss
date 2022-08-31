@@ -1949,25 +1949,66 @@
                 .refiled-projects-sigle-page {
                     .refiled-projects-sigle-page-wrapper {
                         .refiled-projects-sigle-page-title {
-                            .refiled-projects-sigle-page-title--black {}
-                            .refiled-projects-sigle-page-title--green {}
+                            .refiled-projects-sigle-page-title--black {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                            }
+                            .refiled-projects-sigle-page-title--green {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                            }
                         }
                         hr {}
                         .refiled-projects-sigle-page__content {
                             flex-direction: column;
-                            .refiled-projects-sigle-page__content-text {}
+                            .refiled-projects-sigle-page__content-text {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 160%;
+                                /* or 26px */
+                                letter-spacing: 0.002em;
+                            }
                             .refiled-projects-sigle-page__content-links {
+                                margin-top: 25px;
                                 .refiled-projects-sigle-page__link-el {
-                                    .link__text {}
-                                    .link__ico {}
+                                    flex-direction: row-reverse;
+                                    margin-bottom: 15px;
+                                    .link__text {
+                                        margin-left: 15px;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                        text-align: right;
+                                        letter-spacing: 0.002em;
+                                    }
+                                    .link__ico {
+                                        margin: 0;
+                                    }
                                 }
                             }
                         }
                         .refiled-projects__slider {
+                            margin-top: 50px;
+                            margin-bottom: 0;
                             .swiper-refiled-projects {
                                 .swiper-wrapper {
                                     .swiper-slide {
-                                        .slider-image {}
+                                        .slider-image {
+                                            img {}
+                                            object-fit: contain;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
                                     }
                                 }
                             }
@@ -1976,13 +2017,37 @@
                             .refiled-projects-documents-wrapper {
                                 .refiled-projects-documents__title {
                                     img {}
-                                    .refiled-projects-documents__title-text {}
+                                    .refiled-projects-documents__title-text {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 17px;
+                                        line-height: 140%;
+                                    }
                                 }
                                 .refiled-projects-documents__el-wrapper {
+                                    grid-template-columns: 1fr;
+                                    grid-auto-rows: 1.7em;
                                     .refiled-projects-documents__el {
                                         img {}
-                                        .refiled-projects-documents__el-title {}
-                                        .refiled-projects-documents__el-format {}
+                                        .refiled-projects-documents__el-title {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            /* or 22px */
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .refiled-projects-documents__el-format {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            /* or 22px */
+                                            letter-spacing: 0.002em;
+                                        }
                                     }
                                 }
                             }
