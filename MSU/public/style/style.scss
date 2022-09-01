@@ -1611,29 +1611,70 @@
             .section-inner {
                 .single-news {
                     .single-news-wrapper {
+                        margin-top: 40px;
                         .single-news__title {
-                            .single-news__title--black {}
-                            .single-news__title--green {}
+                            .single-news__title--black {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                            }
+                            .single-news__title--green {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 140%;
+                            }
                         }
                         .single-news__publishing-date {}
                         .single-news-content {
                             .single-news__content-wrapper {
                                 .single-news__top-section-wrapper {
-                                    .single-news__image-area {
-                                        .single-news__image-wrapper {
-                                            .single-news__image {}
-                                        }
-                                        a {
-                                            .single-news__link {
-                                                .single-news__link-text {}
-                                                .single-news__ico {
-                                                    img {}
+                                    flex-direction: column;
+                                    .single-news__text-top {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 160%;
+                                        /* or 26px */
+                                        letter-spacing: 0.002em;
+                                    }
+                                    .single-news__image-area-wrapper {
+                                        margin-top: 40px;
+                                        margin-bottom: 25px;
+                                        width: 100%;
+                                        position: relative;
+                                        .single-news__image-area {
+                                            width: 100%;
+                                            position: relative;
+                                            .single-news__image-wrapper {
+                                                width: 100%;
+                                                .single-news__image {}
+                                            }
+                                            a {
+                                                .single-news__link {
+                                                    justify-content: center;
+                                                    .single-news__link-text {}
+                                                    .single-news__ico {
+                                                        img {}
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
-                                .single-news__text-bottom {}
+                                .single-news__text-bottom {
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 160%;
+                                    /* or 26px */
+                                    letter-spacing: 0.002em;
+                                }
                             }
                         }
                     }
