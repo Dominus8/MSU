@@ -14,8 +14,10 @@
                             <div class="slide-wrapper">
                                 <div class="slide-text">
                                     <hr class="slide-text__line">
-                                    <div class="slide-text__title">Детектор Транспорта</div>
-                                    <div class="slide-text__produkt-name">Оптик</div>
+                                    <div class="title-wrapper">
+                                        <div class="slide-text__title">Детектор Транспорта</div>
+                                        <div class="slide-text__produkt-name">Оптик</div>
+                                    </div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
@@ -28,8 +30,11 @@
                             <div class="slide-wrapper">
                                 <div class="slide-text">
                                     <hr class="slide-text__line">
-                                    <div class="slide-text__title">Детектор Транспорта</div>
-                                    <div class="slide-text__produkt-name">Оптик</div>
+                                    <div class="title-wrapper">
+
+                                        <div class="slide-text__title">Детектор Транспорта</div>
+                                        <div class="slide-text__produkt-name">Оптик</div>
+                                    </div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
@@ -42,8 +47,11 @@
                             <div class="slide-wrapper">
                                 <div class="slide-text">
                                     <hr class="slide-text__line">
-                                    <div class="slide-text__title">Управления транспортом</div>
-                                    <div class="slide-text__produkt-name">Единая плаформа</div>
+                                    <div class="title-wrapper">
+
+                                        <div class="slide-text__title">Управления транспортом</div>
+                                        <div class="slide-text__produkt-name">Единая плаформа</div>
+                                    </div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <a href="{{route('app-product-single-page')}}" class="slide-button">

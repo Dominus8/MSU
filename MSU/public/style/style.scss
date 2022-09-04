@@ -304,21 +304,23 @@
                                 background-color: #BDBDBD;
                                 margin: 0 auto 0 0;
                             }
-                            .slide-text__title {
-                                margin-top: 15px;
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 34px;
-                                line-height: 140%;
-                                color: #333333;
-                            }
-                            .slide-text__produkt-name {
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 34px;
-                                line-height: 140%;
-                                text-transform: uppercase;
-                                color: #66B821;
+                            .title-wrapper {
+                                .slide-text__title {
+                                    margin-top: 15px;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 34px;
+                                    line-height: 140%;
+                                    color: #333333;
+                                }
+                                .slide-text__produkt-name {
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 34px;
+                                    line-height: 140%;
+                                    text-transform: uppercase;
+                                    color: #66B821;
+                                }
                             }
                             .slide-text__subtitle {
                                 font-style: normal;
@@ -3303,10 +3305,40 @@
                             align-items: flex-start;
                             .slide-text {
                                 margin-bottom: 20px;
+                                display: flex;
+                                flex-direction: column;
                                 .slide-text__line {}
-                                .slide-text__title {}
-                                .slide-text__produkt-name {}
-                                .slide-text__subtitle {}
+                                .title-wrapper {
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    .slide-text__title {
+                                        margin: 0;
+                                        text-transform: lowercase;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 28px;
+                                        line-height: 140%;
+                                    }
+                                    .slide-text__produkt-name {
+                                        text-transform: uppercase;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 28px;
+                                        line-height: 140%;
+                                    }
+                                }
+                                .slide-text__subtitle {
+                                    margin-top: 15px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 17px;
+                                    line-height: 140%;
+                                    /* or 24px */
+                                    letter-spacing: 0.002em;
+                                }
                             }
                             .slide-button {
                                 position: relative;
