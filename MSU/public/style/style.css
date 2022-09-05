@@ -465,9 +465,7 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 160%;
-  /* or 27px */
   letter-spacing: 0.002em;
-  /* Grey / 700 */
   color: #5E5E5E;
 }
 
@@ -650,6 +648,37 @@
 }
 
 @media (max-width: 768px) {
+  .section-about .about .about-wrapper .about-body .about-body__content {
+    margin-top: 25px;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-subtitle__content-text {
+    height: auto;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-numbers {
+    margin-top: 40px;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-numbers .numders__element .numders__title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 130%;
+    text-align: left;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-numbers .numders__element .numbers__subtitle {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
   .section-about .about .about-wrapper .about-body .about-body__content .honor-aria {
     margin-top: 40px;
   }
@@ -659,9 +688,68 @@
   .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content {
     padding: 0;
   }
+  .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content .card-content__text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content .card-content__date {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content .card-content__date .text-bold {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .documents {
+    margin-top: 40px;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .documents .documents__list .documents__title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .documents .documents__list .documents__title .title-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.002em;
+  }
+  .section-about .about .about-wrapper .about-body .about-body__content .documents .documents__list .documents__element .elemetn__title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.002em;
+  }
   .section-about .about .about-wrapper .about-body .about-body__content .documents .about-call {
     margin-top: 40px;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-about .about .about-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
   }
 }
 
@@ -3467,12 +3555,16 @@
   .section-main-slider {
     background-image: url(../images/slider_bg_image--mobile.png);
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
+  .section-main-slider .section-inner .main-slider {
+    margin-bottom: 50px;
+  }
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
     max-width: 480px;
     padding-left: 0px;
     margin-left: -50px;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper {
+    margin-bottom: 30px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3484,7 +3576,7 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text {
     margin-bottom: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3494,7 +3586,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3503,7 +3595,7 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__title {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__title {
     margin: 0;
     text-transform: lowercase;
     font-family: 'Proxima Nova';
@@ -3512,7 +3604,7 @@
     font-size: 28px;
     line-height: 140%;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__produkt-name {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__produkt-name {
     text-transform: uppercase;
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -3520,7 +3612,7 @@
     font-size: 28px;
     line-height: 140%;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .slide-text__subtitle {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .slide-text__subtitle {
     margin-top: 15px;
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -3530,7 +3622,7 @@
     /* or 24px */
     letter-spacing: 0.002em;
   }
-  .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-button {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-button {
     position: relative;
     margin-bottom: 30px;
     width: 335px;
@@ -3538,17 +3630,21 @@
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .section-main-slider .swiper .swiper-button-prev {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-button-prev {
     display: none;
   }
-  .section-main-slider .swiper .swiper-button-next {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-button-next {
     display: none;
   }
-  .section-main-slider .swiper .swiper-scrollbar {
-    margin-bottom: 14px;
+  .section-main-slider .section-inner .main-slider .swiper .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+  }
+  .section-main-slider .section-inner .main-slider .swiper .swiper-scrollbar {
+    margin-bottom: 18.5px;
     height: 1.5px;
   }
-  .section-main-slider .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  .section-main-slider .section-inner .main-slider .swiper .swiper-scrollbar .swiper-scrollbar-drag {
     background-color: #66B821;
   }
   .section-main-slider .slider-bollets {

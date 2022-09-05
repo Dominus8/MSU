@@ -430,9 +430,7 @@
                                     font-weight: 400;
                                     font-size: 17px;
                                     line-height: 160%;
-                                    /* or 27px */
                                     letter-spacing: 0.002em;
-                                    /* Grey / 700 */
                                     color: #5E5E5E;
                                 }
                                 .about-numbers {
@@ -582,14 +580,38 @@
                     }
                     @media (max-width: 768px) {
                         .about-body__content {
+                            margin-top: 25px;
                             .about-subtitle {
                                 .about-subtitle__content {
-                                    .about-subtitle__content-text {}
+                                    .about-subtitle__content-text {
+                                        height: auto;
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 160%;
+                                        letter-spacing: 0.002em;
+                                    }
                                     .about-numbers {
+                                        margin-top: 40px;
                                         .numders__element {
                                             &:nth-child(2) {}
-                                            .numders__title {}
-                                            .numbers__subtitle {}
+                                            .numders__title {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 38px;
+                                                line-height: 130%;
+                                                text-align: left;
+                                            }
+                                            .numbers__subtitle {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 17px;
+                                                line-height: 160%;
+                                                letter-spacing: 0.002em;
+                                            }
                                         }
                                     }
                                 }
@@ -604,22 +626,61 @@
                                     }
                                     .honor-card__content {
                                         padding: 0;
-                                        .card-content__text {}
-                                        .card-content__date {}
+                                        .card-content__text {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 160%;
+                                            letter-spacing: 0.002em;
+                                        }
+                                        .card-content__date {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 160%;
+                                            letter-spacing: 0.002em;
+                                            .text-bold {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                line-height: 160%;
+                                                letter-spacing: 0.002em;
+                                            }
+                                        }
                                     }
                                 }
                             }
                             .documents {
+                                margin-top: 40px;
                                 .documents__list {
                                     .documents__title {
+                                        margin: 0;
+                                        margin-bottom: 10px;
                                         img {}
-                                        .title-text {}
+                                        .title-text {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 18px;
+                                            line-height: 120%;
+                                            letter-spacing: 0.002em;
+                                        }
                                     }
                                     .documents__element {
                                         .element__ico {
                                             img {}
                                         }
-                                        .elemetn__title {}
+                                        .elemetn__title {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            letter-spacing: 0.002em;
+                                        }
                                     }
                                 }
                                 .about-call {
@@ -633,6 +694,17 @@
                             }
                         }
                     }
+                }
+            }
+            @media (max-width: 768px) {
+                .about-wrapper {
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 140%;
                 }
             }
         }
@@ -3291,83 +3363,91 @@
             background-image: url(../images/slider_bg_image--mobile.png);
         }
         .section-main-slider {
-            .swiper {
-                .swiper-wrapper {
-                    .swiper-slide {
-                        .slider-image {
-                            max-width: 480px;
-                            padding-left: 0px;
-                            margin-left: -50px;
-                        }
-                        .slide-wrapper {
-                            flex-direction: column;
-                            justify-content: end;
-                            align-items: flex-start;
-                            .slide-text {
-                                margin-bottom: 20px;
-                                display: flex;
-                                flex-direction: column;
-                                .slide-text__line {}
-                                .title-wrapper {
-                                    display: flex;
-                                    flex-direction: column-reverse;
-                                    .slide-text__title {
-                                        margin: 0;
-                                        text-transform: lowercase;
-                                        font-family: 'Proxima Nova';
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 28px;
-                                        line-height: 140%;
+            .section-inner {
+                .main-slider {
+                    margin-bottom: 50px;
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                .slider-image {
+                                    max-width: 480px;
+                                    padding-left: 0px;
+                                    margin-left: -50px;
+                                }
+                                .slide-wrapper {
+                                    margin-bottom: 30px;
+                                    flex-direction: column;
+                                    justify-content: end;
+                                    align-items: flex-start;
+                                    .slide-text {
+                                        margin-bottom: 20px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        .slide-text__line {}
+                                        .title-wrapper {
+                                            display: flex;
+                                            flex-direction: column-reverse;
+                                            .slide-text__title {
+                                                margin: 0;
+                                                text-transform: lowercase;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 28px;
+                                                line-height: 140%;
+                                            }
+                                            .slide-text__produkt-name {
+                                                text-transform: uppercase;
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 28px;
+                                                line-height: 140%;
+                                            }
+                                        }
+                                        .slide-text__subtitle {
+                                            margin-top: 15px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 17px;
+                                            line-height: 140%;
+                                            /* or 24px */
+                                            letter-spacing: 0.002em;
+                                        }
                                     }
-                                    .slide-text__produkt-name {
-                                        text-transform: uppercase;
-                                        font-family: 'Proxima Nova';
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 28px;
-                                        line-height: 140%;
+                                    .slide-button {
+                                        position: relative;
+                                        margin-bottom: 30px;
+                                        width: 335px;
+                                        align-self: center;
+                                        .slide-button__link {}
                                     }
                                 }
-                                .slide-text__subtitle {
-                                    margin-top: 15px;
-                                    font-family: 'Proxima Nova';
-                                    font-style: normal;
-                                    font-weight: 400;
-                                    font-size: 17px;
-                                    line-height: 140%;
-                                    /* or 24px */
-                                    letter-spacing: 0.002em;
-                                }
-                            }
-                            .slide-button {
-                                position: relative;
-                                margin-bottom: 30px;
-                                width: 335px;
-                                align-self: center;
-                                .slide-button__link {}
                             }
                         }
-                    }
-                }
-                .swiper-button-prev {
-                    display: none;
-                }
-                .swiper-button-next {
-                    display: none;
-                }
-                .swiper-pagination {
-                    &-bullet {
-                        &-active {}
-                    }
-                }
-                .swiper-scrollbar {
-                    // padding-bottom: 12.5px;
-                    margin-bottom: 14px;
-                    height: 1.5px;
-                    // background-color: #5E5E5E;
-                    .swiper-scrollbar-drag {
-                        background-color: #66B821;
+                        .swiper-button-prev {
+                            display: none;
+                        }
+                        .swiper-button-next {
+                            display: none;
+                        }
+                        .swiper-pagination {
+                            &-bullet {
+                                height: 12px;
+                                width: 12px;
+                                &-active {}
+                            }
+                        }
+                        .swiper-scrollbar {
+                            // padding-bottom: 12.5px;
+                            margin-bottom: 18.5px;
+                            height: 1.5px;
+                            // background-color: #5E5E5E;
+                            .swiper-scrollbar-drag {
+                                background-color: #66B821;
+                            }
+                        }
                     }
                 }
             }
