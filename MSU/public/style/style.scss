@@ -830,35 +830,30 @@
                             }
                         }
                         .catalog-pac__home-content {
-                            margin-top: 72px;
+                            margin-top: 40px;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
                             .pac-home-content__title {
-                                text-align: center;
                                 font-family: 'Proxima Nova';
                                 font-style: normal;
                                 font-weight: 600;
-                                font-size: 34px;
+                                font-size: 24px;
                                 line-height: 140%;
-                                color: #333333;
+                                text-align: center;
                             }
                             .pac-home-content__subtitle {
-                                text-align: center;
-                                margin-top: 20px;
-                                max-width: 575px;
                                 font-family: 'Proxima Nova';
                                 font-style: normal;
                                 font-weight: 400;
-                                font-size: 17px;
-                                line-height: 140%;
+                                font-size: 15px;
+                                line-height: 160%;
                                 text-align: center;
                                 letter-spacing: 0.002em;
-                                color: #5E5E5E;
                             }
                             .pac-home-content__image {
-                                margin-top: 68px;
+                                margin-top: 25px;
                                 margin-bottom: 40px;
                                 width: 100%;
                                 img {

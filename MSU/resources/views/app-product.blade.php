@@ -95,7 +95,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <div class="swiper-scrollbar swiper-scrollbar-mobile"></div>
                     </div>
                 </div>
             </section>

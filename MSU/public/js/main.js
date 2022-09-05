@@ -156,9 +156,10 @@ let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
     spaceBetween: 10,
     freeMode: true,
     loop: false,
-    pagination: {
-        el: '.swiper-pagination',
+    scrollbar: {
+        el: '.swiper-scrollbar-mobile',
     },
+
     breakpoints: {
         // when window width is >= 320px
         425: {
