@@ -80,7 +80,7 @@
                                 <li><div class="mobile_nav-item"><a href="{{route('support')}}">Поддержка</a></div></li>
                                 <li><div class="mobile_nav-item"><a href="{{route('contacts')}}">Контакты</a></div></li>
                                 <li>
-                                <div class="mobile_nav-item-sourse">
+                                <div class="mobile_nav-item-sourсe">
                                     <img src="images/magnifier-icon.png" alt="">
                                 </div>
                                 </li>
@@ -106,7 +106,7 @@
                     <div class="nav-item"><a href="{{route('partners')}}">Партнеры</a></div>
                     <div class="nav-item"><a href="{{route('support')}}">Поддержка</a></div>
                     <div class="nav-item"><a href="{{route('contacts')}}">Контакты</a></div>
-                    <div class="nav-item-sourse">
+                    <div class="nav-item-source">
                         <img src="images/magnifier-icon.png" alt="">
                     </div>
                 </div>

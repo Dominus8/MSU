@@ -91,7 +91,7 @@
                             <div class="feedback-message__image"><img src="./images/question.png" alt=""></div>
                             <div class="feedback-message__text-wrapper">
                                 <div class="feedback-message__title">Остались вопросы?</div>
-                                <div class="feedback-message__subtitle">Напишите нам, мы поможем</div>
+                                <div class="feedback-message__subtitle"><span class="green">Напишите нам</span>, мы поможем!</div>
                             </div>
                         </div>
                         <div class="feedback-form">

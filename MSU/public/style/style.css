@@ -765,7 +765,7 @@
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav {
   padding-top: 20px;
   padding-bottom: 32px;
-  width: 1300px;
+  max-width: 1300px;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav::after {
@@ -1406,11 +1406,16 @@
 }
 
 @media (max-width: 768px) {
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content {
+    margin: 0;
+  }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-pagination {
     display: none;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .singlepage-content-title {
-    margin-top: 25px;
+    margin-top: 40px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 140%;
@@ -1424,8 +1429,21 @@
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .singlep-age-content__category-name {
     display: none;
   }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body {
+    margin-top: 25px;
+  }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    letter-spacing: 0.002em;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .green {
+    color: #66B821;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper {
     -ms-flex-wrap: wrap;
@@ -1433,21 +1451,56 @@
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper .product__subtitle-text {
     width: 335px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.002em;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper .product__subtitle-text .bold {
+    font-weight: 600;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__subtitle .product__subtitle-wrapper .swiper-single-page-mobile {
     margin-top: 40px;
     display: block;
     max-width: 768px;
   }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__purpose .product__purpose-title .green-marc {
+    margin-top: 2px;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__purpose .product__purpose-title .purpose-title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 140%;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__text .product__purpose .product__purpose-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    letter-spacing: 0.002em;
+  }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider {
     display: none;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .basic-parameters-body__bg-slider {
-    height: 330px;
+    height: 375px;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters__title .basic-parameters__title-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 140%;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters-body .basic-parameters__list {
     border: none;
@@ -1456,6 +1509,15 @@
     border: none;
     display: block;
     margin-bottom: 20px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.002em;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__basic-parameters .basic-parameters-body .basic-parameters__list .parameters-list__el .parameters-value {
+    color: #5E5E5E;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__bottom .body-bottom__slider {
     height: auto;
@@ -1464,15 +1526,47 @@
     width: 335px;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents {
-    margin-top: 30px;
+    padding-top: 30px;
     margin-bottom: 40px;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__title .product-documents__title-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 140%;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el .product-documents__el-title {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.002em;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el .product-documents__el-format {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    letter-spacing: 0.002em;
+  }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action {
     margin: 40px auto;
+  }
+  .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-call-to-action .call-to-action-wrapper .call-to-action__text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.002em;
   }
 }
 
@@ -1952,7 +2046,6 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 120%;
-    /* identical to box height, or 22px */
     letter-spacing: 0.002em;
   }
   .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__subtitle {
@@ -1961,7 +2054,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
     letter-spacing: 0.002em;
   }
   .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card__content-wrapper .card-content__download-link {
@@ -1970,7 +2062,6 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 160%;
-    /* identical to box height, or 24px */
     letter-spacing: 0.002em;
   }
   .section-refiled-projects .section-inner .refiled-projects .refiled-projects-wrapper .refiled-projects__body .projects-body__cards .projects-body__card .card-image {
@@ -2211,7 +2302,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
     letter-spacing: 0.002em;
   }
   .section-refiled-projects-sigle-page .section-inner .refiled-projects-sigle-page .refiled-projects-sigle-page-wrapper .refiled-projects__product-documents .refiled-projects-documents-wrapper .refiled-projects-documents__el-wrapper .refiled-projects-documents__el .refiled-projects-documents__el-format {
@@ -2220,7 +2310,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
     letter-spacing: 0.002em;
   }
 }
@@ -2295,8 +2384,18 @@
 }
 
 @media (max-width: 768px) {
+  .section-partners .section-inner .partners .partners-wrapper .partners__title {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+  }
   .section-partners .section-inner .partners .partners-wrapper .partners__callback .partners-call {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -2462,6 +2561,10 @@
   line-height: 140%;
 }
 
+.section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__text-wrapper .feedback-message__subtitle .green {
+  color: #66B821;
+}
+
 .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form {
   width: 344px;
   display: -webkit-box;
@@ -2625,14 +2728,24 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .section-support .section-inner .support .support-wrapper .support-content {
+    padding: 0;
+  }
   .section-support .section-inner .support .support-wrapper .support-content .support-title {
+    margin: 0;
+    margin-top: 40px;
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 140%;
   }
+  .section-support .section-inner .support .support-wrapper .support-content .warranty-cards {
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
   .section-support .section-inner .support .support-wrapper .support-content .warranty-cards .warranty-cards__title-wrapper {
+    margin-bottom: 25px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2678,29 +2791,136 @@
     /* or 22px */
     letter-spacing: 0.002em;
   }
+  .section-support .section-inner .support .support-wrapper .support-feedback {
+    padding-top: 25px;
+    background: none;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-message {
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 98px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-message .feedback-message__text-wrapper .feedback-message__subtitle {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.002em;
+  }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-webkit-input-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input::-moz-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-moz-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form input:-ms-input-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-webkit-input-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message::-moz-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-moz-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.002em;
   }
   .section-support .section-inner .support .support-wrapper .support-feedback .feedback-form form .feedback-message:-ms-input-placeholder {
     padding-left: 10px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    letter-spacing: 0.002em;
+  }
+  .section-support .section-inner .support .support-wrapper .support-feedback .feedback-footer {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -2953,11 +3173,23 @@
 
 @media (max-width: 1024px) {
   .section-contacts .section-inner .contacts .contacts-wrapper .contacts-title {
+    margin-top: 40px;
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 140%;
+  }
+  .section-contacts .section-inner .contacts .contacts-wrapper .contacts-main {
+    margin-top: 15px;
+  }
+  .section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper .contacts-main__title-mark {
+    padding-top: 2px;
   }
   .section-contacts .section-inner .contacts .contacts-wrapper .contacts-main .contacts-main__title .contacts-main__title-werapper .contacts-main__title-text {
     font-family: 'Proxima Nova';
@@ -3016,6 +3248,9 @@
     font-size: 15px;
     line-height: 160%;
     letter-spacing: 0.002em;
+  }
+  .section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__title .contacts-regional-offices__title-wrapper .contacts-regional-offices__title-mark {
+    padding-top: 2px;
   }
   .section-contacts .section-inner .contacts .contacts-wrapper .contacts-regional-offices .contacts-regional-offices__title .contacts-regional-offices__title-wrapper .contacts-regional-offices__title-text {
     font-family: 'Proxima Nova';
@@ -3357,6 +3592,16 @@
   }
 }
 
+@media (max-width: 930px) {
+  .section-nav .section-inner .nav .nav-wrapper .nav-item {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .section-nav .section-inner .nav .nav-wrapper .nav-item a {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 768px) {
   .section-inner {
     padding: 0 15px;
@@ -3372,8 +3617,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

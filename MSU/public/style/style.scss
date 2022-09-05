@@ -262,7 +262,9 @@
                     cursor: pointer;
                 }
             }
-            .nav-item-source {}
+            .nav-item-source {
+                // border-left: 0.8px solid #9E9E9E;
+            }
         }
     }
     
@@ -726,7 +728,7 @@
                         .catalog-pac__nav {
                             padding-top: 20px;
                             padding-bottom: 32px;
-                            width: 1300px;
+                            max-width: 1300px;
                             &::after {
                                 content: '';
                                 z-index: 1;
@@ -1278,12 +1280,15 @@
                             .pac-nav-wrapper {}
                         }
                         .app-product-singlepage__content {
+                            margin: 0;
                             .single-page-pagination {
                                 display: none;
                                 a {}
                             }
                             .singlepage-content-title {
-                                margin-top: 25px;
+                                margin-top: 40px;
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
                                 font-weight: 600;
                                 font-size: 24px;
                                 line-height: 140%;
@@ -1298,14 +1303,34 @@
                                 display: none;
                             }
                             .single-page-content__body {
+                                margin-top: 25px;
                                 .content-body__top {
-                                    padding-bottom: 30px;
+                                    margin-bottom: 30px;
+                                    font-family: 'Proxima Nova';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 160%;
+                                    /* or 26px */
+                                    letter-spacing: 0.002em;
+                                    .green {
+                                        color: #66B821;
+                                    }
                                     .body-top__text {
                                         .product__subtitle {
                                             .product__subtitle-wrapper {
                                                 flex-wrap: wrap;
                                                 .product__subtitle-text {
                                                     width: 335px;
+                                                    font-family: 'Proxima Nova';
+                                                    font-style: normal;
+                                                    font-weight: 400;
+                                                    font-size: 16px;
+                                                    line-height: 160%;
+                                                    letter-spacing: 0.002em;
+                                                    .bold {
+                                                        font-weight: 600;
+                                                    }
                                                     .green {}
                                                 }
                                                 .swiper-single-page-mobile {
@@ -1323,8 +1348,25 @@
                                         }
                                         .product__purpose {
                                             .product__purpose-title {
-                                                .green-marc {}
-                                                .purpose-title {}
+                                                .green-marc {
+                                                    margin-top: 2px;
+                                                }
+                                                .purpose-title {
+                                                    font-family: 'Proxima Nova';
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 17px;
+                                                    line-height: 140%;
+                                                }
+                                            }
+                                            .product__purpose-text {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 16px;
+                                                line-height: 160%;
+                                                /* or 26px */
+                                                letter-spacing: 0.002em;
                                             }
                                         }
                                     }
@@ -1341,15 +1383,21 @@
                                     }
                                 }
                                 .content-body__bottom {
-                                    padding-top: 30px;
-                                    padding-bottom: 30px;
+                                    padding-top: 0px;
+                                    padding-bottom: 0px;
                                     .basic-parameters-body__bg {}
                                     .basic-parameters-body__bg-slider {
-                                        height: 330px;
+                                        height: 375px;
                                     }
                                     .body-bottom__basic-parameters {
                                         .basic-parameters__title {
-                                            .basic-parameters__title-text {}
+                                            .basic-parameters__title-text {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 17px;
+                                                line-height: 140%;
+                                            }
                                         }
                                         .basic-parameters-body {
                                             .basic-parameters__list {
@@ -1358,6 +1406,15 @@
                                                     border: none;
                                                     display: block;
                                                     margin-bottom: 20px;
+                                                    font-family: 'Proxima Nova';
+                                                    font-style: normal;
+                                                    font-weight: 400;
+                                                    font-size: 15px;
+                                                    line-height: 140%;
+                                                    letter-spacing: 0.002em;
+                                                    .parameters-value {
+                                                        color: #5E5E5E;
+                                                    }
                                                 }
                                             }
                                         }
@@ -1378,18 +1435,39 @@
                                 }
                             }
                             .single-page-content__product-documents {
-                                margin-top: 30px;
+                                padding-top: 30px;
                                 margin-bottom: 40px;
                                 .product-documents-wrapper {
                                     .product-documents__title {
-                                        .product-documents__title-text {}
+                                        .product-documents__title-text {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 17px;
+                                            line-height: 140%;
+                                        }
                                     }
                                     .product-documents__el-wrapper {
                                         grid-template-columns: 1fr;
                                         .product-documents__el {
                                             img {}
-                                            .product-documents__el-title {}
-                                            .product-documents__el-format {}
+                                            .product-documents__el-title {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 16px;
+                                                line-height: 140%;
+                                                letter-spacing: 0.002em;
+                                            }
+                                            .product-documents__el-format {
+                                                font-family: 'Proxima Nova';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 16px;
+                                                line-height: 140%;
+                                                /* or 22px */
+                                                letter-spacing: 0.002em;
+                                            }
                                         }
                                     }
                                 }
@@ -1398,6 +1476,12 @@
                                     .call-to-action-wrapper {
                                         .call-to-action__image {}
                                         .call-to-action__text {
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            letter-spacing: 0.002em;
                                             .green {}
                                         }
                                     }
@@ -1889,7 +1973,6 @@
                                                 font-weight: 600;
                                                 font-size: 18px;
                                                 line-height: 120%;
-                                                /* identical to box height, or 22px */
                                                 letter-spacing: 0.002em;
                                             }
                                         }
@@ -1899,7 +1982,6 @@
                                             font-weight: 400;
                                             font-size: 16px;
                                             line-height: 140%;
-                                            /* or 22px */
                                             letter-spacing: 0.002em;
                                         }
                                         .card-content__download-link {
@@ -1908,7 +1990,6 @@
                                             font-weight: 600;
                                             font-size: 15px;
                                             line-height: 160%;
-                                            /* identical to box height, or 24px */
                                             letter-spacing: 0.002em;
                                         }
                                     }
@@ -2146,7 +2227,6 @@
                                             font-weight: 400;
                                             font-size: 16px;
                                             line-height: 140%;
-                                            /* or 22px */
                                             letter-spacing: 0.002em;
                                         }
                                         .refiled-projects-documents__el-format {
@@ -2155,7 +2235,6 @@
                                             font-weight: 400;
                                             font-size: 16px;
                                             line-height: 140%;
-                                            /* or 22px */
                                             letter-spacing: 0.002em;
                                         }
                                     }
@@ -2235,13 +2314,22 @@
             .section-inner {
                 .partners {
                     .partners-wrapper {
-                        .partners__title {}
+                        .partners__title {
+                            margin: 0;
+                            margin-top: 40px;
+                            margin-bottom: 25px;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 140%;
+                        }
                         .partners__logo {
                             .partners-logo__item {}
                         }
                         .partners__callback {
                             .partners-call {
-                                width: auto;
+                                width: 100%;
                                 .partners-call__image {}
                                 .partners-call__subtitle {
                                     span {}
@@ -2379,6 +2467,9 @@
                                     font-weight: 400;
                                     font-size: 17px;
                                     line-height: 140%;
+                                    .green {
+                                        color: #66B821;
+                                    }
                                 }
                             }
                         }
@@ -2525,7 +2616,10 @@
                         justify-content: center;
                         align-items: center;
                         .support-content {
+                            padding: 0;
                             .support-title {
+                                margin: 0;
+                                margin-top: 40px;
                                 font-family: 'Proxima Nova';
                                 font-style: normal;
                                 font-weight: 600;
@@ -2533,7 +2627,10 @@
                                 line-height: 140%;
                             }
                             .warranty-cards {
+                                margin-top: 25px;
+                                margin-bottom: 40px;
                                 .warranty-cards__title-wrapper {
+                                    margin-bottom: 25px;
                                     align-items: center;
                                     .warranty-cards__title-mark {}
                                     .warranty-cards__title-text {
@@ -2588,11 +2685,24 @@
                             }
                         }
                         .support-feedback {
+                            padding-top: 25px;
+                            background: none;
                             .feedback-message {
+                                background-color: #FAFAFA;
+                                width: 100%;
+                                height: 98px;
+                                justify-content: center;
                                 .feedback-message__image {}
                                 .feedback-message__text-wrapper {
                                     .feedback-message__title {}
-                                    .feedback-message__subtitle {}
+                                    .feedback-message__subtitle {
+                                        font-family: 'Proxima Nova';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 140%;
+                                        letter-spacing: 0.002em;
+                                    }
                                 }
                             }
                             .feedback-form {
@@ -2601,36 +2711,110 @@
                                         &:focus {}
                                         &::-webkit-input-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &::-moz-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &:-moz-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &:-ms-input-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                     }
                                     .feedback-message {
                                         &:focus {}
                                         &::-webkit-input-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &::-moz-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &:-moz-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                         &:-ms-input-placeholder {
                                             padding-left: 10px;
+                                            font-family: 'Proxima Nova';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            display: flex;
+                                            align-items: center;
+                                            letter-spacing: 0.002em;
                                         }
                                     }
                                     .feedback-submit {}
                                 }
                             }
-                            .feedback-footer {}
+                            .feedback-footer {
+                                font-family: 'Proxima Nova';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 140%;
+                                /* or 22px */
+                                display: flex;
+                                align-items: center;
+                                letter-spacing: 0.01em;
+                            }
                         }
                     }
                 }
@@ -2838,6 +3022,7 @@
                 .contacts {
                     .contacts-wrapper {
                         .contacts-title {
+                            margin-top: 40px;
                             font-family: 'Proxima Nova';
                             font-style: normal;
                             font-weight: 600;
@@ -2845,9 +3030,14 @@
                             line-height: 140%;
                         }
                         .contacts-main {
+                            margin-top: 15px;
                             .contacts-main__title {
                                 .contacts-main__title-werapper {
-                                    .contacts-main__title-mark {}
+                                    align-items: center;
+                                    .contacts-main__title-mark {
+                                        padding-top: 2px;
+                                        img {}
+                                    }
                                     .contacts-main__title-text {
                                         font-family: 'Proxima Nova';
                                         font-style: normal;
@@ -2916,7 +3106,9 @@
                         .contacts-regional-offices {
                             .contacts-regional-offices__title {
                                 .contacts-regional-offices__title-wrapper {
-                                    .contacts-regional-offices__title-mark {}
+                                    .contacts-regional-offices__title-mark {
+                                        padding-top: 2px;
+                                    }
                                     .contacts-regional-offices__title-text {
                                         font-family: 'Proxima Nova';
                                         font-style: normal;
@@ -3220,6 +3412,24 @@
         }
     }
     
+    @media (max-width: 930px) {
+        .section-nav {
+            .section-inner {
+                .nav {
+                    .nav-wrapper {
+                        .nav-item {
+                            font-size: 12px;
+                            font-weight: 400;
+                            a {
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     @media (max-width: 768px) {
         .section-inner {
             padding: 0 15px;
@@ -3233,7 +3443,7 @@
                 .info-wrapper {
                     width: 120px;
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     align-items: center;
                     .momile-header__item {
                         &:hover {
