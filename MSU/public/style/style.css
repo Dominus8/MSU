@@ -906,6 +906,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
+    /* or 24px */
     text-align: center;
     letter-spacing: 0.002em;
   }
@@ -954,7 +955,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    /* or 20px */
     letter-spacing: 0.002em;
     color: #5E5E5E;
   }
@@ -2292,6 +2292,12 @@
 .section-partners .section-inner .partners .partners-wrapper .partners__callback .partners-call .partners-call__subtitle span {
   font-weight: 600;
   color: #66B821;
+}
+
+@media (max-width: 768px) {
+  .section-partners .section-inner .partners .partners-wrapper .partners__callback .partners-call {
+    width: auto;
+  }
 }
 
 .section-support .section-inner .support .support-wrapper {
