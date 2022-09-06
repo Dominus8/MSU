@@ -59,6 +59,23 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <img class="slider-image" src="./images/slide_img-pad.png" alt="">
+                            <div class="slide-wrapper">
+                                <div class="slide-text">
+                                    <hr class="slide-text__line">
+                                    <div class="title-wrapper">
+
+                                        <div class="slide-text__title">Управления транспортом</div>
+                                        <div class="slide-text__produkt-name">Единая плаформа</div>
+                                    </div>
+                                    <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
+                                </div>
+                                <a href="{{route('app-product-single-page')}}" class="slide-button">
+                                    <div class="slide-button__link" >Узнать подробнее</div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>

@@ -138,6 +138,21 @@
     .main-swiper {
         max-width: 1110px;
         // height: 300px;
+        .swiper-button-prev {
+            --swiper-theme-color: #66B821;
+            &::after {
+                --swiper-theme-color: #66B821;
+            }
+        }
+        .swiper-button-next {
+            --swiper-theme-color: #66B821;
+            &::after {
+                --swiper-theme-color: #66B821;
+            }
+        }
+        .swiper-button-disabled {
+            --swiper-theme-color: #66B821;
+        }
     }
     
     .section-outer {
@@ -213,7 +228,7 @@
                 }
             }
         }
-        .momile-header {
+        .mobile-header {
             display: none;
         }
     }
@@ -251,12 +266,16 @@
                 transition-property: color;
                 transition-property: font-weight;
                 transition-property: font-size;
-                a {
+                .nav-item-link {
                     color: #F5F5F5;
                     &:focus {
                         color: #66B821;
                         font-weight: 600;
                     }
+                }
+                .nav-item-link--active {
+                    color: #66B821;
+                    font-weight: 600;
                 }
                 &:hover {
                     cursor: pointer;
@@ -380,7 +399,7 @@
             }
             .swiper-scrollbar {
                 // padding-bottom: 12.5px;
-                margin-bottom: 14px;
+                margin-bottom: 14.5px;
                 height: 1.5px;
                 // background-color: #5E5E5E;
                 .swiper-scrollbar-drag {
@@ -3372,7 +3391,14 @@
                     padding-top: 10px;
                     .footer-social__ico-wrapper {
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: start;
+                        .footer-social__ico-item {
+                            margin-right: 8px;
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
                     }
                 }
             }
@@ -3438,16 +3464,21 @@
             background-color: #333333;
         }
         .header {
-            .momile-header {
+            .mobile-header {
                 display: block;
                 .info-wrapper {
                     width: 120px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    .momile-header__item {
+                    .mobile-header__item {
                         &:hover {
                             cursor: pointer;
+                        }
+                        a {
+                            img {
+                                padding-top: 5px;
+                            }
                         }
                     }
                     .naw-burger {

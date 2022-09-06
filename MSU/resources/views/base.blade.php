@@ -36,12 +36,10 @@
         <section class="section-inner">
             <div class="header">
                 <a href="{{route('index')}}" class="header_logo">
-                    <!-- <img src="images/header_logo.png" alt=""> -->
-                    <object type="image/svg+xml" data="images/header_logo.svg"></object>
+                    <img src="images/header_logo.svg" alt="">
                 </a>
                 <div class="header_logo--mobile">
-                    <!-- <img src="./images/header_logo--mobile.png" alt=""> -->
-                    <object type="image/svg+xml" data="images/header_logo--mobile.svg"></object>
+                    <img src="./images/header_logo--mobile.svg" alt="">
 
                 </div>
                 <div class="header_info">
@@ -54,17 +52,20 @@
                         <div class="info-phone_bottom">+7 (391) 27-24-24-0</div>
                     </div>
                 </div>
-                <div class="momile-header">
+                <div class="mobile-header">
                     <div class="info-wrapper">
-                        <div class="momile-header__item mail-ico">
+                        <div class="mobile-header__item mail-ico">
                             <a href="#">
-                                <img src="./images/mail-ico.png" alt="">
+
+                                <img src="./images/mail-ico.svg" alt="">
                             </a>
                         </div>
-                        <div class="momile-header__item phone-ico">
-                            <img src="./images/phone-ico.png" alt="">
+                        <div class="mobile-header__item phone-ico">
+                            <a href="#">
+                                <img src="./images/phone-ico.svg" alt="">
+                            </a>
                         </div>
-                        <div class="momile-header__item naw-burger">
+                        <div class="mobile-header__item naw-burger">
                             <!-- <img src="./images/nav-ico.png" alt=""> -->
                             <input id="menu-toggle" type="checkbox" />
                             <label class='menu-button-container' for="menu-toggle">
@@ -98,14 +99,14 @@
         <section class="section-inner">
             <div class="nav">
                 <div class="nav-wrapper">
-                    <div class="nav-item"><a href="{{route('about')}}">О нас</a> </div>
-                    <div class="nav-item"><a href="{{route('app-product')}}">Программные продукты</a></div>
-                    <div class="nav-item"><a href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div>
-                    <div class="nav-item"> <a href="{{route('news-list')}}">Новости</a></div>
-                    <div class="nav-item"><a href="{{route('refiled-projects')}}">Реализованные проекты</a></div>
-                    <div class="nav-item"><a href="{{route('partners')}}">Партнеры</a></div>
-                    <div class="nav-item"><a href="{{route('support')}}">Поддержка</a></div>
-                    <div class="nav-item"><a href="{{route('contacts')}}">Контакты</a></div>
+                    <div class="nav-item"><a id="about" class="nav-item-link" href="{{route('about')}}">О нас</a> </div>
+                    <div class="nav-item"><a id="pc" class="nav-item-link" href="{{route('app-product')}}">Программные продукты</a></div>
+                    <div class="nav-item"><a id="pac" class="nav-item-link" href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div>
+                    <div class="nav-item"><a id="news" class="nav-item-link" href="{{route('news-list')}}">Новости</a></div>
+                    <div class="nav-item"><a id="rp" class="nav-item-link" href="{{route('refiled-projects')}}">Реализованные проекты</a></div>
+                    <div class="nav-item"><a id="partners" class="nav-item-link" href="{{route('partners')}}">Партнеры</a></div>
+                    <div class="nav-item"><a id="support" class="nav-item-link" href="{{route('support')}}">Поддержка</a></div>
+                    <div class="nav-item"><a id="contact" class="nav-item-link" href="{{route('contacts')}}">Контакты</a></div>
                     <div class="nav-item-source">
                         <img src="images/magnifier-icon.png" alt="">
                     </div>
@@ -182,11 +183,11 @@
                         </div>
                         <div class="footer-social__ico">
                             <div class="footer-social__ico-wrapper">
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_fb.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_yt.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_tg.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_wp.png" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_ig.png" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="./images/footer_fb.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="./images/footer_yt.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="./images/footer_tg.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="./images/footer_wp.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="./images/footer_ig.svg" alt=""></a>
                             </div>
                         </div>
                     </div>

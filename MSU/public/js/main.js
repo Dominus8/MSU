@@ -64,7 +64,8 @@ let swiper_single_page_mobile = new Swiper('.swiper-single-page-mobile', {
 
     // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination-2",
+        type: "fraction",
     },
 
     // Navigation arrows
@@ -74,9 +75,9 @@ let swiper_single_page_mobile = new Swiper('.swiper-single-page-mobile', {
     },
 
     // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
     breakpoints: {
         // when window width is >= 320px
         425: {},
@@ -168,4 +169,25 @@ let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
         },
 
     }
+});
+
+// активный стить на пункты главного меню при нажатии
+
+
+
+$('.nav-item-link').on("click", function(event) {
+    var y = $(event.target).attr('class');
+    var navElId;
+    if (y = 'nav-item-link') {
+        console.log('fuzz');
+        navElId = event.target.id;
+        localStorage.setItem('navId', navElId);
+    }
+});
+
+$(document).ready(function($) {
+    var navId = localStorage.getItem('navId');
+    console.log(navId);
+    var x = $('#' + navId).addClass("nav-item-link--active");
+    localStorage.clear();
 });
