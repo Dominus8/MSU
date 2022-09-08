@@ -759,9 +759,10 @@
                                 right: 0px;
                             }
                             .pac-nav-wrapper {
-                                justify-content: center;
+                                width: 162% !important;
                                 .nav-link {
                                     .pac-nav__element {
+                                        pointer-events: none;
                                         margin-left: 20px;
                                         display: flex;
                                         width: 308px;
@@ -773,6 +774,7 @@
                                             margin-left: 18px;
                                         }
                                         .nav-element__title {
+                                            pointer-events: none;
                                             padding-right: 5px;
                                             margin-left: 12px;
                                             font-family: 'Proxima Nova';
@@ -782,6 +784,27 @@
                                             line-height: 140%;
                                             letter-spacing: 0.002em;
                                             color: #5E5E5E;
+                                        }
+                                    }
+                                }
+                                .nav-link--active {
+                                    .pac-nav__element {
+                                        background-color: #66B821;
+                                        .nav-element__ico {
+                                            border-radius: 25px;
+                                            object {
+                                                svg {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    color: #66B821;
+                                }
+                                .swiper-slide-active {
+                                    .pac-nav__element {
+                                        .nav-element__ico {
+                                            img {}
                                         }
                                     }
                                 }
@@ -902,6 +925,7 @@
                             .pac-nav-wrapper {
                                 .nav-link {
                                     .pac-nav__element {
+                                        pointer-events: none;
                                         width: 160px;
                                         height: 168px;
                                         background: #EEEEEE;
@@ -912,6 +936,7 @@
                                             padding-top: 15px;
                                         }
                                         .nav-element__title {
+                                            pointer-events: none;
                                             margin-left: 12px;
                                             font-family: 'Proxima Nova';
                                             font-style: normal;

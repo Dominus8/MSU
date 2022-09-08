@@ -805,12 +805,11 @@
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 162% !important;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element {
+  pointer-events: none;
   margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,6 +828,7 @@
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element .nav-element__title {
+  pointer-events: none;
   padding-right: 5px;
   margin-left: 12px;
   font-family: 'Proxima Nova';
@@ -838,6 +838,22 @@
   line-height: 140%;
   letter-spacing: 0.002em;
   color: #5E5E5E;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link--active {
+  color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link--active .pac-nav__element {
+  background-color: #66B821;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link--active .pac-nav__element .nav-element__ico {
+  border-radius: 25px;
+}
+
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link--active .pac-nav__element .nav-element__ico object svg {
+  display: none;
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .swiper-scrollbar {
@@ -961,6 +977,7 @@
     right: 0px;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav-mobile .pac-nav-wrapper .nav-link .pac-nav__element {
+    pointer-events: none;
     width: 160px;
     height: 168px;
     background: #EEEEEE;
@@ -974,6 +991,7 @@
     padding-top: 15px;
   }
   .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav-mobile .pac-nav-wrapper .nav-link .pac-nav__element .nav-element__title {
+    pointer-events: none;
     margin-left: 12px;
     font-family: 'Proxima Nova';
     font-style: normal;

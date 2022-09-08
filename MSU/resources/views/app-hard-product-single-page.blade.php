@@ -9,40 +9,46 @@
                     <div class="catalog-pac__nav--bg">
                     <div class="catalog-pac__nav swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-0" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element ">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Координированное управление транспортными потоками</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-1" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-2" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Выдача транспортных разрешений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-3" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-4" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-5" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                </div>
+                            </a>
+                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                                <div class="pac-nav__element">
+                                    <div class="nav-element__ico"></div>
+                                    <div class="nav-element__title"></div>
                                 </div>
                             </a>
                         </div>
@@ -209,37 +215,37 @@
                     <div class="catalog-pac__nav--bg-mobile"></div>
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-0" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element ">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Координированное управление транспортными потоками</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-1" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-2" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Выдача транспортных разрешений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-3" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-4" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
+                            <a id="nav-link-5" class="nav-link swiper-slide" href="{{route('app-hard-product-single-page')}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
                                     <div class="nav-element__title">Администрирование транспортных нарушений</div>
