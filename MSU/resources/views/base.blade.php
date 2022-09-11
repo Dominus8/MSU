@@ -127,9 +127,9 @@
                 <div class="footer__body">
                     <div class="footer-nav">
                         <div class="footer-nav__block">
-                            <div> 
+                            <!-- <div> 
                                 <a class="nav-item--primary" href="#"> Каталог</a>
-                            </div>
+                            </div> -->
                             <div>
                                 <a class="nav-item" href="#">Программные продукты</a>
                             </div>
@@ -144,9 +144,7 @@
                             <div>
                                 <a class="nav-item" href="#">Партнеры</a>
                             </div>
-                            <div>
-                                <a class="nav-item" href="#">Сотрудничество</a>
-                            </div>
+
                             <div>
                                 <a class="nav-item" href="#">Поддержка</a>
                             </div>
@@ -159,8 +157,11 @@
                                 <a class="nav-item" href="#">Реализованные проекты</a>
                             </div>
                             <div>
-                                <a class="nav-item" href="#">Пилотные проекты</a>
+                                <a class="nav-item" href="#">Сотрудничество</a>
                             </div>
+                            <!-- <div>
+                                <a class="nav-item" href="#">Пилотные проекты</a>
+                            </div> -->
                         </div>
                     </div>
                     <div class="footer-contacts">

@@ -267,15 +267,25 @@
                 transition-property: font-weight;
                 transition-property: font-size;
                 .nav-item-link {
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                    /* identical to box height, or 20px */
+                    letter-spacing: 0.002em;
+                    /* Grey / 100 */
                     color: #F5F5F5;
-                    &:focus {
-                        color: #66B821;
-                        font-weight: 600;
-                    }
+                    &:focus {}
                 }
                 .nav-item-link--active {
-                    color: #66B821;
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
                     font-weight: 600;
+                    font-size: 14px;
+                    line-height: 140%;
+                    letter-spacing: 0.002em;
+                    color: #FFFFFF;
                 }
                 &:hover {
                     cursor: pointer;
@@ -291,10 +301,10 @@
     //============== main-slider =========
     .section-main-slider {
         background-image: url(../images/slider_bg_image.png);
-        background-size: 100%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
-        object-fit: contain;
+        object-fit: cover;
         .swiper {
             .swiper-wrapper {
                 .swiper-slide {
@@ -740,7 +750,7 @@
                     .catalog-pac__nav--bg {
                         position: absolute;
                         background-color: #FAFAFA;
-                        width: 100%;
+                        width: 95.5%;
                         left: 0;
                         top: 156px;
                         padding-left: 4.5%;
@@ -789,17 +799,22 @@
                                 }
                                 .nav-link--active {
                                     .pac-nav__element {
-                                        background-color: #66B821;
                                         .nav-element__ico {
                                             border-radius: 25px;
-                                            object {
-                                                svg {
-                                                    display: none;
+                                            svg {
+                                                g {
+                                                    .nav-svg-ico {
+                                                        fill: #66B821;
+                                                    }
+                                                    g {
+                                                        .nav-svg-ico {
+                                                            fill: #66B821;
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-                                    color: #66B821;
                                 }
                                 .swiper-slide-active {
                                     .pac-nav__element {
@@ -3297,6 +3312,30 @@
     }
     
     //========================= /admin-contacts ===================================
+    //========================== admin-product ==================================
+    .mine-content {
+        form {
+            .form-group {
+                fieldset {
+                    div {
+                        display: flex;
+                        // flex-direction: column;
+                        .product-ico {
+                            margin: 5px;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            justify-content: center;
+                            input {
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //========================== /admin-product ==================================
     //============= footer ===============
     .section-footer {
         background-color: #333333;

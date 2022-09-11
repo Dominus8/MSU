@@ -12,7 +12,7 @@
             <a href="{{route('admin')}}"><h1>Админка</h1></a>
             <div class="admin-nav">
                 <a href="#" class="admin-nav__el">О нас</a>
-                <a href="#" class="admin-nav__el">Продукты</a>
+                <a href="{{route('admin-product')}}" class="admin-nav__el">Продукты</a>
                 <a href="#" class="admin-nav__el">Новости</a>
                 <a href="#" class="admin-nav__el">Проекты</a>
                 <a href="#" class="admin-nav__el">Партнёры</a>

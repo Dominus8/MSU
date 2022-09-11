@@ -74,3 +74,20 @@ Route::post('/admin/update-contact/{id}', [MainController::class, 'update_contac
 
 //Удаление карточек Контактов
 Route::get('/admin/dell-contact/{id}', [MainController::class, 'dell_contact']) ->name('dell_contact');
+
+//--------- Админка - продукты------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление контактами
+Route::get('/admin-product', [MainController::class, 'admin_product'])->name('admin-product');
+
+// Создание карточек Контактов
+Route::post('/admin/create-product', [MainController::class, 'create_product']) ->name('create_product');
+
+//Изменение карточек Контактов
+Route::get('/edit-product/{id}', [MainController::class, 'edit_product']) ->name('edit_product');
+
+//Обновление карточек Контактов
+Route::post('/admin/update-product/{id}', [MainController::class, 'update_product']) ->name('update_product');
+
+//Удаление карточек Контактов
+Route::get('/admin/dell-product/{id}', [MainController::class, 'dell_product']) ->name('dell_product');

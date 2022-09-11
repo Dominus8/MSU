@@ -92,6 +92,7 @@ class MainController extends Controller
         return view('contacts',['contact'=>$contact->all()]);
     }
 
+//------------------------- Админка ---------------------------------------------------
 
 //Админка
     public function admin(){
@@ -185,4 +186,39 @@ public function admin_contact(){
             return redirect()->route('admin-contact');
 
         }
+
+//--------------------------- Управление продуктами -------------------------------------
+
+//Админка - Управление продуктами
+
+    public function admin_product(){
+      return view('admin-product');
+    }
+
+//Создание продукта
+    public function create_product(Request $request){
+        dd($request);
+      return redirect()->route('admin-product');
+
+    }
+
+// Редактирование продукта
+    public function edit_product($id){
+        return redirect()->route('admin-product');
+    }
+
+//Обновление продукта
+    public function update_product(){
+
+        return redirect()->route('admin-product');
+}
+
+// Для удаления продукта
+        public function dell_product($id){
+
+
+            return redirect()->route('admin-product');
+
+        }
+
 }// Закрывает контроллер 
