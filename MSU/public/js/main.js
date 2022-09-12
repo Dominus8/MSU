@@ -221,3 +221,14 @@ $('.header_logo').on("click", function(event) {
     localStorage.clear();
 
 });
+
+//----------------------- Админка добавление продукта --------------------
+
+$('#in-mine-slider').change(function() {
+    if (this.checked) {
+        $("#in-mine-slider-approved").attr("class", "in-mine-slider-property");
+    } else {
+        $("#in-mine-slider-approved").attr("class", "in-mine-slider-property--hidden");
+    }
+});
+$(document).ready(function() {});
