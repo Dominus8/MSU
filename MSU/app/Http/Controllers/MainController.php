@@ -191,6 +191,40 @@ public function admin_contact(){
 
 //Админка - Управление продуктами
 
+    public function admin_home_page(){
+      return view('admin-home-page');
+    }
+
+//Создание продукта
+    public function create_home_page(Request $request){
+        dd($request);
+      return redirect()->route('admin-home-page');
+
+    }
+
+// Редактирование продукта
+    public function edit_home_page($id){
+        return redirect()->route('admin-home-page');
+    }
+
+//Обновление продукта
+    public function update_home_page(){
+
+        return redirect()->route('admin-home-page');
+    }
+
+// Для удаления продукта
+        public function dell_home_page($id){
+
+
+            return redirect()->route('admin-home-page');
+
+        }
+
+//--------------------------- Управление продуктами -------------------------------------
+
+//Админка - Управление продуктами
+
     public function admin_product(){
       return view('admin-product');
     }
@@ -211,7 +245,7 @@ public function admin_contact(){
     public function update_product(){
 
         return redirect()->route('admin-product');
-}
+    }
 
 // Для удаления продукта
         public function dell_product($id){

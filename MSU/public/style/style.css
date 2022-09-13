@@ -3484,6 +3484,34 @@
   height: 0;
 }
 
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item input {
+  margin: 5px;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item input::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item input::-moz-placeholder {
+  opacity: 0.6;
+}
+
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item input:-moz-placeholder {
+  opacity: 0.6;
+}
+
+.mine-content form .form-group .single-page-parameters-wrapper .single-page-parameters-item input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+
 .section-footer {
   background-color: #333333;
 }

@@ -25,24 +25,13 @@
                             <fieldset>
                                 <!--Для выбора иконки продукта в меню-->
                                 <legend>Иконка для меню</legend>
-                                <div class="product-ico-wrapper">
-                                    <div class="product-ico">
-                                        <input type="radio" id="product-ico1" name="product-ico" value="product-ico-1" checked>
-                                        <label for="product-ico1"><img src="./images/coord_ico.png" alt=""></label>
-                                    </div>
-                                    <div class="product-ico">
-                                        <input type="radio" id="product-ico2" name="product-ico" value="product-ico-2">
-                                        <label for="product-ico2"><img src="./images/config_ico.png" alt=""></label>
-                                    </div>
-                                    <div class="product-ico">
-                                        <input type="radio" id="product-ico3" name="product-ico" value="product-ico-3">
-                                        <label for="product-ico3"><img src="./images/get_ico.png" alt=""></label>
-                                    </div>
-                                    <div class="product-ico">
-                                        <input type="radio" id="product-ico3" name="product-ico" value="product-ico-4">
-                                        <label for="product-ico4"><img src="./images/admin_ico.png" alt=""></label>
-                                    </div>
-                                </div>
+
+                                <lable for="single-page-bico" class="form-label"> <h6>Иконка чёрная</h6></lable>
+                                <input id="single-page-bico" type="file" class="form-control" name='single-page-bico'><br>
+
+                                <lable for="single-page-gico" class="form-label"> <h6>Иконка зелёная</h6></lable>
+                                <input id="single-page-gico" type="file" class="form-control" name='single-page-gico'><br>
+
                                 <!--Название пункта в меню продуктов-->
                                 <lable for="nt" class="form-label"> <h6>Название в пункте меню</h6></lable>
                                 <input id="nt"  class="form-control" name="nav-title"><br>
@@ -50,29 +39,7 @@
                             <br>
                             <hr>
                             <br>
-                            <fieldset>
-                                <legend>Добавление продукта в слайдер на главной</legend>
 
-                                    <lable for="in-mine-slider" class="form-label"><h6>Добавить в слайдер</h6></lable>
-                                    <input id="in-mine-slider" type="checkbox" name="add-mine-slider"><br>
-
-                                    <div id="in-mine-slider-approved" class="in-mine-slider-property--hidden">
-                                        <lable for="imade-mine-slide" class="form-label"> <h6>Изображение для слайдера на главной</h6></lable>
-                                        <input id="imade-mine-slide" type="file" class="form-control" name='imade-mine-slide'><br>
-
-                                        <lable for="b-title-mine-slide" class="form-label"> <h6>Название чёрный текст</h6></lable>
-                                        <input id="b-title-mine-slide"  class="form-control" name="b-title-mine-slide"><br>
-                                        
-                                        <lable for="g-title-mine-slide" class="form-label"> <h6>Название зелёный текст</h6></lable>
-                                        <input id="g-title-mine-slide"  class="form-control" name="g-title-mine-slide"><br>
-
-                                        <lable for="subtitle-mine-slide" class="form-label"> <h6>Описание для главного слайдера</h6></lable>
-                                        <textarea id="subtitle-mine-slide" type="text" class="form-control" name='subtitle-mine-slide'></textarea><br>
-                                    </div>
-                            </fieldset>
-                            <br>
-                            <hr>
-                            <br>
                             <fieldset>
                                 <legend>Продукт на странице продукта</legend>
 
@@ -91,14 +58,21 @@
                                 <lable for="single-page-purpose" class="form-label"> <h6>Назначение</h6></lable>
                                 <textarea id="single-page-purpose" type="text" class="form-control" name='single-page-purpose'></textarea><br>
                             
-                                <div class="single-page-parameters-wrapper">
-                                    <lable for="single-page-parameters" class="form-label"> <h6>Добавить параметры</h6> </lable>
-                                    <input id="single-page-parameters"  class="form-control" name="single-page-parameters"><br>
+                                <h6>Добавить параметры</h6>
+                                <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
+                                    <div class="single-page-parameters-item">
+                                        <input id="single-page-parameters"  class="form-control" name="single-page-parameters" placeholder="Название параметра">
+                                        <input id="single-page-parameters"  class="form-control" name="single-page-parameters" placeholder="Значение параметра">
+                                    </div>    
                                 </div>
-
+                                <br>
+                                <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div>
+                                <br>
+                                <br>
                                 <div class="single-page-documents-wrapper">
                                     <lable for="single-page-documents" class="form-label"> <h6>Добавить документы</h6></lable>
                                     <input id="single-page-documents" type="file"  multiple class="form-control" name='single-page-documents'><br>
+                                    
                                 </div>
                             </fieldset>
 

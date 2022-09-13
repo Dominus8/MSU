@@ -11,6 +11,7 @@
             <section class="mine-content admin">
             <a href="{{route('admin')}}"><h1>Админка</h1></a>
             <div class="admin-nav">
+                <a href="{{route('admin-home-page')}}" class="admin-nav__el">Главная</a>
                 <a href="#" class="admin-nav__el">О нас</a>
                 <a href="{{route('admin-product')}}" class="admin-nav__el">Продукты</a>
                 <a href="#" class="admin-nav__el">Новости</a>

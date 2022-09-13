@@ -77,17 +77,34 @@ Route::get('/admin/dell-contact/{id}', [MainController::class, 'dell_contact']) 
 
 //--------- Админка - продукты------------------------------------------------------------------------------------------------------------------------
 
-//Админка - Управление контактами
+//Админка - Управление продуктами
 Route::get('/admin-product', [MainController::class, 'admin_product'])->name('admin-product');
 
-// Создание карточек Контактов
+// Создание продукта
 Route::post('/admin/create-product', [MainController::class, 'create_product']) ->name('create_product');
 
-//Изменение карточек Контактов
+//Изменение продукта
 Route::get('/edit-product/{id}', [MainController::class, 'edit_product']) ->name('edit_product');
 
-//Обновление карточек Контактов
+//Обновление продукта
 Route::post('/admin/update-product/{id}', [MainController::class, 'update_product']) ->name('update_product');
 
-//Удаление карточек Контактов
+//Удаление продукта
 Route::get('/admin/dell-product/{id}', [MainController::class, 'dell_product']) ->name('dell_product');
+
+//--------- Админка - Главная------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление контактами
+Route::get('/admin-home-page', [MainController::class, 'admin_home_page'])->name('admin-home-page');
+
+// Создание карточек Контактов
+Route::post('/admin/create-home-page', [MainController::class, 'create__home_page']) ->name('create-home-page');
+
+//Изменение карточек Контактов
+Route::get('/edit-home-page/{id}', [MainController::class, 'edit_home_page']) ->name('edit-home-page');
+
+//Обновление карточек Контактов
+Route::post('/admin/update-home-page/{id}', [MainController::class, 'update_home_page']) ->name('update-home-page');
+
+//Удаление карточек Контактов
+Route::get('/admin/dell-home-page/{id}', [MainController::class, 'dell_home_page']) ->name('dell-home-page');

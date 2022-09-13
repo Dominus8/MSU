@@ -156,12 +156,16 @@ $(document).ready(function($) {
 let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
     // Optional parameters
     initialSlide: navSlideIndex1,
+    // allowTouchMove: false,
     slidesPerView: 4,
     spaceBetween: 30,
     // centeredSlides: true,
+    cssMode: false,
     freeMode: true,
     loop: false,
-    mousewheelControl: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
@@ -179,7 +183,7 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
 
 let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
     // Optional parameters
-
+    watchSlidesProgress: true,
     slidesPerView: 2,
     spaceBetween: 10,
     freeMode: true,
@@ -224,11 +228,35 @@ $('.header_logo').on("click", function(event) {
 
 //----------------------- Админка добавление продукта --------------------
 
-$('#in-mine-slider').change(function() {
-    if (this.checked) {
-        $("#in-mine-slider-approved").attr("class", "in-mine-slider-property");
-    } else {
-        $("#in-mine-slider-approved").attr("class", "in-mine-slider-property--hidden");
+// $('#in-mine-slider').change(function() {
+//     if (this.checked) {
+//         $("#in-mine-slider-approved").attr("class", "in-mine-slider-property");
+//     } else {
+//         $("#in-mine-slider-approved").attr("class", "in-mine-slider-property--hidden");
+//     }
+// });
+// $(document).ready(function() {});
+
+//----------------------- Админка добавление параметра продукта --------------------
+
+$(document).ready(function() {
+    let paramiters_str = $("#parameters-wrapper:first").html();
+
+    function plusParameter() {
+        $("#parameters-wrapper").append(paramiters_str);
+
+        // $(".single-page-parameters-wrapper").append($(".single-page-parameters-item:first").clone());
     }
+
+    function minusParameter() {
+        $(".single-page-parameters-item:last").remove();
+    }
+    $("#plus-parameter").on("click", plusParameter);
+    $("#minus-parameter").on("click", minusParameter);
+
+    $(".single-page-parameters-wrapper").on("change", function() {
+        let count = $('.single-page-parameters-item').length;
+        console.log(count);
+    });
+
 });
-$(document).ready(function() {});

@@ -3342,6 +3342,28 @@
                         height: 0;
                     }
                 }
+                .single-page-parameters-wrapper {
+                    .single-page-parameters-item {
+                        display: flex;
+                        input {
+                            margin: 5px;
+                            &::-webkit-input-placeholder {
+                                opacity: 0.6;
+                            }
+                            &::-moz-placeholder {
+                                opacity: 0.6;
+                            }
+                            /* Firefox 19+ */
+                            &:-moz-placeholder {
+                                opacity: 0.6;
+                            }
+                            /* Firefox 18- */
+                            &:-ms-input-placeholder {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
