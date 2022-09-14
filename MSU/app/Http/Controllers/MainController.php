@@ -238,7 +238,6 @@ public function admin_contact(){
         //$img = Image::make( $request->file('contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
 
         $product = new Product();
-//        $product->contact_image = "image";
         $product->product_type = $request->input('product_type');
         $product->single_page_bico = "single_page_bico"; //$request->input('single-page-bico');
         $product->single_page_gico = "single_page_gico"; //$request->input('single-page-gico');
@@ -249,7 +248,7 @@ public function admin_contact(){
         $product->single_page_sudtitle = $request->input('single_page_sudtitle');
         $product->single_page_purpose = $request->input("single-page-purpose");
         $product->single_page_parameters = $request->input("single_page_parameters");
-        $product->single_page_documents ='single_page_documents' ;//$request->input()
+        $product->single_page_documents =$request->file('single_page_documents');//
 
         $product->save();
 
