@@ -263,5 +263,6 @@ $(document).ready(function() {
         });
         let paarm = parametersArr.toString()
         $("#parameters-to-send").val(paarm);
+        console.log($("#parameters-to-send").val());
     });
 });

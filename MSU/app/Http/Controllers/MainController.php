@@ -8,6 +8,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Models\Contact;
+use App\Models\Product;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -231,7 +232,27 @@ public function admin_contact(){
 
 //Создание продукта
     public function create_product(Request $request){
-        dd($request);
+        // dd($request);
+//    dd($request->input("single_page_parameters"));
+        //$image = $request->file('contact_image')->store('storage', 'contacts_image');
+        //$img = Image::make( $request->file('contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
+
+        $product = new Product();
+//        $product->contact_image = "image";
+        $product->product_type = $request->input('product_type');
+        $product->single_page_bico = "single_page_bico"; //$request->input('single-page-bico');
+        $product->single_page_gico = "single_page_gico"; //$request->input('single-page-gico');
+        $product->nav_title = $request->input("nav_title");
+        $product->b_single_page_title = $request->input('b_single_page_title');
+        $product->g_single_page_title = $request->input("g_single_page_title");
+        $product->single_page_slides = "single_page_slides";//$request->input('single-page-slides');
+        $product->single_page_sudtitle = $request->input('single_page_sudtitle');
+        $product->single_page_purpose = $request->input("single-page-purpose");
+        $product->single_page_parameters = $request->input("single_page_parameters");
+        $product->single_page_documents ='single_page_documents' ;//$request->input()
+
+        $product->save();
+
       return redirect()->route('admin-product');
 
     }
