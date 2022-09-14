@@ -61,12 +61,13 @@
                                 <h6>Добавить параметры</h6>
                                 <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                                     <div class="single-page-parameters-item">
-                                        <input id="single-page-parameters"  class="form-control" name="single-page-parameters" placeholder="Название параметра">
-                                        <input id="single-page-parameters"  class="form-control" name="single-page-parameters" placeholder="Значение параметра">
-                                    </div>    
+                                        <input id="single-page-parameters"  class="form-control" placeholder="Название параметра">
+                                        <input id="single-page-parameters"  class="form-control" placeholder="Значение параметра">
+                                    </div>   
+                                    <textarea id="parameters-to-send" type="text" style="display:none;" name='single-page-parameters'></textarea><br> 
                                 </div>
                                 <br>
-                                <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div>
+                                <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div> <div  class="btn btn-primary add-paramiter">Записать</div>
                                 <br>
                                 <br>
                                 <div class="single-page-documents-wrapper">

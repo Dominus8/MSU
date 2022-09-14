@@ -244,8 +244,6 @@ $(document).ready(function() {
 
     function plusParameter() {
         $("#parameters-wrapper").append(paramiters_str);
-
-        // $(".single-page-parameters-wrapper").append($(".single-page-parameters-item:first").clone());
     }
 
     function minusParameter() {
@@ -254,9 +252,16 @@ $(document).ready(function() {
     $("#plus-parameter").on("click", plusParameter);
     $("#minus-parameter").on("click", minusParameter);
 
-    $(".single-page-parameters-wrapper").on("change", function() {
-        let count = $('.single-page-parameters-item').length;
-        console.log(count);
+    $(".add-paramiter").on("click", function() {
+        let parametersArr = [];
+        $('.single-page-parameters-item').each(function() {
+            $(this).each(function() {
+                let x = $(this).find('input:first').val();
+                let y = $(this).find('input:last').val();
+                parametersArr.push("{" + x + ":" + y + "}");
+            })
+        });
+        let paarm = parametersArr.toString()
+        $("#parameters-to-send").val(paarm);
     });
-
 });
