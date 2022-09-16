@@ -169,7 +169,7 @@ public function admin_contact(){
         $contact->contact_adress = $request->input('contact_adress');
         $contact->contact_phone = $request->input('contact_phone');
         $contact->contact_mail = $request->input('contact_mail');
-
+        
         $contact->save();
 
         return redirect()->route('admin-contact');
@@ -233,24 +233,43 @@ public function admin_contact(){
 //Создание продукта
     public function create_product(Request $request){
         // dd($request);
-//    dd($request->input("single_page_parameters"));
         $product_page_bico = $request->file('single_page_bico')->store('storage', 'product_page_ico');
-        // dd($product_page_bico);
-        $img = Image::make( $request->file('single_page_bico'))->save('storage/product_page_ico/'.$image); //->resize(111, 26)
+        $bimg = Image::make( $request->file('single_page_bico'))->save('storage/product_page_ico/'.$product_page_bico); //->resize(111, 26)
+        
+        $product_page_gico = $request->file('single_page_gico')->store('storage', 'product_page_ico');
+        $gimg = Image::make( $request->file('single_page_gico'))->save('storage/product_page_ico/'.$product_page_gico); //->resize(111, 26)
 
+        $slides_image = $request->file('single_page_slides');
+        
+        $arr=array();
+
+        foreach($slides_image as $img){
+            $c=$img->store('public','product_slides_image');
+            array_push($arr,$x);
+        }
+        
+        
+        $document_files = $request->file('single_page_slides');
+        $document_arr = array();
+
+        foreach($document_files as $doc){
+            $z=$doc->store('public','product_slides_document');
+            array_push($document_arr,$x);
+        }
+        
         $product = new Product();
         $product->product_type = $request->input('product_type');
         $product->single_page_bico = $product_page_bico; //$request->input('single-page-bico');
-        $product->single_page_gico = "single_page_gico"; //$request->input('single-page-gico');
+        $product->single_page_gico = $product_page_gico; //$request->input('single-page-gico');
         $product->nav_title = $request->input("nav_title");
         $product->b_single_page_title = $request->input('b_single_page_title');
         $product->g_single_page_title = $request->input("g_single_page_title");
-        $product->single_page_slides = "single_page_slides"; //$request->input('single-page-slides');
+        $product->single_page_slides = $arr; //$request->input('single-page-slides');
         $product->single_page_sudtitle = $request->input('single_page_sudtitle');
         $product->single_page_purpose = $request->input("single-page-purpose");
         $product->single_page_parameters = $request->input("single_page_parameters");
-        $product->single_page_documents =$request->file('single_page_documents');
-
+        $product->single_page_documents = $document_arr;
+        
         $product->save();
 
       return redirect()->route('admin-product');

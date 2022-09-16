@@ -52,10 +52,26 @@ return [
             'visibility' => 'public',
         ],
 
-        //для иконок контактов
+        //для иконок контактов продуктов
         'product_page_ico' => [
             'driver' => 'local',
             'root' => storage_path('app/public/product_page_ico'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        //для слайдов продукта
+        'product_slides_image' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/product_slides_image'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        //для слайдов продукта
+        'product_slides_document' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/product_slides_document'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
