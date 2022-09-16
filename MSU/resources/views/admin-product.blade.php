@@ -39,7 +39,6 @@
                             <br>
                             <hr>
                             <br>
-
                             <fieldset>
                                 <legend>Продукт на странице продукта</legend>
 
