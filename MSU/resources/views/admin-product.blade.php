@@ -49,7 +49,7 @@
                                 <input id="g_single_page_title"  class="form-control" name="g_single_page_title"><br>
 
                                 <lable for="single_page_slides" class="form-label"> <h6>Изображение для слайдера на странице</h6></lable>
-                                <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides'><br>
+                                <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides[]'><br>
 
                                 <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
                                 <textarea id="single_page_sudtitle" type="text" class="form-control" name='single_page_sudtitle'></textarea><br>
@@ -71,7 +71,7 @@
                                 <br>
                                 <div class="single-page-documents-wrapper">
                                     <lable for="single_page_documents" class="form-label"> <h6>Добавить документы</h6></lable>
-                                    <input id="single_page_documents" type="file"  multiple class="form-control" name='single_page_documents'><br>
+                                    <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
                                     
                                 </div>
                             </fieldset>
@@ -81,7 +81,9 @@
                     </form>
                 </div>
                 <div class="admin-section__manage">
-
+                    @foreach($product as $el)
+                        <div>{{$el->b_single_page_title}}</div>
+                    @endforeach
                 </div>
 
 @endsection

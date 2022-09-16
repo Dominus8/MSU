@@ -188,33 +188,33 @@ public function admin_contact(){
 
         }
 
-//--------------------------- Управление продуктами -------------------------------------
+//--------------------------- Управление Главным слайдером -------------------------------------
 
-//Админка - Управление продуктами
+//Админка - Управление Главным слайдером
 
     public function admin_home_page(){
       return view('admin-home-page');
     }
 
-//Создание продукта
+//Создание Главного слайдера
     public function create_home_page(Request $request){
         dd($request);
       return redirect()->route('admin-home-page');
 
     }
 
-// Редактирование продукта
+// Редактирование Главного слайдера
     public function edit_home_page($id){
         return redirect()->route('admin-home-page');
     }
 
-//Обновление продукта
+//Обновление Главного слайдера
     public function update_home_page(){
 
         return redirect()->route('admin-home-page');
     }
 
-// Для удаления продукта
+// Для удаления Главного слайдера
         public function dell_home_page($id){
 
 
@@ -227,7 +227,8 @@ public function admin_contact(){
 //Админка - Управление продуктами
 
     public function admin_product(){
-      return view('admin-product');
+        $product = new Product();
+      return view('admin-product',['product'=>$product->all()]);
     }
 
 //Создание продукта
@@ -240,21 +241,21 @@ public function admin_contact(){
         $gimg = Image::make( $request->file('single_page_gico'))->save('storage/product_page_ico/'.$product_page_gico); //->resize(111, 26)
 
         $slides_image = $request->file('single_page_slides');
-        
         $arr=array();
 
         foreach($slides_image as $img){
+
             $c=$img->store('public','product_slides_image');
-            array_push($arr,$x);
+            array_push($arr,$c);
         }
         
         
-        $document_files = $request->file('single_page_slides');
+        $document_files = $request->file('single_page_documents');
         $document_arr = array();
 
         foreach($document_files as $doc){
-            $z=$doc->store('public','product_slides_document');
-            array_push($document_arr,$x);
+            $z=$doc->store('public','product_document');
+            array_push($document_arr,$z);
         }
         
         $product = new Product();

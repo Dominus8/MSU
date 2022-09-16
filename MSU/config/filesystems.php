@@ -69,9 +69,9 @@ return [
         ],
 
         //для слайдов продукта
-        'product_slides_document' => [
+        'product_document' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/product_slides_document'),
+            'root' => storage_path('app/public/product_document'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
