@@ -25,7 +25,7 @@ Route::get('/about', [MainController::class, 'about'])->name('about');
 Route::get('/app-product', [MainController::class, 'app_product'])->name('app-product');
 
 //Программные продукты соло страница
-Route::get('/app-product-single-page', [MainController::class, 'app_product_single_page'])->name('app-product-single-page');
+Route::get('/app-product-single-page/{id}', [MainController::class, 'app_product_single_page'])->name('app-product-single-page');
 
 //Программно-аппаратные продукты
 Route::get('/app-hard-product', [MainController::class, 'app_hard_product'])->name('app-hard-product');

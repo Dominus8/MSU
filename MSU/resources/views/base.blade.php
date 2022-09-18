@@ -36,7 +36,7 @@
         <section class="section-inner">
             <div class="header">
                 <a href="{{route('index')}}" class="header_logo">
-                    <img src="images/header_logo.svg" alt="">
+                    <img src="/images/header_logo.svg" alt="">
                 </a>
                 <div class="header_logo--mobile">
                     <img src="./images/header_logo--mobile.svg" alt="">
@@ -56,7 +56,6 @@
                     <div class="info-wrapper">
                         <div class="mobile-header__item mail-ico">
                             <a href="#">
-
                                 <img src="./images/mail-ico.svg" alt="">
                             </a>
                         </div>
@@ -205,7 +204,7 @@
     <!-- /footer -->
     
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 

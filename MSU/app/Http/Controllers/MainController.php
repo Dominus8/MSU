@@ -31,12 +31,17 @@ class MainController extends Controller
 
 //Программные продукты
     public function app_product(){
-        return view('app-product');
+        $product = new Product();
+        return view('app-product',['product'=>$product->all()]);
     }
 
 //Программные продукты соло страница
-    public function app_product_single_page(){
-        return view('app-product-single-page');
+    public function app_product_single_page($id){
+        $product = new Product();
+        $soloProduct = $product::where('id', $id)->get();
+        // $soloparamiters = json_decode($soloProduct[0]->single_page_parameters); 
+        // dd($soloparamiters);
+        return view('app-product-single-page',['product'=>$product->all(),'soloproduct'=>$soloProduct]);
     }
 
 
@@ -290,7 +295,11 @@ public function admin_contact(){
 
 // Для удаления продукта
         public function dell_product($id){
-
+                $prpoduct = Product::find($id);
+                
+                // Storage::disk('contacts_image')->delete($contact->contact_image);
+                
+                $prpoduct->delete();
 
             return redirect()->route('admin-product');
 

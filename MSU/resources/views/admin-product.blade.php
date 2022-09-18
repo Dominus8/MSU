@@ -82,7 +82,11 @@
                 </div>
                 <div class="admin-section__manage">
                     @foreach($product as $el)
-                        <div>{{$el->b_single_page_title}}</div>
+                    <div class="manage-element directions_card">
+                            <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
+                            <a class='btn btn-warning' href="#">edit</a>
+                            <a class='btn btn-danger' href="/admin/dell-product/{{$el->id}}">x</a>
+                        </div>
                     @endforeach
                 </div>
 

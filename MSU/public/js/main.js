@@ -258,7 +258,7 @@ $(document).ready(function() {
             $(this).each(function() {
                 let x = $(this).find('input:first').val();
                 let y = $(this).find('input:last').val();
-                parametersArr.push("{" + x + ":" + y + "}");
+                parametersArr.push(`{"parname":"${x}","parval":"${y}"}`);
             })
         });
         let paarm = parametersArr.toString()
