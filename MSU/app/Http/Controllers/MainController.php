@@ -39,17 +39,24 @@ class MainController extends Controller
     public function app_product_single_page($id){
         $product = new Product();
         $soloProduct = $product::find($id);
-        
+
+        // $docArr = [];
+        // foreach($soloProduct->single_page_documents as $el){
+        //     $docInfo = pathinfo($el[0]);
+        //     array_push($docArr, $docInfo);
+        // }
+        // dd($docArr);
+
         preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
         $paramarr = [];
         foreach($matches[0] as $el){
         $jarr = json_decode($el);
         array_push($paramarr, $jarr);
         }
-        // dd($paramarr);
 
         $soloparamiters =$paramarr;
-        // dd($soloparamiters);
+
+        // dd($soloProduct->single_page_documents);
         return view('app-product-single-page',['product'=>$product->all(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
@@ -256,7 +263,7 @@ public function admin_contact(){
 
         $slides_image = $request->file('single_page_slides');
         $arr=array();
-
+        
         foreach($slides_image as $img){
 
             $c=$img->store('public','product_slides_image');
@@ -266,11 +273,14 @@ public function admin_contact(){
         
         $document_files = $request->file('single_page_documents');
         $document_arr = array();
-
+        $keyarr = array();
+        
         foreach($document_files as $doc){
+            $v=($doc->getClientOriginalName());
             $z=$doc->store('public','product_document');
-            array_push($document_arr,$z);
+            $document_arr[$v]=$z;
         }
+        // dd($document_arr);
         
         $product = new Product();
         $product->product_type = $request->input('product_type');
@@ -283,6 +293,8 @@ public function admin_contact(){
         $product->single_page_sudtitle = $request->input('single_page_sudtitle');
         $product->single_page_purpose = $request->input("single-page-purpose");
         $product->single_page_parameters = $request->input("single_page_parameters");
+        $product->single_page_metadescription = $request->input("single_page_metadescription");
+        $product->single_page_metakeywords = $request->input("single_page_metakeywords");
         $product->single_page_documents = $document_arr;
         
         $product->save();

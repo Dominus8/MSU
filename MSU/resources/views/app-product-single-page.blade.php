@@ -1,4 +1,9 @@
 @extends('base')
+@section('head-link')
+<meta property="og:title" content="{{$soloproduct->g_single_page_title}}"/>
+<meta property="og:description" content="{{$soloproduct->single_page_metadescription}}"/>
+<meta property="og:keywords" content="{{$soloproduct->single_page_metakeywords}}"/>
+@endsection
 
 @section('content')
     <!-- main-content -->
@@ -12,7 +17,7 @@
                         @foreach($product as $el)
                         <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/get_ico.png" alt="i"> </div>
+                                    <div class="nav-element__ico"> <img src="/storage/product_page_ico/{{$soloproduct->single_page_bico}}" alt="i"> </div>
                                     <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
@@ -83,15 +88,17 @@
                                 <div class="body-top__slider">
                                     <div class="swiper swiper-single-page">
                                         <div class="swiper-wrapper">
+                                            @foreach($soloproduct->single_page_slides as $el)
                                             <div class="swiper-slide">
+                                                <img class="slider-image" src="/storage/product_slides_image/{{$el}}" alt="">
+                                            </div>
+                                            @endforeach
+                                            <!-- <div class="swiper-slide">
                                                 <img class="slider-image" src="/images/product_image.png" alt="">
                                             </div>
                                             <div class="swiper-slide">
                                                 <img class="slider-image" src="/images/product_image.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="/images/product_image.png" alt="">
-                                            </div>
+                                            </div> -->
                                         </div>
                                             <div class="swiper-control">
                                                 <div class="swiper-button-prev"></div>
@@ -119,79 +126,7 @@
                                                 <div class="parameters-value"> {{ $el->val}}</div>
                                             </div>
                                             @endforeach
-<!-- 
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Расчет скорости транспортных средств </div>
-                                                <div class="parameters-value">от 10 до 120 км/ч</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Минимальные размеры транспортного средства</div>
-                                                <div class="parameters-value">от 2м длины, от 1.3м ширины</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Количество контролируемых полос движения</div>
-                                                <div class="parameters-value">от 1 до 2</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Диапазон рабочей температуры</div>
-                                                <div class="parameters-value">от - 40 ° С до + 50 ° С</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Протокол взаимодействия с ИТС</div>
-                                                <div class="parameters-value">opt 1.0 (открытый)</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Потребляемая мощность </div>
-                                                <div class="parameters-value">220 В ± 10%</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Напряжение питания</div>
-                                                <div class="parameters-value">220 В ± 10%</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Масса (без кронштейна)</div>
-                                                <div class="parameters-value">не более 3 кг</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
-                                            <div class="parameters-list__el">
-                                                <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
-                                                <div class="parameters-value">470*110*100 мм</div>
-                                            </div> -->
+
                                         </div>
                                     </div>
                                 </div>
@@ -204,14 +139,16 @@
                                     <div class="product-documents__title-text">Документация</div>
                                 </div>
                                 <div class="product-documents__el-wrapper">
-                                    <a href="#" class="product-documents__el">
+                                @foreach($soloproduct->single_page_documents as $key=>$val)
+                                    <a href="/storage/product_document/{{$val}}" class="product-documents__el">
                                         <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Гарантийный талон</div>
+                                        <div class="product-documents__el-title">{{pathinfo($key)['filename']}}</div>
                                         <div class="product-documents__el-format">
-                                            [pdf]
+                                            [{{pathinfo($val)['extension']}}]
                                         </div>
                                     </a>
-                                    <a href="#" class="product-documents__el">
+                                @endforeach
+                                    <!-- <a href="#" class="product-documents__el">
                                         <img src="/images/doc_icon.png" alt="">
                                         <div class="product-documents__el-title">Инструкция по использованию</div>
                                         <div class="product-documents__el-format">
@@ -273,7 +210,7 @@
                                         <div class="product-documents__el-format">
                                             [pdf]
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                             <div class="product-call-to-action">

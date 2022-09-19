@@ -72,10 +72,19 @@
                                 <div class="single-page-documents-wrapper">
                                     <lable for="single_page_documents" class="form-label"> <h6>Добавить документы</h6></lable>
                                     <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
-                                    
                                 </div>
                             </fieldset>
 
+                            <fieldset>
+                            <legend>Настройки мета данных</legend>
+
+                                <lable for="single_page_metadescription" class="form-label"><h6>Description (Не обязательно)</h6></lable>
+                                <textarea id="single_page_metadescription" type="text" class="form-control" name='single_page_metadescription'></textarea><br>
+                                
+                                <lable for="single_page_metakeywords" class="form-label"><h6>Keywords (Не обязательно. Отдельные слова через запятую)</h6></lable>
+                                <textarea id="single_page_metakeywords" type="text" class="form-control" name='single_page_metakeywords'></textarea><br>
+                            
+                            </fieldset>    
                             <button class="btn btn-primary" type="sucsess">Создать продукт</button>
                         </div>
                     </form>

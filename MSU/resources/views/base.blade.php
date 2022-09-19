@@ -9,18 +9,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
    
     <!--Мета для ссылки-->
     
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Название страницы"/>
-    <meta property="og:description" content="Описание страницы"/>
     <meta property="og:image" content="images/header_logo.png"/>
     <meta property="og:url" content="http://MSU24.ru"/>
     <meta property="og:site_name" content="MSU24"/>
 
     @yield('head-link')
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="/style/normalize.css">
@@ -39,7 +39,7 @@
                     <img src="/images/header_logo.svg" alt="">
                 </a>
                 <div class="header_logo--mobile">
-                    <img src="./images/header_logo--mobile.svg" alt="">
+                    <img src="/images/header_logo--mobile.svg" alt="">
 
                 </div>
                 <div class="header_info">
@@ -56,16 +56,16 @@
                     <div class="info-wrapper">
                         <div class="mobile-header__item mail-ico">
                             <a href="#">
-                                <img src="./images/mail-ico.svg" alt="">
+                                <img src="/images/mail-ico.svg" alt="">
                             </a>
                         </div>
                         <div class="mobile-header__item phone-ico">
                             <a href="#">
-                                <img src="./images/phone-ico.svg" alt="">
+                                <img src="/images/phone-ico.svg" alt="">
                             </a>
                         </div>
                         <div class="mobile-header__item naw-burger">
-                            <!-- <img src="./images/nav-ico.png" alt=""> -->
+                            <!-- <img src="/images/nav-ico.png" alt=""> -->
                             <input id="menu-toggle" type="checkbox" />
                             <label class='menu-button-container' for="menu-toggle">
                                 <div class='menu-button'></div>
@@ -81,7 +81,7 @@
                                 <li><div class="mobile_nav-item"><a href="{{route('contacts')}}">Контакты</a></div></li>
                                 <li>
                                 <div class="mobile_nav-item-sourсe">
-                                    <img src="images/magnifier-icon.png" alt="">
+                                    <img src="/images/magnifier-icon.png" alt="">
                                 </div>
                                 </li>
                             </ul>
@@ -107,7 +107,7 @@
                     <div class="nav-item"><a id="support" class="nav-item-link" href="{{route('support')}}">Поддержка</a></div>
                     <div class="nav-item"><a id="contact" class="nav-item-link" href="{{route('contacts')}}">Контакты</a></div>
                     <div class="nav-item-source">
-                        <img src="images/magnifier-icon.png" alt="">
+                        <img src="/images/magnifier-icon.png" alt="">
                     </div>
                 </div>
             </div>
@@ -120,8 +120,8 @@
         <section class="section-inner">
             <div class="footer">
                 <div class="footer__logo">
-                    <!-- <img src="./images/footer_logo.png" alt=""> -->
-                    <object class="footer__logo-img" type="image/svg+xml" data="images/footer_logo.svg"></object>
+                    <!-- <img src="/images/footer_logo.png" alt=""> -->
+                    <object class="footer__logo-img" type="image/svg+xml" data="/images/footer_logo.svg"></object>
                 </div>
                 <div class="footer__body">
                     <div class="footer-nav">
@@ -183,11 +183,11 @@
                         </div>
                         <div class="footer-social__ico">
                             <div class="footer-social__ico-wrapper">
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_fb.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_yt.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_tg.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_wp.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="./images/footer_ig.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="/images/footer_fb.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="/images/footer_yt.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="/images/footer_tg.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="/images/footer_wp.svg" alt=""></a>
+                                <a href="" class="footer-social__ico-item"><img src="/images/footer_ig.svg" alt=""></a>
                             </div>
                         </div>
                     </div>

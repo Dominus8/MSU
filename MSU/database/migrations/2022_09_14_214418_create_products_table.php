@@ -22,10 +22,12 @@ return new class extends Migration
             $table->string("b_single_page_title");
             $table->string("g_single_page_title");
             $table->text("single_page_slides");
-            $table->text("single_page_sudtitle");
-            $table->text("single_page_purpose");
-            $table->text("single_page_parameters");
-            $table->text("single_page_documents");
+            $table->text("single_page_sudtitle")->nullable();
+            $table->text("single_page_purpose")->nullable();
+            $table->text("single_page_parameters")->nullable();
+            $table->text("single_page_documents")->nullable();
+            $table->text("single_page_metadescription")->nullable();
+            $table->text("single_page_metakeywords")->nullable();
             $table->timestamps();
         });
     }

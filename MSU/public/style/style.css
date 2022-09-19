@@ -1413,6 +1413,8 @@
 }
 
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__product-documents .product-documents-wrapper .product-documents__el-wrapper .product-documents__el .product-documents__el-format {
+  -ms-grid-column-align: end;
+      justify-self: end;
   margin-left: 6px;
   color: #9E9E9E;
 }

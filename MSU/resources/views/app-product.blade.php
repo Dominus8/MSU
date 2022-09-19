@@ -1,4 +1,8 @@
 @extends('base')
+@section('head-link')
+<meta property="og:title" content="Программные продукты"/>
+<meta property="og:description" content="Программные продукты"/>
+@endsection
 
 @section('content')
     <!-- main-content -->
