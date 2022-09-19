@@ -21,7 +21,7 @@
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
-                                    <a class="slide-button__link" href="{{route('app-product-single-page')}}">Узнать подробнее</a>
+                                    <a class="slide-button__link" href="/app-product-single-page/12">Узнать подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
                                 <div class="slide-button">
-                                    <a class="slide-button__link" href="{{route('app-product-single-page')}}">Узнать подробнее</a>
+                                    <a class="slide-button__link" href="/app-product-single-page/12">Узнать подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
-                                <a href="{{route('app-product-single-page')}}" class="slide-button">
+                                <a href="/app-product-single-page/12" class="slide-button">
                                     <div class="slide-button__link" >Узнать подробнее</div>
                                 </a>
                             </div>
@@ -71,7 +71,7 @@
                                     </div>
                                     <div class="slide-text__subtitle">Фиксация прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                                 </div>
-                                <a href="{{route('app-product-single-page')}}" class="slide-button">
+                                <a href="/app-product-single-page/12" class="slide-button">
                                     <div class="slide-button__link" >Узнать подробнее</div>
                                 </a>
                             </div>
