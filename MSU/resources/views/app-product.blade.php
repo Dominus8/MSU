@@ -13,7 +13,7 @@
                         <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                    <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
                             @endforeach

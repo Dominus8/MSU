@@ -38,10 +38,19 @@ class MainController extends Controller
 //Программные продукты соло страница
     public function app_product_single_page($id){
         $product = new Product();
-        $soloProduct = $product::where('id', $id)->get();
-        // $soloparamiters = json_decode($soloProduct[0]->single_page_parameters); 
+        $soloProduct = $product::find($id);
+        
+        preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
+        $paramarr = [];
+        foreach($matches[0] as $el){
+        $jarr = json_decode($el);
+        array_push($paramarr, $jarr);
+        }
+        // dd($paramarr);
+
+        $soloparamiters =$paramarr;
         // dd($soloparamiters);
-        return view('app-product-single-page',['product'=>$product->all(),'soloproduct'=>$soloProduct]);
+        return view('app-product-single-page',['product'=>$product->all(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
 

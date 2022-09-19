@@ -13,7 +13,7 @@
                         <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="/images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                    <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
                             @endforeach
@@ -30,10 +30,10 @@
                         <div class="single-page-pagination">
                         </div>
                         <div class="singlepage-content-title">
-                            {{$soloproduct[0]->b_single_page_title}}
+                            {{$soloproduct->b_single_page_title}}
                         </div>
                         <div class="single-page-content__pruduct-name">
-                            {{$soloproduct[0]->g_single_page_title}}
+                            {{$soloproduct->g_single_page_title}}
                         </div>
                         <div class="singlep-age-content__category-name">
                             <!-- ПРОГРАММНО-АППАРАТНЫЙ ПРОДУКТ -->
@@ -45,7 +45,7 @@
                                     <div class="product__subtitle">
                                         <div class="product__subtitle-wrapper">
                                             <div class="product__subtitle-text">
-                                            {{$soloproduct[0]->single_page_sudtitle}}
+                                            {{$soloproduct->single_page_sudtitle}}
                                             </div>
                                             <div class="swiper swiper-single-page-mobile">
                                                 <div class="swiper-wrapper">
@@ -75,7 +75,7 @@
                                             <div class="purpose-title">Назначение</div>
                                         </div>
                                         <div class="product__purpose-text">
-                                        {{$soloproduct[0]->single_page_purpose}}
+                                        {{$soloproduct->single_page_purpose}}
                                         </div>
 
                                     </div>
@@ -113,11 +113,13 @@
                                     
                                     <div class="basic-parameters-body">
                                         <div class="basic-parameters__list">
-
+                                            @foreach($soloparamiters as $el)
                                             <div class="parameters-list__el">
-                                                <div class="parameters-title">Расчет интенсивности потока</div>
-                                                <div class="parameters-value">от 0 до 2000 ед/ч</div>
+                                                <div class="parameters-title">{{ $el->key }}</div>
+                                                <div class="parameters-value"> {{ $el->val}}</div>
                                             </div>
+                                            @endforeach
+<!-- 
                                             <div class="parameters-list__el">
                                                 <div class="parameters-title">Расчет скорости транспортных средств </div>
                                                 <div class="parameters-value">от 10 до 120 км/ч</div>
@@ -189,7 +191,7 @@
                                             <div class="parameters-list__el">
                                                 <div class="parameters-title">Габаритные размеры (длина, ширина, высота)</div>
                                                 <div class="parameters-value">470*110*100 мм</div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

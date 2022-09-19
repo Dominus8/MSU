@@ -258,10 +258,10 @@ $(document).ready(function() {
             $(this).each(function() {
                 let x = $(this).find('input:first').val();
                 let y = $(this).find('input:last').val();
-                parametersArr.push(`{"parname":"${x}","parval":"${y}"}`);
+                parametersArr.push(`{"key":"${x}","val":"${y}"}`);
             })
         });
-        let paarm = parametersArr.toString()
+        let paarm = parametersArr;
         $("#parameters-to-send").val(paarm);
         console.log($("#parameters-to-send").val());
     });
