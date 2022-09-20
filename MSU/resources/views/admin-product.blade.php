@@ -11,12 +11,12 @@
                                 <legend>Тип продукта</legend>
                                 <div class="product-ico">
                                     <input type="radio" id="product-type1" name="product_type" value="product_type-1" checked>
-                                    <label for="product-ico1">Программный продукт </label>
+                                    <label for="product-ico1">Программно-аппаратные продуктыПрограммный продукт </label>
                                 </div>
 
                                 <div class="product-ico">
                                     <input type="radio" id="product-type2" name="product_type" value="product_type-2">
-                                    <label for="product-type2">Программно-аппаратные продукты</label>
+                                    <label for="product-type2">Программный продукт</label>
                                 </div>
                             </fieldset>
                             <br>

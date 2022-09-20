@@ -1101,6 +1101,10 @@
                                                 align-items: center;
                                                 width: 345px;
                                                 height: 440px;
+                                                img {
+                                                    max-width: 345px;
+                                                    object-fit: contain;
+                                                }
                                             }
                                         }
                                         .swiper-control {

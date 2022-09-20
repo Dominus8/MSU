@@ -51,10 +51,10 @@
                     </div>
                     </div>
                     <div class="catalog-pac__home-content">
-                        <div class="pac-home-content__title">Программно-аппаратные продукты</div>
+                        <div class="pac-home-content__title">Программные продукты</div>
                         <div class="pac-home-content__subtitle">Аппараты для фиксации прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
                         <div class="pac-home-content__image">
-                            <img src="./images/app-hard.png" alt="">
+                            <img src="./images/programm-cat.png" alt="">
                         </div>
                     </div>
                     <div class="catalog-pac__nav-mobile swiper swiperslider">

@@ -1168,6 +1168,12 @@
   height: 440px;
 }
 
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-wrapper .swiper-slide img {
+  max-width: 345px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .app-product-singlepage__content .single-page-content__body .content-body__top .body-top__slider .swiper-single-page .swiper-control {
   margin-top: 28px;
   display: -webkit-box;

@@ -72,8 +72,8 @@
                             </label>
                             <ul class="menu">
                                 <li><div class="mobile_nav-item"><a href="{{route('about')}}">О нас</a> </div></li>
-                                <li><div class="mobile_nav-item"><a href="{{route('app-product')}}">Программные продукты</a></div></li>
-                                <li><div class="mobile_nav-item"><a href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('app-hard-product')}}">Программные продукты</a></div></li>
+                                <li><div class="mobile_nav-item"><a href="{{route('app-product')}}">Программно-аппаратные продукты</a></div></li>
                                 <li><div class="mobile_nav-item"><a href="{{route('news-list')}}">Новости</a></div></li>
                                 <li><div class="mobile_nav-item"><a href="{{route('refiled-projects')}}">Реализованные проекты</a></div></li>
                                 <li><div class="mobile_nav-item"><a href="{{route('partners')}}">Партнеры</a></div></li>
@@ -99,8 +99,8 @@
             <div class="nav">
                 <div class="nav-wrapper">
                     <div class="nav-item"><a id="about" class="nav-item-link" href="{{route('about')}}">О нас</a> </div>
-                    <div class="nav-item"><a id="pc" class="nav-item-link" href="{{route('app-product')}}">Программные продукты</a></div>
-                    <div class="nav-item"><a id="pac" class="nav-item-link" href="{{route('app-hard-product')}}">Программно-аппаратные продукты</a></div>
+                    <div class="nav-item"><a id="pc" class="nav-item-link" href="{{route('app-product')}}">Программно-аппаратные продукты</a></div>
+                    <div class="nav-item"><a id="pac" class="nav-item-link" href="{{route('app-hard-product')}}">Программные продукты</a></div>
                     <div class="nav-item"><a id="news" class="nav-item-link" href="{{route('news-list')}}">Новости</a></div>
                     <div class="nav-item"><a id="rp" class="nav-item-link" href="{{route('refiled-projects')}}">Реализованные проекты</a></div>
                     <div class="nav-item"><a id="partners" class="nav-item-link" href="{{route('partners')}}">Партнеры</a></div>
