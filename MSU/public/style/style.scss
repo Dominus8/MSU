@@ -771,6 +771,11 @@
                             .pac-nav-wrapper {
                                 width: 162% !important;
                                 .nav-link {
+                                    &:last-child {
+                                        .pac-nav__element {
+                                            background: #FAFAFA;
+                                        }
+                                    }
                                     .pac-nav__element {
                                         pointer-events: none;
                                         margin-left: 20px;

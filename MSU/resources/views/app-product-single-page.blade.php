@@ -54,15 +54,11 @@
                                             </div>
                                             <div class="swiper swiper-single-page-mobile">
                                                 <div class="swiper-wrapper">
+                                                @foreach($soloproduct->single_page_slides as $el)
                                                     <div class="swiper-slide">
-                                                        <img class="slider-image" src="/images/product_image.png" alt="">
+                                                        <img class="slider-image" src="/storage/product_slides_image/{{$el}}" alt="">
                                                     </div>
-                                                    <div class="swiper-slide">
-                                                        <img class="slider-image" src="/images/product_image.png" alt="">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img class="slider-image" src="/images/product_image.png" alt="">
-                                                    </div>
+                                                @endforeach
                                                 </div>
                                                 <div class="swiper-control">
                                                     <div class="swiper-button-prev"></div>
@@ -93,12 +89,6 @@
                                                 <img class="slider-image" src="/storage/product_slides_image/{{$el}}" alt="">
                                             </div>
                                             @endforeach
-                                            <!-- <div class="swiper-slide">
-                                                <img class="slider-image" src="/images/product_image.png" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img class="slider-image" src="/images/product_image.png" alt="">
-                                            </div> -->
                                         </div>
                                             <div class="swiper-control">
                                                 <div class="swiper-button-prev"></div>
@@ -148,69 +138,6 @@
                                         </div>
                                     </a>
                                 @endforeach
-                                    <!-- <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по эксплуатации</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по настройке и регулировке оборудования</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Гарантийный талон</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a>
-                                    <a href="#" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">Инструкция по использованию</div>
-                                        <div class="product-documents__el-format">
-                                            [pdf]
-                                        </div>
-                                    </a> -->
                                 </div>
                             </div>
                             <div class="product-call-to-action">

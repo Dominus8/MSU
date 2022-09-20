@@ -816,6 +816,10 @@
   width: 162% !important;
 }
 
+.section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link:last-child .pac-nav__element {
+  background: #FAFAFA;
+}
+
 .section-catalog-pac .section-inner .catalog-pac .catalog-pac-wrapper .catalog-pac__nav--bg .catalog-pac__nav .pac-nav-wrapper .nav-link .pac-nav__element {
   pointer-events: none;
   margin-left: 20px;

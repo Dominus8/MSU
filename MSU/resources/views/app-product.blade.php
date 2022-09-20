@@ -26,7 +26,6 @@
 
                                 </div>
                             </a>
-
                         </div>
                         <div class="swiper-scrollbar"></div>
                     </div>

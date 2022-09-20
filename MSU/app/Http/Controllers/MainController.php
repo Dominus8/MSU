@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Models\Contact;
 use App\Models\Product;
+use App\Models\Mainslide;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -19,7 +20,8 @@ class MainController extends Controller
 
 // Главная станицаа
     public function index(){
-        return view('index');
+        $mainslide = new Mainslide();
+        return view('index',['mainslide'=> $mainslide->all()]);
     }
 
 
@@ -32,7 +34,7 @@ class MainController extends Controller
 //Программные продукты
     public function app_product(){
         $product = new Product();
-        return view('app-product',['product'=>$product->all()]);
+        return view('app-product',['product'=>$product->where('product_type','product_type-1')->get()]);
     }
 
 //Программные продукты соло страница
@@ -57,18 +59,40 @@ class MainController extends Controller
         $soloparamiters =$paramarr;
 
         // dd($soloProduct->single_page_documents);
-        return view('app-product-single-page',['product'=>$product->all(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
+        return view('app-product-single-page',['product'=>$product->where('product_type','product_type-1')->get(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
 
 //Программно-аппаратные продукты 
     public function app_hard_product(){
-        return view('app-hard-product');
+        $product = new Product();
+
+        return view('app-hard-product',['product'=>$product->where('product_type','product_type-2')->get()]);
     }
 
 //Программно-аппаратные продукты соло страница
-    public function app_hard_product_single_page(){
-        return view('app-hard-product-single-page');
+    public function app_hard_product_single_page($id){
+        $product = new Product();
+        $soloProduct = $product::find($id);
+
+        // $docArr = [];
+        // foreach($soloProduct->single_page_documents as $el){
+        //     $docInfo = pathinfo($el[0]);
+        //     array_push($docArr, $docInfo);
+        // }
+        // dd($docArr);
+
+        preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
+        $paramarr = [];
+        foreach($matches[0] as $el){
+        $jarr = json_decode($el);
+        array_push($paramarr, $jarr);
+        }
+
+        $soloparamiters =$paramarr;
+
+        // dd($soloProduct->single_page_documents);
+        return view('app-hard-product-single-page',['product'=>$product->where('product_type','product_type-2')->get(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
 
@@ -214,12 +238,33 @@ public function admin_contact(){
 //Админка - Управление Главным слайдером
 
     public function admin_home_page(){
-      return view('admin-home-page');
+        $product = new Product();
+        $sainslide = new Mainslide();
+
+      return view('admin-home-page',['product' => $product->all(),'sainslide' => $sainslide->all()]);
     }
 
 //Создание Главного слайдера
     public function create_home_page(Request $request){
-        dd($request);
+
+        // dd($request->file('imade_mine_slide'));
+
+        $mainslide = new Mainslide();
+
+            $image = $request->file('image_mine_slide')->store('storage', 'image_mine_slide');
+
+            $img = Image::make( $request->file('image_mine_slide'))->save('storage/image_mine_slide/'.$image); //->resize(111, 26)
+
+            // Storage::disk('image_mine_slide')->delete(Contact::find($id)->contact_image);
+        
+        $mainslide->image_mine_slide = $image;
+        $mainslide->b_title_mine_slide = $request->input('b_title_mine_slide');
+        $mainslide->g_title_mine_slide = $request->input('g_title_mine_slide');
+        $mainslide->subtitle_mine_slide = $request->input('subtitle_mine_slide');
+        $mainslide->link_mine_slide = $request->input('link_mine_slide');
+
+        $mainslide->save();
+
       return redirect()->route('admin-home-page');
 
     }
@@ -237,7 +282,11 @@ public function admin_contact(){
 
 // Для удаления Главного слайдера
         public function dell_home_page($id){
-
+            $mainslide = Mainslide::find($id);
+            
+            Storage::disk('image_mine_slide')->delete($mainslide->image_mine_slide);
+            
+            $mainslide->delete();
 
             return redirect()->route('admin-home-page');
 

@@ -54,10 +54,10 @@
                                 <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
                                 <textarea id="single_page_sudtitle" type="text" class="form-control" name='single_page_sudtitle'></textarea><br>
 
-                                <lable for="single-page-purpose" class="form-label"> <h6>Назначение</h6></lable>
+                                <lable id="single-page-purpose-lable" for="single-page-purpose" class="form-label"> <h6>Назначение</h6></lable>
                                 <textarea id="single-page-purpose" type="text" class="form-control" name='single-page-purpose'></textarea><br>
                             
-                                <h6>Добавить параметры</h6>
+                                <h6 id="parameters-wrapper_lable">Добавить параметры</h6>
                                 <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                                     <div class="single-page-parameters-item">
                                         <input id="single-page-parameters"  class="form-control" placeholder="Название параметра">
@@ -66,7 +66,7 @@
                                 </div>
                                 <textarea id="parameters-to-send" type="text" style="display:none;"  name='single_page_parameters'></textarea><br> 
                                 <br>
-                                <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div> <div  class="btn btn-primary add-paramiter">Записать</div>
+                                <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div> <div class="btn btn-primary add-paramiter">Записать</div>
                                 <br>
                                 <br>
                                 <div class="single-page-documents-wrapper">
@@ -98,5 +98,7 @@
                         </div>
                     @endforeach
                 </div>
+
+                
 
 @endsection

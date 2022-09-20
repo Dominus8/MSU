@@ -31,7 +31,7 @@ Route::get('/app-product-single-page/{id}', [MainController::class, 'app_product
 Route::get('/app-hard-product', [MainController::class, 'app_hard_product'])->name('app-hard-product');
 
 //Программно-аппаратные продукты соло страница
-Route::get('/app-hard-product-single-page', [MainController::class, 'app_hard_product_single_page'])->name('app-hard-product-single-page');
+Route::get('/app-hard-product-single-page/{id}', [MainController::class, 'app_hard_product_single_page'])->name('app-hard-product-single-page');
 
 //Новости
 Route::get('/news-list', [MainController::class, 'news_list'])->name('news-list');
@@ -98,7 +98,7 @@ Route::get('/admin/dell-product/{id}', [MainController::class, 'dell_product']) 
 Route::get('/admin-home-page', [MainController::class, 'admin_home_page'])->name('admin-home-page');
 
 // Создание карточек Контактов
-Route::post('/admin/create-home-page', [MainController::class, 'create__home_page']) ->name('create-home-page');
+Route::post('/admin/create-home-page', [MainController::class, 'create_home_page']) ->name('create-home-page');
 
 //Изменение карточек Контактов
 Route::get('/edit-home-page/{id}', [MainController::class, 'edit_home_page']) ->name('edit-home-page');
