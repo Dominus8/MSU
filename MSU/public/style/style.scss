@@ -782,6 +782,8 @@
                                         align-items: center;
                                         .nav-element__ico {
                                             margin-left: 18px;
+                                            max-width: 48px;
+                                            object-fit: contain;
                                         }
                                         .nav-element__title {
                                             pointer-events: none;

@@ -11,7 +11,7 @@
                                 <legend>Тип продукта</legend>
                                 <div class="product-ico">
                                     <input type="radio" id="product-type1" name="product_type" value="product_type-1" checked>
-                                    <label for="product-ico1">Программно-аппаратные продуктыПрограммный продукт </label>
+                                    <label for="product-ico1">Программно-аппаратные продукты </label>
                                 </div>
 
                                 <div class="product-ico">
