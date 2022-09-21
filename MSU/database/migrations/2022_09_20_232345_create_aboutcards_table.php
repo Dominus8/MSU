@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('abouttexts', function (Blueprint $table) {
+        Schema::create('aboutcards', function (Blueprint $table) {
             $table->id();
-            $table->text("about_subtitle");
+            $table->text("adout_card_image");
+            $table->text("adout_card_text");
+            $table->date("adout_card_date");
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('abouttexts');
+        Schema::dropIfExists('aboutcards');
     }
 };

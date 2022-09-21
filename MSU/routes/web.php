@@ -108,3 +108,17 @@ Route::post('/admin/update-home-page/{id}', [MainController::class, 'update_home
 
 //Удаление карточек Контактов
 Route::get('/admin/dell-home-page/{id}', [MainController::class, 'dell_home_page']) ->name('dell-home-page');
+
+//--------- Админка - О нас------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление О нас
+Route::get('/admin-about', [MainController::class, 'admin_about'])->name('admin-about');
+
+//Админка - О нас - обновить подзаголовок
+Route::post('/admin/change-adout-subtitle', [MainController::class, 'change_adout_subtitle'])->name('change-adout-subtitle');
+
+//Админка - О нас - Создать карточку
+Route::post('/admin/create-adout-card', [MainController::class, 'create_adout_card'])->name('create-adout-card');
+
+//Удаление карточек О нас
+Route::get('/admin/dell-about-card/{id}', [MainController::class, 'dell_about_card']) ->name('dell-about-card');

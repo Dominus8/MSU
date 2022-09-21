@@ -12,7 +12,7 @@
                             <div class="about-subtitle">
                                 <div class="about-subtitle__content">
                                     <div class="about-subtitle__content-text">
-                                        Мы осуществляем высокотехнологичные программные разработки для управления дорожной инфраструктурой города, региона: транспортные потоки, платные парковки, весовой контроль, видеофиксация и т.д.
+                                        {!!$abouttext->about_subtitle!!}
                                     </div>
                                     <div class="about-numbers">
                                         <div class="numders__element">
@@ -27,24 +27,15 @@
                                 </div>
                             </div>
                             <div class="honor-aria">
-                                <div class="honor-aria__card">
-                                    <div class="honor-card__image">
-                                        <img src="./images/sk.png" alt="">
-                                    </div>
-                                    <div class="honor-card__content">
-                                        <div class="card-content__text">Включение в реестр надежных поставщиков АО "Корпорация развития Енисейской Сибири"
+                                @foreach($aboutcard as $el)
+                                    <div class="honor-aria__card">
+                                        <div class="honor-card__image"><img src="storage/adout_card_image/{{$el->adout_card_image}}" alt=""></div>
+                                        <div class="honor-card__content">
+                                            <div class="card-content__text">{!!$el->adout_card_text!!}</div>
+                                            <div class="card-content__date"><span class="text-bold">Дата аккредитации:</span> {{date('d-m-Y', strtotime($el->adout_card_date))}}г.</div>
                                         </div>
-                                        <div class="card-content__date"><span class="text-bold">Дата аккредитации:</span>  04.10.2019г.</div>
                                     </div>
-                                </div>
-                                <div class="honor-aria__card">
-                                    <div class="honor-card__image"><img src="./images/es.png" alt=""> </div>
-                                    <div class="honor-card__content">
-                                        <div class="card-content__text">Включение в реестр надежных поставщиков АО "Корпорация развития Енисейской Сибири"
-                                        </div>
-                                        <div class="card-content__date"><span class="text-bold">Дата аккредитации:</span> 04.10.2019г.</div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="documents">
                                 <div class="documents__list">

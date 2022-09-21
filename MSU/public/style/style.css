@@ -491,8 +491,9 @@
 }
 
 .section-about .about .about-wrapper .about-body .about-body__content .about-subtitle .about-subtitle__content .about-subtitle__content-text {
+  margin-bottom: 25px;
   max-width: 535px;
-  height: 172px;
+  min-height: 172px;
   font-family: 'Proxima Nova-Regular';
   font-style: normal;
   font-weight: 400;
