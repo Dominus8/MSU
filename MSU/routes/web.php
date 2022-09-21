@@ -122,3 +122,9 @@ Route::post('/admin/create-adout-card', [MainController::class, 'create_adout_ca
 
 //Удаление карточек О нас
 Route::get('/admin/dell-about-card/{id}', [MainController::class, 'dell_about_card']) ->name('dell-about-card');
+
+//Админка - О нас - Добавить документ
+Route::post('/admin/create-adout-doc', [MainController::class, 'create_adout_doc'])->name('create-adout-doc');
+
+//Удаление документа О нас
+Route::get('/admin/dell-about-doc/{id}', [MainController::class, 'dell_about_doc']) ->name('dell-about-doc');

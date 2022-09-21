@@ -92,6 +92,14 @@ return [
             'visibility' => 'public',
         ],
 
+        //для документов О нас
+        'adout_doc_file' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/adout_doc_file'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

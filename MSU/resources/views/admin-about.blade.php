@@ -26,7 +26,7 @@
         {{ csrf_field() }}
         <div class="form-group">
             <fieldset>
-                <legend>Обновить подзаголовок</legend>
+                <legend>Добавить карточку</legend>
                     <div>
                         <lable for="adout_card_image" class="form-label"> <h6>Изображение контакта</h6> </lable>
                         <input id="adout_card_image" type="file" class="form-control" name='adout_card_image'><br>
@@ -46,13 +46,42 @@
 <div class="admin-section__manage">
         @foreach($aboutcard as $el)
             <div class="manage-element directions_card">
-                <img src="storage/adout_card_image/{{$el->adout_card_image}}" alt="img">
+                <img src="/storage/adout_card_image/{{$el->adout_card_image}}" alt="img">
                 <h6>{{$el->contact_title}}</h6>
                 <a class='btn btn-warning' href="/edit-about-card/{{$el->id}}">edit</a>
                 <a class='btn btn-danger' href="/admin/dell-about-card/{{$el->id}}">x</a>
             </div>
         @endforeach 
+</div>
 
+<!-- Карточка О нас -->
+
+    <form action="{{route('create-adout-doc')}}" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <div class="form-group">
+            <fieldset>
+                <legend>Добавить документ</legend>
+                    <div>
+                        <lable for="adout_doc_file" class="form-label"> <h6>Файл документа</h6> </lable>
+                        <input id="adout_doc_file" type="file" class="form-control" name='adout_doc_file'><br>
+
+                        <lable for="adout_doc_title" class="form-label"> <h6>Отображаемое название документа</h6></lable>
+                        <textarea id="adout_doc_title" class="form-control" name='adout_doc_title'></textarea><br>
+
+                        <button class="btn btn-primary" type="sucsess">Добавить документ</button>
+                    </div>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="admin-section__manage">
+        @foreach($aboutdoc as $el)
+            <div class="manage-element directions_card">
+                <h6>{{$el->adout_doc_title}}</h6>
+                <a class='btn btn-warning' href="/edit-about-doc/{{$el->id}}">edit</a>
+                <a class='btn btn-danger' href="/admin/dell-about-doc/{{$el->id}}">x</a>
+            </div>
+        @endforeach 
 </div>
 
 @endsection

@@ -40,40 +40,42 @@
                             <div class="documents">
                                 <div class="documents__list">
                                     <div class="documents__title">
-                                        <img src="./images/green-mark.png" alt="">
+                                        <img src="/images/green-mark.png" alt="">
                                         <div class="title-text">Аккредитации и сертификаты</div>
                                     </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Включение в реестр надежных поставщиков</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                    @foreach($aboutdoc as $el)
+                                    <a href="/storage/adout_doc_file/{{$el->adout_doc_file}}" class="documents__element">
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
+                                        <div class="elemetn__title">{{$el->adout_doc_title}}</div>
+                                    </a>
+                                    @endforeach
+                                    <!-- <div class="documents__element">
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Сертификат на детектор транспорта</div>
                                     </div>
                                     <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Сертификат (ЭПИ)</div>
                                     </div>
                                     <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Свидетельство ООО "МСУ"</div>
                                     </div>
                                     <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Сертификат соответствия контроллер "Поток"</div>
                                     </div>
                                     <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Протокол испытаний контроллера "Поток"</div>
                                     </div>
                                     <div class="documents__element">
-                                        <div class="element__ico"><img src="./images/doc_icon.png" alt=""></div>
+                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
                                         <div class="elemetn__title">Презентация "АСУДД24"</div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="about-call">
-                                    <div class="about-call__image"><img src="./images/question.png" alt=""></div>
+                                    <div class="about-call__image"><img src="/images/question.png" alt=""></div>
                                     <div class="about-call__subtitle">Не нашли то, что искали?
                                         <span>Напишите нам,</span> мы поможем</div>
                                 </div>

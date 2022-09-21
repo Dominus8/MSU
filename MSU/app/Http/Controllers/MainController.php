@@ -12,6 +12,7 @@ use App\Models\Product;
 use App\Models\Mainslide;
 use App\Models\Abouttext;
 use App\Models\Aboutcard;
+use App\Models\Aboutdoc;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -31,7 +32,8 @@ class MainController extends Controller
     public function about(){
         $abouttext = Abouttext::first();
         $aboutcard = new Aboutcard();
-        return view('about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all()]);
+        $aboutdoc = new Aboutdoc();
+        return view('about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all(),'aboutdoc'=>$aboutdoc->all()]);
     }
 
 
@@ -393,8 +395,9 @@ public function admin_contact(){
         }
 
         $aboutcard = new Aboutcard();
+        $aboutdoc = new Aboutdoc();
         
-        return view('admin-about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all()]);
+        return view('admin-about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all(),'aboutdoc'=>$aboutdoc->all()]);
     }        
 
 //Админка - Обновить подзаголовок О нас
@@ -406,9 +409,10 @@ public function admin_contact(){
         
         $abouttext->save();
         $aboutcard = new Aboutcard();
+        $aboutdoc = new Aboutdoc();
         
 
-        return view('admin-about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all()]);
+        return view('admin-about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all(),'aboutdoc'=>$aboutdoc->all()]);
     }        
 
 //Создать карточку О нас
@@ -416,6 +420,7 @@ public function admin_contact(){
     public function create_adout_card(Request $request){
         $abouttext = Abouttext::first();
         $aboutcard = new Aboutcard();
+        $aboutdoc = new Aboutdoc();
 
         $adout_card_image = $request->file('adout_card_image')->store('storage', 'adout_card_image');
         $adoutimg = Image::make( $request->file('adout_card_image'))->save('storage/adout_card_image/'.$adout_card_image); //->resize(111, 26)
@@ -427,7 +432,7 @@ public function admin_contact(){
         $aboutcard->save();
         
 
-        return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext]);
+        return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
     }        
 
 //Удалить карточку О нас
@@ -442,5 +447,37 @@ public function admin_contact(){
         return redirect()->route('admin-about');
 
     }
+    
+//Создать карточку О нас
+
+    public function create_adout_doc(Request $request){
+        $abouttext = Abouttext::first();
+        $aboutcard = new Aboutcard();
+        $aboutdoc = new Aboutdoc();
+
+        $adout_doc_file = $request->file('adout_doc_file')->store('storage', 'adout_doc_file');
+
+        $aboutdoc->adout_doc_file= $adout_doc_file;
+        $aboutdoc->adout_doc_title = $request->input("adout_doc_title");
+        
+        $aboutdoc->save();
+        
+
+        return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
+    }
+    
+//Удалить карточку О нас
+
+    public function dell_about_doc($id){
+        $aboutdoc = Aboutdoc::find($id);
+        
+        Storage::disk('adout_doc_file')->delete($aboutdoc->adout_doc_file);
+        
+        $aboutdoc->delete();
+
+        return redirect()->route('admin-about');
+
+}
+       
 
 }// Закрывает контроллер 
