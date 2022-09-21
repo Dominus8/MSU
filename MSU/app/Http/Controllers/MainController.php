@@ -391,6 +391,7 @@ public function admin_contact(){
             $abouttext = Abouttext::first();
         }else{
             $abouttext = new Abouttext();
+            $abouttext->about_subtitle = '';
             $abouttext->save();
         }
 
