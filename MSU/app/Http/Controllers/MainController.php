@@ -13,6 +13,7 @@ use App\Models\Mainslide;
 use App\Models\Abouttext;
 use App\Models\Aboutcard;
 use App\Models\Aboutdoc;
+use App\Models\News;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -104,13 +105,16 @@ class MainController extends Controller
 
 //Новости
     public function news_list(){
-        return view('news-list');
+        $news =new News();
+
+        return view('news-list',['news'=>$news->all()]);
     }
 
 
 //Новости соло страница
-    public function news_single_page(){
-        return view('single-news');
+    public function news_single_page($id){
+        $news =News::find($id);
+        return view('single-news',['news'=>$news]);
     }
 
 
@@ -470,6 +474,7 @@ public function admin_contact(){
 //Удалить карточку О нас
 
     public function dell_about_doc($id){
+
         $aboutdoc = Aboutdoc::find($id);
         
         Storage::disk('adout_doc_file')->delete($aboutdoc->adout_doc_file);
@@ -479,6 +484,60 @@ public function admin_contact(){
         return redirect()->route('admin-about');
 
 }
-       
+ 
+//--------------------------- Управление Новости -------------------------------------
+
+//Админка - Управление новостями
+
+    public function admin_news(){
+        $news = new News();
+  
+        return view('admin-news',['news'=>$news->all()]);
+    } 
+
+
+//Создать новость
+
+public function create_news(Request $request){
+    $news = new News();
+
+    $image_news = $request->file('image_news')->store('storage', 'image_news');
+    $newsimg = Image::make( $request->file('image_news'))->save('storage/image_news/'.$image_news); //->resize(111, 26)
+
+    $thumbnail_news = $request->file('thumbnail_news')->store('storage', 'image_news');
+    $thumbnailimg = Image::make( $request->file('thumbnail_news'))->save('storage/image_news/'.$thumbnail_news)->resize(343, 174); //
+
+    $news->thumbnail_news = $thumbnail_news;
+    $news->image_news = $image_news;
+    $news->b_title_news = $request->input("b_title_news");
+    $news->g_title_news = $request->input("g_title_news");
+    $news->subtitle_news = $request->input("subtitle_news");
+    $news->top_text_news = $request->input("top_text_news");
+    $news->bottom_text_news = $request->input("bottom_text_news");
+    $news->elink_text_news = $request->input("elink_text_news");
+    $news->elink_link_news = $request->input("elink_link_news");
+    $news->description_news = $request->input("description_news");
+    $news->keywords_news = $request->input("keywords_news");
+    $news->date_news = $request->input("date_news");
+    
+    $news->save();
+    
+
+    return view('admin-news',['news'=>$news->all()]);
+}
+
+// Для удаления продукта
+    public function dell_news($id){
+        $news = News::find($id);
+        
+        Storage::disk('image_news')->delete($news->thumbnail_news);
+        Storage::disk('image_news')->delete($news->image_news);
+        
+        $news->delete();
+
+    return redirect()->route('admin-news');
+
+}
 
 }// Закрывает контроллер 
+

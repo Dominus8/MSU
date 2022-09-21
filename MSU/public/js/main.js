@@ -287,3 +287,16 @@ $('input[name="product_type"]').click(function() {
 
     }
 });
+
+$(document).ready(function() {
+    $('#external-link-visable').click(function() {
+        let divAttr = $('.external-link').attr("style");
+        console.log(divAttr);
+        if (divAttr == 'display:none;') {
+            $('.external-link').attr("style", "display:block;");
+        }
+        if (divAttr == 'display:block;') {
+            $('.external-link').attr("style", "display:none;");
+        }
+    });
+});

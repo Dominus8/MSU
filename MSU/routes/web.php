@@ -37,7 +37,7 @@ Route::get('/app-hard-product-single-page/{id}', [MainController::class, 'app_ha
 Route::get('/news-list', [MainController::class, 'news_list'])->name('news-list');
 
 //Новости соло страница
-Route::get('/single-news', [MainController::class, 'news_single_page'])->name('single-news');
+Route::get('/single-news/{id}', [MainController::class, 'news_single_page'])->name('single-news');
 
 //Реализованные проекты
 Route::get('/refiled-projects', [MainController::class, 'refiled_projects'])->name('refiled-projects');
@@ -128,3 +128,14 @@ Route::post('/admin/create-adout-doc', [MainController::class, 'create_adout_doc
 
 //Удаление документа О нас
 Route::get('/admin/dell-about-doc/{id}', [MainController::class, 'dell_about_doc']) ->name('dell-about-doc');
+
+//--------- Админка - Новости ------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление Новости
+Route::get('/admin-news', [MainController::class, 'admin_news'])->name('admin-news');
+
+//Админка - О нас - Создать карточку
+Route::post('/admin/create-news', [MainController::class, 'create_news'])->name('create-news');
+
+//Удаление документа О нас
+Route::get('/admin/dell-news/{id}', [MainController::class, 'dell_news']) ->name('dell-news');

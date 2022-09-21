@@ -11,39 +11,20 @@
                         <div class="news-list-pagination">
                             &#60; 1 из 5 &#62;
                         </div>
+                        @foreach($news as $el)
                         <div class="news-list-el">
                             <div class="news__text-content">
-                                <div class="news__title">Улучшенная версия детектора тарнспорта</div>
-                                <div class="news__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                <div class="news__more-link"> <a href="{{route('single-news')}}">Подробнее</a> </div>
+                                <div class="news__title">{{$el->b_title_news}} {{$el->g_title_news}}</div>
+                                <div class="news__subtitle">{{$el->subtitle_news}}</div>
+                                <div class="news__more-link"> <a href="/single-news/{{$el->id}}">Подробнее</a> </div>
                             </div>
-                            <div class="news__create-date">12.09.2022</div>
+                            <div class="news__create-date">{{date('d-m-Y', strtotime($el->date_news))}}</div>
                             <div class="news__thumbnail">
-                                <img src="./images/news-image-1.png" alt="" class="news__thumbnail-image">
+                                <img src="/storage/image_news/{{$el->thumbnail_news}}" alt="" class="news__thumbnail-image">
                             </div>
                         </div>
-                        <div class="news-list-el">
-                            <div class="news__text-content">
-                                <div class="news__title">Улучшенная версия детектора тарнспорта</div>
-                                <div class="news__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                <div class="news__more-link"> <a href="{{route('single-news')}}">Подробнее</a> </div>
-                            </div>
-                            <div class="news__create-date">12.09.2022</div>
-                            <div class="news__thumbnail">
-                                <img src="./images/news-image-1.png" alt="" class="news__thumbnail-image">
-                            </div>
-                        </div>
-                        <div class="news-list-el">
-                            <div class="news__text-content">
-                                <div class="news__title">Улучшенная версия детектора тарнспорта</div>
-                                <div class="news__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                <div class="news__more-link"> <a href="{{route('single-news')}}">Подробнее</a> </div>
-                            </div>
-                            <div class="news__create-date">12.09.2022</div>
-                            <div class="news__thumbnail">
-                                <img src="./images/news-image-1.png" alt="" class="news__thumbnail-image">
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </section>

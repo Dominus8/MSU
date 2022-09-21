@@ -14,7 +14,7 @@
                 <a href="{{route('admin-home-page')}}" class="admin-nav__el">Главная</a>
                 <a href="{{route('admin-about')}}" class="admin-nav__el">О нас</a>
                 <a href="{{route('admin-product')}}" class="admin-nav__el">Продукты</a>
-                <a href="#" class="admin-nav__el">Новости</a>
+                <a href="{{route('admin-news')}}" class="admin-nav__el">Новости</a>
                 <a href="#" class="admin-nav__el">Проекты</a>
                 <a href="#" class="admin-nav__el">Партнёры</a>
                 <a href="#" class="admin-nav__el">Поддержка</a>
