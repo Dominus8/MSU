@@ -240,10 +240,14 @@ $('.header_logo').on("click", function(event) {
 //----------------------- Админка добавление параметра продукта --------------------
 
 $(document).ready(function() {
-    let paramiters_str = $("#parameters-wrapper:first").html();
+    let paramiters_str = $(".single-page-parameters-item-wrapper").html();
+    console.log(paramiters_str);
 
     function plusParameter() {
         $("#parameters-wrapper").append(paramiters_str);
+        $('.single-page-parameters-item:last').find('input:first').val('');
+        $('.single-page-parameters-item:last').find('input:last').val('');
+
     }
 
     function minusParameter() {

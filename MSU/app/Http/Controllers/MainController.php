@@ -308,12 +308,13 @@ public function admin_contact(){
 
     public function admin_product(){
         $product = new Product();
-      return view('admin-product',['product'=>$product->all()]);
+        $hardproduct = Product::where('product_type','product_type-1')->get();
+        $appproduct = Product::where('product_type','product_type-2')->get();
+      return view('admin-product',['product'=>$product->all(),'hardproduct'=>$hardproduct,'appproduct'=>$appproduct]);
     }
 
 //Создание продукта
     public function create_product(Request $request){
-        // dd($request);
         $product_page_bico = $request->file('single_page_bico')->store('storage', 'product_page_ico');
         $bimg = Image::make( $request->file('single_page_bico'))->save('storage/product_page_ico/'.$product_page_bico); //->resize(111, 26)
         
@@ -339,7 +340,6 @@ public function admin_contact(){
             $z=$doc->store('public','product_document');
             $document_arr[$v]=$z;
         }
-        // dd($document_arr);
         
         $product = new Product();
         $product->product_type = $request->input('product_type');
@@ -364,11 +364,98 @@ public function admin_contact(){
 
 // Редактирование продукта
     public function edit_product($id){
-        return redirect()->route('admin-product');
+        $product = Product::find($id);
+        $soloProduct = Product::find($id);
+
+        preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
+        $paramarr = [];
+        foreach($matches[0] as $el){
+        $jarr = json_decode($el);
+        array_push($paramarr, $jarr);
+        }
+
+        $soloparamiters =$paramarr;
+
+        return  view('admin-product-edit',['product'=>$product, 'soloparamiters'=>$soloparamiters]);
     }
 
 //Обновление продукта
-    public function update_product(){
+    public function update_product(Request $request,$id){
+        $product = Product::find($id);
+
+        if($request->file('single_page_bico')){
+            Storage::disk('product_page_ico')->delete($product->single_page_bico);
+
+            $product_page_bico = $request->file('single_page_bico')->store('storage', 'product_page_ico');
+            $bimg = Image::make( $request->file('single_page_bico'))->save('storage/product_page_ico/'.$product_page_bico); //->resize(111, 26)
+        }else{
+            $product_page_bico = $product->single_page_bico;
+        }
+        
+        if($request->file('single_page_gico')){
+            Storage::disk('product_page_ico')->delete($product->single_page_gico);
+
+            $product_page_gico = $request->file('single_page_gico')->store('storage', 'product_page_ico');
+            $gimg = Image::make( $request->file('single_page_gico'))->save('storage/product_page_ico/'.$product_page_gico); //->resize(111, 26)
+        }else{
+           $product_page_gico = $product->single_page_gico;
+        }
+
+
+        if($slides_image = $request->file('single_page_slides')){
+
+            foreach($product->single_page_slides as $el){
+                Storage::disk('product_slides_image')->delete($el);
+            }
+
+            $slides_image = $request->file('single_page_slides');
+            $arr=array();
+            foreach($slides_image as $img){
+    
+                $c=$img->store('public','product_slides_image');
+                array_push($arr,$c);
+            }
+        }else{
+          $arr = $product->single_page_slides;
+        }
+        
+        if($request->file('single_page_documents')){
+
+            foreach($product->single_page_documents as $el){
+                Storage::disk('product_document')->delete($el);
+            }
+
+            $document_files = $request->file('single_page_documents');
+            $document_arr = array();
+            $keyarr = array();
+            
+            foreach($document_files as $doc){
+                $v=($doc->getClientOriginalName());
+                $z=$doc->store('public','product_document');
+                $document_arr[$v]=$z;
+            }
+        }else{
+            $document_arr = $product->single_page_documents;
+        }
+        
+        
+        $product->product_type = $request->input('product_type');
+        $product->single_page_bico = $product_page_bico;
+        $product->single_page_gico = $product_page_gico;
+        $product->nav_title = $request->input("nav_title");
+        $product->b_single_page_title = $request->input('b_single_page_title');
+        $product->g_single_page_title = $request->input("g_single_page_title");
+        $product->single_page_slides = $arr;
+        $product->single_page_sudtitle = $request->input('single_page_sudtitle');
+        $product->single_page_purpose = $request->input("single-page-purpose");
+        $product->single_page_parameters = $request->input("single_page_parameters");
+        $product->single_page_metadescription = $request->input("single_page_metadescription");
+        $product->single_page_metakeywords = $request->input("single_page_metakeywords");
+        $product->single_page_documents = $document_arr;
+        
+        $product->save();
+
+
 
         return redirect()->route('admin-product');
     }
@@ -453,7 +540,7 @@ public function admin_contact(){
 
     }
     
-//Создать карточку О нас
+//Создать документ О нас
 
     public function create_adout_doc(Request $request){
         $abouttext = Abouttext::first();
@@ -471,7 +558,7 @@ public function admin_contact(){
         return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
     }
     
-//Удалить карточку О нас
+//Удалить документ О нас
 
     public function dell_about_doc($id){
 
