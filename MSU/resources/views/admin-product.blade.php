@@ -10,9 +10,9 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+<h6>Редактировать Программно-аппаратные продукты</h6>
   <div class="admin-section__manage">
-    <h6>Редактировать Программно-аппаратные продукты</h6>
-    <br>
+    
             @foreach($hardproduct as $el)
             <div class="manage-element directions_card">
                     <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
@@ -21,9 +21,9 @@
                 </div>
             @endforeach
         </div>
+        <h6>Редактировать Программные продукты</h6>
   <div class="admin-section__manage">
-  <h6>Редактировать Программные продукты</h6>
-  <br>
+  
             @foreach($appproduct as $el)
             <div class="manage-element directions_card">
                     <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
@@ -37,8 +37,9 @@
 
 
 
-    
-  
+<br>
+<br>
+    <h3>Добавить новый продукт</h3>
         <div class="mine-content admin-section__form">
             <form action="/admin/create-product" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -61,7 +62,10 @@
                     <fieldset>
                         <!--Для выбора иконки продукта в меню-->
                         <legend>Иконка для меню</legend>
-    
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Об иконках" data-bs-content="Размер 48х48px (1:1) jpg или png формата. Иконки могут быть любого цвета. Первая - основная, вторая - активная(отображается при выбранном продукте)">Об иконках</button>
+                        <br>
+
+                        <br>
                         <lable for="single_page_bico" class="form-label"> <h6>Иконка чёрная</h6></lable>
                         <input id="single_page_bico" type="file" class="form-control" name='single_page_bico'><br>
     
@@ -83,8 +87,14 @@
     
                         <lable for="g_single_page_title" class="form-label"> <h6>Заголовок зелёный текст</h6> </lable>
                         <input id="g_single_page_title"  class="form-control" name="g_single_page_title"><br>
-    
+
+                        
                         <lable for="single_page_slides" class="form-label"> <h6>Изображение для слайдера на странице</h6></lable>
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О слайдах Программно-аппаратного продукта" data-bs-content="Область отображения слайда 345х440px jpg(если размер на всю область) или png формата. Подложка у облости отображения всегда зелёного цвета. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.">О слайдах Программно-аппаратного продукта</button>
+                        
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О слайдах Программного продукта" data-bs-content="Область отображения слайдана 880х450px (На данный момент строго не ограничена, Можно эксперементировать) jpg или png формата. Подложки нет только цвет фона секции. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.">О слайдах Программного продукта</button>
+                        <br>
+                        <br>
                         <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides[]'><br>
     
                         <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
@@ -94,6 +104,9 @@
                         <textarea id="single-page-purpose" type="text" class="form-control" name='single-page-purpose'></textarea><br>
                     
                         <h6 id="parameters-wrapper_lable">Добавить параметры</h6>
+                        <button id="parameters-description" type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О параметрах" data-bs-content="Обязательно нажать кнопку 'Записать', иначе параметры не добавятся. Не оставляйте строки параметров пустыми, иначе они так и запишутся и отобразятся на странице пустыми (на данный момент)">О параметрах</button>
+                        <br>
+                        <br>
                         <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                            <div class="single-page-parameters-item-wrapper">
                                <div class="single-page-parameters-item">
@@ -109,6 +122,9 @@
                         <br>
                         <div class="single-page-documents-wrapper">
                             <lable for="single_page_documents" class="form-label"> <h6>Добавить документы</h6></lable>
+                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Название документов на странице берётся из названия файла. Следите за актеальными названиями файлов. Документы добавляются все вместе. По одному добавить нельзя. Для добавление выделите все документы и они добавятся в форму.">О документах</button>
+                            <br>
+                            <br>
                             <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
                         </div>
                     </fieldset>
@@ -131,7 +147,12 @@
 
 
 
-
+        <script>
+            $(document).ready(function(){
+                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            });
+        </script>
                 
 
 @endsection

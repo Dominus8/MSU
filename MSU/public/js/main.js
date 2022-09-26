@@ -273,7 +273,7 @@ $(document).ready(function() {
 
 $('input[name="product_type"]').click(function() {
     if ($('#product-type1').is(':checked')) {
-        // $('#single-page-purpose').attr("style", "display:block");
+        $('#parameters-description').attr("style", "display:block");
         // $('#single-page-purpose-lable').attr("style", "display:block");
         $('#parameters-wrapper_lable').attr("style", "display:block");
         $('#parameters-wrapper').attr("style", "display:block");
@@ -281,7 +281,7 @@ $('input[name="product_type"]').click(function() {
         $('#plus-parameter').attr("style", "display:block");
         $('.add-paramiter').attr("style", "display:block");
     } else {
-        // $('#single-page-purpose').attr("style", "display:none");
+        $('#parameters-description').attr("style", "display:none");
         // $('#single-page-purpose-lable').attr("style", "display:none");
         $('#parameters-wrapper_lable').attr("style", "display:none");
         $('#parameters-wrapper').attr("style", "display:none");
