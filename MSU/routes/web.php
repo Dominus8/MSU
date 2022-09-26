@@ -143,3 +143,14 @@ Route::post('/admin/create-news', [MainController::class, 'create_news'])->name(
 
 //Удаление документа О нас
 Route::get('/admin/dell-news/{id}', [MainController::class, 'dell_news']) ->name('dell-news');
+
+//--------- Админка - Реализованные проекты ------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление Проектами
+Route::get('/admin-projects', [MainController::class, 'admin_projects'])->name('admin-projects');
+
+//Админка - О нас - Создать карточку
+Route::post('/admin/create-project', [MainController::class, 'create_project'])->name('create-project');
+
+//Удаление Проекта
+Route::get('/admin/dell-project/{id}', [MainController::class, 'dell_project']) ->name('dell-project');

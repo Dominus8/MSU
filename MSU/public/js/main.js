@@ -241,7 +241,6 @@ $('.header_logo').on("click", function(event) {
 
 $(document).ready(function() {
     let paramiters_str = $(".single-page-parameters-item-wrapper").html();
-    console.log(paramiters_str);
 
     function plusParameter() {
         $("#parameters-wrapper").append(paramiters_str);
@@ -268,6 +267,40 @@ $(document).ready(function() {
         let paarm = parametersArr;
         $("#parameters-to-send").val(paarm);
         console.log($("#parameters-to-send").val());
+    });
+});
+
+//====================== Добавление ссылки проектов ================================
+$(document).ready(function() {
+    let link_str = $(".link-item-wrapper").html();
+    console.log(link_str);
+
+    function plusLink() {
+        $(".link-item-wrapper").append(link_str);
+        $('.elink-item:last').find('input:first').val('');
+        $('.elink-item:last').find('input:last').val('');
+
+    }
+
+    function minusLink() {
+        $(".link-item:last").remove();
+    }
+    $("#projectLinc-plus").on("click", plusLink);
+    $("#projectLinc-minus").on("click", minusLink);
+
+    $("#projectLinc-write").on("click", function() {
+        let linksArr = {};
+        $('.link-item').each(function() {
+            $(this).each(function() {
+                let x = $(this).find('input:first').val();
+                let y = $(this).find('input:last').val();
+                linksArr[x] = y;
+            })
+        });
+        console.log(linksArr);
+        let links = linksArr;
+        $("#links-to-send").val(links);
+        console.log($("#links-to-send").val());
     });
 });
 

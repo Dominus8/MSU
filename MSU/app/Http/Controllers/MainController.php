@@ -370,8 +370,8 @@ public function admin_contact(){
         preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
         $paramarr = [];
         foreach($matches[0] as $el){
-        $jarr = json_decode($el);
-        array_push($paramarr, $jarr);
+            $jarr = json_decode($el);
+            array_push($paramarr, $jarr);
         }
 
         $soloparamiters =$paramarr;
@@ -623,6 +623,57 @@ public function create_news(Request $request){
         $news->delete();
 
     return redirect()->route('admin-news');
+
+}
+ 
+//--------------------------- Управление Проектами -------------------------------------
+
+//Админка - Управление Проектами
+
+    public function admin_projects(){
+  
+        return view('admin-project');
+    } 
+
+
+//Создать Проект
+
+public function create_project(Request $request){
+    foreach($request->input("links-to-send") as $el){
+       dd($el);
+    }
+    
+    $project = new project();
+
+    $image_project = $request->file('image_project')->store('storage', 'image_project');
+    $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
+
+    $thumbnail_project = $request->file('thumbnail_project')->store('storage', 'image_project');
+    $thumbnailimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
+
+    $project->thumbnail_project = $thumbnail_project;
+    $project->image_project = $image_project;
+    $project->b_title_project = $request->input("b_title_project");
+    $project->g_title_project = $request->input("g_title_project");
+    $project->subtitle_project = $request->input("subtitle_project");
+    $project->top_text_project = $request->input("top_text_project");
+    $project->bottom_text_project = $request->input("bottom_text_project");
+    $project->elink_text_project = $request->input("elink_text_project");
+    $project->elink_link_project = $request->input("elink_link_project");
+    $project->description_project = $request->input("description_project");
+    $project->keywords_project = $request->input("keywords_project");
+    $project->date_project = $request->input("date_project");
+    
+    $project->save();
+    
+
+    return view('admin-project',['project'=>$project->all()]);
+}
+
+// Для удаления Проекта
+    public function dell_project(){
+
+    return redirect()->route('admin-project');
 
 }
 
