@@ -7,41 +7,35 @@
             <section class="mine-content refiled-projects-sigle-page">
                 <div class="refiled-projects-sigle-page-wrapper">
                     <div class="refiled-projects-sigle-page-title">
-                        <div class="refiled-projects-sigle-page-title--black">Проектирование</div>
-                        <div class="refiled-projects-sigle-page-title--green">Дорожной разметки</div>
+                        <div class="refiled-projects-sigle-page-title--black">{{$project->b_title_project}}</div>
+                        <div class="refiled-projects-sigle-page-title--green">{{$project->g_title_project}}</div>
                     </div>    
                     <hr>
                     <div class="refiled-projects-sigle-page__content">
                         <div class="refiled-projects-sigle-page__content-text">
-                            Единая платформа управления транспортной системой — программа, предназначенная для обнаружения транспортных средств, регистрации прохождения количества транспортных средств через зону детекции и определения параметров.
-                            <br>
-                            <br>
-                            Изготавливается в соответствии с требованиями <span class="green">ГОСТ 34.401-90</span>  «Информационная технология (ИТ). Комплекс стандартов на автоматизированные системы. Средства технические периферийные автоматизированных систем дорожного движения. Типы и технические требования». <span class="green">ГОСТ 32965-2014</span> (прил. Б) «Дороги автомобильные общего пользования. Методы учёта интенсивности движения транспортного потока».
+                            {!!$project->full_text_project!!}
                         </div>
+
                         <div class="refiled-projects-sigle-page__content-links">
-                            <a href="#" class="refiled-projects-sigle-page__link-el">
-                                <div class="link__text">Промо-сайт проекта</div>
-                                <div class="link__ico"><img src="./images/single-news-ico.png" alt="ico"></div>
-                            </a>
-                            <a href="#" class="refiled-projects-sigle-page__link-el">
-                                <div class="link__text">Официальный сайт заказчика</div>
-                                <div class="link__ico"><img src="./images/single-news-ico.png" alt="ico"></div>
-                            </a>
+                            @if($project->links_to_send)
+                                @foreach(json_decode($project->links_to_send) as $key=>$val)
+                                    <a href="{{$val}}" class="refiled-projects-sigle-page__link-el">
+                                        <div class="link__text">{{$key}}</div>
+                                        <div class="link__ico"><img src="/images/single-news-ico.png" alt="ico"></div>
+                                    </a>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                     
                     <div class="refiled-projects__slider">
                         <div class="swiper swiper-refiled-projects">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img class="slider-image" src="./images/refiled-projects.png" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="slider-image" src="./images/refiled-projects.png" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img class="slider-image" src="./images/refiled-projects.png" alt="">
-                                </div>
+                                @foreach($project->image_project as $el)
+                                    <div class="swiper-slide">
+                                        <img class="slider-image" src="/storage/image_project/{{$el}}" alt="">
+                                    </div>
+                                @endforeach
                             </div>
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
@@ -49,58 +43,27 @@
                     </div>
 
                     
-                    <div class="refiled-projects__product-documents">
-                        <div class="refiled-projects-documents-wrapper">
-                            <div class="refiled-projects-documents__title">
-                                <img src="./images/green-mark.png" alt="">
-                                <div class="refiled-projects-documents__title-text">Документация</div>
-                            </div>
-                            <div class="refiled-projects-documents__el-wrapper">
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Презентация проекта</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [pdf]
-                                    </div>
-                                </a>
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Данные проектирования</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [doc]
-                                    </div>
-                                </a>
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Результаты проведенных работ</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [pdf]
-                                    </div>
-                                </a>
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Презентация проекта</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [pdf]
-                                    </div>
-                                </a>
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Данные проектирования</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [pdf]
-                                    </div>
-                                </a>
-                                <a href="#" class="refiled-projects-documents__el">
-                                    <img src="./images/doc_icon.png" alt="">
-                                    <div class="refiled-projects-documents__el-title">Результаты проведенных работ</div>
-                                    <div class="refiled-projects-documents__el-format">
-                                        [pdf]
-                                    </div>
-                                </a>
-                            </div>
-                        </div> 
-                    </div>
+                    @if($project->document_project)
+                        <div class="refiled-projects__product-documents">
+                            <div class="refiled-projects-documents-wrapper">
+                                <div class="refiled-projects-documents__title">
+                                    <img src="/images/green-mark.png" alt="">
+                                    <div class="refiled-projects-documents__title-text">Документация</div>
+                                </div>
+                                <div class="refiled-projects-documents__el-wrapper">
+                                    @foreach($project->document_project as $key=>$val)
+                                        <a href="/storage/product_document/{{$val}}" class="refiled-projects-documents__el">
+                                            <img src="/images/doc_icon.png" alt="">
+                                            <div class="refiled-projects-documents__el-title">{{pathinfo($key)['filename']}}</div>
+                                            <div class="refiled-projects-documents__el-format">
+                                                [{{pathinfo($val)['extension']}}]
+                                            </div>
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div> 
+                        </div>
+                    @endif
                 </div>
             </section>
         </section>

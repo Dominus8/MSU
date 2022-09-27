@@ -14,6 +14,7 @@ use App\Models\Abouttext;
 use App\Models\Aboutcard;
 use App\Models\Aboutdoc;
 use App\Models\News;
+use App\Models\Project;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -120,13 +121,16 @@ class MainController extends Controller
 
 //Реализованные проекты
     public function refiled_projects(){
-        return view('refiled-projects');
+        $project= Project::all();
+        return view('refiled-projects',['project'=>$project]);
     }
 
 
 //Реализованные проекты соло страница
-    public function refiled_projects_single_page(){
-        return view('refiled-projects-single-page');
+    public function refiled_projects_single_page($id){
+        $project= Project::find($id);
+        $projectLincArr = json_decode($project->links_to_send);
+        return view('refiled-projects-single-page',['project'=>$project]);
     }
 
 
@@ -631,49 +635,67 @@ public function create_news(Request $request){
 //Админка - Управление Проектами
 
     public function admin_projects(){
+        $project = new Project();
   
-        return view('admin-project');
+        return view('admin-project',['project'=>$project->all()]);
     } 
 
 
 //Создать Проект
 
 public function create_project(Request $request){
-    foreach($request->input("links-to-send") as $el){
-       dd($el);
-    }
     
-    $project = new project();
+    $project = new Project();
 
-    $image_project = $request->file('image_project')->store('storage', 'image_project');
-    $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
-
+    
+    // $image_project = $request->file('image_project')->store('storage', 'image_project');
+    // $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
+    
     $thumbnail_project = $request->file('thumbnail_project')->store('storage', 'image_project');
-    $thumbnailimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
+    $thumbnailpimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
+    
+    
+    $pslides_image = $request->file('image_project');
+    $parr=array();
+    
+    foreach($pslides_image as $img){
 
+        $c=$img->store('public','image_project');
+        array_push($parr,$c);
+    }
+
+    $pdocument_files = $request->file('document_project');
+    $pdocument_arr = array();
+    // $pkeyarr = array();
+    
+    foreach($pdocument_files as $pdoc){
+        $v=($pdoc->getClientOriginalName());
+        $z=$pdoc->store('public','document_project');
+        $pdocument_arr[$v]=$z;
+    }
+    // dd($pdocument_arr);
+    
     $project->thumbnail_project = $thumbnail_project;
-    $project->image_project = $image_project;
+    $project->image_project = $parr;
     $project->b_title_project = $request->input("b_title_project");
     $project->g_title_project = $request->input("g_title_project");
     $project->subtitle_project = $request->input("subtitle_project");
-    $project->top_text_project = $request->input("top_text_project");
-    $project->bottom_text_project = $request->input("bottom_text_project");
-    $project->elink_text_project = $request->input("elink_text_project");
-    $project->elink_link_project = $request->input("elink_link_project");
+    $project->full_text_project = $request->input("full_text_project");
+    $project->links_to_send = $request->input("links-to-send");
+    $project->document_project = $pdocument_arr;
     $project->description_project = $request->input("description_project");
     $project->keywords_project = $request->input("keywords_project");
-    $project->date_project = $request->input("date_project");
     
     $project->save();
     
 
-    return view('admin-project',['project'=>$project->all()]);
+    return redirect()->route('admin-projects');
 }
 
 // Для удаления Проекта
     public function dell_project(){
 
-    return redirect()->route('admin-project');
+    return redirect()->route('admin-projects');
 
 }
 

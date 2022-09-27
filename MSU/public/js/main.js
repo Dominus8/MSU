@@ -204,8 +204,6 @@ let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
 
 // активный стить на пункты главного меню при нажатии
 
-
-
 $('.nav-item-link').on("click", function(event) {
     var y = $(event.target).attr('class');
     var navElId;
@@ -266,14 +264,12 @@ $(document).ready(function() {
         });
         let paarm = parametersArr;
         $("#parameters-to-send").val(paarm);
-        console.log($("#parameters-to-send").val());
     });
 });
 
 //====================== Добавление ссылки проектов ================================
 $(document).ready(function() {
     let link_str = $(".link-item-wrapper").html();
-    console.log(link_str);
 
     function plusLink() {
         $(".link-item-wrapper").append(link_str);
@@ -297,10 +293,8 @@ $(document).ready(function() {
                 linksArr[x] = y;
             })
         });
-        console.log(linksArr);
-        let links = linksArr;
+        let links = JSON.stringify(linksArr);
         $("#links-to-send").val(links);
-        console.log($("#links-to-send").val());
     });
 });
 
@@ -328,7 +322,6 @@ $('input[name="product_type"]').click(function() {
 $(document).ready(function() {
     $('#external-link-visable').click(function() {
         let divAttr = $('.external-link').attr("style");
-        console.log(divAttr);
         if (divAttr == 'display:none;') {
             $('.external-link').attr("style", "display:block;");
         }

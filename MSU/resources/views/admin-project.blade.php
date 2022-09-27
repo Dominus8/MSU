@@ -13,8 +13,8 @@
                                         <lable for="thumbnail-project" class="form-label"> <h6>Превью для проекта</h6></lable>
                                         <input id="thumbnail-project" type="file" class="form-control" name='thumbnail_project'><br>
                                         
-                                        <lable for="image-project" class="form-label"> <h6>Изображение для проекта</h6></lable>
-                                        <input id="image-project" type="file" class="form-control" name='image_project'><br>
+                                        <lable for="image-project" class="form-label"> <h6>Изображениея для слфйдов</h6></lable>
+                                        <input id="image-project" multiple type="file" class="form-control" name='image_project[]'><br>
 
                                         <lable for="b-title-project" class="form-label"> <h6>Заголовок - чёрный текст</h6></lable>
                                         <input id="b-title-project"  class="form-control" name="b_title_project"><br>
@@ -26,14 +26,14 @@
                                         <textarea id="subtitle-project" type="text" class="form-control" name='subtitle_project'></textarea><br>
 
                                         <lable for="full-text-project" class="form-label"> <h6>Полный текст проекта</h6></lable>
+                                        <p>Перенос строки - &lt;br&gt;  | Сделать зелёным &lt;span class="green"&gt;Сюда текст&lt;/span&gt; </p> 
                                         <textarea id="full-text-project" type="text" class="form-control" name='full_text_project'></textarea><br>
 
 
                                         <fieldset>
-                                            <h5 class="btn btn-primary" id='external-link-visable'>Добавить внешнюю ссылку </h5>
-                                            
+                                            <h5 class="btn btn-primary" id='external-link-visable'>Добавить внешнюю ссылку</h5>
                                             <div class="external-link" style="display:none;">
-                                            <input style="display:none;" id="links-to-send" name="links-to-send[]" >
+                                            <input style="display:none;" id="links-to-send" name="links-to-send" >
                                                 <div class="link-wrapper">
                                                     <div class="link-item-wrapper">
                                                         <div class="link-item input-group mb-3">
@@ -47,6 +47,8 @@
                                             </div>
 
                                         </fieldset>
+                                        <lable for="document-project" class="form-label"> <h6>Документы проекта</h6></lable>
+                                        <input id="document-project" type="file" multiple class="form-control" name='document_project[]'><br>
                                         <hr>
                                         <fieldset>
                                             <h5>Мета для проекта</h5>
@@ -56,10 +58,6 @@
                                             <lable for="keywords-project" class="form-label"> <h6>Keywords (Не обязательно. Отдельные слова через запятую)</h6></lable>
                                             <textarea id="keywords-project" type="text" class="form-control" name='keywords_project'></textarea><br>
                                         </fieldset>
-
-                                        <lable for="date-project" class="form-label"> <h6>Дата</h6></lable>
-                                        <input id="date-project" type="date"  class="form-control" name="date_project"><br>
-
                                         <hr>
                                         <button class="btn btn-primary" type="sucsess">Добавить проект</button>
                                     </div>
@@ -70,7 +68,14 @@
                 </div>
                 <div class="admin-section__manage">
                     <!--Список существующих карточек-->
-
+                    @foreach($project as $el)
+                        <div class="manage-element directions_card">
+                            <img src="/storage/image_project/{{$el->thumbnail_project}}" alt="img">
+                            <h6>{{$el->b_title_project}} {{$el->g_title_project}}</h6>
+                            <a class='btn btn-warning' href="/edit-project/{{$el->id}}">edit</a>
+                            <a class='btn btn-danger' href="/admin/dell-project/{{$el->id}}">x</a>
+                        </div>
+                    @endforeach 
                 </div>
 
 

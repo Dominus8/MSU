@@ -14,118 +14,32 @@
                                 &#60; 1 из 5 &#62;
                             </div>
                         </div>
-                        <div class="projects-body__cards">
-                            <div class="projects-body__card">
+                        @foreach($project as $el)
+                            <div class="projects-body__cards">
+                                <div class="projects-body__card">
                                 <div class="card__dot">
-                                    <img src="./images/green-mark.png" alt="">
+                                    <img src="/images/green-mark.png" alt="">
                                 </div>
                                 <div class="card__content-wrapper">
                                     <div class="card-content__title">
                                         <div class="card-content__title-mark">
-                                                <img src="./images/green-mark.png" alt="">
+                                                <img src="/images/green-mark.png" alt="">
                                         </div>
                                         <div class="card-content__title-text">
-                                            Проектирование дороги
+                                            {{$el->b_title_project}} {{$el->g_title_project}}
                                         </div>    
                                     </div>
-                                    <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
+                                    <div class="card-content__subtitle">{{$el->subtitle_project}}</div>
+                                    <a href="/refiled-projects-single-page/{{$el->id}}" class="card-content__download-link">
                                         Подробнее о проекте
                                     </a>
                                 </div>
                                 <div class="card-image">
-                                    <img src="./images/project_road.png" alt="">
+                                    <img src="/storage/image_project/{{$el->thumbnail_project}}" alt="img">
                                 </div>
                             </div>
-                            <div class="projects-body__card">
-                                <div class="card__dot">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="card__content-wrapper">
-                                    <div class="card-content__title">
-                                        <div class="card-content__title-mark">
-                                            <img src="./images/green-mark.png" alt="">
-                                        </div>
-                                        <div class="card-content__title-text">
-                                            Анализ дорожной разметки
-                                        </div>
-                                    </div>
-                                    <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
-                                        Подробнее о проекте
-                                    </a>
-                                </div>
-                                <div class="card-image">
-                                    <img src="./images/road_mark.png" alt="">
-                                </div>
-                            </div>
-                            <div class="projects-body__card">
-                                <div class="card__dot">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="card__content-wrapper">
-                                    <div class="card-content__title">
-                                        <div class="card-content__title-mark">
-                                            <img src="./images/green-mark.png" alt="">
-                                        </div>
-                                        <div class="card-content__title-text">
+                        @endforeach
 
-                                            <div class="card-content__title-text">
-                                                Установка детекторов транспорта
-                                             </div>    
-                                        </div> 
-                                    </div>
-                                    <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
-                                        Подробнее о проекте
-                                    </a>
-                                </div>
-                                <div class="card-image">
-                                    <img src="./images/Detect.png" alt="">
-                                </div>
-                            </div>
-                            <div class="projects-body__card">
-                                <div class="card__dot">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="card__content-wrapper">
-                                    <div class="card-content__title">
-                                        <div class="card-content__title-mark">
-                                            <img src="./images/green-mark.png" alt="">
-                                        </div>
-                                        <div class="card-content__title-text">
-
-                                            <div class="card-content__title-text">
-                                                Установка детекторов транспорта
-                                            </div>    
-                                        </div>
-                                    </div>
-                                    <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
-                                        Подробнее о проекте
-                                    </a>
-                                </div>
-                                <div class="card-image">
-                                    <img src="./images/road_mark.png" alt="">
-                                </div>
-                            </div>
-                            <div class="projects-body__card">
-                                <div class="card__dot">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="card__content-wrapper">
-                                    <div class="card-content__title">
-                                        Установка детекторов транспорта
-                                    </div>
-                                    <div class="card-content__subtitle">Отработка инженерно-технических решений, имитация реальных ситуаций, интеграция с АСУДД, отработаны и внедрены решения по оптимизации дорожного движения без дополнительных затрат</div>
-                                    <a href="{{route('refiled-projects-single-page')}}" class="card-content__download-link">
-                                        Подробнее о проекте
-                                    </a>
-                                </div>
-                                <div class="card-image">
-                                    <img src="./images/Detect.png" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
