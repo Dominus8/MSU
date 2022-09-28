@@ -107,6 +107,10 @@
   text-decoration: none;
 }
 
+* .green {
+  color: #66B821;
+}
+
 .main-swiper {
   max-width: 1110px;
 }
@@ -2415,6 +2419,12 @@
   background: #FAFAFA;
   border-radius: 25px;
   margin: 2.5px;
+}
+
+.section-partners .section-inner .partners .partners-wrapper .partners__logo .partners-logo__item img {
+  max-width: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section-partners .section-inner .partners .partners-wrapper .partners__callback .partners-call {

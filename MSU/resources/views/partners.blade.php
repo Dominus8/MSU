@@ -8,11 +8,14 @@
                 <div class="partners-wrapper">
                     <div class="partners__title">Наши партнеры</div>
                     <div class="partners__logo">
-                        <div class="partners-logo__item"><img src="./images/pits.png" alt=""></div>
-                        <div class="partners-logo__item"><img src="./images/pmgt.png" alt=""></div>
+                        @foreach($partner as $el)
+                        <a href="{{$el->link_partner}}"  class="partners-logo__item"><img title="{{$el->data_title_partner}}"  src="/storage/image_partner/{{$el->image_partner}}" alt=""></a>
+                        @endforeach
+                        <!-- <div class="partners-logo__item"><img src="./images/pmgt.png" alt=""></div>
                         <div class="partners-logo__item"><img src="./images/pglob.png" alt=""></div>
                         <div class="partners-logo__item"><img src="./images/pappro.png" alt=""></div>
-                        <div class="partners-logo__item"><img src="./images/psb.png" alt=""></div>
+                        <div class="partners-logo__item"><img src="./images/psb.png" alt=""></div> -->
+                    
                     </div>
                     <div class="partners__callback">
                         <div class="partners-call">

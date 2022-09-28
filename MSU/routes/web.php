@@ -149,8 +149,25 @@ Route::get('/admin/dell-news/{id}', [MainController::class, 'dell_news']) ->name
 //Админка - Управление Проектами
 Route::get('/admin-projects', [MainController::class, 'admin_projects'])->name('admin-projects');
 
-//Админка - О нас - Создать карточку
+//Админка - Создать проект
 Route::post('/admin/create-project', [MainController::class, 'create_project'])->name('create-project');
 
 //Удаление Проекта
 Route::get('/admin/dell-project/{id}', [MainController::class, 'dell_project']) ->name('dell-project');
+
+//--------- Админка - Партнёры ------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление Партнёрами
+Route::get('/admin-partner', [MainController::class, 'admin_partner'])->name('admin-partner');
+
+//Админка - Партнёты - Создать карточку
+Route::post('/admin/create-partner', [MainController::class, 'create_partner'])->name('create-partner');
+
+//Редактирование Карточки партнёра
+Route::get('/admin/edit-partner/{id}', [MainController::class, 'edit_partner']) ->name('edit-partner');
+
+//Редактирование Карточки партнёра
+Route::post('/admin/update-partner/{id}', [MainController::class, 'update_partner']) ->name('update-partner');
+
+//Удаление Карточки партнёра
+Route::get('/admin/dell-partner/{id}', [MainController::class, 'dell_partner']) ->name('dell-partner');

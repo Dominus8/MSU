@@ -15,6 +15,7 @@ use App\Models\Aboutcard;
 use App\Models\Aboutdoc;
 use App\Models\News;
 use App\Models\Project;
+use App\Models\Partner;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -136,7 +137,9 @@ class MainController extends Controller
 
 //Партнеры
     public function partners(){
-        return view('partners');
+            $partner = new Partner();
+
+        return view('partners',['partner'=>$partner->all()]);
     }
 
 
@@ -295,16 +298,16 @@ public function admin_contact(){
     }
 
 // Для удаления Главного слайдера
-        public function dell_home_page($id){
-            $mainslide = Mainslide::find($id);
-            
-            Storage::disk('image_mine_slide')->delete($mainslide->image_mine_slide);
-            
-            $mainslide->delete();
+    public function dell_home_page($id){
+        $mainslide = Mainslide::find($id);
+        
+        Storage::disk('image_mine_slide')->delete($mainslide->image_mine_slide);
+        
+        $mainslide->delete();
 
-            return redirect()->route('admin-home-page');
+        return redirect()->route('admin-home-page');
 
-        }
+    }
 
 //--------------------------- Управление продуктами -------------------------------------
 
@@ -333,7 +336,6 @@ public function admin_contact(){
             $c=$img->store('public','product_slides_image');
             array_push($arr,$c);
         }
-        
         
         $document_files = $request->file('single_page_documents');
         $document_arr = array();
@@ -459,8 +461,6 @@ public function admin_contact(){
         
         $product->save();
 
-
-
         return redirect()->route('admin-product');
     }
 
@@ -507,7 +507,6 @@ public function admin_contact(){
         $aboutcard = new Aboutcard();
         $aboutdoc = new Aboutdoc();
         
-
         return view('admin-about',['abouttext'=>$abouttext,'aboutcard'=>$aboutcard->all(),'aboutdoc'=>$aboutdoc->all()]);
     }        
 
@@ -527,7 +526,6 @@ public function admin_contact(){
         
         $aboutcard->save();
         
-
         return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
     }        
 
@@ -541,7 +539,6 @@ public function admin_contact(){
         $aboutcard->delete();
 
         return redirect()->route('admin-about');
-
     }
     
 //Создать документ О нас
@@ -558,7 +555,6 @@ public function admin_contact(){
         
         $aboutdoc->save();
         
-
         return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
     }
     
@@ -586,7 +582,6 @@ public function admin_contact(){
         return view('admin-news',['news'=>$news->all()]);
     } 
 
-
 //Создать новость
 
 public function create_news(Request $request){
@@ -612,12 +607,11 @@ public function create_news(Request $request){
     $news->date_news = $request->input("date_news");
     
     $news->save();
-    
 
     return view('admin-news',['news'=>$news->all()]);
 }
 
-// Для удаления продукта
+// Для удаления новости
     public function dell_news($id){
         $news = News::find($id);
         
@@ -688,14 +682,96 @@ public function create_project(Request $request){
     
     $project->save();
     
-
     return redirect()->route('admin-projects');
 }
 
 // Для удаления Проекта
-    public function dell_project(){
+    public function dell_project($id){
+        $project = Project::find($id);
+        
+        foreach($project->image_project as $el){
+
+            Storage::disk('image_news')->delete($el);
+        }
+
+        foreach($project->document_project as $el){
+
+            Storage::disk('document_project')->delete($el);
+        }
+        
+        $news->delete();
 
     return redirect()->route('admin-projects');
+
+}
+
+//--------------------------- Управление Проектами -------------------------------------
+
+//Админка - Управление Проектами
+
+    public function admin_partner(){
+        $partner = new Partner();
+  
+        return view('admin-partner',['partner'=>$partner->all()]);
+    } 
+
+//Создать Проект
+
+public function create_partner(Request $request){
+    
+    $partner = new Partner();
+
+    $image_partner = $request->file('image_partner')->store('storage', 'image_partner');
+    $imagepartner = Image::make( $request->file('image_partner'))->save('storage/image_partner/'.$image_partner); //->resize(343, 174)
+    
+    $partner->image_partner = $image_partner;
+    $partner->link_partner = $request->input("link_partner");
+    $partner->data_title_partner = $request->input("data_title_partner");
+
+    $partner->save();
+    
+    return redirect()->route('admin-partner');
+}
+
+// Для редактирования Проекта
+    public function edit_partner($id){
+        $partner = Partner::find($id);
+
+    return view('admin-partner-edit',['partner'=>$partner]);
+
+}
+
+// Для обновления Проекта
+    public function update_partner(Request $request, $id){
+        $partner = Partner::find($id);
+
+        if($request->file('image_partner')){
+            Storage::disk('image_partner')->delete($partner->image_partner);
+            $image_partner = $request->file('image_partner')->store('storage', 'image_partner');
+            $imagepartner = Image::make( $request->file('image_partner'))->save('storage/image_partner/'.$image_partner); //->resize(343, 174)
+        }else{
+            $image_partner = $partner->image_partner;
+        }
+    
+        $partner->image_partner = $image_partner;
+        $partner->link_partner = $request->input("link_partner");
+        $partner->data_title_partner = $request->input("data_title_partner");
+    
+        $partner->save();
+
+    return redirect()->route('admin-partner');
+
+}
+
+// Для удаления Проекта
+    public function dell_partner($id){
+        $partner = Partner::find($id);
+
+        Storage::disk('image_partner')->delete($partner->image_partner);
+
+        $partner->delete();
+
+    return redirect()->route('admin-partner');
 
 }
 

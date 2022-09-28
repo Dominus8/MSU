@@ -107,6 +107,7 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+
         //для слайдов проектов
         'image_project' => [
             'driver' => 'local',
@@ -114,10 +115,19 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+
         //для документов проектов
         'document_project' => [
             'driver' => 'local',
             'root' => storage_path('app/public/document_project'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        //для документов проектов
+        'image_partner' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/image_partner'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

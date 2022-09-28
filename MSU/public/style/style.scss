@@ -2353,6 +2353,10 @@
                             background: #FAFAFA;
                             border-radius: 25px;
                             margin: 2.5px;
+                            img {
+                                max-width: 350px;
+                                object-fit: contain;
+                            }
                         }
                     }
                     .partners__callback {
