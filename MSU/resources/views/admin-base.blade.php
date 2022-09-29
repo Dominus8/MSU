@@ -17,7 +17,7 @@
                 <a href="{{route('admin-news')}}" class="admin-nav__el">Новости</a>
                 <a href="{{route('admin-projects')}}" class="admin-nav__el">Проекты</a>
                 <a href="{{route('admin-partner')}}" class="admin-nav__el">Партнёры</a>
-                <a href="#" class="admin-nav__el">Поддержка</a>
+                <a href="{{route('admin-support')}}" class="admin-nav__el">Поддержка</a>
                 <a href="{{route('admin-contact')}}" class="admin-nav__el">Контакты</a>
 
             </div>

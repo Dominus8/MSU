@@ -1,7 +1,7 @@
 @extends('admin-base')
 
 @section('admin-content')
-<h1>Управление слайдами</h1>
+<h1>Управление новостями</h1>
 
 <div class="mine-content admin-section__form">
                     <form action="/admin/create-news" method="post" enctype="multipart/form-data">

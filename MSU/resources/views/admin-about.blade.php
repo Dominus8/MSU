@@ -1,7 +1,7 @@
 @extends('admin-base')
 
 @section('admin-content')
-<h1>Управление странице  "О нас"</h1>
+<h1>Управление страницей "О нас"</h1>
 
 <div class="mine-content admin-section__form">
 <!-- Текст подзаголовка -->

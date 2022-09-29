@@ -16,6 +16,8 @@ use App\Models\Aboutdoc;
 use App\Models\News;
 use App\Models\Project;
 use App\Models\Partner;
+use App\Models\Swarranty;
+use App\Models\Smanual;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -145,7 +147,11 @@ class MainController extends Controller
 
 //Поддержка
     public function support(){
-        return view('support');
+
+        $warranty = new Swarranty();
+        $manual = new Smanual();
+    
+        return view('support',['warranty'=>$warranty->all(), 'manual'=>$manual->all()]);
     }
 
 
@@ -488,6 +494,8 @@ public function admin_contact(){
             $abouttext = new Abouttext();
             $abouttext->about_subtitle = '';
             $abouttext->save();
+
+            return redirect()->route('admin-about');
         }
 
         $aboutcard = new Aboutcard();
@@ -772,6 +780,103 @@ public function create_partner(Request $request){
         $partner->delete();
 
     return redirect()->route('admin-partner');
+
+}
+
+//--------------------------- Управление Поддержка -------------------------------------
+
+//Админка - Управление Поддержкой
+
+    public function admin_support(){
+        $warranty = new Swarranty();
+        $manual = new Smanual();
+  
+        return view('admin-support',['warranty'=>$warranty->all(), 'manual'=>$manual->all()]);
+    } 
+
+//Создать Гарантийный талон
+
+public function create_warranty(Request $request){
+    
+    $warranty = new Swarranty();
+    
+    $file_warranty=$request->file("file_warranty")->store('public','document_support');
+
+    $warranty->file_warranty = $file_warranty;
+    $warranty->title_warranty = $request->input("title_warranty");
+
+    $warranty->save();
+    
+    return redirect()->route('admin-support');
+}
+
+//Создать Инструкцию
+
+public function create_manual(Request $request){
+    
+    $manual = new Smanual();
+    
+    $file_manual=$request->file("file_manual")->store('public','document_support');
+
+    $manual->file_manual = $file_manual;
+    $manual->title_manual = $request->input("title_manual");
+
+    $manual->save();
+    
+    return redirect()->route('admin-support');
+}
+
+// Для редактирования Проекта
+//     public function edit_partner($id){
+//         $partner = Partner::find($id);
+
+//     return view('admin-partner-edit',['partner'=>$partner]);
+
+// }
+
+// Для обновления Проекта
+//     public function update_partner(Request $request, $id){
+//         $partner = Partner::find($id);
+
+//         if($request->file('image_partner')){
+//             Storage::disk('image_partner')->delete($partner->image_partner);
+//             $image_partner = $request->file('image_partner')->store('storage', 'image_partner');
+//             $imagepartner = Image::make( $request->file('image_partner'))->save('storage/image_partner/'.$image_partner); //->resize(343, 174)
+//         }else{
+//             $image_partner = $partner->image_partner;
+//         }
+    
+//         $partner->image_partner = $image_partner;
+//         $partner->link_partner = $request->input("link_partner");
+//         $partner->data_title_partner = $request->input("data_title_partner");
+    
+//         $partner->save();
+
+//     return redirect()->route('admin-partner');
+
+// }
+
+// Для удаления Проекта
+    public function dell_warranty($id){
+        $warranty = Swarranty::find($id);
+
+        Storage::disk('document_support')->delete($warranty->file_warranty);
+
+        $warranty->delete();
+
+    return redirect()->route('admin-support');
+
+}
+
+// Для удаления Проекта
+    public function dell_manual($id){
+        $manual = Smanual::find($id);
+
+        Storage::disk('document_support')->delete($manual->file_manual);
+
+        $manual->delete();
+
+    return redirect()->route('admin-support');
 
 }
 

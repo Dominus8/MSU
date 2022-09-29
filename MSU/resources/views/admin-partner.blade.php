@@ -1,7 +1,7 @@
 @extends('admin-base')
 
 @section('admin-content')
-<h1>Управление проектами</h1>
+<h1>Управление партнёрами</h1>
 
 <div class="mine-content admin-section__form">
                     <form action="/admin/create-partner" method="post" enctype="multipart/form-data">

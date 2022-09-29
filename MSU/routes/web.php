@@ -166,8 +166,25 @@ Route::post('/admin/create-partner', [MainController::class, 'create_partner'])-
 //Редактирование Карточки партнёра
 Route::get('/admin/edit-partner/{id}', [MainController::class, 'edit_partner']) ->name('edit-partner');
 
-//Редактирование Карточки партнёра
+//Обновление Карточки партнёра
 Route::post('/admin/update-partner/{id}', [MainController::class, 'update_partner']) ->name('update-partner');
 
 //Удаление Карточки партнёра
 Route::get('/admin/dell-partner/{id}', [MainController::class, 'dell_partner']) ->name('dell-partner');
+
+//--------- Админка - Поддержка ------------------------------------------------------------------------------------------------------------------------
+
+//Админка - Управление Поддержкой
+Route::get('/admin-support', [MainController::class, 'admin_support'])->name('admin-support');
+
+//Админка - Поддержка - Создать талон
+Route::post('/admin/create-warranty', [MainController::class, 'create_warranty'])->name('create-warranty');
+
+//Админка - Поддержка - Создать инструкцию
+Route::post('/admin/create-manual', [MainController::class, 'create_manual'])->name('create-manual');
+
+//Удаление талона
+Route::get('/admin/dell-warranty/{id}', [MainController::class, 'dell_warranty']) ->name('dell-earranty');
+
+//Удаление инструкции
+Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual');
