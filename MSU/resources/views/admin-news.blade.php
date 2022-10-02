@@ -2,6 +2,16 @@
 
 @section('admin-content')
 <h1>Управление новостями</h1>
+@if ($errors->any())
+    <div class="fixed-top alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
 <div class="mine-content admin-section__form">
                     <form action="/admin/create-news" method="post" enctype="multipart/form-data">
@@ -10,21 +20,36 @@
                             <fieldset>
                                 <legend>Добавление новости</legend>
                                     <div id="in-mine-slider-approved" class="in-mine-slider-property">
-                                        <lable for="thumbnail-news" class="form-label"> <h6>Превью для новости</h6></lable>
+                                        <lable for="thumbnail-news" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span>Превью для новости</h6></lable>
+                                        <p style="font-size:11px;"> 
+                                            345х175 любой формат
+                                        </p>
                                         <input id="thumbnail-news" type="file" class="form-control" name='thumbnail_news'><br>
                                         
                                         <lable for="image-news" class="form-label"> <h6>Изображение для новости</h6></lable>
                                         <input id="image-news" type="file" class="form-control" name='image_news'><br>
 
-                                        <lable for="b-title-news" class="form-label"> <h6>Заголовок - чёрный текст</h6></lable>
+                                        <lable for="b-title-news" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок - чёрный текст</h6></lable>
                                         <input id="b-title-news"  class="form-control" name="b_title_news"><br>
                                         
-                                        <lable for="g-title-news" class="form-label"> <h6>Заголовок - зелёный текст</h6></lable>
+                                        <lable for="g-title-news" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок - зелёный текст</h6></lable>
                                         <input id="g-title-news"  class="form-control" name="g_title_news"><br>
 
-                                        <lable for="subtitle-news" class="form-label"> <h6>Краткое описание</h6></lable>
+                                        <lable for="subtitle-news" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Краткое описание</h6></lable>
+                                        <p style="font-size:11px;"> 
+                                            180 символов с пробелами(Если болье, будет ошибка)
+                                        </p>
                                         <textarea id="subtitle-news" type="text" class="form-control" name='subtitle_news'></textarea><br>
-
+                                        <p style="font-size:11px;">
+                                            Текст. Для форматированииспользовать: <br>
+                                            &lt;br&gt; - перенос строки (Ставится в текст в место переноса, можно нескоько подряд) <br>
+                                            &lt;span class = "Сюда нужный класс, можно сразу несколько чрез пробел"&gt;Сюда текс&lt;/span&gt; <br>
+                                                Список слассов: <br>
+                                                green - Сделать текст зелёным. <br>
+                                                bold - Cделать текст "жирным" <br>
+                                                Пример:<br>
+                                                &lt;span class = "green bold"&gt;Зелёный, жирный текст&lt;/span&gt;
+                                        </p>
                                         <lable for="top-text-news" class="form-label"> <h6>Верхняя часть текста (Над картинкой в мобильной версии)</h6></lable>
                                         <textarea id="top-text-news" type="text" class="form-control" name='top_text_news'></textarea><br>
 

@@ -16,14 +16,22 @@
                                 <div class="slide-text">
                                     <hr class="slide-text__line">
                                     <div class="title-wrapper">
+                                        @if($el->b_title_mine_slide)
                                         <div class="slide-text__title">{{$el->b_title_mine_slide}}</div>
+                                        @endif
+                                        @if($el->g_title_mine_slide)
                                         <div class="slide-text__produkt-name">{{$el->g_title_mine_slide}}</div>
+                                        @endif
                                     </div>
+                                    @if($el->subtitle_mine_slide)
                                     <div class="slide-text__subtitle">{{$el->subtitle_mine_slide}}</div>
+                                    @endif
                                 </div>
+                                @if($el->link_mine_slide)
                                 <div class="slide-button">
                                     <a class="slide-button__link" href="{{$el->link_mine_slide}}">Узнать подробнее</a>
                                 </div>
+                                @endif
                             </div>
                         </div>
                         @endforeach

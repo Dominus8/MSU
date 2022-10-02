@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('abouttexts', function (Blueprint $table) {
             $table->id();
-            $table->text("about_subtitle");
+            $table->text("about_subtitle")->nullable();
             $table->timestamps();
         });
     }

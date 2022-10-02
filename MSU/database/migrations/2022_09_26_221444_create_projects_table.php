@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text("b_title_project");
             $table->text("g_title_project");
             $table->text("subtitle_project");
-            $table->text("full_text_project");
+            $table->text("full_text_project")->nullable();
             $table->text("links_to_send")->nullable();
             $table->text("document_project")->nullable();
             $table->text("description_project")->nullable();

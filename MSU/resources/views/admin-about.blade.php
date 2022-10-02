@@ -1,6 +1,16 @@
 @extends('admin-base')
 
 @section('admin-content')
+@if ($errors->any())
+    <div class="fixed-top alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <h1>Управление страницей "О нас"</h1>
 
 <div class="mine-content admin-section__form">
@@ -9,6 +19,16 @@
         {{ csrf_field() }}
         <div class="form-group">
             <fieldset>
+            <p style="font-size:11px;">
+                Текст. Для форматированииспользовать: <br>
+                &lt;br&gt; - перенос строки (Ставится в текст в место переноса, можно нескоько подряд) <br>
+                &lt;span class = "Сюда нужный класс, можно сразу несколько чрез пробел"&gt;Сюда текс&lt;/span&gt; <br>
+                    Список слассов: <br>
+                    green - Сделать текст зелёным. <br>
+                    bold - Cделать текст "жирным" <br>
+                    Пример:<br>
+                    &lt;span class = "green bold"&gt;Зелёный, жирный текст&lt;/span&gt;
+            </p>
                 <legend>Обновить подзаголовок</legend>
                     <div>
                         <lable for="about_subtitle" class="form-label"> <h6> </h6></lable>
@@ -26,12 +46,18 @@
         {{ csrf_field() }}
         <div class="form-group">
             <fieldset>
-                <legend>Добавить карточку</legend>
+                <legend>Карточка о нас</legend>
                     <div>
-                        <lable for="adout_card_image" class="form-label"> <h6>Изображение контакта</h6> </lable>
+                        <lable for="adout_card_image" class="form-label"> <h6>Изображение карточки</h6> </lable>
+                        <p style="font-size:11px;"> 
+                            230х60 любой формат
+                        </p>
                         <input id="adout_card_image" type="file" class="form-control" name='adout_card_image'><br>
 
                         <lable for="adout_card_text" class="form-label"> <h6> </h6></lable>
+                        <p style="font-size:11px;"> 
+                            Текст. По макеты три строки, около 130 символов (с пробелами). Можно больше - карточка станеш выше.
+                        </p>
                         <textarea id="adout_card_text" class="form-control" name='adout_card_text'></textarea><br>
 
                         <lable for="adout_card_date" class="form-label"> <h6>Дата</h6> </lable>
@@ -63,6 +89,9 @@
                 <legend>Добавить документ</legend>
                     <div>
                         <lable for="adout_doc_file" class="form-label"> <h6>Файл документа</h6> </lable>
+                            <p style="font-size:11px;"> 
+                                Любой формат. (Картинка, архив, документ, PDF...)
+                            </p>
                         <input id="adout_doc_file" type="file" class="form-control" name='adout_doc_file'><br>
 
                         <lable for="adout_doc_title" class="form-label"> <h6>Отображаемое название документа</h6></lable>

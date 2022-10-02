@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('aboutcards', function (Blueprint $table) {
             $table->id();
             $table->text("adout_card_image");
-            $table->text("adout_card_text");
-            $table->date("adout_card_date");
+            $table->text("adout_card_text")->nullable();
+            $table->date("adout_card_date")->nullable();
             $table->timestamps();
         });
     }

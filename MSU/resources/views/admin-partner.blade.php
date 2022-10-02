@@ -2,6 +2,16 @@
 
 @section('admin-content')
 <h1>Управление партнёрами</h1>
+@if ($errors->any())
+    <div class="fixed-top alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
 <div class="mine-content admin-section__form">
                     <form action="/admin/create-partner" method="post" enctype="multipart/form-data">

@@ -111,6 +111,10 @@
   color: #66B821;
 }
 
+* .bold {
+  font-weight: 600;
+}
+
 .main-swiper {
   max-width: 1110px;
 }
@@ -312,8 +316,14 @@
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
   z-index: 1;
   max-height: 599px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
   position: absolute;
-  padding-left: 190px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper {
@@ -334,6 +344,7 @@
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text {
+  z-index: 999;
   font-family: 'Proxima Nova';
   max-width: 440px;
   margin-bottom: 70px;
@@ -349,6 +360,7 @@
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__title {
+  z-index: 999;
   margin-top: 15px;
   font-style: normal;
   font-weight: 600;
@@ -358,6 +370,7 @@
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .title-wrapper .slide-text__produkt-name {
+  z-index: 999;
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -367,6 +380,7 @@
 }
 
 .section-main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper .slide-text .slide-text__subtitle {
+  z-index: 999;
   font-style: normal;
   font-weight: 400;
   font-size: 17px;

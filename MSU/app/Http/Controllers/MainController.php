@@ -186,7 +186,6 @@ public function admin_contact(){
             //     'contact_phone'=>'required|max:150',
             //     'contact_mail'=>'required|max:150',
             // ]);
-            // dd($request);
             $image = $request->file('contact_image')->store('storage', 'contacts_image');
             $img = Image::make( $request->file('contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
     
@@ -270,7 +269,10 @@ public function admin_contact(){
 //Создание Главного слайдера
     public function create_home_page(Request $request){
 
-        // dd($request->file('imade_mine_slide'));
+        $valid = $request->validate([
+            'image_mine_slide'=>'required',
+
+        ]);
 
         $mainslide = new Mainslide();
 
@@ -593,6 +595,14 @@ public function admin_contact(){
 //Создать новость
 
 public function create_news(Request $request){
+
+            $valid = $request->validate([
+                'thumbnail_news'=>'required',
+                'b_title_news'=>'required|max:20',
+                'g_title_news'=>'required|max:20',
+                'subtitle_news'=>'required|max:180',
+            ]);
+
     $news = new News();
 
     $image_news = $request->file('image_news')->store('storage', 'image_news');

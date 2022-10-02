@@ -26,16 +26,16 @@
 
                     </div>
                     <div class="contacts-regional-offices">
+                        @if(count($contact)>=1)
                         <div class="contacts-regional-offices__title">
                             <div class="contacts-regional-offices__title-wrapper">
                                 <div class="contacts-regional-offices__title-mark">
-                                    <img src="./images/green-mark.png" alt="">
+                                    <img src="/images/green-mark.png" alt="">
                                 </div>
                                 <div class="contacts-regional-offices__title-text">Региональные представительства</div>
                             </div>
                         </div>
                         <div class="contacts-regional-offices__cards-wrapper">
-                        @if(count($contact)>=1)
                             @foreach($contact as $el)
                             <div class="contacts-regional-offices__card">
                                     <div class="offices-card-wrapper">
@@ -51,72 +51,6 @@
                                     </div>
                                 </div>
                             @endforeach
-                            @else
-                                <div class="contacts-regional-offices__card">
-                                    <div class="offices-card-wrapper">
-                                        <div class="offices-card__image">
-                                            <img src="./images/card-logo1.png" alt="">
-                                        </div>
-                                        <div class="offices-card__text">
-                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                            <div class="offices-card__email">info@company.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contacts-regional-offices__card">
-                                    <div class="offices-card-wrapper">
-                                        <div class="offices-card__image">
-                                            <img src="./images/card-logo2.png" alt="">
-                                        </div>
-                                        <div class="offices-card__text">
-                                            <div class="offices-card__title">ООО “Связь банк”</div>
-                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                            <div class="offices-card__email">info@company.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contacts-regional-offices__card">
-                                    <div class="offices-card-wrapper">
-                                        <div class="offices-card__image">
-                                            <img src="./images/card-logo3.png" alt="">
-                                        </div>
-                                        <div class="offices-card__text">
-                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                            <div class="offices-card__email">info@company.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contacts-regional-offices__card">
-                                    <div class="offices-card-wrapper">
-                                        <div class="offices-card__image">
-                                            <img src="./images/card-logo1.png" alt="">
-                                        </div>
-                                        <div class="offices-card__text">
-                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                            <div class="offices-card__email">info@company.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="contacts-regional-offices__card">
-                                    <div class="offices-card-wrapper">
-                                        <div class="offices-card__image">
-                                            <img src="./images/card-logo1.png" alt="">
-                                        </div>
-                                        <div class="offices-card__text">
-                                            <div class="offices-card__title">Надежные Парковочные Системы</div>
-                                            <div class="offices-card__address">г. Красноярск, ул. Ленина, д. 14</div>
-                                            <div class="offices-card__phone">+7 (999) 123-45-56</div>
-                                            <div class="offices-card__email">info@company.com</div>
-                                        </div>
-                                    </div>
-                                </div>
                             @endif
                         </div>
                     </div>

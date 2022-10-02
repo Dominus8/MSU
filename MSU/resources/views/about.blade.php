@@ -12,7 +12,9 @@
                             <div class="about-subtitle">
                                 <div class="about-subtitle__content">
                                     <div class="about-subtitle__content-text">
-                                        {!!$abouttext->about_subtitle!!}
+                                        @if($abouttext)
+                                            {!!$abouttext->about_subtitle!!}
+                                        @endif
                                     </div>
                                     <div class="about-numbers">
                                         <div class="numders__element">
@@ -44,35 +46,11 @@
                                         <div class="title-text">Аккредитации и сертификаты</div>
                                     </div>
                                     @foreach($aboutdoc as $el)
-                                    <a href="/storage/adout_doc_file/{{$el->adout_doc_file}}" class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">{{$el->adout_doc_title}}</div>
-                                    </a>
+                                        <a href="/storage/adout_doc_file/{{$el->adout_doc_file}}" class="documents__element">
+                                            <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
+                                            <div class="elemetn__title">{{$el->adout_doc_title}}</div>
+                                        </a>
                                     @endforeach
-                                    <!-- <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Сертификат на детектор транспорта</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Сертификат (ЭПИ)</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Свидетельство ООО "МСУ"</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Сертификат соответствия контроллер "Поток"</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Протокол испытаний контроллера "Поток"</div>
-                                    </div>
-                                    <div class="documents__element">
-                                        <div class="element__ico"><img src="/images/doc_icon.png" alt=""></div>
-                                        <div class="elemetn__title">Презентация "АСУДД24"</div>
-                                    </div> -->
                                 </div>
                                 <div class="about-call">
                                     <div class="about-call__image"><img src="/images/question.png" alt=""></div>

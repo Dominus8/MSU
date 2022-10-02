@@ -136,6 +136,9 @@
         .green {
             color: #66B821;
         }
+        .bold {
+            font-weight: 600;
+        }
     }
     
     .main-swiper {
@@ -314,8 +317,13 @@
                     .slider-image {
                         z-index: 1;
                         max-height: 599px;
+                        object-fit: cover;
+                        margin: auto;
                         position: absolute;
-                        padding-left: 190px;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
                     }
                     .slide-wrapper {
                         z-index: 999;
@@ -327,6 +335,7 @@
                         justify-content: space-between;
                         align-items: flex-end;
                         .slide-text {
+                            z-index: 999;
                             font-family: 'Proxima Nova';
                             max-width: 440px;
                             margin-bottom: 70px;
@@ -340,6 +349,7 @@
                             }
                             .title-wrapper {
                                 .slide-text__title {
+                                    z-index: 999;
                                     margin-top: 15px;
                                     font-style: normal;
                                     font-weight: 600;
@@ -348,6 +358,7 @@
                                     color: #333333;
                                 }
                                 .slide-text__produkt-name {
+                                    z-index: 999;
                                     font-style: normal;
                                     font-weight: 600;
                                     font-size: 34px;
@@ -357,6 +368,7 @@
                                 }
                             }
                             .slide-text__subtitle {
+                                z-index: 999;
                                 font-style: normal;
                                 font-weight: 400;
                                 font-size: 17px;

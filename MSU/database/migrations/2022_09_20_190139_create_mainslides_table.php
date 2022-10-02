@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('mainslides', function (Blueprint $table) {
             $table->id();
             $table->text("image_mine_slide");
-            $table->text("b_title_mine_slide");
-            $table->text("g_title_mine_slide");
-            $table->text("subtitle_mine_slide");
-            $table->text("link_mine_slide");
+            $table->text("b_title_mine_slide")->nullable();
+            $table->text("g_title_mine_slide")->nullable();
+            $table->text("subtitle_mine_slide")->nullable();
+            $table->text("link_mine_slide")->nullable();
             $table->timestamps();
         });
     }

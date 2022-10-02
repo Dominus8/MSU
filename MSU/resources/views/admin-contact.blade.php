@@ -1,12 +1,24 @@
 @extends('admin-base')
 
 @section('admin-content')
+@if ($errors->any())
+    <div class="fixed-top alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 
 <div class="mine-content admin-section__form">
                     <form action="/admin/create-contact" method="post" enctype="multipart/form-data" >
                         {{ csrf_field() }}
                         <div class="form-group"> 
-                            <lable for="ci" class="form-label"> <h6>Изображение контакта</h6>  </lable>
+                            <lable for="ci" class="form-label"> <h6>Изображение контакта</h6> </lable>
+                            <p style="font-size:11px;"> 
+                            </p>
                             <input id="ci" type="file" class="form-control" name='contact_image'> <br>
 
                             <lable for="cb" class="form-label"> <h6>Название контакта</h6>  </lable>
