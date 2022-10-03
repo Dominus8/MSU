@@ -330,6 +330,15 @@ public function admin_contact(){
 
 //Создание продукта
     public function create_product(Request $request){
+
+        $valid = $request->validate([
+            'product_type'=>'required',
+            'single_page_bico'=>'required',
+            'single_page_gico'=>'required',
+            'nav_title'=>'required',
+            'b_single_page_title'=>'required',
+            'g_single_page_title'=>'required',
+        ]);
         $product_page_bico = $request->file('single_page_bico')->store('storage', 'product_page_ico');
         $bimg = Image::make( $request->file('single_page_bico'))->save('storage/product_page_ico/'.$product_page_bico); //->resize(111, 26)
         
@@ -339,20 +348,24 @@ public function admin_contact(){
         $slides_image = $request->file('single_page_slides');
         $arr=array();
         
-        foreach($slides_image as $img){
-
-            $c=$img->store('public','product_slides_image');
-            array_push($arr,$c);
+        if($slides_image){
+            foreach($slides_image as $img){
+    
+                $c=$img->store('public','product_slides_image');
+                array_push($arr,$c);
+            }
         }
         
         $document_files = $request->file('single_page_documents');
         $document_arr = array();
         $keyarr = array();
         
-        foreach($document_files as $doc){
-            $v=($doc->getClientOriginalName());
-            $z=$doc->store('public','product_document');
-            $document_arr[$v]=$z;
+        if($document_files){
+            foreach($document_files as $doc){
+                $v=($doc->getClientOriginalName());
+                $z=$doc->store('public','product_document');
+                $document_arr[$v]=$z;
+            }
         }
         
         $product = new Product();

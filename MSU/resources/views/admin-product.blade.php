@@ -45,7 +45,7 @@
 </div>
 
 
-
+<!-- Добавление нового продукта -->
 <br>
 <br>
     <h3>Добавить новый продукт</h3>
@@ -54,7 +54,7 @@
                 {{ csrf_field() }}
                 <div class="form-group">
                     <fieldset>
-                        <legend>Тип продукта</legend>
+                        <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Тип продукта</legend>
                         <div class="product-ico">
                             <input type="radio" id="product-type1" name="product_type" value="product_type-1" checked>
                             <label for="product-ico1">Программно-аппаратные продукты </label>
@@ -70,7 +70,7 @@
                     <br>
                     <fieldset>
                         <!--Для выбора иконки продукта в меню-->
-                        <legend>Иконка для меню</legend>
+                        <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Иконка для меню</legend>
                         <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Об иконках" data-bs-content="Размер 48х48px (1:1) jpg или png формата. Иконки могут быть любого цвета. Первая - основная, вторая - активная(отображается при выбранном продукте)">Об иконках</button>
                         <br>
 
@@ -82,7 +82,7 @@
                         <input id="single_page_gico" type="file" class="form-control" name='single_page_gico'><br>
     
                         <!--Название пункта в меню продуктов-->
-                        <lable for="nt" class="form-label"> <h6>Название в пункте меню</h6></lable>
+                        <lable for="nt" class="form-label"> <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Название в пункте меню</legend></lable>
                         <input id="nt"  class="form-control" name="nav_title"><br>
                     </fieldset>
                     <br>
@@ -91,10 +91,10 @@
                     <fieldset>
                         <legend>Продукт на странице продукта</legend>
     
-                        <lable for="b_single_page_title" class="form-label"> <h6>Заголовок чёрный текст</h6> </lable>
+                        <lable for="b_single_page_title" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок чёрный текст</h6> </lable>
                         <input id="b_single_page_title"  class="form-control" name="b_single_page_title"><br>
     
-                        <lable for="g_single_page_title" class="form-label"> <h6>Заголовок зелёный текст</h6> </lable>
+                        <lable for="g_single_page_title" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок зелёный текст</h6> </lable>
                         <input id="g_single_page_title"  class="form-control" name="g_single_page_title"><br>
 
                         
@@ -131,7 +131,7 @@
                         <br>
                         <div class="single-page-documents-wrapper">
                             <lable for="single_page_documents" class="form-label"> <h6>Добавить документы</h6></lable>
-                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Название документов на странице берётся из названия файла. Следите за актеальными названиями файлов. Документы добавляются все вместе. По одному добавить нельзя. Для добавление выделите все документы и они добавятся в форму.">О документах</button>
+                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Название документов на странице берётся из названия файла. Следите за актуальными названиями файлов. Документы добавляются все вместе. По одному добавить нельзя. Для добавление выделите все документы и они добавятся в форму.">О документах</button>
                             <br>
                             <br>
                             <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>

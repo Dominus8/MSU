@@ -803,6 +803,13 @@
                                         align-items: center;
                                         .nav-element__ico {
                                             margin-left: 18px;
+                                            .nav-element__ico--black {
+                                                display: block;
+                                            }
+                                            .nav-element__ico--green {
+                                                margin-left: 17px;
+                                                display: none;
+                                            }
                                             img {
                                                 max-width: 48px;
                                                 object-fit: contain;
@@ -826,17 +833,11 @@
                                     .pac-nav__element {
                                         .nav-element__ico {
                                             border-radius: 25px;
-                                            svg {
-                                                g {
-                                                    .nav-svg-ico {
-                                                        fill: #66B821;
-                                                    }
-                                                    g {
-                                                        .nav-svg-ico {
-                                                            fill: #66B821;
-                                                        }
-                                                    }
-                                                }
+                                            .nav-element__ico--black {
+                                                display: none;
+                                            }
+                                            .nav-element__ico--green {
+                                                display: block;
                                             }
                                         }
                                     }
@@ -974,6 +975,12 @@
                                         .nav-element__ico {
                                             margin-left: 12px;
                                             padding-top: 15px;
+                                            .nav-element__ico--black {
+                                                display: block;
+                                            }
+                                            .nav-element__ico--green {
+                                                display: none;
+                                            }
                                         }
                                         .nav-element__title {
                                             pointer-events: none;
@@ -986,6 +993,19 @@
                                             letter-spacing: 0.002em;
                                             color: #5E5E5E;
                                         }
+                                    }
+                                }
+                                .nav-link--active {
+                                    .pac-nav__element {
+                                        .nav-element__ico {
+                                            .nav-element__ico--black {
+                                                display: none;
+                                            }
+                                            .nav-element__ico--green {
+                                                display: block;
+                                            }
+                                        }
+                                        .nav-element__title {}
                                     }
                                 }
                             }

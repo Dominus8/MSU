@@ -14,10 +14,13 @@
                 <div class="catalog-pac__nav--bg">
                     <div class="catalog-pac__nav swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
+                        <div style="display:none">{{$i=0}}</div>
                         @foreach($product as $el)
-                        <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
+                        <div style="display:none">{{$i=$i+1}}</div>
+                        <a id="nav-link-{{$i-1}}" class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"> </div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
                                     <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
@@ -52,6 +55,7 @@
                                             <div class="product__subtitle-text">
                                             {{$soloproduct->single_page_sudtitle}}
                                             </div>
+                                            @if(count($soloproduct->single_page_slides)>1)
                                             <div class="swiper swiper-single-page-mobile">
                                                 <div class="swiper-wrapper">
                                                 @foreach($soloproduct->single_page_slides as $el)
@@ -65,6 +69,7 @@
                                                     <div class="swiper-button-next"></div>
                                                 </div>
                                             </div>
+                                            @endif
                                         </div>
                                     </div>
 
@@ -141,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="product-call-to-action">
-                                <a href="#" class="call-to-action-wrapper">
+                                <a href="{{route('support')}}" class="call-to-action-wrapper">
                                     <div class="call-to-action__image">
                                         <img src="/images/question.png" alt="">
                                     </div>
@@ -154,19 +159,22 @@
                     </div>
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
+                        <div style="display:none">{{$y=0}}</div>
                         @foreach($product as $el)
-                        <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
+                        <div style="display:none">{{$y=$y+1}}</div>
+                        <a id="nav-link-mobile-{{$y-1}}" class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
+                                    <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
                             @endforeach
-                            <a class="nav-link swiper-slide" >
+                            <!-- <a class="nav-link swiper-slide" >
                                 <div class="pac-nav__element">
 
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="swiper-scrollbar swiper-scrollbar-mobile"></div>
                     </div>

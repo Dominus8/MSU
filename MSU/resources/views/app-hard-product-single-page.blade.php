@@ -14,17 +14,19 @@
                     <div class="catalog-pac__nav--bg">
                     <div class="catalog-pac__nav swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
+                        <div style="display:none">{{$i=0}}</div>
                         @foreach($product as $el)
-                        <a class="nav-link swiper-slide" href="/app-hard-product-single-page/{{$el->id}}">
+                        <div style="display:none">{{$i=$i+1}}</div>
+                            <a id="nav-link-{{$i-1}}" class="nav-link swiper-slide" href="/app-hard-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"> </div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
                                     <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
                             @endforeach
                             <a class="nav-link swiper-slide" >
                                 <div class="pac-nav__element">
-
                                 </div>
                             </a>
                         </div>
@@ -33,7 +35,6 @@
                     </div>
                     <div class="app-product-singlepage__content">
                         <div class="single-page-pagination">
-                            <!-- <a href="{{route('index')}}">Главная</a><a href="{{route('app-hard-product')}}">— Программные продукты</a><a href="/app-hard-product-single-page/12">— Единая платформа управления</a> -->
                         </div>
                         <div class="singlepage-content-title">
                         {{$soloproduct->b_single_page_title}}
@@ -67,10 +68,10 @@
                                 </div>
                             </div>
 
-
                             <div class="content-body__bottom">
                             <div class="basic-parameters-body__bg-slider"></div>
                                 <div class="body-bottom__slider">
+                                @if(count($soloproduct->single_page_slides)>=1)
                                     <div class="swiper swiper-single-page__bottom">
                                         <div class="swiper-wrapper">
                                             @foreach($soloproduct->single_page_slides as $el)
@@ -80,11 +81,12 @@
                                             @endforeach
                                         </div>
                                         <div class="swiper-control">
-                                                <div class="swiper-button-prev"></div>
-                                                <div class="swiper-pagination-3"></div>
-                                                <div class="swiper-button-next"></div>
-                                            </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination-3"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
                                     </div>
+                                @endif
                                 </div>
                             </div>
 
@@ -95,6 +97,7 @@
                                     <img src="/images/green-mark.png" alt="">
                                     <div class="product-documents__title-text">Документация</div>
                                 </div>
+                                @if(count($soloproduct->single_page_documents) >=1)
                                 <div class="product-documents__el-wrapper">
                                     @foreach($soloproduct->single_page_documents as $key=>$val)
                                         <a href="/storage/product_document/{{$val}}" class="product-documents__el">
@@ -106,9 +109,10 @@
                                         </a>
                                     @endforeach
                                 </div>
+                                @endif
                             </div>
                             <div class="product-call-to-action">
-                                <a href="#" class="call-to-action-wrapper">
+                                <a href="{{route('support')}}" class="call-to-action-wrapper">
                                     <div class="call-to-action__image">
                                         <img src="/images/question.png" alt="">
                                     </div>
@@ -122,42 +126,17 @@
                     <div class="catalog-pac__nav--bg-mobile"></div>
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
-                            <a id="nav-link-0" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
-                                <div class="pac-nav__element ">
-                                    <div class="nav-element__ico"> <img src="/images/coord_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Координированное управление транспортными потоками</div>
-                                </div>
-                            </a>
-                            <a id="nav-link-1" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
+                        <div style="display:none">{{$y=0}}</div>
+                        @foreach($product as $el)
+                        <div style="display:none">{{$y=$y+1}}</div>
+                        <a id="nav-link-mobile-{{$y-1}}" class="nav-link swiper-slide" href="/app-hard-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/config_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
+                                    <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
+                                    <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
-                            <a id="nav-link-2" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Выдача транспортных разрешений</div>
-                                </div>
-                            </a>
-                            <a id="nav-link-3" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/admin_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
-                            <a id="nav-link-4" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
-                            <a id="nav-link-5" class="nav-link swiper-slide" href="/app-hard-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="/images/coord_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
+                            @endforeach
                         </div>
                         <div class="swiper-scrollbar swiper-scrollbar-mobile"></div>
                     </div>
@@ -169,7 +148,7 @@
         let x = $('.content-body__bottom').height();
         let y = $('.basic-parameters-body__bg').height(x+128);
         // let z = $('.basic-parameters-body__bg-slider').height(x+128);
-        console.log(x);
+        // console.log(x);
     </script>
     <!-- /main-content -->
 @endsection

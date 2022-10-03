@@ -63,10 +63,10 @@ let swiper_single_page_mobile = new Swiper('.swiper-single-page-mobile', {
     loop: false,
 
     // If we need pagination
-    pagination: {
-        el: ".swiper-pagination-2",
-        type: "fraction",
-    },
+    // pagination: {
+    //     el: ".swiper-pagination-2",
+    //     type: "fraction",
+    // },
 
     // Navigation arrows
     navigation: {
@@ -132,22 +132,19 @@ let refiled_projects = new Swiper('.swiper-refiled-projects', {
     }
 });
 
+//----- Переключение стилей активной ссылки на слайдере каталога продуктов ------
 
 var navSlideIndex1;
-// localStorage.setItem('navSlideIndex', 0);
 
-// $(document).ready(function($) {
 $('.nav-link').on("click", function(event) {
     var z = $(event.target).attr('aria-label');
     navSlideIndex = z[0] - 1;
-    // alert(navSlideIndex);
     localStorage.setItem('navSlideIndex', navSlideIndex);
-
 });
 
 navSlideIndex1 = localStorage.getItem('navSlideIndex');
-let c = $(`#nav-link-${navSlideIndex1}`).addClass('nav-link--active');
-
+$(`#nav-link-${navSlideIndex1}`).addClass('nav-link--active');
+$(`#nav-link-mobile-${navSlideIndex1}`).addClass('nav-link--active');
 
 $(document).ready(function($) {
     localStorage.setItem('navSlideIndex', 0);
@@ -183,6 +180,7 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
 
 let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
     // Optional parameters
+    initialSlide: navSlideIndex1,
     watchSlidesProgress: true,
     slidesPerView: 2,
     spaceBetween: 10,

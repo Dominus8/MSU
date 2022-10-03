@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string("nav_title");
             $table->string("b_single_page_title");
             $table->string("g_single_page_title");
-            $table->text("single_page_slides");
+            $table->text("single_page_slides")->nullable();
             $table->text("single_page_sudtitle")->nullable();
             $table->text("single_page_purpose")->nullable();
             $table->text("single_page_parameters")->nullable();

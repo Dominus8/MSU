@@ -52,11 +52,11 @@
                                         </a>
                                     @endforeach
                                 </div>
-                                <div class="about-call">
+                                <a href="{{route('support')}}" class="about-call">
                                     <div class="about-call__image"><img src="/images/question.png" alt=""></div>
                                     <div class="about-call__subtitle">Не нашли то, что искали?
                                         <span>Напишите нам,</span> мы поможем</div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
