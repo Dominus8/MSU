@@ -130,33 +130,33 @@
                                 <a class="nav-item--primary" href="#"> Каталог</a>
                             </div> -->
                             <div>
-                                <a class="nav-item" href="#">Программные продукты</a>
+                                <a class="nav-item" href="{{route('app-product')}}">Программно-аппаратные продукты</a>
                             </div>
                             <div>
-                                <a class="nav-item" href="#">Программно-аппаратные продукты</a>
+                                <a class="nav-item" href="{{route('app-hard-product')}}">Программные продукты</a>
                             </div>
                         </div>
                         <div class="footer-nav__block">
                             <div>
-                                <a class="nav-item--primary" href="#">О нас</a>
+                                <a class="nav-item" href="{{route('about')}}">О нас</a>
                             </div>
                             <div>
-                                <a class="nav-item" href="#">Партнеры</a>
+                                <a class="nav-item" href="{{route('partners')}}">Партнеры</a>
                             </div>
 
                             <div>
-                                <a class="nav-item" href="#">Поддержка</a>
+                                <a class="nav-item" href="{{route('support')}}">Поддержка</a>
                             </div>
                         </div>
                         <div class="footer-nav__block">
                             <div>
-                                <a class="nav-item--primary" href="#">Наши проекты</a>
+                                <a class="nav-item" href="{{route('news-list')}}">Новости</a>  <!-- class="nav-item--primary" -->
                             </div>
                             <div>
-                                <a class="nav-item" href="#">Реализованные проекты</a>
+                                <a class="nav-item" href="{{route('refiled-projects')}}">Реализованные проекты</a>
                             </div>
                             <div>
-                                <a class="nav-item" href="#">Сотрудничество</a>
+                                <a class="nav-item" href="{{route('contacts')}}">Контакты</a>
                             </div>
                             <!-- <div>
                                 <a class="nav-item" href="#">Пилотные проекты</a>
