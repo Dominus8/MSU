@@ -16,14 +16,6 @@
                                 </div>
                                 <div class="warranty-cards__title-text">Гарантийные талоны</div>
                             </div>
-                            @foreach($warranty as $el)
-                            <a href="/storage/document_support/{{$el->file_warranty}}" class="warranty-cards__element">
-                                <div class="warranty-cards__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="warranty-cards__element-title">{{$el->title_warranty}} [{{pathinfo($el->file_warranty)['extension']}}]</div>
-                            </a>
-                            @endforeach
                         </div>
                         <div class="support-manuals">
                             <div class="support-manuals__title-wrapper">
@@ -32,38 +24,6 @@
                                 </div>
                                 <div class="support-manuals__title-text">Инструкции к ПО</div>
                             </div>
-                            @foreach($manual as $el)
-                            <a href="/storage/document_support/{{$el->file_manual}}" class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">{{$el->title_manual}} [{{pathinfo($el->file_manual)['extension']}}]</div>
-                            </a>
-                            @endforeach
-                            <!-- <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div> -->
                         </div>
                     </div>
                     <div class="support-feedback">

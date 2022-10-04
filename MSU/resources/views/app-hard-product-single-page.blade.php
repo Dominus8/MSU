@@ -50,7 +50,7 @@
                             <div class="content-body__top">
                                 <div class="body-top__text">
                                     <div class="product__subtitle">
-                                    {{$soloproduct->single_page_sudtitle}}
+                                    {!!$soloproduct->single_page_sudtitle!!}
                                     </div>
                                     <div class="product__purpose">
                                         <div class="product__purpose-title">
@@ -60,7 +60,7 @@
                                             <div class="purpose-title">Назначение</div>
                                         </div>
                                         <div class="product__purpose-text">
-                                        {{$soloproduct->single_page_purpose}}
+                                        {!!$soloproduct->single_page_purpose!!}
                                         </div>
                                     </div>
                                 </div>

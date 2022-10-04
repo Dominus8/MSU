@@ -53,7 +53,7 @@
                                     <div class="product__subtitle">
                                         <div class="product__subtitle-wrapper">
                                             <div class="product__subtitle-text">
-                                            {{$soloproduct->single_page_sudtitle}}
+                                            {!!$soloproduct->single_page_sudtitle!!}
                                             </div>
                                             @if(count($soloproduct->single_page_slides)>1)
                                             <div class="swiper swiper-single-page-mobile">
@@ -81,7 +81,7 @@
                                             <div class="purpose-title">Назначение</div>
                                         </div>
                                         <div class="product__purpose-text">
-                                        {{$soloproduct->single_page_purpose}}
+                                        {!!$soloproduct->single_page_purpose!!}
                                         </div>
 
                                     </div>

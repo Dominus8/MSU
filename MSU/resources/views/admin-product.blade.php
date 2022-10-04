@@ -59,7 +59,6 @@
                             <input type="radio" id="product-type1" name="product_type" value="product_type-1" checked>
                             <label for="product-ico1">Программно-аппаратные продукты </label>
                         </div>
-    
                         <div class="product-ico">
                             <input type="radio" id="product-type2" name="product_type" value="product_type-2">
                             <label for="product-type2">Программный продукт</label>
@@ -71,10 +70,7 @@
                     <fieldset>
                         <!--Для выбора иконки продукта в меню-->
                         <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Иконка для меню</legend>
-                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Об иконках" data-bs-content="Размер 48х48px (1:1) jpg или png формата. Иконки могут быть любого цвета. Первая - основная, вторая - активная(отображается при выбранном продукте)">Об иконках</button>
-                        <br>
-
-                        <br>
+                        <p style="font-size:11px;">Размер 48х48px (1:1) jpg или png формата. Иконки могут быть любого цвета. Первая - основная, вторая - активная(отображается при выбранном продукте)</p>
                         <lable for="single_page_bico" class="form-label"> <h6>Иконка чёрная</h6></lable>
                         <input id="single_page_bico" type="file" class="form-control" name='single_page_bico'><br>
     
@@ -85,9 +81,7 @@
                         <lable for="nt" class="form-label"> <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Название в пункте меню</legend></lable>
                         <input id="nt"  class="form-control" name="nav_title"><br>
                     </fieldset>
-                    <br>
                     <hr>
-                    <br>
                     <fieldset>
                         <legend>Продукт на странице продукта</legend>
     
@@ -99,23 +93,34 @@
 
                         
                         <lable for="single_page_slides" class="form-label"> <h6>Изображение для слайдера на странице</h6></lable>
-                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О слайдах Программно-аппаратного продукта" data-bs-content="Область отображения слайда 345х440px jpg(если размер на всю область) или png формата. Подложка у облости отображения всегда зелёного цвета. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.">О слайдах Программно-аппаратного продукта</button>
-                        
-                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О слайдах Программного продукта" data-bs-content="Область отображения слайдана 880х450px (На данный момент строго не ограничена, Можно эксперементировать) jpg или png формата. Подложки нет только цвет фона секции. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.">О слайдах Программного продукта</button>
-                        <br>
-                        <br>
+                        <p style="font-size:11px;">
+                        &nbsp;&nbsp;&nbsp;&nbsp;О слайдах Программно-аппаратного продукта - Область отображения слайда 345х440px jpg(если размер на всю область) или png формата. Подложка у облости отображения всегда зелёного цвета. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.<br> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;О слайдах Программного продукта - Область отображения слайдана 880х450px (На данный момент строго не ограничена, Можно эксперементировать) jpg или png формата. Подложки нет только цвет фона секции. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.
+                        </p>
                         <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides[]'><br>
     
                         <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
+                        <p style="font-size:11px;">
+                            Текст. Для форматированииспользовать: <br>
+                            &lt;br&gt; - перенос строки (Ставится в текст в место переноса, можно нескоько подряд) <br>
+                            &lt;span class = "Сюда нужный класс, можно сразу несколько чрез пробел"&gt;Сюда текс&lt;/span&gt; <br>
+                                Список слассов: <br>
+                                green - Сделать текст зелёным. <br>
+                                bold - Cделать текст "жирным" <br>
+                                Пример:<br>
+                                &lt;span class = "green bold"&gt;Зелёный, жирный текст&lt;/span&gt;
+                        </p>
                         <textarea id="single_page_sudtitle" type="text" class="form-control" name='single_page_sudtitle'></textarea><br>
     
                         <lable id="single-page-purpose-lable" for="single-page-purpose" class="form-label"> <h6>Назначение</h6></lable>
+
                         <textarea id="single-page-purpose" type="text" class="form-control" name='single-page-purpose'></textarea><br>
                     
                         <h6 id="parameters-wrapper_lable">Добавить параметры</h6>
-                        <button id="parameters-description" type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О параметрах" data-bs-content="Обязательно нажать кнопку 'Записать', иначе параметры не добавятся. Не оставляйте строки параметров пустыми, иначе они так и запишутся и отобразятся на странице пустыми (на данный момент)">О параметрах</button>
-                        <br>
-                        <br>
+                        <p style="font-size:11px;">
+                        Обязательно нажать кнопку 'Записать', иначе параметры не добавятся. Не оставляйте строки параметров пустыми, <br> иначе они так и запишутся и отобразятся на странице пустыми (на данный момент)
+                        </p>
+
                         <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                            <div class="single-page-parameters-item-wrapper">
                                <div class="single-page-parameters-item">
@@ -131,9 +136,9 @@
                         <br>
                         <div class="single-page-documents-wrapper">
                             <lable for="single_page_documents" class="form-label"> <h6>Добавить документы</h6></lable>
-                            <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Название документов на странице берётся из названия файла. Следите за актуальными названиями файлов. Документы добавляются все вместе. По одному добавить нельзя. Для добавление выделите все документы и они добавятся в форму.">О документах</button>
-                            <br>
-                            <br>
+                            <p style="font-size:11px;">
+                            Название документов на странице берётся из названия файла. Следите за актуальными названиями файлов. Документы добавляются все вместе. <br> По одному добавить нельзя. Для добавление выделите все документы и они добавятся в форму.
+                            </p>
                             <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
                         </div>
                     </fieldset>
@@ -151,17 +156,6 @@
                     <button class="btn btn-primary" type="sucsess">Создать продукт</button>
                 </div>
             </form>
-        </div>
-
-
-
-
-        <script>
-            $(document).ready(function(){
-                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-                const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-            });
-        </script>
-                
+        </div>              
 
 @endsection

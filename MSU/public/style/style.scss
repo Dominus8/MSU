@@ -269,20 +269,18 @@
                 line-height: 140%;
                 letter-spacing: 0.002em;
                 color: #F5F5F5;
-                transition-property: color;
-                transition-property: font-weight;
-                transition-property: font-size;
+                flex-grow: 0;
+                // transition-property: color;
+                // transition-property: font-weight;
+                // transition-property: font-size;
                 .nav-item-link {
                     font-family: 'Proxima Nova';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 140%;
-                    /* identical to box height, or 20px */
                     letter-spacing: 0.002em;
-                    /* Grey / 100 */
                     color: #F5F5F5;
-                    &:focus {}
                 }
                 .nav-item-link--active {
                     font-family: 'Proxima Nova';
@@ -298,7 +296,9 @@
                 }
             }
             .nav-item-source {
-                // border-left: 0.8px solid #9E9E9E;
+                padding-left: 20px;
+                padding-top: 3px;
+                border-left: 0.8px solid #9E9E9E;
             }
         }
     }
@@ -1230,9 +1230,9 @@
                                             max-width: 730px;
                                             .parameters-list__el {
                                                 max-width: 730px;
-                                                height: 56px;
+                                                min-height: 56px;
                                                 display: flex;
-                                                flex-wrap: wrap;
+                                                flex-wrap: no;
                                                 justify-content: space-between;
                                                 align-items: center;
                                                 font-family: 'Proxima Nova';
@@ -1243,6 +1243,18 @@
                                                 letter-spacing: 0.002em;
                                                 color: #757575;
                                                 border-top: 1px solid #E0E0E0;
+                                                .parameters-title {
+                                                    padding-right: 5px;
+                                                    max-width: 500px;
+                                                    overflow-wrap: break-word;
+                                                    // flex-grow: 1;
+                                                }
+                                                .parameters-value {
+                                                    padding-left: 5px;
+                                                    text-align: right;
+                                                    overflow-wrap: break-word;
+                                                    // flex-grow: 1;
+                                                }
                                             }
                                         }
                                     }
