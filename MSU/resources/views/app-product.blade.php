@@ -39,42 +39,14 @@
                     </div>
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
-                                <div class="pac-nav__element ">
-                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Координированное управление транспортными потоками</div>
-                                </div>
-                            </a>
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
+                        @foreach($product as $el)
+                        <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="./images/config_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Конфигурация сценарных планов управления движением</div>
+                                    <div class="nav-element__ico"> <img src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"> </div>
+                                    <div class="nav-element__title">{{$el->nav_title}}</div>
                                 </div>
                             </a>
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Выдача транспортных разрешений</div>
-                                </div>
-                            </a>
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="./images/admin_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="./images/get_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
-                            <a class="nav-link swiper-slide" href="/app-product-single-page/12">
-                                <div class="pac-nav__element">
-                                    <div class="nav-element__ico"> <img src="./images/coord_ico.png" alt="i"> </div>
-                                    <div class="nav-element__title">Администрирование транспортных нарушений</div>
-                                </div>
-                            </a>
+                            @endforeach
                         </div>
                         <!-- <div class="swiper-pagination"></div> -->
                         <div class="swiper-scrollbar swiper-scrollbar-mobile"></div>
