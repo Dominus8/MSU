@@ -76,7 +76,6 @@ Route::post('/admin/update-contact/{id}', [MainController::class, 'update_contac
 Route::get('/admin/dell-contact/{id}', [MainController::class, 'dell_contact']) ->name('dell_contact');
 
 
-
 //--------- Админка - продукты------------------------------------------------------------------------------------------------------------------------
 
 //Админка - Управление продуктами
@@ -93,7 +92,6 @@ Route::post('/admin/update-product/{id}', [MainController::class, 'update_produc
 
 //Удаление продукта
 Route::get('/admin/dell-product/{id}', [MainController::class, 'dell_product']) ->name('dell_product');
-
 
 
 //--------- Админка - Главная------------------------------------------------------------------------------------------------------------------------

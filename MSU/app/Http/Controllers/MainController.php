@@ -271,7 +271,6 @@ public function admin_contact(){
 
         $valid = $request->validate([
             'image_mine_slide'=>'required',
-
         ]);
 
         $mainslide = new Mainslide();
@@ -296,14 +295,42 @@ public function admin_contact(){
 
 // Редактирование Главного слайдера
     public function edit_home_page($id){
-        return redirect()->route('admin-home-page');
+        $product = new Product();
+        $mainslide = Mainslide::find($id);
+        
+        return view('edit-home-page',['product'=>$product->all(),'mainslide'=>$mainslide ]);
     }
 
 //Обновление Главного слайдера
-    public function update_home_page(){
+    public function update_home_page(Request $request, $id){
+        
+        $mainslide = Mainslide::find($id);
 
-        return redirect()->route('admin-home-page');
+            if($request->file('image_mine_slide')){
+
+                Storage::disk('image_mine_slide')->delete($mainslide->image_mine_slide);
+
+                $image = $request->file('image_mine_slide')->store('storage', 'image_mine_slide');
+    
+                $img = Image::make( $request->file('image_mine_slide'))->save('storage/image_mine_slide/'.$image); //->resize(111, 26)
+            }else{
+                $image = $mainslide->image_mine_slide;
+            }
+
+            // Storage::disk('image_mine_slide')->delete(Contact::find($id)->contact_image);
+        
+        $mainslide->image_mine_slide = $image;
+        $mainslide->b_title_mine_slide = $request->input('b_title_mine_slide');
+        $mainslide->g_title_mine_slide = $request->input('g_title_mine_slide');
+        $mainslide->subtitle_mine_slide = $request->input('subtitle_mine_slide');
+        $mainslide->link_mine_slide = $request->input('link_mine_slide');
+
+        $mainslide->save();
+
+      return redirect()->route('admin-home-page');
+
     }
+
 
 // Для удаления Главного слайдера
     public function dell_home_page($id){
@@ -403,7 +430,7 @@ public function admin_contact(){
 
         $soloparamiters =$paramarr;
 
-        return  view('admin-product-edit',['product'=>$product, 'soloparamiters'=>$soloparamiters]);
+        return view('admin-product-edit',['product'=>$product, 'soloparamiters'=>$soloparamiters]);
     }
 
 //Обновление продукта

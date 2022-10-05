@@ -13,7 +13,7 @@
 @endif
 
 <div class="mine-content admin-section__form">
-                    <form action="/admin/create-home-page" method="post" enctype="multipart/form-data">
+                    <form action="/admin/update-home-page/{{$mainslide->id}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <fieldset>
@@ -22,7 +22,12 @@
                                         <p style="font-size:11px;">
                                             Область отображения слайда 1110х600. Формат .png с прозрачным фоном. 
                                             <a href="/images/main-slide.psd">Шаблон для главного слайда.</a> <br>Можно добавить только картинку, без остальных элементов в таком случае, можно использовать любую картинку подходящего размера. <br> Каждый следующий элемент будет отображаться при наличии.
+                                            Если не выбрать новое изображение, останется текущее.
                                         </p>
+                                        <div class="current-slide-image">
+                                            <p>Текущее изображение</p>
+                                            <img style="width:150px" src="/storage/image_mine_slide/{{ $mainslide->image_mine_slide}}" alt="">
+                                        </div>
                                         <lable for="image-mine-slide" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Изображение для слайдера на главной</h6></lable>
                                         <input id="image-mine-slide" type="file" class="form-control" name='image_mine_slide'><br>
 
@@ -30,21 +35,22 @@
                                         <p style="font-size:11px;">
                                             Пара слов. 
                                         </p>
-                                        <input id="b-title-mine-slide"  class="form-control" name="b_title_mine_slide"><br>
+                                        <input id="b-title-mine-slide"  class="form-control" name="b_title_mine_slide" value="{{$mainslide->b_title_mine_slide}}"><br>
                                         
                                         <lable for="g-title-mine-slide" class="form-label"> <h6>Название зелёный текст</h6></lable>
                                         <p style="font-size:11px;">
                                             Пара слов. 
                                         </p>
-                                        <input id="g-title-mine-slide"  class="form-control" name="g_title_mine_slide"><br>
+                                        <input id="g-title-mine-slide"  class="form-control" name="g_title_mine_slide" value="{{$mainslide->g_title_mine_slide}}"><br>
 
                                         <lable for="subtitle-mine-slide" class="form-label"> <h6>Описание для главного слайдера</h6></lable>
                                         <p style="font-size:11px;">
                                             2-3 строки (Около 100-120 символов с учёном пробелов) 
                                         </p>
-                                        <textarea id="subtitle-mine-slide" type="text" class="form-control" name='subtitle_mine_slide'></textarea><br>
+                                        <textarea id="subtitle-mine-slide" type="text" class="form-control" name='subtitle_mine_slide'>{{$mainslide->subtitle_mine_slide}}</textarea><br>
                                         
                                         <lable for="link-mine-slide" class="form-label"> <h6>Продукт для кнопки</h6></lable>
+
                                         <select id="link-mine-slide" class="form-control" name="link_mine_slide">
                                         <option value="">Без кнопки</option>
                                             @foreach($product as $el)
@@ -57,21 +63,16 @@
                                             @endforeach
                                         </select> 
                                         <hr>
-                                        <button class="btn btn-primary" type="sucsess">Добавить слайд</button>
+                                        <button class="btn btn-primary" type="sucsess">Обновить слайд</button>
                                     </div>
                             </fieldset>
                         </div>
                     </form>
                 </div>
-                <div class="admin-section__manage">
-                @foreach($sainslide as $el)
-                        <div class="manage-element directions_card">
-                            <img src="/storage/image_mine_slide/{{$el->image_mine_slide}}" alt="img">
-                            <h6>{{$el->b_title_mine_slide}}</h6>
-                            <a class='btn btn-warning' href="/edit-home-page/{{$el->id}}">edit</a>
-                            <a class='btn btn-danger' href="/admin/dell-home-page/{{$el->id}}">x</a>
-                        </div>
-                    @endforeach 
-                </div>
+                <script>
+                    $(document).ready(function(){
+                        let x = $("select[name='link_mine_slide'] option[value='{{$mainslide->link_mine_slide}}']").attr('selected','selected');
+                    });
+                </script>
 
 @endsection
