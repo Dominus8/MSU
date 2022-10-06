@@ -117,15 +117,15 @@
                                         <div class="basic-parameters__list">
                                             @foreach($soloparamiters as $el)
                                             <div class="parameters-list__el">
-                                                @if($el->key)
-                                                    <div class="parameters-title">{{$el->key }}</div>
-                                                @else
+                                                @if(is_null($el->key))
                                                     <div class="parameters-title"> </div>
-                                                @endif
-                                                @if($el->val)
-                                                    <div class="parameters-value"> {{$el->val}}</div>
                                                 @else
+                                                    <div class="parameters-title"> {{$el->key }}</div>
+                                                @endif
+                                                @if(is_null($el->val))
                                                     <div class="parameters-value"> </div>
+                                                @else
+                                                    <div class="parameters-value"> {{$el->val}}</div>
                                                 @endif
                                             </div>
                                             @endforeach
