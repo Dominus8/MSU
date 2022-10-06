@@ -510,6 +510,7 @@
                         }
                         .honor-aria {
                             .honor-aria__card {
+                                padding: 10px 0;
                                 &:nth-child(1) {
                                     border-top: 1px solid #E0E0E0;
                                 }
@@ -517,10 +518,12 @@
                                 flex-wrap: wrap;
                                 align-items: center;
                                 max-width: 634px;
-                                height: 172px;
+                                // height: 172px;
                                 border-bottom: 1px solid #E0E0E0;
                                 .honor-card__image {
-                                    img {}
+                                    img {
+                                        max-width: 228px;
+                                    }
                                 }
                                 .honor-card__content {
                                     max-width: 380px;
@@ -1780,6 +1783,7 @@
                 .single-news-wrapper {
                     margin-top: 80px;
                     margin-bottom: 100px;
+                    min-height: 450px;
                     .single-news__title {
                         font-family: 'Proxima Nova';
                         font-style: normal;
@@ -1828,13 +1832,17 @@
                                         right: 0;
                                         position: absolute;
                                         .single-news__image-wrapper {
-                                            height: 440px;
-                                            width: 343px;
-                                            background-color: #66B821;
+                                            max-height: 440px;
+                                            max-width: 343px;
+                                            // background-color: #66B821;
                                             display: flex;
                                             align-items: center;
                                             justify-content: end;
-                                            .single-news__image {}
+                                            .single-news__image {
+                                                max-height: 440px;
+                                                max-width: 343px;
+                                                object-fit: contain;
+                                            }
                                         }
                                         a {
                                             .single-news__link {
@@ -1985,7 +1993,6 @@
                             font-size: 14px;
                             line-height: 140%;
                             letter-spacing: 0.002em;
-                            text-transform: uppercase;
                             color: #BDBDBD;
                             .projects-pagination__count {}
                             .projects-pagination_switch {

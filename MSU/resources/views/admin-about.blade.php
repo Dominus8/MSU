@@ -74,7 +74,7 @@
             <div class="manage-element directions_card">
                 <img src="/storage/adout_card_image/{{$el->adout_card_image}}" alt="img">
                 <h6>{{$el->contact_title}}</h6>
-                <a class='btn btn-warning' href="/edit-about-card/{{$el->id}}">edit</a>
+                <a class='btn btn-warning' href="/admin/edit-about-card/{{$el->id}}">edit</a>
                 <a class='btn btn-danger' href="/admin/dell-about-card/{{$el->id}}">x</a>
             </div>
         @endforeach 
@@ -107,7 +107,7 @@
         @foreach($aboutdoc as $el)
             <div class="manage-element directions_card">
                 <h6>{{$el->adout_doc_title}}</h6>
-                <a class='btn btn-warning' href="/edit-about-doc/{{$el->id}}">edit</a>
+                <a class='btn btn-warning' href="{{route('edit-about-doc',['id'=>$el->id])}}">edit</a>
                 <a class='btn btn-danger' href="/admin/dell-about-doc/{{$el->id}}">x</a>
             </div>
         @endforeach 

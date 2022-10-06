@@ -32,7 +32,9 @@
                     </div>
                     <div class="catalog-pac__home-content">
                         <div class="pac-home-content__title">Программно-аппаратные продукты</div>
-                        <div class="pac-home-content__subtitle">Аппараты для фиксации прохождения транспортных средств по каждой полосе в реальном масштабе времени</div>
+                        <div class="pac-home-content__subtitle">
+                            Оборудование разработанно собственным штатом инженеров, проектировщиков, разработчиков, дизайнеров, Сирийно производиться на собственной производственной базе. Оборудование Российского производства и внесено в реестр МинПромТорга РФ.
+                        </div>
                         <div class="pac-home-content__image">
                             <img src="./images/app-hard.png" alt="">
                         </div>

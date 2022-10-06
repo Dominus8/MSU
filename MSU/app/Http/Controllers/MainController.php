@@ -526,7 +526,7 @@ public function admin_contact(){
 
 //--------------------------- Управление О нас -------------------------------------
 
-//Админка - Управление продуктами
+//Админка - Управление О нас
 
     public function admin_about(){
         if($abouttext = Abouttext::first()){
@@ -563,12 +563,10 @@ public function admin_contact(){
 //Создать карточку О нас
 
     public function create_adout_card(Request $request){
-        $abouttext = Abouttext::first();
-        $aboutcard = new Aboutcard();
-        $aboutdoc = new Aboutdoc();
+        $aboutcard= new Aboutcard();
 
         $adout_card_image = $request->file('adout_card_image')->store('storage', 'adout_card_image');
-        $adoutimg = Image::make( $request->file('adout_card_image'))->save('storage/adout_card_image/'.$adout_card_image); //->resize(111, 26)
+        $adoutimg = Image::make( $request->file('adout_card_image'))->resize(228, 60)->save('storage/adout_card_image/'.$adout_card_image); //->resize(111, 26)
 
         $aboutcard->adout_card_image = $adout_card_image;
         $aboutcard->adout_card_text = $request->input("adout_card_text");
@@ -576,8 +574,39 @@ public function admin_contact(){
         
         $aboutcard->save();
         
-        return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
+        return redirect()->route('admin-about');
     }        
+
+//Ркдвктировать карточку О нас
+
+    public function edit_about_card($id){
+
+        $aboutcard = Aboutcard::find($id);
+        
+        return view('edit-about-card', ['aboutcard'=>$aboutcard]);
+    }
+
+//Обновить карточку О нас
+
+    public function update_about_card(Request $request, $id){
+        $aboutcard = Aboutcard::find($id);
+        
+        if($request->file('adout_card_image')){
+            Storage::disk('adout_card_image')->delete($aboutcard->adout_card_image);
+            $adout_card_image = $request->file('adout_card_image')->store('storage', 'adout_card_image');
+            $adoutimg = Image::make( $request->file('adout_card_image'))->resize(228, 60)->save('storage/adout_card_image/'.$adout_card_image); //->resize(111, 26)
+        }else{
+            $adout_card_image = $aboutcard->adout_card_image;
+        }
+
+        $aboutcard->adout_card_image = $adout_card_image;
+        $aboutcard->adout_card_text = $request->input("adout_card_text");
+        $aboutcard->adout_card_date = $request->input("adout_card_date");
+        
+        $aboutcard->save();
+
+        return redirect()->route('admin-about');
+    }
 
 //Удалить карточку О нас
 
@@ -591,22 +620,60 @@ public function admin_contact(){
         return redirect()->route('admin-about');
     }
     
+
+
+
 //Создать документ О нас
 
     public function create_adout_doc(Request $request){
-        $abouttext = Abouttext::first();
-        $aboutcard = new Aboutcard();
         $aboutdoc = new Aboutdoc();
 
         $adout_doc_file = $request->file('adout_doc_file')->store('storage', 'adout_doc_file');
-
-        $aboutdoc->adout_doc_file= $adout_doc_file;
+        $aboutdoc->adout_doc_file = $adout_doc_file;
         $aboutdoc->adout_doc_title = $request->input("adout_doc_title");
         
         $aboutdoc->save();
+
+        return redirect()->route('admin-about');
         
-        return view('admin-about',['aboutcard'=>$aboutcard->all(),'abouttext'=>$abouttext,'aboutdoc'=>$aboutdoc->all()]);
     }
+    
+//Редактировать документ О нас
+
+    public function edit_about_doc($id){
+
+        $aboutdoc = Aboutdoc::find($id);
+
+    return view('edit-about-doc',['aboutdoc'=>$aboutdoc]);
+
+}
+    
+//Обновить документ О нас
+
+    public function update_about_doc(Request $request, $id){
+
+        $aboutdoc = Aboutdoc::find($id);
+
+        if($request->file('adout_doc_file')){
+
+            Storage::disk('adout_doc_file')->delete($aboutdoc->adout_doc_file);
+            
+            $adout_doc_file = $request->file('adout_doc_file')->store('storage', 'adout_doc_file');
+
+        }else{
+
+            $adout_doc_file = $aboutdoc->adout_doc_file;
+
+        }
+
+        $aboutdoc->adout_doc_file = $adout_doc_file;
+        $aboutdoc->adout_doc_title = $request->input("adout_doc_title");
+        
+        $aboutdoc->save();
+
+    return redirect()->route('admin-about');
+
+}
     
 //Удалить документ О нас
 
@@ -618,7 +685,7 @@ public function admin_contact(){
         
         $aboutdoc->delete();
 
-        return redirect()->route('admin-about');
+    return redirect()->route('admin-about');
 
 }
  
@@ -638,9 +705,9 @@ public function create_news(Request $request){
 
             $valid = $request->validate([
                 'thumbnail_news'=>'required',
-                'b_title_news'=>'required|max:20',
-                'g_title_news'=>'required|max:20',
-                'subtitle_news'=>'required|max:180',
+                'b_title_news'=>'required',
+                'g_title_news'=>'required',
+                'subtitle_news'=>'required',
             ]);
 
     $news = new News();
@@ -667,6 +734,55 @@ public function create_news(Request $request){
     $news->save();
 
     return view('admin-news',['news'=>$news->all()]);
+}
+
+// Редактирование новости
+    public function edit_news($id){
+
+        $news = News::find($id);
+
+        return view('edit-news',['news'=>$news]);
+
+}
+
+// Обновление новости
+    public function update_news(Request $request, $id){
+
+        $news = News::find($id);
+        
+        if($request->file('image_news')){
+            Storage::disk('image_news')->delete($news->image_news);
+            $image_news = $request->file('image_news')->store('storage', 'image_news');
+            $newsimg = Image::make( $request->file('image_news'))->save('storage/image_news/'.$image_news); //->resize(111, 26)
+        }else{
+            $image_news = $news->image_news;
+        }
+        
+        if($request->file('thumbnail_news')){
+            Storage::disk('image_news')->delete($news->thumbnail_news);
+            $thumbnail_news = $request->file('thumbnail_news')->store('storage', 'image_news');
+            $thumbnailimg = Image::make( $request->file('thumbnail_news'))->save('storage/image_news/'.$thumbnail_news)->resize(343, 174); //
+        }else{
+            $thumbnail_news = $news->thumbnail_news;
+        }
+
+        $news->thumbnail_news = $thumbnail_news;
+        $news->image_news = $image_news;
+        $news->b_title_news = $request->input("b_title_news");
+        $news->g_title_news = $request->input("g_title_news");
+        $news->subtitle_news = $request->input("subtitle_news");
+        $news->top_text_news = $request->input("top_text_news");
+        $news->bottom_text_news = $request->input("bottom_text_news");
+        $news->elink_text_news = $request->input("elink_text_news");
+        $news->elink_link_news = $request->input("elink_link_news");
+        $news->description_news = $request->input("description_news");
+        $news->keywords_news = $request->input("keywords_news");
+        $news->date_news = $request->input("date_news");
+
+        $news->save();
+
+    return redirect()->route('admin-news');
+
 }
 
 // Для удаления новости

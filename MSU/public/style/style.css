@@ -556,6 +556,7 @@
 }
 
 .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card {
+  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,12 +566,15 @@
       -ms-flex-align: center;
           align-items: center;
   max-width: 634px;
-  height: 172px;
   border-bottom: 1px solid #E0E0E0;
 }
 
 .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card:nth-child(1) {
   border-top: 1px solid #E0E0E0;
+}
+
+.section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__image img {
+  max-width: 228px;
 }
 
 .section-about .about .about-wrapper .about-body .about-body__content .honor-aria .honor-aria__card .honor-card__content {
@@ -1841,6 +1845,7 @@
 .section-single-news .section-inner .single-news .single-news-wrapper {
   margin-top: 80px;
   margin-bottom: 100px;
+  min-height: 450px;
 }
 
 .section-single-news .section-inner .single-news .single-news-wrapper .single-news__title {
@@ -1907,9 +1912,8 @@
 }
 
 .section-single-news .section-inner .single-news .single-news-wrapper .single-news-content .single-news__content-wrapper .single-news__top-section-wrapper .single-news__image-area-wrapper .single-news__image-area .single-news__image-wrapper {
-  height: 440px;
-  width: 343px;
-  background-color: #66B821;
+  max-height: 440px;
+  max-width: 343px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1919,6 +1923,13 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+
+.section-single-news .section-inner .single-news .single-news-wrapper .single-news-content .single-news__content-wrapper .single-news__top-section-wrapper .single-news__image-area-wrapper .single-news__image-area .single-news__image-wrapper .single-news__image {
+  max-height: 440px;
+  max-width: 343px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section-single-news .section-inner .single-news .single-news-wrapper .single-news-content .single-news__content-wrapper .single-news__top-section-wrapper .single-news__image-area-wrapper .single-news__image-area a .single-news__link {
@@ -2056,7 +2067,6 @@
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.002em;
-  text-transform: uppercase;
   color: #BDBDBD;
 }
 

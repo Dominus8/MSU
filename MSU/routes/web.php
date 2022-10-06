@@ -122,25 +122,48 @@ Route::post('/admin/change-adout-subtitle', [MainController::class, 'change_adou
 //Админка - О нас - Создать карточку
 Route::post('/admin/create-adout-card', [MainController::class, 'create_adout_card'])->name('create-adout-card');
 
-//Удаление карточек О нас
+//Редактировать карточеу О нас
+Route::get('/admin/edit-about-card/{id}', [MainController::class, 'edit_about_card']) ->name('edit-about-card');
+
+//Обновить карточеу О нас
+Route::post('/admin/update-about-card/{id}', [MainController::class, 'update_about_card']) ->name('update-about-card');
+
+//Удалить карточеу О нас
 Route::get('/admin/dell-about-card/{id}', [MainController::class, 'dell_about_card']) ->name('dell-about-card');
+
+
 
 //Админка - О нас - Добавить документ
 Route::post('/admin/create-adout-doc', [MainController::class, 'create_adout_doc'])->name('create-adout-doc');
 
+//Редактировать документа О нас
+Route::get('/admin/edit-about-doc/{id}', [MainController::class, 'edit_about_doc']) ->name('edit-about-doc');
+
+//Обновить документа О нас
+Route::post('/admin/update-about-doc/{id}', [MainController::class, 'update_about_doc']) ->name('update-about-doc');
+
 //Удаление документа О нас
 Route::get('/admin/dell-about-doc/{id}', [MainController::class, 'dell_about_doc']) ->name('dell-about-doc');
+
+
 
 //--------- Админка - Новости ------------------------------------------------------------------------------------------------------------------------
 
 //Админка - Управление Новости
 Route::get('/admin-news', [MainController::class, 'admin_news'])->name('admin-news');
 
-//Админка - О нас - Создать карточку
+//Админка - Создать Новость
 Route::post('/admin/create-news', [MainController::class, 'create_news'])->name('create-news');
 
-//Удаление документа О нас
+//Редактировать Новость
+Route::get('/admin/edit-news/{id}', [MainController::class, 'edit_news']) ->name('edit-news');
+
+//Обновить новость
+Route::post('/admin/update-news/{id}', [MainController::class, 'update_news']) ->name('update-news');
+
+//Удаление Новости
 Route::get('/admin/dell-news/{id}', [MainController::class, 'dell_news']) ->name('dell-news');
+
 
 //--------- Админка - Реализованные проекты ------------------------------------------------------------------------------------------------------------------------
 
