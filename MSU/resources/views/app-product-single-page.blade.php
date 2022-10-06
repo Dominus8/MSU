@@ -21,7 +21,7 @@
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
                                     <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
-                                    <div class="nav-element__title">{{$el->nav_title}}</div>
+                                    <div class="nav-element__title">{!!$el->nav_title!!}</div>
                                 </div>
                             </a>
                             @endforeach
@@ -117,8 +117,16 @@
                                         <div class="basic-parameters__list">
                                             @foreach($soloparamiters as $el)
                                             <div class="parameters-list__el">
-                                                <div class="parameters-title">{{ $el->key }}</div>
-                                                <div class="parameters-value"> {{ $el->val}}</div>
+                                                @if($el->key)
+                                                    <div class="parameters-title">{{$el->key }}</div>
+                                                @else
+                                                    <div class="parameters-title"> </div>
+                                                @endif
+                                                @if($el->val)
+                                                    <div class="parameters-value"> {{$el->val}}</div>
+                                                @else
+                                                    <div class="parameters-value"> </div>
+                                                @endif
                                             </div>
                                             @endforeach
 

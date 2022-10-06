@@ -17,7 +17,7 @@
                         <a class="nav-link swiper-slide" href="/app-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"> <img src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"> </div>
-                                    <div class="nav-element__title">{{$el->nav_title}}</div>
+                                    <div class="nav-element__title">{!!$el->nav_title!!}</div>
                                 </div>
                             </a>
                             @endforeach
@@ -33,7 +33,7 @@
                     <div class="catalog-pac__home-content">
                         <div class="pac-home-content__title">Программно-аппаратные продукты</div>
                         <div class="pac-home-content__subtitle">
-                            Оборудование разработанно собственным штатом инженеров, проектировщиков, разработчиков, дизайнеров, Сирийно производиться на собственной производственной базе. Оборудование Российского производства и внесено в реестр МинПромТорга РФ.
+                            Оборудование разработанно собственным штатом инженеров, проектировщиков, разработчиков, дизайнеров, сирийно <br> производиться на собственной производственной базе. Оборудование Российского производства и внесено в реестр МинПромТорга РФ.
                         </div>
                         <div class="pac-home-content__image">
                             <img src="./images/app-hard.png" alt="">

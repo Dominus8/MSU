@@ -15,7 +15,7 @@
                         <div class="news-list-el">
                             <div class="news__text-content">
                                 <div class="news__title">{{$el->b_title_news}} {{$el->g_title_news}}</div>
-                                <div class="news__subtitle">{{$el->subtitle_news}}</div>
+                                <div class="news__subtitle">{!!$el->subtitle_news!!}</div>
                                 <div class="news__more-link"> <a href="/single-news/{{$el->id}}">Подробнее</a> </div>
                             </div>
                             <div class="news__create-date">{{date('d-m-Y', strtotime($el->date_news))}}</div>
