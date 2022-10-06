@@ -16,7 +16,7 @@
                                 <div class="contacts-main__title-text">Главный офис</div>
                             </div>
                         </div>
-                        <div class="contacts-main__address">Адрес: <span>г. Красноярск, ул. Ленина, д. 53, строение 1</span> </div>
+                        <div class="contacts-main__address">Адрес: <span>г. Красноярск, ул. Партизана-железняка, д. 35а</span></div>
                         <div class="contacts-main_email">Напишите нам: <span>info@msu24.ru</span> </div>
                         <div class="contacts-main__phone">Позвоните нам: <span>+7 (391) 27-24-24-0</span> </div>
                     </div>

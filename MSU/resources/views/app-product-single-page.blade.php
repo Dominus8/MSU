@@ -105,6 +105,7 @@
                             </div>
                             <div class="content-body__bottom">
                                 <div class="basic-parameters-body__bg"></div>
+                                
                                 <div class="body-bottom__basic-parameters">
                                     <div class="basic-parameters__title">
                                         <img src="/images/green-mark.png" alt="">
@@ -122,6 +123,7 @@
                                                 @else
                                                     <div class="parameters-title"> {{$el->key }}</div>
                                                 @endif
+                                                
                                                 @if(is_null($el->val))
                                                     <div class="parameters-value"> </div>
                                                 @else

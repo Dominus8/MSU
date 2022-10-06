@@ -130,6 +130,17 @@
                                 <a class="nav-item--primary" href="#"> Каталог</a>
                             </div> -->
                             <div>
+                                <a class="nav-item" href="{{route('about')}}">О нас</a>
+                            </div>
+                            <div>
+                                <a class="nav-item" href="{{route('news-list')}}">Новости</a>  <!-- class="nav-item--primary" -->
+                            </div>
+                            <div>
+                                <a class="nav-item" href="{{route('contacts')}}">Контакты</a>
+                            </div>
+                        </div>
+                        <div class="footer-nav__block">
+                            <div>
                                 <a class="nav-item" href="{{route('app-product')}}">Программно-аппаратные продукты</a>
                             </div>
                             <div>
@@ -138,25 +149,14 @@
                         </div>
                         <div class="footer-nav__block">
                             <div>
-                                <a class="nav-item" href="{{route('about')}}">О нас</a>
-                            </div>
-                            <div>
                                 <a class="nav-item" href="{{route('partners')}}">Партнеры</a>
                             </div>
-
+    
                             <div>
                                 <a class="nav-item" href="{{route('support')}}">Поддержка</a>
                             </div>
-                        </div>
-                        <div class="footer-nav__block">
-                            <div>
-                                <a class="nav-item" href="{{route('news-list')}}">Новости</a>  <!-- class="nav-item--primary" -->
-                            </div>
                             <div>
                                 <a class="nav-item" href="{{route('refiled-projects')}}">Реализованные проекты</a>
-                            </div>
-                            <div>
-                                <a class="nav-item" href="{{route('contacts')}}">Контакты</a>
                             </div>
                             <!-- <div>
                                 <a class="nav-item" href="#">Пилотные проекты</a>
@@ -183,11 +183,11 @@
                         </div>
                         <div class="footer-social__ico">
                             <div class="footer-social__ico-wrapper">
-                                <a href="" class="footer-social__ico-item"><img src="/images/footer_fb.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="/images/footer_yt.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="/images/footer_tg.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="/images/footer_wp.svg" alt=""></a>
-                                <a href="" class="footer-social__ico-item"><img src="/images/footer_ig.svg" alt=""></a>
+                                <a href="#" class="footer-social__ico-item"><img src="/images/footer_fb.svg" alt=""></a>
+                                <a href="#" class="footer-social__ico-item"><img src="/images/footer_yt.svg" alt=""></a>
+                                <a href="#" class="footer-social__ico-item"><img src="/images/footer_tg.svg" alt=""></a>
+                                <a href="#" class="footer-social__ico-item"><img src="/images/footer_wp.svg" alt=""></a>
+                                <a href="#" class="footer-social__ico-item"><img src="/images/footer_ig.svg" alt=""></a>
                             </div>
                         </div>
                     </div>
