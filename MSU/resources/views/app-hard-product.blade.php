@@ -42,7 +42,7 @@
                         <a  class="nav-link swiper-slide" href="/app-hard-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
                                     <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
-                                    <div class="nav-element__title">{{$el->nav_title}}</div>
+                                    <div class="nav-element__title">{!!$el->nav_title!!}</div>
                                 </div>
                             </a>
                             @endforeach

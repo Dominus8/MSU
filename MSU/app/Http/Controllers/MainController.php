@@ -834,14 +834,23 @@ public function create_project(Request $request){
 
     $pdocument_files = $request->file('document_project');
     $pdocument_arr = array();
-    // $pkeyarr = array();
     
-    foreach($pdocument_files as $pdoc){
-        $v=($pdoc->getClientOriginalName());
-        $z=$pdoc->store('public','document_project');
-        $pdocument_arr[$v]=$z;
+    if($pdocument_files){
+        foreach($pdocument_files as $pdoc){
+            $v=($pdoc->getClientOriginalName());
+            $z=$pdoc->store('public','document_project');
+            $pdocument_arr[$v]=$z;
+        }
+    }else{
+        $pdocument_arr['']='';
     }
-    // dd($pdocument_arr);
+   
+    if($request->input("links-to-send")){
+        $links_to_send = $request->input("links-to-send");
+    }else{
+        $arr = array('' => '', '' => '');
+        $links_to_send = json_encode($arr);
+    }
     
     $project->thumbnail_project = $thumbnail_project;
     $project->image_project = $parr;
@@ -849,7 +858,7 @@ public function create_project(Request $request){
     $project->g_title_project = $request->input("g_title_project");
     $project->subtitle_project = $request->input("subtitle_project");
     $project->full_text_project = $request->input("full_text_project");
-    $project->links_to_send = $request->input("links-to-send");
+    $project->links_to_send = $links_to_send;
     $project->document_project = $pdocument_arr;
     $project->description_project = $request->input("description_project");
     $project->keywords_project = $request->input("keywords_project");
@@ -857,6 +866,78 @@ public function create_project(Request $request){
     $project->save();
     
     return redirect()->route('admin-projects');
+}
+
+// Для редактирования Проекта
+    public function edit_project($id){
+        $project = Project::find($id);
+
+    return view('edit-project',['project'=>$project]);
+
+}
+// Для обновления Проекта
+    public function update_project(Request $request, $id){
+        $project = Project::find($id);
+        
+    // $image_project = $request->file('image_project')->store('storage', 'image_project');
+    // $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
+    
+    if($request->file('thumbnail_project')){
+        $thumbnail_project = $request->file('thumbnail_project')->store('storage', 'image_project');
+        $thumbnailpimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
+    }else{
+        $thumbnail_project = $project->thumbnail_project;
+    }
+    
+    
+    if($request->file('image_project')){
+        $pslides_image = $request->file('image_project');
+        $parr=array();
+        
+        foreach($pslides_image as $img){
+            $c=$img->store('public','image_project');
+            array_push($parr,$c);
+        }
+    }else{
+        $parr = $project->image_project;
+    }
+
+    if($request->file('document_project')){
+        $pdocument_files = $request->file('document_project');
+        $pdocument_arr = array();
+        
+        foreach($pdocument_files as $pdoc){
+            $v=($pdoc->getClientOriginalName());
+            $z=$pdoc->store('public','document_project');
+            $pdocument_arr[$v]=$z;
+        }
+    }else{
+        $pdocument_arr = $project->document_project;
+    }
+
+    if($request->input("links-to-send")){
+        $links_to_send = $request->input("links-to-send");
+    }else{
+        $arr = array('' => '', '' => '');
+
+        $links_to_send = json_encode($arr);
+    }
+    
+    $project->thumbnail_project = $thumbnail_project;
+    $project->image_project = $parr;
+    $project->b_title_project = $request->input("b_title_project");
+    $project->g_title_project = $request->input("g_title_project");
+    $project->subtitle_project = $request->input("subtitle_project");
+    $project->full_text_project = $request->input("full_text_project");
+    $project->links_to_send = $links_to_send;
+    $project->document_project = $pdocument_arr;
+    $project->description_project = $request->input("description_project");
+    $project->keywords_project = $request->input("keywords_project");
+    
+    $project->save();
+
+    return redirect()->route('admin-projects');
+
 }
 
 // Для удаления Проекта
@@ -873,15 +954,15 @@ public function create_project(Request $request){
             Storage::disk('document_project')->delete($el);
         }
         
-        $news->delete();
+        $project->delete();
 
     return redirect()->route('admin-projects');
 
 }
 
-//--------------------------- Управление Проектами -------------------------------------
+//--------------------------- Управление партнёрами -------------------------------------
 
-//Админка - Управление Проектами
+//Админка - Управление партнёрами
 
     public function admin_partner(){
         $partner = new Partner();
@@ -889,7 +970,7 @@ public function create_project(Request $request){
         return view('admin-partner',['partner'=>$partner->all()]);
     } 
 
-//Создать Проект
+//Создать Партнёра
 
 public function create_partner(Request $request){
     
@@ -907,7 +988,7 @@ public function create_partner(Request $request){
     return redirect()->route('admin-partner');
 }
 
-// Для редактирования Проекта
+// Для редактирования Партнёра
     public function edit_partner($id){
         $partner = Partner::find($id);
 
@@ -915,7 +996,7 @@ public function create_partner(Request $request){
 
 }
 
-// Для обновления Проекта
+// Для обновления Партнёра
     public function update_partner(Request $request, $id){
         $partner = Partner::find($id);
 
@@ -937,7 +1018,7 @@ public function create_partner(Request $request){
 
 }
 
-// Для удаления Проекта
+// Для удаления Партнёра
     public function dell_partner($id){
         $partner = Partner::find($id);
 

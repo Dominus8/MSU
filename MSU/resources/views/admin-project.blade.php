@@ -101,7 +101,7 @@
                         <div class="manage-element directions_card">
                             <img src="/storage/image_project/{{$el->thumbnail_project}}" alt="img">
                             <h6>{{$el->b_title_project}} {{$el->g_title_project}}</h6>
-                            <a class='btn btn-warning' href="/edit-project/{{$el->id}}">edit</a>
+                            <a class='btn btn-warning' href="/admin/edit-project/{{$el->id}}">edit</a>
                             <a class='btn btn-danger' href="/admin/dell-project/{{$el->id}}">x</a>
                         </div>
                     @endforeach 

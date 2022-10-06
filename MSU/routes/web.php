@@ -173,6 +173,12 @@ Route::get('/admin-projects', [MainController::class, 'admin_projects'])->name('
 //Админка - Создать проект
 Route::post('/admin/create-project', [MainController::class, 'create_project'])->name('create-project');
 
+//Редактировать Проекта
+Route::get('/admin/edit-project/{id}', [MainController::class, 'edit_project']) ->name('edit-project');
+
+//Обновить Проекта
+Route::post('/admin/update-project/{id}', [MainController::class, 'update_project']) ->name('update-project');
+
 //Удаление Проекта
 Route::get('/admin/dell-project/{id}', [MainController::class, 'dell_project']) ->name('dell-project');
 
@@ -198,14 +204,31 @@ Route::get('/admin/dell-partner/{id}', [MainController::class, 'dell_partner']) 
 //Админка - Управление Поддержкой
 Route::get('/admin-support', [MainController::class, 'admin_support'])->name('admin-support');
 
+
+
 //Админка - Поддержка - Создать талон
 Route::post('/admin/create-warranty', [MainController::class, 'create_warranty'])->name('create-warranty');
+
+//Изменение талона
+Route::get('/admin/edit-warranty/{id}', [MainController::class, 'edit_warranty']) ->name('edit-earranty');
+
+//Обновление талона
+Route::post('/admin/update-warranty/{id}', [MainController::class, 'update_warranty']) ->name('update-earranty');
+
+//Удаление талона
+Route::get('/admin/dell-warranty/{id}', [MainController::class, 'dell_warranty']) ->name('dell-earranty');
+
+
+
 
 //Админка - Поддержка - Создать инструкцию
 Route::post('/admin/create-manual', [MainController::class, 'create_manual'])->name('create-manual');
 
-//Удаление талона
-Route::get('/admin/dell-warranty/{id}', [MainController::class, 'dell_warranty']) ->name('dell-earranty');
+//Редактировать инструкции
+Route::get('/admin/edit-manual/{id}', [MainController::class, 'edit_manual']) ->name('edit-manual');
+
+//Обновить инструкции
+Route::get('/admin/update-manual/{id}', [MainController::class, 'update_manual']) ->name('update-manual');
 
 //Удаление инструкции
 Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual');
