@@ -228,7 +228,7 @@ Route::post('/admin/create-manual', [MainController::class, 'create_manual'])->n
 Route::get('/admin/edit-manual/{id}', [MainController::class, 'edit_manual']) ->name('edit-manual');
 
 //Обновить инструкции
-Route::get('/admin/update-manual/{id}', [MainController::class, 'update_manual']) ->name('update-manual');
+Route::post('/admin/update-manual/{id}', [MainController::class, 'update_manual']) ->name('update-manual');
 
 //Удаление инструкции
 Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual');

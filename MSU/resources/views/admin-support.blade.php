@@ -59,7 +59,7 @@
                     @foreach($warranty as $el)
                         <div class="manage-element directions_card">
                             <h6>{{$el->title_warranty}}</h6>
-                            <a class='btn btn-warning' href="#">edit</a>
+                            <a class='btn btn-warning' href="/admin/edit-warranty/{{$el->id}}">edit</a>
                             <a class='btn btn-danger' href="/admin/dell-warranty/{{$el->id}}">x</a>
                         </div>
                     @endforeach 
@@ -70,7 +70,7 @@
                     @foreach($manual as $el)
                         <div class="manage-element directions_card">
                             <h6>{{$el->title_manual}}</h6>
-                            <a class='btn btn-warning' href="#">edit</a>
+                            <a class='btn btn-warning' href="/admin/edit-manual/{{$el->id}}">edit</a>
                             <a class='btn btn-danger' href="/admin/dell-manual/{{$el->id}}">x</a>
                         </div>
                     @endforeach 

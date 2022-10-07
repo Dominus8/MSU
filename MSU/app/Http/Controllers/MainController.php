@@ -1057,6 +1057,48 @@ public function create_warranty(Request $request){
     return redirect()->route('admin-support');
 }
 
+// Редактирование Талона
+    public function edit_warranty($id){
+        $warranty = Swarranty::find($id);
+
+    return view('edit-support-warranty',['warranty'=>$warranty]);
+
+}
+
+// Обновление Талона
+    public function update_warranty(Request $request, $id){
+        $warranty = Swarranty::find($id);
+
+        if($request->file("file_warranty")){
+            Storage::disk('document_support')->delete($warranty->file_warranty);
+            $file_warranty=$request->file("file_warranty")->store('public','document_support');
+        }else{
+            $file_warranty = $warranty->file_warranty;
+        }
+
+        $warranty->file_warranty = $file_warranty;
+        $warranty->title_warranty = $request->input("title_warranty");
+    
+        $warranty->save();
+
+
+    return redirect()->route('admin-support');
+
+}
+
+// Для удаления Талона
+    public function dell_warranty($id){
+        $warranty = Swarranty::find($id);
+
+        Storage::disk('document_support')->delete($warranty->file_warranty);
+
+        $warranty->delete();
+
+    return redirect()->route('admin-support');
+
+}
+
+
 //Создать Инструкцию
 
 public function create_manual(Request $request){
@@ -1073,49 +1115,33 @@ public function create_manual(Request $request){
     return redirect()->route('admin-support');
 }
 
-// Для редактирования Проекта
-//     public function edit_partner($id){
-//         $partner = Partner::find($id);
+// Редактировать Инструкции
+    public function edit_manual($id){
+        $manual = Smanual::find($id);
+    return view('edit-support-manual',['manual'=>$manual]);
 
-//     return view('admin-partner-edit',['partner'=>$partner]);
+}
 
-// }
+// Обновить Инструкции
+    public function update_manual(Request $request, $id){
+        $manual = Smanual::find($id);
+        if($request->file("file_manual")){
+            Storage::disk('document_support')->delete($manual->file_manual);
+            $file_manual=$request->file("file_manual")->store('public','document_support');
+        }else{
+            $file_manual = $manual->file_manual;
+        }
 
-// Для обновления Проекта
-//     public function update_partner(Request $request, $id){
-//         $partner = Partner::find($id);
-
-//         if($request->file('image_partner')){
-//             Storage::disk('image_partner')->delete($partner->image_partner);
-//             $image_partner = $request->file('image_partner')->store('storage', 'image_partner');
-//             $imagepartner = Image::make( $request->file('image_partner'))->save('storage/image_partner/'.$image_partner); //->resize(343, 174)
-//         }else{
-//             $image_partner = $partner->image_partner;
-//         }
+        $manual->file_manual = $file_manual;
+        $manual->title_manual = $request->input("title_manual");
     
-//         $partner->image_partner = $image_partner;
-//         $partner->link_partner = $request->input("link_partner");
-//         $partner->data_title_partner = $request->input("data_title_partner");
-    
-//         $partner->save();
-
-//     return redirect()->route('admin-partner');
-
-// }
-
-// Для удаления Проекта
-    public function dell_warranty($id){
-        $warranty = Swarranty::find($id);
-
-        Storage::disk('document_support')->delete($warranty->file_warranty);
-
-        $warranty->delete();
+        $manual->save();
 
     return redirect()->route('admin-support');
 
 }
 
-// Для удаления Проекта
+// Для удаления Инструкции
     public function dell_manual($id){
         $manual = Smanual::find($id);
 
