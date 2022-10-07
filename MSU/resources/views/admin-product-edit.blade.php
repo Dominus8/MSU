@@ -94,6 +94,16 @@
                                 <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides[]'><br>
 
                                 <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
+                                <p style="font-size:11px;">
+                                    Текст. Для форматированииспользовать: <br>
+                                    &lt;br&gt; - перенос строки (Ставится в текст в место переноса, можно нескоько подряд) <br>
+                                    &lt;span class = "Сюда нужный класс, можно сразу несколько чрез пробел"&gt;Сюда текс&lt;/span&gt; <br>
+                                        Список слассов: <br>
+                                        green - Сделать текст зелёным. <br>
+                                        bold - Cделать текст "жирным" <br>
+                                        Пример:<br>
+                                        &lt;span class = "green bold"&gt;Зелёный, жирный текст&lt;/span&gt;
+                                </p>
                                 <textarea id="single_page_sudtitle" type="text" class="form-control" name='single_page_sudtitle'>{{$product->single_page_sudtitle}}</textarea><br>
                                 @if($product->single_page_purpose)
                                 <lable id="single-page-purpose-lable" for="single-page-purpose" class="form-label"><h6>Назначение</h6></lable>
@@ -101,6 +111,9 @@
                                 @endif
                                 @if($product->product_type == 'product_type-1')
                                 <h6 id="parameters-wrapper_lable">Обновить параметры</h6>
+                                <strong>
+                                    Нажимать "Записать", даже если нет содержимого! Запишется пустая строка.
+                                </strong>
                                     <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                                         @if($soloparamiters)
                                         @foreach( $soloparamiters as $el)
@@ -128,6 +141,9 @@
                                 <br>
                                 <div class="single-page-documents-wrapper">
                                     <lable for="single_page_documents" class="form-label"><h6>Обновить документы</h6></lable>
+                                    <p>
+                                        По одному не добавляются, только за ново все менять.
+                                    </p>
                                     <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Документы добавляются все вместе. По одному добавить нельзя. Если нужно добавить один документ, соберите все уже загруженные документы в каталог, добавьте в этот каталог недостающий документ и выделите все документы вместе. Документы перезаписываются `пачкой`">Подробности</button>
                                     <br>
                                     <br>

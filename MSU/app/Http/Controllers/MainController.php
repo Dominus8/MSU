@@ -808,16 +808,11 @@ public function create_news(Request $request){
         return view('admin-project',['project'=>$project->all()]);
     } 
 
-
 //Создать Проект
 
 public function create_project(Request $request){
     
     $project = new Project();
-
-    
-    // $image_project = $request->file('image_project')->store('storage', 'image_project');
-    // $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
     
     $thumbnail_project = $request->file('thumbnail_project')->store('storage', 'image_project');
     $thumbnailpimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
@@ -878,11 +873,9 @@ public function create_project(Request $request){
 // Для обновления Проекта
     public function update_project(Request $request, $id){
         $project = Project::find($id);
-        
-    // $image_project = $request->file('image_project')->store('storage', 'image_project');
-    // $projectimg = Image::make( $request->file('image_project'))->save('storage/image_project/'.$image_project); //->resize(111, 26)
-    
+            
     if($request->file('thumbnail_project')){
+        Storage::disk('image_news')->delete($project->thumbnail_project);
         $thumbnail_project = $request->file('thumbnail_project')->store('storage', 'image_project');
         $thumbnailpimg = Image::make( $request->file('thumbnail_project'))->save('storage/image_project/'.$thumbnail_project)->resize(343, 174); //
     }else{
@@ -891,6 +884,11 @@ public function create_project(Request $request){
     
     
     if($request->file('image_project')){
+        foreach($project->image_project as $el){
+
+            Storage::disk('image_news')->delete($el);
+        }
+
         $pslides_image = $request->file('image_project');
         $parr=array();
         
@@ -903,6 +901,11 @@ public function create_project(Request $request){
     }
 
     if($request->file('document_project')){
+        foreach($project->document_project as $el){
+
+            Storage::disk('document_project')->delete($el);
+        }
+
         $pdocument_files = $request->file('document_project');
         $pdocument_arr = array();
         
@@ -943,6 +946,8 @@ public function create_project(Request $request){
 // Для удаления Проекта
     public function dell_project($id){
         $project = Project::find($id);
+
+        Storage::disk('image_news')->delete($project->thumbnail_project);
         
         foreach($project->image_project as $el){
 

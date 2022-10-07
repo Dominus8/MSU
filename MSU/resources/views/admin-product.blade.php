@@ -120,6 +120,9 @@
                         <p style="font-size:11px;">
                         Обязательно нажать кнопку 'Записать', иначе параметры не добавятся. Не оставляйте строки параметров пустыми, <br> иначе они так и запишутся и отобразятся на странице пустыми (на данный момент)
                         </p>
+                        <strong>
+                            Нажимать "Записать", даже если нет содержимого! Запишется пустая строка.
+                        </strong>
 
                         <div id="parameters-wrapper"  class="single-page-parameters-wrapper">
                            <div class="single-page-parameters-item-wrapper">
