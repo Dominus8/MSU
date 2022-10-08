@@ -3803,9 +3803,11 @@
                         .swiper-wrapper {
                             .swiper-slide {
                                 .slider-image {
-                                    max-width: 480px;
+                                    max-width: 520px;
                                     padding-left: 0px;
                                     margin-left: -50px;
+                                    bottom: auto;
+                                    left: auto;
                                 }
                                 .slide-wrapper {
                                     margin-bottom: 30px;

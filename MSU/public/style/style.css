@@ -4022,9 +4022,11 @@
     margin-bottom: 50px;
   }
   .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slider-image {
-    max-width: 480px;
+    max-width: 520px;
     padding-left: 0px;
     margin-left: -50px;
+    bottom: auto;
+    left: auto;
   }
   .section-main-slider .section-inner .main-slider .swiper .swiper-wrapper .swiper-slide .slide-wrapper {
     margin-bottom: 30px;
