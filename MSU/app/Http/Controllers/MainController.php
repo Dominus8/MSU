@@ -481,7 +481,6 @@ public function admin_contact(){
 
             $document_files = $request->file('single_page_documents');
             $document_arr = array();
-            $keyarr = array();
             
             foreach($document_files as $doc){
                 $v=($doc->getClientOriginalName());
@@ -491,6 +490,17 @@ public function admin_contact(){
         }else{
             $document_arr = $product->single_page_documents;
         }
+
+        if(!$request->file('single_page_documents') || $request->input("dell-document-product")){
+            $document_arr = array();
+            $document_arr['']='';
+            foreach($product->single_page_documents as $el){
+    
+                Storage::disk('product_document')->delete($el);
+            }
+        }
+
+        
         
         
         $product->product_type = $request->input('product_type');
@@ -822,7 +832,6 @@ public function create_project(Request $request){
     $parr=array();
     
     foreach($pslides_image as $img){
-
         $c=$img->store('public','image_project');
         array_push($parr,$c);
     }
@@ -870,6 +879,8 @@ public function create_project(Request $request){
     return view('edit-project',['project'=>$project]);
 
 }
+
+
 // Для обновления Проекта
     public function update_project(Request $request, $id){
         $project = Project::find($id);
@@ -900,23 +911,36 @@ public function create_project(Request $request){
         $parr = $project->image_project;
     }
 
-    if($request->file('document_project')){
-        foreach($project->document_project as $el){
-
-            Storage::disk('document_project')->delete($el);
-        }
-
-        $pdocument_files = $request->file('document_project');
-        $pdocument_arr = array();
+        // dd($request->input("dell-document-project"));
         
-        foreach($pdocument_files as $pdoc){
-            $v=($pdoc->getClientOriginalName());
-            $z=$pdoc->store('public','document_project');
-            $pdocument_arr[$v]=$z;
+        
+        if($request->file('document_project')){
+            foreach($project->document_project as $el){
+                
+                Storage::disk('document_project')->delete($el);
+            }
+            
+            $pdocument_files = $request->file('document_project');
+            $pdocument_arr = array();
+            
+            foreach($pdocument_files as $pdoc){
+                $v=($pdoc->getClientOriginalName());
+                $z=$pdoc->store('public','document_project');
+                $pdocument_arr[$v]=$z;
+            }
+        }else{
+            $pdocument_arr = $project->document_project;
         }
-    }else{
-        $pdocument_arr = $project->document_project;
-    }
+        
+        if(!$request->file('document_project') || $request->input("dell-document-project")){
+            $pdocument_arr = array();
+            $pdocument_arr['']='';
+            foreach($project->document_project as $el){
+    
+                Storage::disk('document_project')->delete($el);
+            }
+        }
+
 
     if($request->input("links-to-send")){
         $links_to_send = $request->input("links-to-send");
@@ -925,6 +949,7 @@ public function create_project(Request $request){
 
         $links_to_send = json_encode($arr);
     }
+
     
     $project->thumbnail_project = $thumbnail_project;
     $project->image_project = $parr;
@@ -942,6 +967,7 @@ public function create_project(Request $request){
     return redirect()->route('admin-projects');
 
 }
+
 
 // Для удаления Проекта
     public function dell_project($id){

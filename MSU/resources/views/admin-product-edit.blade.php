@@ -141,12 +141,19 @@
                                 <br>
                                 <div class="single-page-documents-wrapper">
                                     <lable for="single_page_documents" class="form-label"><h6>Обновить документы</h6></lable>
-                                    <p>
+                                    <p style="font-size:11px;">
                                         По одному не добавляются, только за ново все менять.
+                                        Документы добавляются все вместе. По одному добавить нельзя. <br> Если нужно добавить один документ, соберите все уже загруженные документы в каталог, <br> добавьте в этот каталог недостающий документ и выделите все документы вместе. Документы перезаписываются `пачкой`
                                     </p>
-                                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="О документах" data-bs-content="Документы добавляются все вместе. По одному добавить нельзя. Если нужно добавить один документ, соберите все уже загруженные документы в каталог, добавьте в этот каталог недостающий документ и выделите все документы вместе. Документы перезаписываются `пачкой`">Подробности</button>
-                                    <br>
-                                    <br>
+                                    @if(count($product->single_page_documents) >=1)
+                                    @foreach($product->single_page_documents as $key=>$val)
+                                        <a href="/storage/product_document/{{$val}}">
+                                            {{pathinfo($key)['filename']}}
+                                        </a> <br>
+                                    @endforeach
+                                
+                                @endif
+                                    <input type="checkbox" name="dell-document-product" value="1"> Удалить документы</p>
                                     <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
                                 </div>
                             </fieldset>

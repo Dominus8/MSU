@@ -16,12 +16,14 @@
                             {!!$project->full_text_project!!}
                         </div>
 
-                        <div class="refiled-projects-sigle-page__content-links">
+                        <div class="refiled-projects-sigle-page__content-links">                       
                             @if($project->links_to_send)
                                 @foreach(json_decode($project->links_to_send) as $key=>$val)
                                     <a href="{{$val}}" class="refiled-projects-sigle-page__link-el">
                                         <div class="link__text">{{$key}}</div>
+                                        @if(!$key == '')
                                         <div class="link__ico"><img src="/images/single-news-ico.png" alt="ico"></div>
+                                        @endif
                                     </a>
                                 @endforeach
                             @endif
@@ -42,8 +44,7 @@
                         </div>
                     </div>
 
-                    
-                    @if($project->document_project)
+                    @if(!empty(array_keys($project->document_project)[0]))
                         <div class="refiled-projects__product-documents">
                             <div class="refiled-projects-documents-wrapper">
                                 <div class="refiled-projects-documents__title">
@@ -53,11 +54,15 @@
                                 <div class="refiled-projects-documents__el-wrapper">
                                     @foreach($project->document_project as $key=>$val)
                                         <a href="/storage/product_document/{{$val}}" class="refiled-projects-documents__el">
+                                            @if($key)
                                             <img src="/images/doc_icon.png" alt="">
                                             <div class="refiled-projects-documents__el-title">{{pathinfo($key)['filename']}}</div>
+                                            @endif
+                                            @if($key)
                                             <div class="refiled-projects-documents__el-format">
                                                 [{{pathinfo($val)['extension']}}]
                                             </div>
+                                            @endif
                                         </a>
                                     @endforeach
                                 </div>

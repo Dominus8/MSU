@@ -108,6 +108,7 @@
                                             </a> <br>
                                 @endforeach
                             </p>
+                        <input type="checkbox" name="dell-document-project" value="1"> Удалить документы</p>
                         <input id="document-project" type="file" multiple class="form-control" name='document_project[]'><br>
                         <hr>
                         <fieldset>

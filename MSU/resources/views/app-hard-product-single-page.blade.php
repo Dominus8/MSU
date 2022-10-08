@@ -19,7 +19,7 @@
                         <div style="display:none">{{$i=$i+1}}</div>
                             <a id="nav-link-{{$i-1}}" class="nav-link swiper-slide" href="/app-hard-product-single-page/{{$el->id}}">
                                 <div class="pac-nav__element">
-                                    <div class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
+                                    <div style="display:none;" class="nav-element__ico"><img class="nav-element__ico--green"  src="/storage/product_page_ico/{{$el->single_page_gico}}" alt="i"></div>
                                     <div class="nav-element__ico"><img class="nav-element__ico--black" src="/storage/product_page_ico/{{$el->single_page_bico}}" alt="i"></div>
                                     <div class="nav-element__title">{!!$el->nav_title!!}</div>
                                 </div>
@@ -93,19 +93,25 @@
                         </div>
                         <div class="single-page-content__product-documents">
                             <div class="product-documents-wrapper">
+                                @if(!empty(array_keys($soloproduct->single_page_documents)[0]))
                                 <div class="product-documents__title">
                                     <img src="/images/green-mark.png" alt="">
                                     <div class="product-documents__title-text">Документация</div>
                                 </div>
-                                @if(count($soloproduct->single_page_documents) >=1)
                                 <div class="product-documents__el-wrapper">
                                     @foreach($soloproduct->single_page_documents as $key=>$val)
                                         <a href="/storage/product_document/{{$val}}" class="product-documents__el">
                                             <img src="/images/doc_icon.png" alt="">
-                                            <div class="product-documents__el-title">{{pathinfo($key)['filename']}}</div>
+                                            @if($key)
+                                            <div class="product-documents__el-title">
+                                                {{pathinfo($key)['filename']}}
+                                            </div>
+                                            @endif
+                                            @if($val == 2)
                                             <div class="product-documents__el-format">
                                                 [{{pathinfo($val)['extension']}}]
                                             </div>
+                                            @endif
                                         </a>
                                     @endforeach
                                 </div>

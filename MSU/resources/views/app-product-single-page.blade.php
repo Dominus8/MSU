@@ -139,21 +139,23 @@
                         </div>
                         <div class="single-page-content__product-documents">
                             <div class="product-documents-wrapper">
-                                <div class="product-documents__title">
-                                    <img src="/images/green-mark.png" alt="">
-                                    <div class="product-documents__title-text">Документация</div>
-                                </div>
-                                <div class="product-documents__el-wrapper">
-                                @foreach($soloproduct->single_page_documents as $key=>$val)
-                                    <a href="/storage/product_document/{{$val}}" class="product-documents__el">
-                                        <img src="/images/doc_icon.png" alt="">
-                                        <div class="product-documents__el-title">{{pathinfo($key)['filename']}}</div>
-                                        <div class="product-documents__el-format">
-                                            [{{pathinfo($val)['extension']}}]
-                                        </div>
-                                    </a>
-                                @endforeach
-                                </div>
+                                @if(!empty(array_keys($soloproduct->single_page_documents)[0]))
+                                    <div class="product-documents__title">
+                                        <img src="/images/green-mark.png" alt="">
+                                        <div class="product-documents__title-text">Документация</div>
+                                    </div>
+                                    <div class="product-documents__el-wrapper">
+                                        @foreach($soloproduct->single_page_documents as $key=>$val)
+                                            <a href="/storage/product_document/{{$val}}" class="product-documents__el">
+                                                <img src="/images/doc_icon.png" alt="">
+                                                <div class="product-documents__el-title">{{pathinfo($key)['filename']}}</div>
+                                                <div class="product-documents__el-format">
+                                                    [{{pathinfo($val)['extension']}}]
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                @endif
                             </div>
                             <div class="product-call-to-action">
                                 <a href="{{route('support')}}" class="call-to-action-wrapper">

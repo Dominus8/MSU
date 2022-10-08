@@ -138,21 +138,36 @@ var navSlideIndex1;
 
 $('.nav-link').on("click", function(event) {
     var z = $(event.target).attr('aria-label');
-    navSlideIndex = z[0] - 1;
+    navSlideIndex = z.split('/')[0] - 1;
+    console.log();
     localStorage.setItem('navSlideIndex', navSlideIndex);
 });
 
 navSlideIndex1 = localStorage.getItem('navSlideIndex');
-$(`#nav-link-${navSlideIndex1}`).addClass('nav-link--active');
+// $(`#nav-link-${navSlideIndex1}`).addClass('nav-link--active');
+
+let gIco = $(`#nav-link-${navSlideIndex1}`).find('.nav-element__ico--green').attr('src');
+
+$(`#nav-link-${navSlideIndex1}`).find('.nav-element__ico--black').attr('src', `${gIco}`);
+console.log();
+
 $(`#nav-link-mobile-${navSlideIndex1}`).addClass('nav-link--active');
 
 $(document).ready(function($) {
-    localStorage.setItem('navSlideIndex', 0);
+    // localStorage.setItem('navSlideIndex', 0);
 });
+
+let primarySlide;
+
+if (navSlideIndex1) {
+    primarySlide = navSlideIndex1;
+} else {
+    primarySlide = 0;
+}
 
 let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
     // Optional parameters
-    initialSlide: navSlideIndex1,
+    initialSlide: primarySlide,
     // allowTouchMove: false,
     slidesPerView: 4,
     spaceBetween: 30,
@@ -180,7 +195,7 @@ let catalog_pac_nav = new Swiper('.catalog-pac__nav', {
 
 let catalog_pac_nav_mobile = new Swiper('.catalog-pac__nav-mobile', {
     // Optional parameters
-    initialSlide: navSlideIndex1,
+    initialSlide: primarySlide,
     watchSlidesProgress: true,
     slidesPerView: 2,
     spaceBetween: 10,
@@ -206,11 +221,11 @@ $('.nav-item-link').on("click", function(event) {
     var y = $(event.target).attr('class');
     var navElId;
     if (y = 'nav-item-link') {
-        console.log('fuzz');
         navElId = event.target.id;
         localStorage.setItem('navId', navElId);
     }
 });
+
 
 $(document).ready(function($) {
     var navId = localStorage.getItem('navId');
@@ -316,6 +331,8 @@ $('input[name="product_type"]').click(function() {
 
     }
 });
+
+// отображение блока ввода ссылок в адвинке на добавлении/обновлении проекта
 
 $(document).ready(function() {
     $('#external-link-visable').click(function() {
