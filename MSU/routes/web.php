@@ -232,3 +232,7 @@ Route::post('/admin/update-manual/{id}', [MainController::class, 'update_manual'
 
 //Удаление инструкции
 Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
