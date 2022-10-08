@@ -109,9 +109,9 @@ class MainController extends Controller
 
 //Новости
     public function news_list(){
-        $news =new News();
+        $news =DB::table('news')->latest('date_news')->get();
 
-        return view('news-list',['news'=>$news->all()]);
+        return view('news-list',['news'=>$news]);
     }
 
 

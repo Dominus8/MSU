@@ -1733,6 +1733,9 @@
 }
 
 .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__text-content {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   max-width: 550px;
 }
 
@@ -1780,6 +1783,8 @@
   letter-spacing: 0.002em;
   text-transform: uppercase;
   color: #BDBDBD;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 
 .section-news-list .section-inner .news-list .news-list-content .news-list-wrapper .news-list-el .news__thumbnail .news__thumbnail-image {

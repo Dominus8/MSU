@@ -1650,6 +1650,7 @@
                             justify-content: space-between;
                             border-bottom: 1px solid #E0E0E0;
                             .news__text-content {
+                                flex-grow: 2;
                                 max-width: 550px;
                                 .news__title {
                                     font-family: 'Proxima Nova';
@@ -1692,6 +1693,8 @@
                                 letter-spacing: 0.002em;
                                 text-transform: uppercase;
                                 color: #BDBDBD;
+                                white-space: nowrap;
+                                padding: 0 5px;
                             }
                             .news__thumbnail {
                                 .news__thumbnail-image {
