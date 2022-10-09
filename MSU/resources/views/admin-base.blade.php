@@ -9,7 +9,11 @@
     <section class="section-outer section-admin">
         <section class="section-inner">
             <section class="mine-content admin">
-            <a href="{{route('admin')}}"><h1>Админка</h1></a>
+                <div style="display:flex; justify-content: space-between;" class="manage-admin-button">
+                    <a href="{{route('admin')}}"><h1>Админка</h1></a>
+                    <a style="color:red;" href="{{route('logout')}}"><h1>Разлогиниться</h1></a>
+                </div>
+
             <div class="admin-nav">
                 <a href="{{route('admin-home-page')}}" class="admin-nav__el">Главная</a>
                 <a href="{{route('admin-about')}}" class="admin-nav__el">О нас</a>
