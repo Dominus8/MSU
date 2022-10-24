@@ -75,12 +75,12 @@
                             </div>
                         </div>
                         <div class="feedback-form">
-                            <form action="#" method="post">
+                            <form action="/admin/feedback" method="post">
                                 <input class="feedback-name" type="text" name="feedback-name" placeholder="Имя" id="">
                                 <input class="feedback-phone" type="tel" name="feedback-phone" placeholder="Телефон" id="">
                                 <input class="feedback-email" type="email" name="feedback-email" placeholder="e-mail" id="">
                                 <textarea class="feedback-message" name="feedback-message" placeholder="Сообщение" id="" cols="30" rows="6"></textarea>
-                                <input class="feedback-submit" type="submit" value="Отправить">
+                                <input class="feedback-submit" type="submit"  value="Отправить">
 
                             </form>
                         </div>

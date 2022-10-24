@@ -233,8 +233,7 @@ Route::post('/admin/update-manual/{id}', [MainController::class, 'update_manual'
 //Удаление инструкции
 Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual')->middleware('auth');
 
-
-Auth::routes();  // регистрация отключена Auth::routes(['register' => false]);
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
