@@ -54,6 +54,9 @@ Route::get('/support', [MainController::class, 'support'])->name('support');
 //Контакты
 Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts');
 
+//Поиск
+Route::get('/search', [MainController::class, 'search'])->name('search');
+
 //Админка
 Route::get('/admin', [MainController::class, 'admin'])->name('admin')->middleware('auth');
 
@@ -233,8 +236,12 @@ Route::post('/admin/update-manual/{id}', [MainController::class, 'update_manual'
 //Удаление инструкции
 Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->name('dell-manual')->middleware('auth');
 
-Auth::routes(['register' => false]);
+// Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

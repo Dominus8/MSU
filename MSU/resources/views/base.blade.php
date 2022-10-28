@@ -107,7 +107,7 @@
                     <div class="nav-item"><a id="support" class="nav-item-link" href="{{route('support')}}">Поддержка</a></div>
                     <div class="nav-item"><a id="contact" class="nav-item-link" href="{{route('contacts')}}">Контакты</a></div>
                     <div class="nav-item-source">
-                        <img src="/images/magnifier-icon.png" alt="">
+                        <a href="{{route('search')}}"><img src="/images/magnifier-icon.png" alt=""></a> 
                     </div>
                 </div>
             </div>

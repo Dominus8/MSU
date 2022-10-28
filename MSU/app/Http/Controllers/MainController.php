@@ -117,7 +117,7 @@ class MainController extends Controller
 
 //Новости соло страница
     public function news_single_page($id){
-        $news =News::find($id);
+        $news = News::find($id);
         return view('single-news',['news'=>$news]);
     }
 
@@ -159,6 +159,20 @@ class MainController extends Controller
     public function contacts(){
         $contact = new Contact();
         return view('contacts',['contact'=>$contact->all()]);
+    }
+
+
+//Поиск
+    public function search(Request $request){
+        $query = $request->input("query");
+        if($query){
+            
+            $foundNews = News::where('top_text_news', 'LIKE', "%$query%")->orWhere('bottom_text_news', 'LIKE', "%$query%")->orWhere("b_title_news", 'LIKE', "%$query%")->get();
+            
+        }else{
+            $foundNews = [];
+        }
+        return view('search',["foundNews"=>$foundNews]);
     }
 
 //------------------------- Админка ---------------------------------------------------

@@ -1,56 +1,42 @@
 @extends('base')
 
 @section('content')
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- main-content -->
     <section class="section-outer section-support">
         <section class="section-inner">
             <section class="mine-content support">
                 <div class="support-wrapper">
-                    <div class="support-content">
-                        <div class="support-title">Поддержка</div>
-                        <div class="warranty-cards">
-                            <!---Название раздела с талонами--->
-                            <div class="warranty-cards__title-wrapper">
-                                <div class="warranty-cards__title-mark">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="warranty-cards__title-text">Гарантийные талоны</div>
+                    <div style="width:100%;" class="support-content">
+                        <div class="support-title">Поиск</div>
+                        <form action="{{route('search')}}" method="get">
+                            <div class="input-group mb-3">
+                                <input name="query" type="text" class="form-control" placeholder="Что искать..." aria-label="Что искать..." aria-describedby="button-addon2">
+                                <button class="btn  btn-success" type="submit" id="button-addon2">Искать</button>
+                                <br>
+                                <br>
                             </div>
-                        </div>
-                        <div class="support-manuals">
-                            <div class="support-manuals__title-wrapper">
-                                <div class="support-manuals__title-mark">
-                                    <img src="./images/green-mark.png" alt="">
-                                </div>
-                                <div class="support-manuals__title-text">Инструкции к ПО</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="support-feedback">
-                        <div class="feedback-message">
-                            <div class="feedback-message__image"><img src="./images/question.png" alt=""></div>
-                            <div class="feedback-message__text-wrapper">
-                                <div class="feedback-message__title">Остались вопросы?</div>
-                                <div class="feedback-message__subtitle"><span class="green">Напишите нам</span>, мы поможем!</div>
-                            </div>
-                        </div>
-                        <div class="feedback-form">
-                            <form action="#" method="post">
-                                <input class="feedback-name" type="text" name="feedback-name" placeholder="Имя" id="">
-                                <input class="feedback-phone" type="tel" name="feedback-phone" placeholder="Телефон" id="">
-                                <input class="feedback-email" type="email" name="feedback-email" placeholder="e-mail" id="">
-                                <textarea class="feedback-message" name="feedback-message" placeholder="Сообщение" id="" cols="30" rows="6"></textarea>
-                                <input class="feedback-submit" type="submit" value="Отправить">
-
-                            </form>
-                        </div>
-                        <div class="feedback-footer">
-                            Отправляя заявку, Вы соглашаетесь на обработку персональных данных и политики конфиденц-сти
-                        </div>
+                        </form>
+                        <h4>Результаты поиска по запросу: {{Request::input('query')}}</h4>
+                        <br>
+                        @if($foundNews)
+                            @foreach($foundNews as $el)
+                            <div class="search-news-card">
+                                <a href="/single-news/{{$el->id}}">{{$el->b_title_news}} {{$el->g_title_news}}</a> <br>
+                                {!!$el->subtitle_news!!}
+                            </div> <br>
+                            @endforeach
+                            @else
+                            <p>Ничего не найдено...</p>
+                            @endif
+                        <hr>
                     </div>
                 </div>
             </section>
         </section>
     </section>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- /main-content -->
 @endsection
