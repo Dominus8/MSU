@@ -165,14 +165,21 @@ class MainController extends Controller
 //Поиск
     public function search(Request $request){
         $query = $request->input("query");
+        $foundresult = new \Illuminate\Database\Eloquent\Collection;
         if($query){
             
             $foundNews = News::where('top_text_news', 'LIKE', "%$query%")->orWhere('bottom_text_news', 'LIKE', "%$query%")->orWhere("b_title_news", 'LIKE', "%$query%")->get();
+            $foundProjects = Project::where('b_title_project', 'LIKE', "%$query%")->orWhere('g_title_project', 'LIKE', "%$query%")->orWhere("full_text_project", 'LIKE', "%$query%")->get();
+            $foundProducts = Product::where('b_single_page_title', 'LIKE', "%$query%")->orWhere('g_single_page_title', 'LIKE', "%$query%")->orWhere("single_page_sudtitle", 'LIKE', "%$query%")->get();
             
+            $foundresult = $foundresult->merge($foundNews);
+            $foundresult = $foundresult->merge($foundProjects);
+            $foundresult = $foundresult->merge($foundProducts);
+            // dd($foundresult);
         }else{
-            $foundNews = [];
+            $foundresult = [];
         }
-        return view('search',["foundNews"=>$foundNews]);
+        return view('search',["foundresult"=>$foundresult]);
     }
 
 //------------------------- Админка ---------------------------------------------------
