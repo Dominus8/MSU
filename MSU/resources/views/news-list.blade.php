@@ -9,7 +9,9 @@
                     <div class="news-list-wrapper">
                         <div class="news-list__title">Новости</div>
                         <div class="news-list-pagination">
-                            &#60; 1 из 5 &#62;
+                            @if($news->hasPages())
+                                <a href="{{$news->previousPageUrl()}}">&#60;</a> {{$news->currentPage()}} из {{$news->lastPage()}} <a href="{{$news->nextPageUrl()}}">&#62;</a> 
+                            @endif   
                         </div>
                         @foreach($news as $el)
                         <div class="news-list-el">

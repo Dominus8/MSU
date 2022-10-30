@@ -109,7 +109,7 @@ class MainController extends Controller
 
 //Новости
     public function news_list(){
-        $news =DB::table('news')->latest('date_news')->get();
+        $news =DB::table('news')->latest('date_news')->Paginate(5);
 
         return view('news-list',['news'=>$news]);
     }
@@ -124,7 +124,7 @@ class MainController extends Controller
 
 //Реализованные проекты
     public function refiled_projects(){
-        $project= Project::all();
+        $project= Project::Paginate(5);
         return view('refiled-projects',['project'=>$project]);
     }
 
