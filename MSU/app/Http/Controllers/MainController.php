@@ -155,6 +155,26 @@ class MainController extends Controller
     }
 
 
+//Отправка обратной связи
+    public function send(Request $request){
+        $mail_data = [
+            'recipient' => 'ikari162@mail.ru',
+            'fromEmail' => $request->feedbackEmail,
+            'fromName' => $request->feedbackName,
+            'subject' => $request->feedbackPhone,
+            'body' => $request->feedbackMessage
+        ];
+
+        \Mail::send('email-template', $mail_data, function($message) use ($mail_data){
+            $message->to($mail_data['recipient'])
+            ->from($mail_data['fromEmail'])
+            ->subject($mail_data['subject']);
+        });
+    
+        return redirect()->back()->with('success','Сообщение отправлено.');
+    }
+
+
 //Контакты
     public function contacts(){
         $contact = new Contact();

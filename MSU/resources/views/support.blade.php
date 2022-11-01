@@ -40,30 +40,6 @@
                                 <div class="support-manuals__element-title">{{$el->title_manual}} [{{pathinfo($el->file_manual)['extension']}}]</div>
                             </a>
                             @endforeach
-                            <!-- <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div>
-                            <div class="support-manuals__element">
-                                <div class="support-manuals__element-mark">
-                                    <img src="./images/doc_icon.png" alt="">
-                                </div>
-                                <div class="support-manuals__element-title">Инструкция по использованию [doc]</div>
-                            </div> -->
                         </div>
                     </div>
                     <div class="support-feedback">
@@ -75,11 +51,12 @@
                             </div>
                         </div>
                         <div class="feedback-form">
-                            <form action="/admin/feedback" method="post">
-                                <input class="feedback-name" type="text" name="feedback-name" placeholder="Имя" id="">
-                                <input class="feedback-phone" type="tel" name="feedback-phone" placeholder="Телефон" id="">
-                                <input class="feedback-email" type="email" name="feedback-email" placeholder="e-mail" id="">
-                                <textarea class="feedback-message" name="feedback-message" placeholder="Сообщение" id="" cols="30" rows="6"></textarea>
+                            <form action="{{route('send.email')}}" method="POST">
+                                @csrf
+                                <input class="feedback-name" type="text" name="feedbackName" placeholder="Имя" id="">
+                                <input class="feedback-phone" type="tel" name="feedbackPhone" placeholder="Телефон" id="">
+                                <input class="feedback-email" type="email" name="feedbackEmail" placeholder="e-mail" id="">
+                                <textarea class="feedback-message" name="feedbackMessage" placeholder="Сообщение" id="" cols="30" rows="6"></textarea>
                                 <input class="feedback-submit" type="submit"  value="Отправить">
 
                             </form>

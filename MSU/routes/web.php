@@ -51,6 +51,9 @@ Route::get('/partners', [MainController::class, 'partners'])->name('partners');
 //Поддержка
 Route::get('/support', [MainController::class, 'support'])->name('support');
 
+//Отправка ормы обратной связи
+Route::post('/send', [MainController::class, 'send'])->name('send.email');
+
 //Контакты
 Route::get('/contacts', [MainController::class, 'contacts'])->name('contacts');
 
