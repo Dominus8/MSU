@@ -19,7 +19,7 @@
                                     <div class="about-numbers">
                                         <div class="numders__element">
                                             <div class="numders__title">100+</div>
-                                            <div class="numbers__subtitle">экспертизных заключений</div>
+                                            <div class="numbers__subtitle">экспертных заключений</div>
                                         </div>
                                         <div class="numders__element">
                                             <div class="numders__title">300+</div>

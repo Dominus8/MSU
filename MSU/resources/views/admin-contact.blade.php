@@ -95,8 +95,8 @@
                     <lable for="pcp" class="form-label"> <h6>Телефон основоного контакта</h6> </lable>
                     <input id="pcp"  class="form-control" name="prymary_contact_phone" value="{{$primarycontact->prymary_contact_phone}}"> <br>
                     
-                    <!-- <lable for="pci" class="form-label"> <h6>Изображение основоного контакта</h6> </lable>
-                    <input id="pci" type="file" class="form-control" name='prymary_contact_image'> <br> -->
+                    <lable for="pci" class="form-label"> <h6>Изображение основоного контакта</h6> </lable>
+                    <input id="pci" type="file" class="form-control" name='prymary_contact_image'> <br>
                     @else
                     <lable for="pcb" class="form-label"> <h6>Адрес основного контакта</h6>  </lable>
                     <input id="pcb" type="text" class="form-control" name='prymary_contact_adress' > <br>
@@ -107,8 +107,8 @@
                     <lable for="pcp" class="form-label"> <h6>Телефон основоного контакта</h6> </lable>
                     <input id="pcp"  class="form-control" name="prymary_contact_phone"> <br>
                     
-                    <!-- <lable for="pci" class="form-label"> <h6>Изображение основоного контакта</h6> </lable>
-                    <input id="pci" type="file" class="form-control" name='prymary_contact_image'> <br> -->
+                    <lable for="pci" class="form-label"> <h6>Изображение основоного контакта</h6> </lable>
+                    <input id="pci" type="file" class="form-control" name='prymary_contact_image'> <br>
                     @endif
 
                     <button class="btn btn-primary" type="sucsess">Обновить основной контакт</button>

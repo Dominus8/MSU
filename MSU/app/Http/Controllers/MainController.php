@@ -219,6 +219,7 @@ public function admin_contact(){
             //     'contact_phone'=>'required|max:150',
             //     'contact_mail'=>'required|max:150',
             // ]);
+
             if($request->file('prymary_contact_image')){
                 $image = $request->file('prymary_contact_image')->store('storage', 'contacts_image');
                 $img = Image::make( $request->file('prymary_contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
@@ -252,6 +253,7 @@ public function admin_contact(){
             //     'contact_phone'=>'required|max:150',
             //     'contact_mail'=>'required|max:150',
             // ]);
+            
             $image = $request->file('contact_image')->store('storage', 'contacts_image');
             $img = Image::make( $request->file('contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
     
