@@ -16,14 +16,18 @@
                                 <div class="contacts-main__title-text">Главный офис</div>
                             </div>
                         </div>
+                        @if(isset($primarycontact->prymary_contact_adress))
+                        <div class="contacts-main__address">Адрес: <span>{{$primarycontact->prymary_contact_adress}}</span></div>
+                        <div class="contacts-main_email">Напишите нам: <span>{{$primarycontact->prymary_contact_mail}}</span> </div>
+                        <div class="contacts-main__phone">Позвоните нам: <span>{{$primarycontact->prymary_contact_phone}}</span> </div>
+                        @else
                         <div class="contacts-main__address">Адрес: <span>г. Красноярск, ул. Партизана-железняка, д. 35а</span></div>
                         <div class="contacts-main_email">Напишите нам: <span>info@msu24.ru</span> </div>
                         <div class="contacts-main__phone">Позвоните нам: <span>+7 (391) 27-24-24-0</span> </div>
+                        @endif
                     </div>
                     <div class="contacts-map">
-                        <!-- <img src="./images/contacts_map.png" alt=""> -->
                         <object class="contacts-map-svg" type="image/svg+xml" data="./images/contacts_map.svg"></object>
-
                     </div>
                     <div class="contacts-regional-offices">
                         @if(count($contact)>=1)

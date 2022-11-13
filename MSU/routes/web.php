@@ -81,6 +81,9 @@ Route::post('/admin/update-contact/{id}', [MainController::class, 'update_contac
 //Удаление карточек Контактов
 Route::get('/admin/dell-contact/{id}', [MainController::class, 'dell_contact']) ->name('dell_contact')->middleware('auth');
 
+// Обновление основного контакта
+Route::post('/admin/update-prymary-contact', [MainController::class, 'update_prymary_contact']) ->name('update_prymary_contact')->middleware('auth');
+
 
 //--------- Админка - продукты------------------------------------------------------------------------------------------------------------------------
 

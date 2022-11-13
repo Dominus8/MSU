@@ -20,6 +20,7 @@ use App\Models\Swarranty;
 use App\Models\Smanual;
 use App\Models\Apphardlabel;
 use App\Models\Applabel;
+use App\Models\Primarycontact;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -65,7 +66,6 @@ class MainController extends Controller
 
         $soloparamiters =$paramarr;
 
-        // dd($soloProduct->single_page_documents);
         return view('app-product-single-page',['product'=>$product->where('product_type','product_type-1')->get(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
@@ -168,7 +168,8 @@ class MainController extends Controller
 //Контакты
     public function contacts(){
         $contact = new Contact();
-        return view('contacts',['contact'=>$contact->all()]);
+        $primarycontact = Primarycontact::first();
+        return view('contacts',['contact'=>$contact->all(), 'primarycontact'=>$primarycontact]);
     }
 
 
@@ -204,8 +205,42 @@ class MainController extends Controller
 
 public function admin_contact(){
     $contact = new Contact();
-    return view('admin-contact',['contact'=>$contact->all()]);
+    $primarycontact = Primarycontact::first();
+    return view('admin-contact',['contact'=>$contact->all(), 'primarycontact'=>$primarycontact]);
 }
+
+//Обновление основного контакта
+        public function update_prymary_contact(Request $request){
+            
+            // $valid = $request->validate([
+            //     'contact_image'=>'required',
+            //     'contact_title'=>'required|max:200',
+            //     'contact_adres'=>'required|max:200',
+            //     'contact_phone'=>'required|max:150',
+            //     'contact_mail'=>'required|max:150',
+            // ]);
+            if($request->file('prymary_contact_image')){
+                $image = $request->file('prymary_contact_image')->store('storage', 'contacts_image');
+                $img = Image::make( $request->file('prymary_contact_image'))->save('storage/contacts_image/'.$image); //->resize(111, 26)
+            }else{
+                $image = Primarycontact::first()->prymary_contact_image;
+            }
+            
+            if(Primarycontact::first()){
+                $primarycontact = Primarycontact::first();
+            }else{
+                $primarycontact = new Primarycontact();
+            }
+            $primarycontact->prymary_contact_image = $image;
+            $primarycontact->prymary_contact_adress = $request->input('prymary_contact_adress');
+            $primarycontact->prymary_contact_phone = $request->input('prymary_contact_phone');
+            $primarycontact->prymary_contact_mail = $request->input('prymary_contact_mail');
+    
+            $primarycontact->save();
+    
+            return redirect()->route('admin-contact');
+
+    }
 
 //Создание карточки кнтактов
         public function create_contact(Request $request){
