@@ -30,15 +30,17 @@
                         <div class="swiper-scrollbar"></div>
                     </div>
                     </div>
+                    @if(isset($apphardlabel->apphardlable_image))
                     <div class="catalog-pac__home-content">
-                        <div class="pac-home-content__title">Программно-аппаратные продукты</div>
+                        <div class="pac-home-content__title">{{$apphardlabel->apphardlable_title}}</div>
                         <div class="pac-home-content__subtitle">
-                            Оборудование разработанно собственным штатом инженеров, проектировщиков, разработчиков, дизайнеров, сирийно <br> производиться на собственной производственной базе. Оборудование Российского производства и внесено в реестр МинПромТорга РФ.
+                            {{$apphardlabel->apphardlable_subtitle}}
                         </div>
                         <div class="pac-home-content__image">
-                            <img src="./images/app-hard.png" alt="">
+                            <img src="/storage/product_page_ico/{{$apphardlabel->apphardlable_image}}" alt="">
                         </div>
                     </div>
+                    @endif
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
                         @foreach($product as $el)

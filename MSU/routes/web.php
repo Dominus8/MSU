@@ -99,6 +99,12 @@ Route::post('/admin/update-product/{id}', [MainController::class, 'update_produc
 //Удаление продукта
 Route::get('/admin/dell-product/{id}', [MainController::class, 'dell_product']) ->name('dell_product')->middleware('auth');
 
+// Обновление главной каталога программно-аппаратных продуктов
+Route::post('/admin/update_apphard_primary_page', [MainController::class, 'update_apphard_primary_page']) ->name('update_apphard_primary_page')->middleware('auth');
+
+// Обновление главной каталога программных продуктов
+Route::post('/admin/update_app_primary_page', [MainController::class, 'update_app_primary_page']) ->name('update_app_primary_page')->middleware('auth');
+
 
 //--------- Админка - Главная------------------------------------------------------------------------------------------------------------------------
 
@@ -243,7 +249,7 @@ Route::get('/admin/dell-manual/{id}', [MainController::class, 'dell_manual']) ->
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 Auth::routes();
 

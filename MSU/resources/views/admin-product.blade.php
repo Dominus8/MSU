@@ -11,44 +11,110 @@
         </ul>
     </div>
 @endif
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Редактировать существующие продукты</button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-<h6>Редактировать Программно-аппаратные продукты</h6>
-  <div class="admin-section__manage">
-    
-            @foreach($hardproduct as $el)
-            <div class="manage-element directions_card">
-                    <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
-                    <a class='btn btn-warning' href="/edit-product/{{$el->id}}">edit</a>
-                    <a class='btn btn-danger' href="/admin/dell-product/{{$el->id}}">x</a>
-                </div>
-            @endforeach
+<!--------------------------------------------------------------------------------------------------------------->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">
+  Добавить продукт
+</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appHardLable">
+  Изменить главную программно-аппаратных
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="appHardLable" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Изменить главную страницу программно-аппаратных продуктов</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="curent-app-hard-image">
+            <h5>Текущее изображение</h5>
+            @if(isset($apphardlabel->applable_image))
+                <img style="width:200px;" src="/storage/product_page_ico/{{$apphardlabel->apphardlable_image}}" alt="">
+            @endif
         </div>
-        <h6>Редактировать Программные продукты</h6>
-  <div class="admin-section__manage">
-  
-            @foreach($appproduct as $el)
-            <div class="manage-element directions_card">
-                    <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
-                    <a class='btn btn-warning' href="/edit-product/{{$el->id}}">edit</a>
-                    <a class='btn btn-danger' href="/admin/dell-product/{{$el->id}}">x</a>
-                </div>
-            @endforeach
-        </div>
+          
+        <form action="/admin/update_apphard_primary_page" method="post" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        @if(isset($apphardlabel->applable_image))
+            <input class="form-control" type="text" name="apphardlable_title" value="{{$apphardlabel->apphardlable_title}}"> <br>
+            <textarea class="form-control" name="apphardlable_subtitle" >{{$apphardlabel->apphardlable_subtitle}}</textarea> <br>
+        @else
+            <input class="form-control" type="text" name="apphardlable_title"> <br>
+            <textarea class="form-control" name="apphardlable_subtitle" ></textarea> <br>
+        @endif
+            <input class="form-control" type="file" name="apphardlable_image"> <br>
+            <button class="btn btn-primary" type="sucsess">Обновить</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
   </div>
 </div>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appLable">
+  Изменить главную аппаратных
+</button>
 
-<!-- Добавление нового продукта -->
-<br>
-<br>
-    <h3>Добавить новый продукт</h3>
+<!-- Modal -->
+<div class="modal fade" id="appLable" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Изменить главную страницу аппаратных продуктов</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="curent-app-image">
+            <h5>Текущее изображение</h5>
+            @if(isset($applabel->applable_image))
+                <img style="width:200px;" src="/storage/product_page_ico/{{$applabel->applable_image}}" alt="">
+            @endif
+      </div>
+          
+          <form action="/admin/update_app_primary_page" method="post" enctype="multipart/form-data">
+          {{ csrf_field() }}
+            @if(isset($applabel->applable_image))
+              <input class="form-control" type="text" name="applable_title" value="{{$applabel->applable_title}}"> <br>
+              <textarea class="form-control" name="applable_subtitle" >{{$applabel->applable_subtitle}}</textarea> <br>
+            @else
+            <input class="form-control" type="text" name="applable_title"> <br>
+              <textarea class="form-control" name="applable_subtitle" ></textarea> <br>
+            @endif
+              <input type="file" class="form-control" name='applable_image'> <br>
+  
+              <button class="btn btn-primary" type="sucsess">Обновить</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade " id="addProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Добавить новый продукт</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
         <div class="mine-content admin-section__form">
             <form action="/admin/create-product" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
@@ -159,6 +225,45 @@
                     <button class="btn btn-primary" type="sucsess">Создать продукт</button>
                 </div>
             </form>
-        </div>              
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Добавление нового продукта -->
+<br>
+<br>
+<h6>Редактировать Программно-аппаратные продукты</h6>
+<div class="admin-section__manage">
+            @foreach($hardproduct as $el)
+            <div class="manage-element directions_card">
+                    <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
+                    <a class='btn btn-warning' href="/edit-product/{{$el->id}}">edit</a>
+                    <a class='btn btn-danger' href="/admin/dell-product/{{$el->id}}">x</a>
+                </div>
+            @endforeach
+</div>
+
+<h6>Редактировать Программные продукты</h6>
+<div class="admin-section__manage">
+
+            @foreach($appproduct as $el)
+            <div class="manage-element directions_card">
+                    <h6>{{$el->b_single_page_title}} {{$el->g_single_page_title}}</h6>
+                    <a class='btn btn-warning' href="/edit-product/{{$el->id}}">edit</a>
+                    <a class='btn btn-danger' href="/admin/dell-product/{{$el->id}}">x</a>
+                </div>
+            @endforeach
+        </div>
+</div>
+<br>
+
+    
+          
 
 @endsection

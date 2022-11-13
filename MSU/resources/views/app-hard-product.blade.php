@@ -27,15 +27,17 @@
                         <div class="swiper-scrollbar"></div>
                     </div>
                     </div>
+                    @if(isset($applabel->applable_image))
                     <div class="catalog-pac__home-content">
-                        <div class="pac-home-content__title">Программные продукты</div>
+                        <div class="pac-home-content__title">{{$applabel->applable_title}}</div>
                         <div class="pac-home-content__subtitle">
-                            Компания «МСУ» осуществляет высокотехнологичные программные разработки для управления дорожной инфраструктурой в масштабе города, региона, страны.
+                            {{$applabel->applable_subtitle}}
                         </div>
                         <div class="pac-home-content__image">
-                            <img src="./images/programm-cat.png" alt="">
+                            <img src="storage/product_page_ico/{{$applabel->applable_image}}" alt="">
                         </div>
                     </div>
+                    @endif
                     <div class="catalog-pac__nav-mobile swiper swiperslider">
                         <div class="pac-nav-wrapper swiper-wrapper">
                         @foreach($product as $el)

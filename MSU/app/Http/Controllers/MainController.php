@@ -18,6 +18,8 @@ use App\Models\Project;
 use App\Models\Partner;
 use App\Models\Swarranty;
 use App\Models\Smanual;
+use App\Models\Apphardlabel;
+use App\Models\Applabel;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
@@ -44,21 +46,15 @@ class MainController extends Controller
 
 //Программные продукты
     public function app_product(){
+        $apphardlabel = Apphardlabel::first();
         $product = new Product();
-        return view('app-product',['product'=>$product->where('product_type','product_type-1')->get()]);
+        return view('app-product',['product'=>$product->where('product_type','product_type-1')->get(), 'apphardlabel'=>$apphardlabel]);
     }
 
 //Программные продукты соло страница
     public function app_product_single_page($id){
         $product = new Product();
         $soloProduct = $product::find($id);
-
-        // $docArr = [];
-        // foreach($soloProduct->single_page_documents as $el){
-        //     $docInfo = pathinfo($el[0]);
-        //     array_push($docArr, $docInfo);
-        // }
-        // dd($docArr);
 
         preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
         $paramarr = [];
@@ -76,22 +72,16 @@ class MainController extends Controller
 
 //Программно-аппаратные продукты 
     public function app_hard_product(){
+        $applabel = Applabel::first();
         $product = new Product();
 
-        return view('app-hard-product',['product'=>$product->where('product_type','product_type-2')->get()]);
+        return view('app-hard-product',['product'=>$product->where('product_type','product_type-2')->get(), 'applabel'=>$applabel]);
     }
 
 //Программно-аппаратные продукты соло страница
     public function app_hard_product_single_page($id){
         $product = new Product();
         $soloProduct = $product::find($id);
-
-        // $docArr = [];
-        // foreach($soloProduct->single_page_documents as $el){
-        //     $docInfo = pathinfo($el[0]);
-        //     array_push($docArr, $docInfo);
-        // }
-        // dd($docArr);
 
         preg_match_all("/\{(.+?)\}/", $soloProduct->single_page_parameters, $matches);
         $paramarr = [];
@@ -102,7 +92,6 @@ class MainController extends Controller
 
         $soloparamiters =$paramarr;
 
-        // dd($soloProduct->single_page_documents);
         return view('app-hard-product-single-page',['product'=>$product->where('product_type','product_type-2')->get(),'soloproduct'=>$soloProduct,'soloparamiters'=>$soloparamiters]);
     }
 
@@ -158,19 +147,20 @@ class MainController extends Controller
 //Отправка обратной связи
     public function send(Request $request){
         $mail_data = [
-            'recipient' => 'ikari162@mail.ru',
+            'recipient' => 'ikari162@gmail.com',
             'fromEmail' => $request->feedbackEmail,
             'fromName' => $request->feedbackName,
-            'subject' => $request->feedbackPhone,
+            'subject' => 'Письмо с сайта',
+            'phone' => $request->feedbackPhone,
             'body' => $request->feedbackMessage
         ];
 
         \Mail::send('email-template', $mail_data, function($message) use ($mail_data){
             $message->to($mail_data['recipient'])
-            ->from($mail_data['fromEmail'])
+            ->from($mail_data['fromEmail'], $mail_data['fromName'])
             ->subject($mail_data['subject']);
         });
-    
+            
         return redirect()->back()->with('success','Сообщение отправлено.');
     }
 
@@ -390,11 +380,68 @@ public function admin_contact(){
 //Админка - Управление продуктами
 
     public function admin_product(){
+        $apphardlabel = Apphardlabel::first();
+        $applabel = Applabel::first();
+
         $product = new Product();
         $hardproduct = Product::where('product_type','product_type-1')->get();
         $appproduct = Product::where('product_type','product_type-2')->get();
-      return view('admin-product',['product'=>$product->all(),'hardproduct'=>$hardproduct,'appproduct'=>$appproduct]);
+      return view('admin-product',['product'=>$product->all(),'hardproduct'=>$hardproduct,'appproduct'=>$appproduct, 'apphardlabel'=>$apphardlabel, 'applabel'=>$applabel]);
     }
+
+//Обновить главную программно-аппаратных продуктов
+public function update_apphard_primary_page(Request $request){
+
+    if(Apphardlabel::first()){
+        $apphardlabel = Apphardlabel::first();
+    }else{
+        $apphardlabel = new Apphardlabel();
+    }
+
+
+    if($request->file('apphardlable_image')){
+    $apphardlable_image = $request->file('apphardlable_image')->store('storage', 'product_page_ico');
+    $ahimg = Image::make( $request->file('apphardlable_image'))->save('storage/product_page_ico/'.$apphardlable_image); //->resize(111, 26)
+    }else{
+        $apphardlable_image = Apphardlabel::first()->apphardlable_image;
+    }
+    
+    $apphardlabel->apphardlable_image = $apphardlable_image;
+    $apphardlabel->apphardlable_title = $request->input('apphardlable_title');
+    $apphardlabel->apphardlable_subtitle = $request->input('apphardlable_subtitle');
+
+    $apphardlabel->save();
+
+    return redirect()->route('admin-product');
+
+}
+
+//Обновить главную аппаратных продуктов
+public function update_app_primary_page(Request $request){
+
+    if(Applabel::first()){
+        $applabel = Applabel::first();
+    }else{
+        $applabel = new Applabel();
+    }
+ 
+
+    if($request->file('applable_image')){
+    $applable_image = $request->file('applable_image')->store('storage', 'product_page_ico');
+    $aimg = Image::make( $request->file('applable_image'))->save('storage/product_page_ico/'.$applable_image); //->resize(111, 26)
+    }else{
+        $applable_image = Applabel::first()->applable_image;
+    }
+    
+    $applabel->applable_image = $applable_image;
+    $applabel->applable_title = $request->input('applable_title');
+    $applabel->applable_subtitle = $request->input('applable_subtitle');
+
+    $applabel->save();
+
+    return redirect()->route('admin-product');
+
+}
 
 //Создание продукта
     public function create_product(Request $request){
