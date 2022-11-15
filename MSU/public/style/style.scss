@@ -2396,11 +2396,13 @@
                         color: #333333;
                     }
                     .partners__logo {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-shrink: 25px;
-                        justify-content: space-around;
-                        align-items: center;
+                        display: grid;
+                        gap: 20px;
+                        // flex-wrap: wrap;
+                        // flex-shrink: 25px;
+                        // justify-content: space-around;
+                        grid-template-columns: repeat(3, 1fr);
+                        justify-items: center;
                         margin-bottom: 64px;
                         .partners-logo__item {
                             padding: 15px;
@@ -2444,7 +2446,7 @@
         }
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1240px) {
         .section-partners {
             .section-inner {
                 .partners {
@@ -2460,11 +2462,36 @@
                             line-height: 140%;
                         }
                         .partners__logo {
+                            grid-template-columns: repeat(2, 1fr);
                             .partners-logo__item {}
                         }
                         .partners__callback {
                             .partners-call {
                                 width: 100%;
+                                .partners-call__image {}
+                                .partners-call__subtitle {
+                                    span {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-partners {
+            .section-inner {
+                .partners {
+                    .partners-wrapper {
+                        .partners__title {}
+                        .partners__logo {
+                            grid-template-columns: repeat(1, 1fr);
+                            .partners-logo__item {}
+                        }
+                        .partners__callback {
+                            .partners-call {
                                 .partners-call__image {}
                                 .partners-call__subtitle {
                                     span {}

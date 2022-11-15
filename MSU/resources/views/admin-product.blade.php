@@ -36,14 +36,14 @@
       <div class="modal-body">
         <div class="curent-app-hard-image">
             <h5>Текущее изображение</h5>
-            @if(isset($apphardlabel->applable_image))
+            @if(isset($apphardlabel->apphardlable_image))
                 <img style="width:200px;" src="/storage/product_page_ico/{{$apphardlabel->apphardlable_image}}" alt="">
             @endif
         </div>
           
         <form action="/admin/update_apphard_primary_page" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
-        @if(isset($apphardlabel->applable_image))
+        @if(isset($apphardlabel->apphardlable_title))
             <input class="form-control" type="text" name="apphardlable_title" value="{{$apphardlabel->apphardlable_title}}"> <br>
             <textarea class="form-control" name="apphardlable_subtitle" >{{$apphardlabel->apphardlable_subtitle}}</textarea> <br>
         @else
@@ -86,7 +86,7 @@
           
           <form action="/admin/update_app_primary_page" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
-            @if(isset($applabel->applable_image))
+            @if(isset($applabel->applable_title))
               <input class="form-control" type="text" name="applable_title" value="{{$applabel->applable_title}}"> <br>
               <textarea class="form-control" name="applable_subtitle" >{{$applabel->applable_subtitle}}</textarea> <br>
             @else
