@@ -6,7 +6,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Medium';
         src: url('../fonts/DINPro-Medium.eot');
@@ -14,7 +14,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Medium';
         src: url('../fonts/DINPro-Medium.eot');
@@ -22,35 +22,35 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Gotham Pro';
-        src: url('../fonts/GothamPro.svg#GothamPro') format('svg'), url('../fonts/GothamPro.ttf') format('truetype'), url('../fonts/GothamPro.woff') format('woff');
+        src: url('../fonts/GothamPro.svg#GothamPro') format('svg'), url('../fonts/gothampro.ttf') format('truetype'), url('../fonts/GothamPro.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'GothamPro-Bold';
         src: url('../fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg'), url('../fonts/GothamPro-Bold.ttf') format('truetype'), url('../fonts/GothamPro-Bold.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'GothamPro-Medium';
         src: url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg'), url('../fonts/GothamPro-Medium.ttf') format('truetype'), url('../fonts/GothamPro-Medium.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'ProximaNova-Semibold';
         src: url('../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Proxima Nova';
         src: url('../fonts/ofont.ru_Proxima Nova.eot');
@@ -58,7 +58,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'ProximaNova-Bold';
         src: url('../fonts/ProximaNova-Bold.eot');
@@ -66,14 +66,14 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'ProximaNova-Regular';
         src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'proximanova_regular';
         src: url('../fonts/proximanova_regular.eot');
@@ -81,7 +81,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Bold';
         src: url('../fonts/DINPro-Bold.eot');
@@ -89,7 +89,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Poppins';
         src: url('../fonts/Poppins-Regular.eot');
@@ -97,7 +97,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @mixin h1 {
         font-family: 'Proxima Nova';
         font-style: normal;
@@ -106,7 +106,7 @@
         line-height: 140%;
         color: #333333;
     }
-    
+
     @mixin h2 {
         font-family: 'Proxima Nova';
         font-style: normal;
@@ -115,28 +115,28 @@
         line-height: 140%;
         color: #333333;
     }
-    
+
     * {
         a {
             text-decoration: none;
         }
     }
-    
+
     .swiper {
         max-width: 1110px;
         // height: 300px;
     }
-    
+
     .section-outer {
         margin: 0 auto;
         max-width: 1440px;
     }
-    
+
     .section-inner {
         margin: 0 auto;
         max-width: 1110px;
     }
-    
+
     //=========== /main ===============
     //=========== header =============
     .header {
@@ -207,14 +207,14 @@
             display: none;
         }
     }
-    
+
     //=========== /header =============
     //============= Navigation =========
     .section-nav {
         height: 52px;
         background: #333333;
     }
-    
+
     .nav {
         // position: absolute;
         width: 100%;
@@ -257,7 +257,7 @@
             .nav-item-source {}
         }
     }
-    
+
     //============= /Navigation ========
     //============== main-slider =========
     .section-main-slider {
@@ -377,11 +377,11 @@
             align-items: center;
         }
     }
-    
+
     .main-slider {
         height: 599px;
     }
-    
+
     //============== /main-slider ========
     //=============== about =====================
     .section-about {
@@ -554,7 +554,7 @@
             }
         }
     }
-    
+
     //================ /about ====================
     //================= catalog ===========================
     .section-catalog-pac {
@@ -631,7 +631,7 @@
             }
         }
     }
-    
+
     //==================/ catalog =====================================
     //================== single page ==================================
     .section-catalog-pac {
@@ -876,7 +876,7 @@
             }
         }
     }
-    
+
     //================== /single page =================================
     //================== news =========================================
     .section-news-list {
@@ -899,7 +899,7 @@
             }
         }
     }
-    
+
     @media (max-width: 1120px) {
         .section-news-list {
             .section-inner {
@@ -920,7 +920,7 @@
             }
         }
     }
-    
+
     //================== /news =========================================
     //================== refiled-projects =======================
     .section-refiled-projects {
@@ -1007,7 +1007,7 @@
             }
         }
     }
-    
+
     //================== /refiled-projects ======================
     //=================== partners ==============================
     .section-partners {
@@ -1061,7 +1061,7 @@
             }
         }
     }
-    
+
     //=================== /partners =============================
     //==================== support ==============================
     .section-support {
@@ -1315,7 +1315,7 @@
             }
         }
     }
-    
+
     //==================== /support ==============================
     //===================== contacts =============================
     .section-contacts {
@@ -1442,13 +1442,13 @@
             }
         }
     }
-    
+
     //===================== /contacts ============================
     //============= footer ===============
     .section-footer {
         background-color: #333333;
     }
-    
+
     .footer {
         height: 327px;
         background-color: #333333;
@@ -1566,14 +1566,14 @@
             }
         }
     }
-    
+
     //============= /footer ===============
     @media (max-width: 1120px) {
         .section-inner {
             padding: 0 20px;
         }
     }
-    
+
     @media (max-width: 375px) {
         .section-inner {
             padding: 0 15px;
