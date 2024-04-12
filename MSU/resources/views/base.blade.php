@@ -9,10 +9,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
+
+
     <!--Мета для ссылки-->
-    
+
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
     <meta property="og:image" content="images/header_logo.png"/>
@@ -20,8 +20,8 @@
     <meta property="og:site_name" content="MSU24"/>
 
     @yield('head-link')
-    
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="/style/swiper8-bundle.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/style.css">
@@ -107,7 +107,7 @@
                     <div class="nav-item"><a id="support" class="nav-item-link" href="{{route('support')}}">Поддержка</a></div>
                     <div class="nav-item"><a id="contact" class="nav-item-link" href="{{route('contacts')}}">Контакты</a></div>
                     <div class="nav-item-source">
-                        <a href="{{route('search')}}"><img src="/images/magnifier-icon.png" alt=""></a> 
+                        <a href="{{route('search')}}"><img src="/images/magnifier-icon.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                 <div class="footer__body">
                     <div class="footer-nav">
                         <div class="footer-nav__block">
-                            <!-- <div> 
+                            <!-- <div>
                                 <a class="nav-item--primary" href="#"> Каталог</a>
                             </div> -->
                             <div>
@@ -151,7 +151,7 @@
                             <div>
                                 <a class="nav-item" href="{{route('partners')}}">Партнеры</a>
                             </div>
-    
+
                             <div>
                                 <a class="nav-item" href="{{route('support')}}">Поддержка</a>
                             </div>
@@ -202,8 +202,8 @@
         </section>
     </section>
     <!-- /footer -->
-    
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="/js/swiper8-bundle.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

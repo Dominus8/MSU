@@ -43,7 +43,7 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
-        
+
         //для контактов
         'contacts_image' => [
             'driver' => 'local',
