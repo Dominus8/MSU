@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         @if(isset($primarycontact->prymary_contact_adress))
-                        <div class="contacts-main__address">Адрес: <span>{{$primarycontact->prymary_contact_adress}}</span></div>
+                        <div class="contacts-main__address"><p>Адрес:<br> <span>{!!$primarycontact->prymary_contact_adress!!}</span></p></div>
                         <div class="contacts-main_email">Напишите нам: <span>{{$primarycontact->prymary_contact_mail}}</span> </div>
                         <div class="contacts-main__phone">Позвоните нам: <span>{{$primarycontact->prymary_contact_phone}}</span> </div>
                         @else
