@@ -57,7 +57,7 @@
                                             <div class="green-marc">
                                                 <img src="/images/green-mark.png" alt="">
                                             </div>
-                                            <div class="purpose-title">Назначение</div>
+                                            <div class="purpose-title">Функционал</div>
                                         </div>
                                         <div class="product__purpose-text">
                                         {!!$soloproduct->single_page_purpose!!}

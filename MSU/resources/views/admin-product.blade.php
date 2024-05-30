@@ -40,7 +40,7 @@
                 <img style="width:200px;" src="/storage/product_page_ico/{{$apphardlabel->apphardlable_image}}" alt="">
             @endif
         </div>
-          
+
         <form action="/admin/update_apphard_primary_page" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         @if(isset($apphardlabel->apphardlable_title))
@@ -83,7 +83,7 @@
                 <img style="width:200px;" src="/storage/product_page_ico/{{$applabel->applable_image}}" alt="">
             @endif
       </div>
-          
+
           <form action="/admin/update_app_primary_page" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
             @if(isset($applabel->applable_title))
@@ -94,7 +94,7 @@
               <textarea class="form-control" name="applable_subtitle" ></textarea> <br>
             @endif
               <input type="file" class="form-control" name='applable_image'> <br>
-  
+
               <button class="btn btn-primary" type="sucsess">Обновить</button>
           </form>
       </div>
@@ -139,10 +139,10 @@
                         <p style="font-size:11px;">Размер 48х48px (1:1) jpg или png формата. Иконки могут быть любого цвета. Первая - основная, вторая - активная(отображается при выбранном продукте)</p>
                         <lable for="single_page_bico" class="form-label"> <h6>Иконка чёрная</h6></lable>
                         <input id="single_page_bico" type="file" class="form-control" name='single_page_bico'><br>
-    
+
                         <lable for="single_page_gico" class="form-label"> <h6>Иконка зелёная</h6></lable>
                         <input id="single_page_gico" type="file" class="form-control" name='single_page_gico'><br>
-    
+
                         <!--Название пункта в меню продуктов-->
                         <lable for="nt" class="form-label"> <legend><span style='color:red; font-size:24; font-weight:900;'>*</span> Название в пункте меню</legend></lable>
                         <input id="nt"  class="form-control" name="nav_title"><br>
@@ -150,21 +150,21 @@
                     <hr>
                     <fieldset>
                         <legend>Продукт на странице продукта</legend>
-    
+
                         <lable for="b_single_page_title" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок чёрный текст</h6> </lable>
                         <input id="b_single_page_title"  class="form-control" name="b_single_page_title"><br>
-    
+
                         <lable for="g_single_page_title" class="form-label"> <h6><span style='color:red; font-size:24; font-weight:900;'>*</span> Заголовок зелёный текст</h6> </lable>
                         <input id="g_single_page_title"  class="form-control" name="g_single_page_title"><br>
 
-                        
+
                         <lable for="single_page_slides" class="form-label"> <h6>Изображение для слайдера на странице</h6></lable>
                         <p style="font-size:11px;">
                         &nbsp;&nbsp;&nbsp;&nbsp;О слайдах Программно-аппаратного продукта - Область отображения слайда 345х440px jpg(если размер на всю область) или png формата. Подложка у облости отображения всегда зелёного цвета. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.<br> <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;О слайдах Программного продукта - Область отображения слайдана 880х450px (На данный момент строго не ограничена, Можно эксперементировать) jpg или png формата. Подложки нет только цвет фона секции. Добавить по одному слайду нельзя, только все вместе. При нажатии `Выбрать файлы` обведите сразу несколько картинок и они добавятся в форму.
                         </p>
                         <input id="single_page_slides" type="file" multiple class="form-control" name='single_page_slides[]'><br>
-    
+
                         <lable for="single_page_sudtitle" class="form-label"><h6>Описание</h6></lable>
                         <p style="font-size:11px;">
                             Текст. Для форматированииспользовать: <br>
@@ -177,11 +177,11 @@
                                 &lt;span class = "green bold"&gt;Зелёный, жирный текст&lt;/span&gt;
                         </p>
                         <textarea id="single_page_sudtitle" type="text" class="form-control" name='single_page_sudtitle'></textarea><br>
-    
-                        <lable id="single-page-purpose-lable" for="single-page-purpose" class="form-label"> <h6>Назначение</h6></lable>
+
+                        <lable id="single-page-purpose-lable" for="single-page-purpose" class="form-label"> <h6>Функционал</h6></lable>
 
                         <textarea id="single-page-purpose" type="text" class="form-control" name='single-page-purpose'></textarea><br>
-                    
+
                         <h6 id="parameters-wrapper_lable">Добавить параметры</h6>
                         <p style="font-size:11px;">
                         Обязательно нажать кнопку 'Записать', иначе параметры не добавятся. Не оставляйте строки параметров пустыми, <br> иначе они так и запишутся и отобразятся на странице пустыми (на данный момент)
@@ -195,10 +195,10 @@
                                <div class="single-page-parameters-item">
                                    <input id="single-page-parameters"  class="form-control" placeholder="Название параметра">
                                    <input id="single-page-parameters"  class="form-control" placeholder="Значение параметра">
-                               </div>   
-                           </div> 
+                               </div>
+                           </div>
                         </div>
-                        <textarea id="parameters-to-send" type="text" style="display:none;"  name='single_page_parameters'></textarea><br> 
+                        <textarea id="parameters-to-send" type="text" style="display:none;"  name='single_page_parameters'></textarea><br>
                         <br>
                         <div id="plus-parameter" class="btn btn-success">+</div> <div id="minus-parameter" class="btn btn-danger">-</div> <div class="btn btn-primary add-paramiter">Записать</div>
                         <br>
@@ -211,17 +211,17 @@
                             <input id="single_page_documents" type="file" multiple class="form-control" name='single_page_documents[]'><br>
                         </div>
                     </fieldset>
-    
+
                     <fieldset>
                     <legend>Настройки мета данных</legend>
-    
+
                         <lable for="single_page_metadescription" class="form-label"><h6>Description (Не обязательно)</h6></lable>
                         <textarea id="single_page_metadescription" type="text" class="form-control" name='single_page_metadescription'></textarea><br>
-                        
+
                         <lable for="single_page_metakeywords" class="form-label"><h6>Keywords (Не обязательно. Отдельные слова через запятую)</h6></lable>
                         <textarea id="single_page_metakeywords" type="text" class="form-control" name='single_page_metakeywords'></textarea><br>
-                    
-                    </fieldset>    
+
+                    </fieldset>
                     <button class="btn btn-primary" type="sucsess">Создать продукт</button>
                 </div>
             </form>
@@ -263,7 +263,7 @@
 </div>
 <br>
 
-    
-          
+
+
 
 @endsection
