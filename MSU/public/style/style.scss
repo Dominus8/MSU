@@ -6,7 +6,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Medium';
         src: url('../fonts/DINPro-Medium.eot');
@@ -14,7 +14,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Medium';
         src: url('../fonts/DINPro-Medium.eot');
@@ -22,42 +22,42 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Gotham Pro';
         src: url('../fonts/GothamPro.svg#GothamPro') format('svg'), url('../fonts/GothamPro.ttf') format('truetype'), url('../fonts/GothamPro.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Gotham Pro-Regular';
         src: url('../fonts/GothamPro-Regular.svg#GothamPro-Regular') format('svg'), url('../fonts/Gotham Pro-regular.ttf') format('truetype'), url('../fonts/Gotham Pro-regular.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Gotham Pro-Bold';
         src: url('../fonts/GothamPro-Bold.svg#GothamPro-Bold') format('svg'), url('../fonts/GothamPro-Bold.ttf') format('truetype'), url('../fonts/GothamPro-Bold.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Gotham Pro-Medium';
         src: url('../fonts/GothamPro-Medium.svg#GothamPro-Medium') format('svg'), url('../fonts/GothamPro-Medium.ttf') format('truetype'), url('../fonts/GothamPro-Medium.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Proxima Nova-Semibold';
         src: url('../fonts/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
         font-weight: 500;
         font-style: normal;
     }
-    
+
     // @font-face {
     //     font-family: 'Proxima Nova';
     //     src: url('../fonts/ofont.ru_Proxima Nova.eot');
@@ -72,21 +72,21 @@
         font-weight: bold;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Proxima Nova-Regular';
         src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
         font-weight: 400;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Proxima Nova';
         src: url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
         font-weight: 400;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Proxima Nova_regular';
         src: url('../fonts/proximanova_regular.eot');
@@ -94,7 +94,7 @@
         font-weight: 400;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'DINPro-Bold';
         src: url('../fonts/DINPro-Bold.eot');
@@ -102,7 +102,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @font-face {
         font-family: 'Poppins';
         src: url('../fonts/Poppins-Regular.eot');
@@ -110,7 +110,7 @@
         font-weight: normal;
         font-style: normal;
     }
-    
+
     @mixin h1 {
         font-family: 'Proxima Nova';
         font-style: normal;
@@ -119,7 +119,7 @@
         line-height: 140%;
         color: #333333;
     }
-    
+
     @mixin h2 {
         font-family: 'Proxima Nova';
         font-style: normal;
@@ -128,7 +128,7 @@
         line-height: 140%;
         color: #333333;
     }
-    
+
     * {
         a {
             text-decoration: none;
@@ -140,7 +140,7 @@
             font-weight: 600;
         }
     }
-    
+
     .main-swiper {
         max-width: 1110px;
         // height: 300px;
@@ -160,22 +160,22 @@
             --swiper-theme-color: #66B821;
         }
     }
-    
+
     .section-outer {
         margin: 0 auto;
         // max-width: 1440px;
         overflow-x: hidden;
     }
-    
+
     .section-inner {
         margin: 0 auto;
         max-width: 1110px;
     }
-    
+
     .mine-content {
         min-height: calc(100vh - 483px);
     }
-    
+
     //=========== /main ===============
     //=========== header =============
     .header {
@@ -238,14 +238,14 @@
             display: none;
         }
     }
-    
+
     //=========== /header =============
     //============= Navigation =========
     .section-nav {
         height: 52px;
         background: #333333;
     }
-    
+
     .nav {
         // position: absolute;
         width: 100%;
@@ -302,7 +302,7 @@
             }
         }
     }
-    
+
     //============= /Navigation ==========
     //============== main-slider =========
     .section-main-slider {
@@ -440,11 +440,11 @@
             align-items: center;
         }
     }
-    
+
     .main-slider {
         height: 599px;
     }
-    
+
     //============== /main-slider ========
     //=============== about =====================
     .section-about {
@@ -759,7 +759,7 @@
             }
         }
     }
-    
+
     //================ /about ====================
     //================= catalog ===========================
     .section-catalog-pac {
@@ -900,7 +900,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-catalog-pac {
             .section-inner {
@@ -1021,7 +1021,7 @@
             }
         }
     }
-    
+
     //==================/ catalog =====================================
     //================== single page ==================================
     .section-catalog-pac {
@@ -1394,7 +1394,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-catalog-pac {
             .section-inner {
@@ -1617,7 +1617,7 @@
             }
         }
     }
-    
+
     //================== /single page =================================
     //================== news =========================================
     .section-news-list {
@@ -1708,7 +1708,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-news-list {
             .section-inner {
@@ -1777,7 +1777,7 @@
             }
         }
     }
-    
+
     //================== /news =========================================
     //================== news-single-page ==============================
     .section-single-news {
@@ -1890,7 +1890,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-single-news {
             .section-inner {
@@ -1967,7 +1967,7 @@
             }
         }
     }
-    
+
     //================== /news-single-page ==============================
     //================== refiled-projects =======================
     .section-refiled-projects {
@@ -2061,7 +2061,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-refiled-projects {
             .section-inner {
@@ -2136,7 +2136,7 @@
             }
         }
     }
-    
+
     //================== refiled-projects-single-page =======================
     .section-refiled-projects-sigle-page {
         .section-inner {
@@ -2264,7 +2264,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-refiled-projects-sigle-page {
             .section-inner {
@@ -2377,7 +2377,7 @@
             }
         }
     }
-    
+
     //================== /refiled-projects-single-page =======================
     //================== /refiled-projects ======================
     //=================== partners ==============================
@@ -2446,7 +2446,7 @@
             }
         }
     }
-    
+
     @media (max-width: 1240px) {
         .section-partners {
             .section-inner {
@@ -2480,7 +2480,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-partners {
             .section-inner {
@@ -2504,7 +2504,7 @@
             }
         }
     }
-    
+
     //=================== /partners =============================
     //==================== support ==============================
     .section-support {
@@ -2769,7 +2769,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-support {
             .section-inner {
@@ -2984,13 +2984,25 @@
             }
         }
     }
-    
+
     //==================== /support ==============================
     //===================== contacts =============================
     .section-contacts {
         .section-inner {
             .contacts {
                 .contacts-wrapper {
+                    .activies{
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 160%;
+                        letter-spacing: 0.002em;
+                        .activies__title{
+                            @include h2();
+                        }
+
+                    }
                     margin-bottom: 120px;
                     .contacts-title {
                         margin-top: 64px;
@@ -3178,12 +3190,18 @@
             }
         }
     }
-    
+
     @media (max-width: 1024px) {
         .section-contacts {
             .section-inner {
                 .contacts {
                     .contacts-wrapper {
+                        .activies{
+                            .activies__title{
+                                @include h1();
+                            }
+
+                        }
                         .contacts-title {
                             margin-top: 40px;
                             font-family: 'Proxima Nova';
@@ -3261,6 +3279,7 @@
                                 }
                             }
                         }
+
                         .contacts-map {
                             .contacts-map-svg {
                                 svg {}
@@ -3357,7 +3376,7 @@
             }
         }
     }
-    
+
     //===================== /contacts ============================
     //--------------------------admin-----------------------------
     //========================== admin-contacts ==================================
@@ -3414,7 +3433,7 @@
             }
         }
     }
-    
+
     //========================= /admin-contacts ===================================
     //========================== admin-product ==================================
     .mine-content {
@@ -3471,13 +3490,13 @@
             }
         }
     }
-    
+
     //========================== /admin-product ==================================
     //============= footer ===============
     .section-footer {
         background-color: #333333;
     }
-    
+
     .footer {
         height: 335px;
         background-color: #333333;
@@ -3631,14 +3650,14 @@
             }
         }
     }
-    
+
     //============= /footer ===============
     @media (max-width: 1120px) {
         .section-inner {
             padding: 0 20px;
         }
     }
-    
+
     @media (max-width: 930px) {
         .section-nav {
             .section-inner {
@@ -3656,7 +3675,7 @@
             }
         }
     }
-    
+
     @media (max-width: 768px) {
         .section-inner {
             padding: 0 15px;
